@@ -1,0 +1,17 @@
+body {
+    background-color: black;
+    background-image: linear-gradient( to right, red, transparent, blue );
+ }
+
+#card{
+    width:360px ;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+    }
+
+
+
+
