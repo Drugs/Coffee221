@@ -33,13 +33,13 @@ include "head.php";
                     <div id="cafedama" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                             <div class="carousel-item">
-                                <img src="camisa1.png" class="d-block w-100" alt="...">
+                                <img src="../Imagens/camisa1.png" class="d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="camisa2.png" class="d-block w-100" alt="...">
+                                <img src="../Imagens/camisa2.png" class="d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item active">
-                                <img src="Camisa3.png" class="d-block w-100" alt="...">
+                                <img src="../Imagens/Camisa3.png" class="d-block w-100" alt="...">
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#cafedama" data-bs-slide="prev">
@@ -99,7 +99,7 @@ include "head.php";
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                 <div class="col">
                     <div class="card shadow-sm">
-                        <img src="caf2.png" alt="">
+                        <img src="../Imagens/caf2.png" alt="">
 
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-center">
@@ -112,7 +112,7 @@ include "head.php";
                 </div>
                 <div class="col">
                     <div class="card shadow-sm">
-                        <img src="caf2.png" alt="">
+                        <img src="../Imagens/caf2.png" alt="">
 
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-center">
@@ -125,7 +125,7 @@ include "head.php";
                 </div>
                 <div class="col">
                     <div class="card shadow-sm">
-                        <img src="caf2.png" alt="" >
+                        <img src="../Imagens/caf2.png" alt="" >
 
                         <div class="card-body">
 
