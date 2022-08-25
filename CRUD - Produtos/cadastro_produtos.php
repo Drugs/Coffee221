@@ -12,8 +12,11 @@ if (isset($_GET['cadastrar']) and $_GET['cadastrar'] == 'send') {
     VALUES ('{$_GET['nome']}','{$_GET['estoque']}','{$_GET['preco']}','{$_GET['cor']}','{$_GET['tamanho']}',
     '{$_GET['genero']}','{$id_produto}')";
     $query = mysqli_query($con, $inf2);*/
-    header("location: produto.php?cadastrar=sucesso");
+    #header("location: produto.php?cadastrar=sucesso");
 }
+$inf2 = "SELECT * FROM produto";
+$query = mysqli_query($con, $inf2);
+$resultado = mysqli_fetch_all($query, MYSQLI_ASSOC);
 ?>
 
 <body class="text-center">
@@ -35,6 +38,25 @@ if (isset($_GET['cadastrar']) and $_GET['cadastrar'] == 'send') {
                             <div class="form-floating">
                                 <input type="text" class="form-control" name="categoria">
                                 <label for="exampleFormControlInput1" class="form-label"><strong>Categoria</strong></label>
+                                <!--<label for="select" class="form-label"></label>
+                                <select class="form-select" name="categoria" required="">
+                                    <option></option>-->
+                                <?php
+                                if (isset($produtos['categoria']) and $produtos['categoria'] == 'Roupa') {
+                                    echo "
+                                                    <option value='{$produtos['categoria']}'>{$produtos['categoria']}</option>
+                                                    ";
+                                }
+                                if (isset($produtos['categoria']) and $produtos['categoria'] == 'Alimento') {
+                                    echo "
+                                                    <option value='{$produtos['categoria']}'>{$produtos['categoria']}</option>
+                                                    ";
+                                }
+                                ?>
+                                <div class="invalid-feedback">
+                                    Por favor, selecione um produto válido.
+                                </div>
+                                </select>
                             </div>
                             <div class="form-floating" style="margin-bottom: 5mm;">
                                 <input type="text" class="form-control" name="marca">
