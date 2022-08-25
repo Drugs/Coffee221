@@ -7,12 +7,7 @@ if (isset($_GET['cadastrar']) and $_GET['cadastrar'] == 'send') {
     $inf = "INSERT INTO produto (`nome_produto`,`descricao`,`categoria`,`marca`)
     VALUES ('{$_GET['nome_produto']}','{$_GET['descricao']}','{$_GET['categoria']}','{$_GET['marca']}')";
     $query = mysqli_query($con, $inf);
-    /*$id_produto = mysqli_insert_id($con);
-    $inf2 = "INSERT INTO info_produto (`nome`,`estoque`,`preco`,`cor`,`tamanho`,`genero`,`fk_id_produto`)
-    VALUES ('{$_GET['nome']}','{$_GET['estoque']}','{$_GET['preco']}','{$_GET['cor']}','{$_GET['tamanho']}',
-    '{$_GET['genero']}','{$id_produto}')";
-    $query = mysqli_query($con, $inf2);*/
-    #header("location: produto.php?cadastrar=sucesso");
+    header("location: produto.php?cadastrar=sucesso");
 }
 $inf2 = "SELECT * FROM produto";
 $query = mysqli_query($con, $inf2);
