@@ -2,12 +2,18 @@
 $title = "CRUD - Informações dos produtos";
 include "../include/header.php";
 include '../include/database_projeto.php';
-
-$inf = "SELECT * FROM produto JOIN info_roupa ON id_produto = fk_id_roupa";
+$pesquisa = '';
+if (isset($_GET["submit"]) and $_GET["submit"] == "buscar") {
+    $pesquisa = $_GET['buscar'];
+}
+$inf = "SELECT * FROM produto JOIN info_roupa ON id_produto = fk_id_roupa WHERE produto.nome_produto LIKE '%{$pesquisa}%' 
+OR info_roupa.tamanho LIKE '%{$pesquisa}%' OR info_roupa.genero LIKE '%{$pesquisa}%'
+OR info_roupa.cor LIKE '%{$pesquisa}%'";
 $query = mysqli_query($con, $inf);
 $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
 # Nova consulta
-$inf2 = "SELECT * FROM produto JOIN info_alimento ON id_produto = fk_id_alimento";
+$inf2 = "SELECT * FROM produto JOIN info_alimento ON id_produto = fk_id_alimento WHERE produto.nome_produto LIKE '%{$pesquisa}%' 
+OR info_alimento.sabor LIKE '%{$pesquisa}%' OR info_alimento.embalagem LIKE '%{$pesquisa}%'";
 $query = mysqli_query($con, $inf2);
 $result2 = mysqli_fetch_all($query, MYSQLI_ASSOC);
 ?>
