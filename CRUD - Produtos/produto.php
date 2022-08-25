@@ -2,7 +2,7 @@
 $title = "Tabela - Produtos";
 include "../include/header.php";
 include '../include/database_projeto.php';
-
+# http://localhost/Coffee221/CRUD%20-%20Produtos/produto.php
 $pesquisa = '';
 if (isset($_GET["submit"]) and $_GET["submit"] == "buscar") {
     $pesquisa = $_GET['buscar'];
