@@ -10,7 +10,6 @@ include "../include/header.php";
                     <div class="card-body p-5 text-center">
                         <form action="">
                             <h2 style="color:white;">Cadastrar-se</h2>
-
                             <div class="form-floating mt-3">
                             <input type="text" class="form-control" id="floatingPassword" placeholder="Password">
                             <label for="floatingPassword">Digite seu nome</label>
