@@ -8,7 +8,7 @@ $id = $_GET['var'];
 if (isset($_GET['del']) and $_GET['del'] == 1) {
     $inf = "DELETE FROM produto WHERE id_produto = {$id}";
     $query = mysqli_query($con, $inf);
-    header("location: produto.php?del=sucesso");
+    header("location: relatorioProdutos.php?del=sucesso");
 }
 $inf2 = "SELECT * FROM produto WHERE id_produto = {$id}";
 $query = mysqli_query($con, $inf2);
@@ -42,7 +42,7 @@ $result = mysqli_fetch_assoc($query);
                             <input type="hidden" name="var" value="<?php echo $_GET['var']; ?>">
                             <div class="row">
                                 <div class="col-6">
-                                    <a class="w-100 btn btn-lg btn-primary" href="produto.php">Voltar</a>
+                                    <a class="w-100 btn btn-lg btn-primary" href="relatorioProdutos.php">Voltar</a>
                                 </div>
                                 <div class="col-6">
                                     <button class="w-100 btn btn-lg btn-primary" type="submit" value="1" name="del">Deletar</button>
