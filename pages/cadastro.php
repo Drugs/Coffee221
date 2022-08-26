@@ -36,7 +36,7 @@ include "../include/header.php";
                             <label for="floatingPassword">Digite seu País</label>
                         </div>
                         <div class="mt-2 d-grid gap-2">
-                            <input class="btn btn-light mt-3" type="submit" value="Cadastrar">
+                            <input class="btn btn-light mt-3" type="submit" value="Cadastrar" href="../home.php">
                             <p style="color:white;">Fazer login?<a href="login.php"> Clique aqui</p>
                         </div>
                         </form>

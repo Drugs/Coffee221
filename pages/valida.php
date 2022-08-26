@@ -14,8 +14,4 @@ $hj=$_POST['email'];
    }else{
     header("Location:login.php?login=erro");
 }
-    
-     
-
-
 ?>
