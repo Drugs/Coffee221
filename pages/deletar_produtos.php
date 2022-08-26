@@ -8,7 +8,7 @@ $id = $_GET['var'];
 if (isset($_GET['del']) and $_GET['del'] == 1) {
     $inf = "DELETE FROM produto WHERE id_produto = {$id}";
     $query = mysqli_query($con, $inf);
-    header("location: produto.php?del=sucesso");
+    header("location: relatorioProdutos.php?del=sucesso");
 }
 $inf2 = "SELECT * FROM produto WHERE id_produto = {$id}";
 $query = mysqli_query($con, $inf2);

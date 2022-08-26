@@ -9,7 +9,7 @@ if (isset($_GET['submit']) and $_GET['submit'] = 'send') {
     $inf = "UPDATE produto SET nome_produto = '{$_GET["nome_produto"]}', descricao = '{$_GET["descricao"]}', 
     categoria = '{$_GET["categoria"]}', marca = '{$_GET['marca']}' WHERE id_produto = {$id}";
     $query = mysqli_query($con, $inf);
-    header("location: produto.php?submit=sucesso");
+    header("location: relatorioProdutos.php?submit=sucesso");
 }
 $inf2 = "SELECT * FROM produto WHERE id_produto = {$id}";
 $query = mysqli_query($con, $inf2);
