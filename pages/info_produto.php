@@ -1,7 +1,7 @@
 <?php
 $title = "CRUD - Informações dos produtos";
 include "../include/header.php";
-include '../include/database_projeto.php';
+include '../include/database.php';
 $pesquisa = '';
 if (isset($_GET["submit"]) and $_GET["submit"] == "buscar") {
     $pesquisa = $_GET['buscar'];

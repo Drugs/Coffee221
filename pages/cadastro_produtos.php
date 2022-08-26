@@ -1,7 +1,7 @@
 <?php
 $title = "CRUD - Produtos";
 include "../include/header.php";
-include '../include/database_projeto.php';
+include '../include/database.php';
 
 if (isset($_GET['cadastrar']) and $_GET['cadastrar'] == 'send') {
     $inf = "INSERT INTO produto (`nome_produto`,`descricao`,`categoria`,`marca`)
