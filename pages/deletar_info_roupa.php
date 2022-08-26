@@ -1,7 +1,8 @@
 <?php
 $title = "Deletar - Roupa";
 include "../include/header.php";
-include '../include/database_projeto.php';
+include '../include/database.php';
+
 $id = $_GET['var'];
 if (isset($_GET['del']) and $_GET['del'] == 1) {
     $inf = "DELETE FROM info_roupa WHERE id_info_roupa = {$id}";

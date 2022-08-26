@@ -6,7 +6,12 @@
 		<title><?php echo $title; ?></title>
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css">
+<<<<<<< Updated upstream
 		<link rel="stylesheet" href="../css/meu.css" />
 		<link rel="stylesheet" href="../css/meucss.css" />
 		<link rel="stylesheet" href="../css/alert.css" />
+=======
+		<link rel="stylesheet" href="../css/meucss.css" />
+		<link rel="stylesheet" href="alert.css" />
+>>>>>>> Stashed changes
 	</head>

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bree+Serif&family=Lobster+Two:ital@1&family=Satisfy&display=swap');
 
-body{
+body .goldenGradient{
     background: rgb(200,140,51);
 background: linear-gradient(90deg, rgba(200,140,51,1) 0%, rgba(235,154,92,1) 74%, rgba(145,72,38,1) 100%);
     width: 100%;
@@ -26,18 +26,18 @@ background: linear-gradient(90deg, rgba(200,140,51,1) 0%, rgba(235,154,92,1) 74%
 }
 
 
-h2{
+#h2{
     border-left: 6px solid rgb(185, 164, 133);
     padding: 6px;
     font-family: 'Bree Serif', serif;
 }
 
-label{
+#label{
     font-family: 'Bree Serif', serif;
     font-size: large;
 }
 
-form{
+#form{
     background: rgb(255, 255, 255);
     display: flex;
     justify-content: center;

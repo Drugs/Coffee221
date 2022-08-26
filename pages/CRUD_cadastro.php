@@ -1,46 +1,47 @@
 <?php
-include'header.php';
-$title="relatorio";
-include'datebase.php';
+include 'header.php';
+$title = "relatorio";
+include 'datebase.php';
 $consulta = "select * from pessoa";
 $query = mysqli_query($con, $consulta);
-$result =mysqli_fetch_all($query, MYSQLI_ASSOC);
+$result = mysqli_fetch_all($query, MYSQLI_ASSOC);
 #echo "<pre>";
 #var_dump($result);
 #echo "</pre>";
 ?>
+
 <body>
 
 
 
-<div class="container">
-  <div class="row">
-       <h1 style="margin-botton:1cm;margin-top:1cm;">cadastro pessoas</h1>
-       <a class="btn mb-3 btn-warning float-start" href="cd_pessoas.php"> cadastre-se</a>
-   <div class="col-12">
-     <table class="mt-3 table table-dark" style="box-shadow:10px 10px 50px #350068,10px 10px 10px #9644C2;">
-             <thead class="table table-dark table- striped">
-               <tr>
-                <th scope="col">#</th>  
-                 <th scope="col">Nome</th>
-                 <th scope="col">Email</th>
-                 <th scope="col">Telefone</th>
-                 <th scope="col">Endereço</th>
-                 <th scope="col">Pais</th>
-                 <th scope="col">Atualizar</th>
-                 <th scope="col">Deletar</th> 
-               </tr>
-             </thead>
+  <div class="container">
+    <div class="row">
+      <h1 style="margin-botton:1cm;margin-top:1cm;">cadastro pessoas</h1>
+      <a class="btn mb-3 btn-warning float-start" href="cd_pessoas.php"> cadastre-se</a>
+      <div class="col-12">
+        <table class="mt-3 table table-dark" style="box-shadow:10px 10px 50px #350068,10px 10px 10px #9644C2;">
+          <thead class="table table-dark table- striped">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Nome</th>
+              <th scope="col">Email</th>
+              <th scope="col">Telefone</th>
+              <th scope="col">Endereço</th>
+              <th scope="col">Pais</th>
+              <th scope="col">Atualizar</th>
+              <th scope="col">Deletar</th>
+            </tr>
+          </thead>
 
-  
-           
-           
-           
-             <tbody>
-<?php
-                  
-  foreach($result as $pessoa){
-     echo"
+
+
+
+
+          <tbody>
+            <?php
+
+            foreach ($result as $pessoa) {
+              echo "
   <tr>
       <th scope='row'>{$pessoa['id_pessoa']}</th>
      <td>{$pessoa['nome']}</td>
@@ -54,17 +55,17 @@ $result =mysqli_fetch_all($query, MYSQLI_ASSOC);
        <td> <a class='btn btn-outline-warning' href='delete_cd.php?var={$pessoa['id_pessoa']}'>Deletar</a>
        </td>
   </tr>";
-                  }
-                 
-  ?>
-                 
-                 </tbody>
+            }
 
-     </table>
+            ?>
+
+          </tbody>
+
+        </table>
+      </div>
     </div>
   </div>
-</div>
 
-<?php
-include'footer.php';
-?>
+  <?php
+  include 'footer.php';
+  ?>
