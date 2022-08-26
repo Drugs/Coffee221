@@ -76,7 +76,7 @@ $result2 = mysqli_fetch_all($query, MYSQLI_ASSOC);
                         ?>
                     </div>
                 </div>
-                <table class="table table-dark table-hover" style="box-shadow: 10px 10px 50px #D30000, 10px 10px 10px #9644C2;">
+                <table class="table table-dark table-hover" class="shadow-lg p-3 mb-5 bg-body rounded">
                     <thead class="table table-dark table-striped">
                         <tr>
                             <th scope="col">ID</th>
@@ -108,8 +108,8 @@ $result2 = mysqli_fetch_all($query, MYSQLI_ASSOC);
                         ?>
                     </tbody>
                 </table>
-
-                <table class="table table-dark table-hover" style="box-shadow: 10px 10px 50px #D30000, 10px 10px 10px #9644C2;">
+                <h1 style="margin-bottom: 1cm; margin-top: 1cm;" class="text-center">Informações dos produtos alimentícios</h1>
+                <table class="table table-dark table-hover" class="shadow-lg p-3 mb-5 bg-body rounded">
                     <thead class="table table-dark table-striped">
                         <tr>
                             <th scope="col">ID</th>

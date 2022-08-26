@@ -76,7 +76,7 @@ echo '</pre>';*/
                         ?>
                     </div>
                 </div>
-                <table class="table table-dark table-hover">
+                <table class="table table-dark table-hover" class="shadow-lg p-3 mb-5 bg-body rounded">
                     <thead class="table table-dark table-striped">
                         <tr>
                             <th scope="col">ID</th>
