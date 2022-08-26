@@ -1,7 +1,7 @@
 <?php
-include'header.php';
+include'../include/header.php';
 $title="usuario relatorio";
-include'datebase.php';
+include'../include/database.php';
 $pesquisa = '';
 
 if(isset($_GET['pesqui']) and $_GET['pesqui'] == 'busca'){
@@ -82,5 +82,5 @@ echo $consulta;
    </div>
 
 <?php
-include'footer.php';
+include'../include/footer.php';
 ?>
