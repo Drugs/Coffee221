@@ -9,7 +9,7 @@ include "../include/header.php";
                 <div class="card bg-dark " style="border-radius: 1rem;" id="card">
                     <div class="card-body p-5 text-center">
                         <h2 style="color:white;">LOGIN</h2>
-                    <form>
+                    <form action="valida.php">
                         <div class="form-floating mt-3">
                             <input type="text" class="form-control" id="floatingPassword" placeholder="Password">
                             <label for="floatingPassword">Digite seu Username</label>
@@ -24,7 +24,7 @@ include "../include/header.php";
                             
                         </div>
                         <div class="mt-2 d-grid gap-2">
-                        <button type="submit" value='send' name='submit' class="btn btn-outline-light">Entrar</button>
+                        <button type="submit" value='send' name='submit' class="btn btn-outline-light" href="../index.php">Entrar</button>
                                 <p style="color:white;">Ainda não tem uma conta?<a href="cadastro.php"> Clique aqui</p>
                         </div>
                     </form>
