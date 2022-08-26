@@ -1,6 +1,6 @@
 <?php
 $title = "Produto";
-include "../includes/head.php";
+include "../include/header.php";
 ?>
 
 <body>
@@ -162,5 +162,5 @@ include "../includes/head.php";
 
 
     <?php
-    include "footer.php";
+    include "../include/footer.php";
     ?>
