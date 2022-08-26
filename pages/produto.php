@@ -1,6 +1,6 @@
 <?php
 $title = "Produto";
-include "../include/head.php";
+include "../include/header.php";
 ?>
 
 <body>
