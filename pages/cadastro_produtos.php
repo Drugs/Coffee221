@@ -9,7 +9,7 @@ if (isset($_GET['cadastrar']) and $_GET['cadastrar'] == 'send') {
     $query = mysqli_query($con, $inf);
     header("location: relatorioProdutos.php?cadastrar=sucesso");
 }
-$inf2 = "SELECT * FROM produto";
+$inf2 = "SELECT * FROM produto GROUP BY categoria";
 $query = mysqli_query($con, $inf2);
 $resultado = mysqli_fetch_all($query, MYSQLI_ASSOC);
 ?>
@@ -31,26 +31,28 @@ $resultado = mysqli_fetch_all($query, MYSQLI_ASSOC);
                                 <label for="exampleFormControlInput1" class="form-label"><strong>Descrição</strong></label>
                             </div>
                             <div class="form-floating">
-                                <input type="text" class="form-control" name="categoria">
-                                <label for="exampleFormControlInput1" class="form-label"><strong>Categoria</strong></label>
-                                <!--<label for="select" class="form-label"></label>
+                                <!--<input type="text" class="form-control" name="categoria">
+                                <label for="exampleFormControlInput1" class="form-label"><strong>Categoria</strong></label>-->
+                                <label for="select" class="form-label"></label>
                                 <select class="form-select" name="categoria" required="">
-                                    <option></option>-->
-                                <?php
-                                if (isset($produtos['categoria']) and $produtos['categoria'] == 'Roupa') {
-                                    echo "
+                                    <option></option>
+                                    <?php
+                                    foreach ($resultado as $produtos) {
+                                        if (isset($produtos['categoria']) and $produtos['categoria'] == 'Roupa') {
+                                            echo "
                                                     <option value='{$produtos['categoria']}'>{$produtos['categoria']}</option>
                                                     ";
-                                }
-                                if (isset($produtos['categoria']) and $produtos['categoria'] == 'Alimento') {
-                                    echo "
+                                        }
+                                        if (isset($produtos['categoria']) and $produtos['categoria'] == 'Alimento') {
+                                            echo "
                                                     <option value='{$produtos['categoria']}'>{$produtos['categoria']}</option>
                                                     ";
-                                }
-                                ?>
-                                <div class="invalid-feedback">
-                                    Por favor, selecione um produto válido.
-                                </div>
+                                        }
+                                    }
+                                    ?>
+                                    <div class="invalid-feedback">
+                                        Por favor, selecione um produto válido.
+                                    </div>
                                 </select>
                             </div>
                             <div class="form-floating" style="margin-bottom: 5mm;">
