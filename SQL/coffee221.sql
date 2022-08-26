@@ -60,19 +60,6 @@ INSERT INTO `pessoa` (`id_pessoa`, `nome`, `email`, `telefone`, `endereco`, `pai
 
 -- --------------------------------------------------------
 
---
--- Table structure for table `produto`
---
-
-CREATE TABLE `produto` (
-  `id_produto` int(11) NOT NULL,
-  `nome_produto` int(11) NOT NULL,
-  `descricao` int(11) NOT NULL,
-  `categoria` int(11) NOT NULL,
-  `marca` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
 
 --
 -- Table structure for table `usuario`
@@ -107,12 +94,7 @@ ALTER TABLE `pessoa`
   ADD PRIMARY KEY (`id_pessoa`);
 
 --
--- Indexes for table `produto`
---
-ALTER TABLE `produto`
-  ADD PRIMARY KEY (`id_produto`);
 
---
 -- Indexes for table `usuario`
 --
 ALTER TABLE `usuario`
@@ -130,12 +112,7 @@ ALTER TABLE `pessoa`
   MODIFY `id_pessoa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
--- AUTO_INCREMENT for table `produto`
---
-ALTER TABLE `produto`
-  MODIFY `id_produto` int(11) NOT NULL AUTO_INCREMENT;
 
---
 -- AUTO_INCREMENT for table `usuario`
 --
 ALTER TABLE `usuario`

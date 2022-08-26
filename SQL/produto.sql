@@ -27,14 +27,6 @@ SET time_zone = "+00:00";
 -- Table structure for table `produto`
 --
 
-CREATE TABLE `produto` (
-  `id_produto` int(11) NOT NULL,
-  `nome_produto` varchar(250) NOT NULL,
-  `descricao` varchar(250) NOT NULL,
-  `categoria` varchar(100) NOT NULL,
-  `marca` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
 --
 -- Dumping data for table `produto`
 --

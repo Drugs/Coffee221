@@ -1,8 +1,7 @@
 <?php
-$title = "Pagina de Login";
-include 'head.php';
+$title="Login";
+include "../include/header.php";
 ?>
-
 <body>
     <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
@@ -22,18 +21,11 @@ include 'head.php';
                         <div class="form-floating mt-2">
                             <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
                             <label for="floatingPassword">Digite sua Senha</label>
+                            
                         </div>
-                        <div class="form-floating mt-2 mb-3">
-                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                            <label for="floatingPassword">Confirme sua Senha</label>
-                        </div>
-                        <div class="row">
-                            <div class=" col-6 mt-2 d-grid gap-2">
-                                <button type="submit" value='send' name='submit' class="btn btn-dark">Enviar</button>
-                            </div>
-                            <div class="col-6 mt-1 d-grid gap-2">
-                                <a class='btn btn-info' href=''>Voltar</a>
-                            </div>
+                        <div class="mt-2 d-grid gap-2">
+                        <button type="submit" value='send' name='submit' class="btn btn-outline-light">Entrar</button>
+                                <p style="color:white;">Ainda não tem uma conta?<a href="cadastro.php"> Clique aqui</p>
                         </div>
                     </form>
                 </div>
@@ -45,5 +37,5 @@ include 'head.php';
 </body>
 
 <?php
-include 'footer.php';
+include '../include/footer.php';
 ?>
