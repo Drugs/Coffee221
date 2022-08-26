@@ -24,7 +24,7 @@ include "../include/header.php";
                             
                         </div>
                         <div class="mt-2 d-grid gap-2">
-                        <button type="submit" value='send' name='submit' class="btn btn-outline-light" href="../index.php">Entrar</button>
+                        <button type="submit" value='send' name='submit' class="btn btn-outline-light" href="../home.php">Entrar</button>
                                 <p style="color:white;">Ainda não tem uma conta?<a href="cadastro.php"> Clique aqui</p>
                         </div>
                     </form>

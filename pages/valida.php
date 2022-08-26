@@ -7,7 +7,7 @@ $hj=$_POST['email'];
    if($login==$hj){
 
     if($senha==$sg){
-        header("Location:index.php");
+        header("Location:home.php");
     }else{
         header("Location:login.php?senha=erro");
     }
