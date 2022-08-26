@@ -60,7 +60,7 @@ $resultado = mysqli_fetch_all($query, MYSQLI_ASSOC);
 
                             <div class="row">
                                 <div class="col-6">
-                                    <a class="w-100 btn btn-lg btn-primary" style="margin-bottom: 5mm;" href="produto.php">Voltar</a>
+                                    <a class="w-100 btn btn-lg btn-primary" style="margin-bottom: 5mm;" href="relatorioProdutos.php">Voltar</a>
                                 </div>
                                 <div class="col-6">
                                     <button class="w-100 btn btn-lg btn-primary" style="margin-bottom: 5mm;" type="submit" value="send" name="cadastrar">Enviar</button>
