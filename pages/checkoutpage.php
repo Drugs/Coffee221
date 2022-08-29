@@ -46,12 +46,6 @@ include "../include/header.php";
                             <span class="text-muted"><strong>R$X</strong></span>
                         </li>
                     </ul>
-                    <form class="card p-2">
-                        <div class="input-group">
-                            <input type="search" class="form-control" placeholder="Cupom" name="" id="">
-                            <button type="submit" class="btn btn-secondary">Resgatar</button>
-                        </div>
-                    </form>
                 </div>
                 <div class="col-md-7 col-lg-8">
                     <h4>Endereço de cobrança
