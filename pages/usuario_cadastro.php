@@ -57,7 +57,7 @@ header("Location:../home.php");
                                 <label for="floatingPassword">Data</label>
                             </div>
                         <div class="mt-2 d-grid gap-2">
-                            <input class="btn btn-light mt-3" type="submit" value="send" name="cadastra">
+                        <button type="submit" value='send' name='cadastra' class="btn btn-outline-light" >Entrar</button>
                             <p style="color:white;">Fazer login?<a href="login.php"> Clique aqui</p>
                         </div>
                         </form>

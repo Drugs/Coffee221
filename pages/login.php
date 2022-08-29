@@ -3,18 +3,19 @@ $title="Login";
 include "../include/header.php";
 include "../include/database.php";
 session_start();
-
-if(isset($_POST['submit'])and $_POST['submit'] == 'send'){
-    $loginuse=$_POST['email'];
-    $senhauser= base64_encode($_POST['senha']);
+var_dump($_GET);
+if(isset($_GET['login'])and $_GET['login'] == 'send'){
+    $loginuse=$_GET['email'];
+    $senhauser= base64_encode($_GET['senha']);
     $consulta="Select * From `usuario` where email='{$loginuse}'";
     $query=mysqli_query($con, $consulta);
     $result= mysqli_fetch_assoc($query);
+    echo $consulta;
     if($loginuse !='' AND $senhauser !=''){
         if($senhauser==$result["senha"]){
           if($loginuse==$result["email"]){
            $_SESSION['$id_usu']=$result['id_usuario'];
-           header('Location:usuario_cd.php');
+           header('Location:../home.php');
         }else{
             echo "Login errado";
         }
@@ -47,7 +48,7 @@ if(isset($_POST['submit'])and $_POST['submit'] == 'send'){
                             
                         </div>
                         <div class="mt-2 d-grid gap-2">
-                        <button type="submit" value='send' name='submit' class="btn btn-outline-light" href="../home.php">Entrar</button>
+                        <button type="submit" value='send' name='login' class="btn btn-outline-light" href="../home.php">Entrar</button>
                                 <p style="color:white;">Ainda não tem uma conta?<a href="usuario_cadastro.php"> Clique aqui</p>
                         </div>
                     </form>
