@@ -47,7 +47,9 @@ include "../include/header.php";
                         </li>
                     </ul>
                 </div>
+                
                 <div class="col-md-7 col-lg-8">
+                    <!--
                     <h4>Endereço de cobrança
                     </h4>
                     <form class="needs-validation" action="" method="post">
@@ -137,6 +139,11 @@ include "../include/header.php";
                             <label class="form-label" for="">Salvar informações para próximas compras</label>
                         </div>
                         <hr class="my-4">
+
+                        -->
+
+
+
                         <h4 class="mb-4">Forma de Pagamento</h4>
                         <div class="my-3">
                             <div class="form-check">
