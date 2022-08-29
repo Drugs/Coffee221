@@ -1,9 +1,8 @@
 <?php
 #BY GUSTAVO
-include "../include/header.php"
+include "../include/header.php";
 ?>
-<div class="container">
-
+    <div class="container">
         <main>
             <div class="row g-5 mt-3">
                 <div class="col-md-5 col-lg-4 order-md-last">
@@ -190,11 +189,9 @@ include "../include/header.php"
                 </div>
             </div>
         </main>
-    </div>
-    
-
+    </div>  
 <?php
-include "../include/footer.php"
+include "../include/footer.php";
 ?>
 
 
