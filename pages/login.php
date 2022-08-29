@@ -1,6 +1,29 @@
 <?php
 $title="Login";
 include "../include/header.php";
+include "../include/database.php";
+session_start();
+
+if(isset($_POST['submit'])and $_POST['submit'] == 'send'){
+    $loginuse=$_POST['email'];
+    $senhauser= base64_encode($_POST['senha']);
+    $consulta="Select * From `usuario` where email='{$loginuse}'";
+    $query=mysqli_query($con, $consulta);
+    $result= mysqli_fetch_assoc($query);
+    if($loginuse !='' AND $senhauser !=''){
+        if($senhauser==$result["senha"]){
+          if($loginuse==$result["email"]){
+           $_SESSION['$id_usu']=$result['id_usuario'];
+           header('Location:usuario_cd.php');
+        }else{
+            echo "Login errado";
+        }
+        }else{
+            echo"Senha errada";
+        }
+    }
+}
+
 ?>
 <body class="bianca">
     <div class="container py-5 h-100">
@@ -15,17 +38,17 @@ include "../include/header.php";
                             <label for="floatingPassword">Digite seu Username</label>
                         </div>
                         <div class="form-floating mt-2">
-                            <input type="email" class="form-control" id="floatingPassword" placeholder="Password">
+                            <input type="email" class="form-control" id="floatingPassword" placeholder="Password"  name="email">
                             <label for="floatingPassword">Digite seu Email</label>
                         </div>
                         <div class="form-floating mt-2">
-                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password"  name="senha">
                             <label for="floatingPassword">Digite sua Senha</label>
                             
                         </div>
                         <div class="mt-2 d-grid gap-2">
                         <button type="submit" value='send' name='submit' class="btn btn-outline-light" href="../home.php">Entrar</button>
-                                <p style="color:white;">Ainda não tem uma conta?<a href="cadastro.php"> Clique aqui</p>
+                                <p style="color:white;">Ainda não tem uma conta?<a href="usuario_cadastro.php"> Clique aqui</p>
                         </div>
                     </form>
                 </div>
