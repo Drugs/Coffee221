@@ -1,6 +1,6 @@
 <?php
 #BY GUSTAVO
-include "../include/header.php"
+include "../include/header.php";
 ?>
     <div class="container">
         <main>
@@ -191,7 +191,7 @@ include "../include/header.php"
         </main>
     </div>  
 <?php
-include "../include/footer.php"
+include "../include/footer.php";
 ?>
 
 
