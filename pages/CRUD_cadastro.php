@@ -13,13 +13,10 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
 ?>
 
 <body>
-
-
-
   <div class="container">
     <div class="row">
-      <h1 style="margin-botton:1cm;margin-top:1cm;">cadastro pessoas</h1>
-      <a class="btn mb-3 btn-warning float-start" href="cd_pessoas.php"> cadastre-se</a>
+      <h1 style="margin-bottom:1cm;margin-top:1cm;">cadastro pessoas</h1>
+      <a class="btn mb-3 btn-warning float-start" href="cd_pessoas.php">cadastre-se</a>
       <div class="col-12">
         <table class="mt-3 table table-dark" style="box-shadow:10px 10px 50px  #000000,10px 10px 10px  #000000;">
           <thead class="table table-dark table- striped">
