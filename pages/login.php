@@ -4,25 +4,25 @@ $title="Login";
 include "../include/header.php";
 include "../include/database.php";
 session_start();
-var_dump($_GET);
+//var_dump($_GET);
 if(isset($_GET['login'])and $_GET['login'] == 'send'){
     $loginuse=$_GET['email'];
     $senhauser= base64_encode($_GET['senha']);
     $consulta="Select * From `usuario` where email='{$loginuse}'";
     $query=mysqli_query($con, $consulta);
     $result= mysqli_fetch_assoc($query);
-    echo $consulta;
+   //var_dump($result);
     if($loginuse !='' AND $senhauser !=''){
+        if($loginuse==$result["email"]){
         if($senhauser==$result["senha"]){
-          if($loginuse==$result["email"]){
            $_SESSION['$id_usu']=$result['id_usuario'];
            header('Location:../home.php');
         }else{
-            echo "Login errado";
+            header('Location:login.php?senha=erro');
         }
-        }else{
-            echo"Senha errada";
-        }
+         }else{
+             header('Location:login.php?login=email');
+       }
     }
 }
 
@@ -33,7 +33,18 @@ if(isset($_GET['login'])and $_GET['login'] == 'send'){
             <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                 <div class="card bg-dark " style="border-radius: 1rem;" id="card">
                     <div class="card-body p-5 text-center">
-                        <h2 style="color:white;">LOGIN</h2>
+                        <h2 style="color:white;">LOGIN </h2>
+                        <div>
+                            <?php
+                            if (isset($_GET['login']) and $_GET['login'] == 'email' ){
+                           echo '<div class="alert alert-warning" role="alert">Errou o email!</div>';
+                            }
+                            if (isset($_GET['senha']) and $_GET['senha'] == 'erro' ){
+                                echo '<div class="alert alert-warning" role="alert">Errou a senha!</div>';
+                                 }
+                            
+                            ?>
+                </div>
                     <form action="">
                         <div class="form-floating mt-3">
                             <input type="text" class="form-control" id="floatingPassword" placeholder="Password" name="email">
