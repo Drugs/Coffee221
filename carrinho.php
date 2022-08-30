@@ -24,212 +24,122 @@
 </head>
 <body>
 
-<div class="row g-5">
-      <div class="col-md-5 col-lg-4 order-md-last">
-        <h4 class="d-flex justify-content-between align-items-center mb-3">
-          <span class="text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Seu carrinho</font></font></span>
-          <span class="badge bg-primary rounded-pill"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3</font></font></span>
-        </h4>
-        <ul class="list-group mb-3">
-          <li class="list-group-item d-flex justify-content-between lh-sm">
-            <div>
-              <h6 class="my-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nome do Produto</font></font></h6>
-              <small class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Descrição breve</font></font></small>
-            </div>
-            <span class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">$ 12</font></font></span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between lh-sm">
-            <div>
-              <h6 class="my-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Segundo produto</font></font></h6>
-              <small class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Descrição breve</font></font></small>
-            </div>
-            <span class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">$ 8</font></font></span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between lh-sm">
-            <div>
-              <h6 class="my-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Terceiro item</font></font></h6>
-              <small class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Descrição breve</font></font></small>
-            </div>
-            <span class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">$ 5</font></font></span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between bg-light">
-            <div class="text-success">
-              <h6 class="my-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Código promocional</font></font></h6>
-              <small><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CÓDIGO DE EXEMPLO</font></font></small>
-            </div>
-            <span class="text-success"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">−$5</font></font></span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between">
-            <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Total (USD)</font></font></span>
-            <strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">$ 20</font></font></strong>
-          </li>
-        </ul>
+<div class="row" style="background-color:rgb(44, 44, 44);height:50px;">
+            <p></p>
 
-        <form class="card p-2">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Código promocional">
-            <button type="submit" class="btn btn-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Resgatar</font></font></button>
-          </div>
-        </form>
-      </div>
-      <div class="col-md-7 col-lg-8">
-        <h4 class="mb-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Endereço de cobrança</font></font></h4>
-        <form class="needs-validation" novalidate="">
-          <div class="row g-3">
-            <div class="col-sm-6">
-              <label for="firstName" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Primeiro nome</font></font></label>
-              <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
-              <div class="invalid-feedback">
-                Valid first name is required.
-              </div>
-            </div>
+            <header class="p-3 bg-dark text-white">
+                <div class="container">
+                    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+                                <use xlink:href="#bootstrap"></use>
+                            </svg>
+                        </a>
 
-            <div class="col-sm-6">
-              <label for="lastName" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sobrenome</font></font></label>
-              <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
-              <div class="invalid-feedback">
-                Valid last name is required.
-              </div>
-            </div>
+                        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                            <h2><i class="bi bi-cart4"></i> </h2>
 
-            <div class="col-12">
-              <label for="username" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nome de usuário</font></font></label>
-              <div class="input-group has-validation">
-                <span class="input-group-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">@</font></font></span>
-                <input type="text" class="form-control" id="username" placeholder="Nome de usuário" required="">
-              <div class="invalid-feedback">
-                  Your username is required.
+                            <li><a href="#" class="nav-link px-2 text-warning">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">SEU CARRINHO</font>
+                                    </font>
+                                </a></li>
+ 
+                            <li><a href="#" class="nav-link px-2 text-white">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Descontos</font>
+                                    </font>
+                                </a></li>
+                            <li><a href="#" class="nav-link px-2 text-white">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Comprar Novamente</font>
+                                    </font>
+                                </a></li>
+                            <li><a href="#" class="nav-link px-2 text-white">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Sobre</font>
+                                    </font>
+                                </a></li>
+      </ul>
+     
+  
+      <h3><i class="bi bi-search"></i> <h3>  <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" >  
+                            <input type= "search" class="form-control form-control-dark" placeholder="Procurar..."
+                                aria-label="Procurar">
+                        </form>
+
+
+                    </div>
                 </div>
-              </div>
-            </div>
+                
+            </header>
 
-            <div class="col-12">
-              <label for="email" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">E- mail </font></font><span class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">(opcional)</font></font></span></label>
-              <input type="email" class="form-control" id="email" placeholder="você@exemplo.com">
-              <div class="invalid-feedback">
-                Please enter a valid email address for shipping updates.
-              </div>
-            </div>
-
-            <div class="col-12">
-              <label for="address" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Endereço</font></font></label>
-              <input type="text" class="form-control" id="address" placeholder="Rua Principal 1234" required="">
-              <div class="invalid-feedback">
-                Please enter your shipping address.
-              </div>
-            </div>
-
-            <div class="col-12">
-              <label for="address2" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Endereço 2 </font></font><span class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">(Opcional)</font></font></span></label>
-              <input type="text" class="form-control" id="address2" placeholder="Apartamento ou suíte">
-            </div>
-
-            <div class="col-md-5">
-              <label for="country" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">País</font></font></label>
-              <select class="form-select" id="country" required="">
-                <option value=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Escolher...</font></font></option>
-                <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Estados Unidos</font></font></option>
-              </select>
-              <div class="invalid-feedback">
-                Please select a valid country.
-              </div>
-            </div>
-
+            <body><br>
+       
+            <div class="row">
             <div class="col-md-4">
-              <label for="state" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Estado</font></font></label>
-              <select class="form-select" id="state" required="">
-                <option value=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Escolher...</font></font></option>
-                <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Califórnia</font></font></option>
-              </select>
-              <div class="invalid-feedback">
-                Please provide a valid state.
-              </div>
+                <div class="card shadow-sm">
+                    <img src="Imagens/xicaraleit.jpeg" heigth="">
+                    <div class="card-body">
+                        <p class="card-text">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">
+                                    <h2 class="text-center">Cafeteira Delux</h2>
+                                </font>
+                                <font style="vertical-align: inherit;"><h6>Procura menos gastos de energia e maior eficiencia quando falamos de cafeteira? Então vocè achou a Cafeteira Delux COFFE'JOIN te entrega tudo isso e mais um pouco, atribuindo o processador de grãos e a cabine para capsulas de café.</h6></font>
+                            </font>
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Mais</font>
+                                    </font>
+                                </button>
+                            </div>
+                            <small class="text-muted">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">COFFE'JOIN</font>
+                                </font>
+                            </small>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <div class="col-md-3">
-              <label for="zip" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Fecho eclair</font></font></label>
-              <input type="text" class="form-control" id="zip" placeholder="" required="">
-              <div class="invalid-feedback">
-                Zip code required.
-              </div>
+            
+<div class="row">
+            <div class="col-md-4"><br>
+                <div class="card shadow-sm">
+                    <img src="Imagens/xicaraleit.jpeg" heigth="">
+                    <div class="card-body">
+                        <p class="card-text">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">
+                                    <h2 class="text-center">Cafeteira Delux</h2>
+                                </font>
+                                <font style="vertical-align: inherit;"><h6>Procura menos gastos de energia e maior eficiencia quando falamos de cafeteira? Então vocè achou a Cafeteira Delux COFFE'JOIN te entrega tudo isso e mais um pouco, atribuindo o processador de grãos e a cabine para capsulas de café.</h6></font>
+                            </font>
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Mais</font>
+                                    </font>
+                                </button>
+                            </div>
+                            <small class="text-muted">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">COFFE'JOIN</font>
+                                </font>
+                            </small>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-
-          <hr class="my-4">
-
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="same-address">
-            <label class="form-check-label" for="same-address"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">O endereço de entrega é o mesmo que meu endereço de cobrança</font></font></label>
-          </div>
-
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="save-info">
-            <label class="form-check-label" for="save-info"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Salve esta informação para a próxima vez</font></font></label>
-          </div>
-
-          <hr class="my-4">
-
-          <h4 class="mb-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Pagamento</font></font></h4>
-
-          <div class="my-3">
-            <div class="form-check">
-              <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked="" required="">
-              <label class="form-check-label" for="credit"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cartão de crédito</font></font></label>
-            </div>
-            <div class="form-check">
-              <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required="">
-              <label class="form-check-label" for="debit"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cartão de débito</font></font></label>
-            </div>
-            <div class="form-check">
-              <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required="">
-              <label class="form-check-label" for="paypal"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PayPal</font></font></label>
-            </div>
-          </div>
-
-          <div class="row gy-3">
-            <div class="col-md-6">
-              <label for="cc-name" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nome no cartão</font></font></label>
-              <input type="text" class="form-control" id="cc-name" placeholder="" required="">
-              <small class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nome completo conforme exibido no cartão</font></font></small>
-              <div class="invalid-feedback">
-                Name on card is required
-              </div>
-            </div>
-
-            <div class="col-md-6">
-              <label for="cc-number" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Número do cartão de crédito</font></font></label>
-              <input type="text" class="form-control" id="cc-number" placeholder="" required="">
-              <div class="invalid-feedback">
-                Credit card number is required
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <label for="cc-expiration" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Expiração</font></font></label>
-              <input type="text" class="form-control" id="cc-expiration" placeholder="" required="">
-              <div class="invalid-feedback">
-                Expiration date required
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <label for="cc-cvv" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CVV</font></font></label>
-              <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
-              <div class="invalid-feedback">
-                Security code required
-              </div>
-            </div>
-          </div>
-
-          <hr class="my-4">
-
-          <button class="w-100 btn btn-primary btn-lg" type="submit"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Continuar para finalizar a compra</font></font></button>
-        </form>
-      </div>
     </div>
-
-
-
+    
+        
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
         integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
