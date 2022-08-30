@@ -11,7 +11,8 @@ if(isset($_GET['login'])and $_GET['login'] == 'send'){
     $consulta="Select * From `usuario` where email='{$loginuse}'";
     $query=mysqli_query($con, $consulta);
     $result= mysqli_fetch_assoc($query);
-  //  echo $consulta;
+   var_dump($result) ;
+   die();
     if($loginuse !='' AND $senhauser !=''){
         if($loginuse==$result["email"]){
         if($senhauser==$result["senha"]){
@@ -33,7 +34,7 @@ if(isset($_GET['login'])and $_GET['login'] == 'send'){
             <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                 <div class="card bg-dark " style="border-radius: 1rem;" id="card">
                     <div class="card-body p-5 text-center">
-                        <h2 style="color:white;">LOGIN</h2>
+                        <h2 style="color:white;">LOGIN Careca</h2>
                         <div>
                             <?php
                             if (isset($_GET['login']) and $_GET['login'] == 'email' ){
