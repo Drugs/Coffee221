@@ -1,15 +1,15 @@
 <?php
 $title = "CRUD - Produtos";
 include "../include/header.php";
-include '../include/database_projeto.php';
+include '../include/database.php';
 
 if (isset($_GET['cadastrar']) and $_GET['cadastrar'] == 'send') {
     $inf = "INSERT INTO produto (`nome_produto`,`descricao`,`categoria`,`marca`)
     VALUES ('{$_GET['nome_produto']}','{$_GET['descricao']}','{$_GET['categoria']}','{$_GET['marca']}')";
     $query = mysqli_query($con, $inf);
-    header("location: produto.php?cadastrar=sucesso");
+    header("location: relatorioProdutos.php?cadastrar=sucesso");
 }
-$inf2 = "SELECT * FROM produto";
+$inf2 = "SELECT * FROM produto GROUP BY categoria";
 $query = mysqli_query($con, $inf2);
 $resultado = mysqli_fetch_all($query, MYSQLI_ASSOC);
 ?>
@@ -31,26 +31,28 @@ $resultado = mysqli_fetch_all($query, MYSQLI_ASSOC);
                                 <label for="exampleFormControlInput1" class="form-label"><strong>Descrição</strong></label>
                             </div>
                             <div class="form-floating">
-                                <input type="text" class="form-control" name="categoria">
-                                <label for="exampleFormControlInput1" class="form-label"><strong>Categoria</strong></label>
-                                <!--<label for="select" class="form-label"></label>
+                                <!--<input type="text" class="form-control" name="categoria">
+                                <label for="exampleFormControlInput1" class="form-label"><strong>Categoria</strong></label>-->
+                                <label for="select" class="form-label"></label>
                                 <select class="form-select" name="categoria" required="">
-                                    <option></option>-->
-                                <?php
-                                if (isset($produtos['categoria']) and $produtos['categoria'] == 'Roupa') {
-                                    echo "
+                                    <option></option>
+                                    <?php
+                                    foreach ($resultado as $produtos) {
+                                        if (isset($produtos['categoria']) and $produtos['categoria'] == 'Roupa') {
+                                            echo "
                                                     <option value='{$produtos['categoria']}'>{$produtos['categoria']}</option>
                                                     ";
-                                }
-                                if (isset($produtos['categoria']) and $produtos['categoria'] == 'Alimento') {
-                                    echo "
+                                        }
+                                        if (isset($produtos['categoria']) and $produtos['categoria'] == 'Alimento') {
+                                            echo "
                                                     <option value='{$produtos['categoria']}'>{$produtos['categoria']}</option>
                                                     ";
-                                }
-                                ?>
-                                <div class="invalid-feedback">
-                                    Por favor, selecione um produto válido.
-                                </div>
+                                        }
+                                    }
+                                    ?>
+                                    <div class="invalid-feedback">
+                                        Por favor, selecione um produto válido.
+                                    </div>
                                 </select>
                             </div>
                             <div class="form-floating" style="margin-bottom: 5mm;">
@@ -60,7 +62,7 @@ $resultado = mysqli_fetch_all($query, MYSQLI_ASSOC);
 
                             <div class="row">
                                 <div class="col-6">
-                                    <a class="w-100 btn btn-lg btn-primary" style="margin-bottom: 5mm;" href="produto.php">Voltar</a>
+                                    <a class="w-100 btn btn-lg btn-primary" style="margin-bottom: 5mm;" href="relatorioProdutos.php">Voltar</a>
                                 </div>
                                 <div class="col-6">
                                     <button class="w-100 btn btn-lg btn-primary" style="margin-bottom: 5mm;" type="submit" value="send" name="cadastrar">Enviar</button>

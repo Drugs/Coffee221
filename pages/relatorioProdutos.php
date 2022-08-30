@@ -1,8 +1,8 @@
 <?php
 $title = "Tabela - Produtos";
 include "../include/header.php";
-include '../include/database_projeto.php';
-# http://localhost/Coffee221/CRUD%20-%20Produtos/produto.php
+include '../include/database.php';
+# http://localhost/coffee221/pages/relatorioProdutos.php
 $pesquisa = '';
 if (isset($_GET["submit"]) and $_GET["submit"] == "buscar") {
     $pesquisa = $_GET['buscar'];
@@ -76,7 +76,7 @@ echo '</pre>';*/
                         ?>
                     </div>
                 </div>
-                <table class="table table-dark table-hover">
+                <table class="table table-dark table-hover" class="shadow-lg p-3 mb-5 bg-body rounded">
                     <thead class="table table-dark table-striped">
                         <tr>
                             <th scope="col">ID</th>

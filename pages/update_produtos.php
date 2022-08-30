@@ -1,14 +1,15 @@
 <?php
 $title = "CRUD - Produtos";
 include "../include/header.php";
-include '../include/database_projeto.php';
+include '../include/database.php';
+
 $id = $_GET['var'];
 
 if (isset($_GET['submit']) and $_GET['submit'] = 'send') {
     $inf = "UPDATE produto SET nome_produto = '{$_GET["nome_produto"]}', descricao = '{$_GET["descricao"]}', 
     categoria = '{$_GET["categoria"]}', marca = '{$_GET['marca']}' WHERE id_produto = {$id}";
     $query = mysqli_query($con, $inf);
-    header("location: produto.php?submit=sucesso");
+    header("location: relatorioProdutos.php?submit=sucesso");
 }
 $inf2 = "SELECT * FROM produto WHERE id_produto = {$id}";
 $query = mysqli_query($con, $inf2);
@@ -42,7 +43,7 @@ $result = mysqli_fetch_assoc($query);
                             <input type='hidden' name='var' value='<?php echo $_GET['var']; ?>'>
                             <div class='row'>
                                 <div class='col-6'>
-                                    <a class='w-100 btn btn-lg btn-primary' href='produto.php'>Voltar</a>
+                                    <a class='w-100 btn btn-lg btn-primary' href='relatorioProdutos.php'>Voltar</a>
                                 </div>
                                 <div class='col-6'>
                                     <button class='w-100 btn btn-lg btn-primary' type='submit' value='send' name='submit'>Enviar</button>

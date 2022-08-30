@@ -1,7 +1,9 @@
 <?php
-include'header.php';
+//autor:Ana Clara
+//arquivo com conexão com o BD
+include'../include/header.php';
 $title="usuario update";
-include'datebase.php';
+include'../include/database.php';
 #echo'<pre>';
 #var_dump($_GET);
 #echo'</pre>';
@@ -98,5 +100,5 @@ $result=mysqli_fetch_assoc($query);
 
 
 <?php
-include'footer.php';
+include'../include/footer.php';
 ?>

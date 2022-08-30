@@ -1,7 +1,9 @@
 <?php
-include'header.php';
+//autor:Ana Clara
+//arquivo com conexão com o BD
+include'../include/header.php';
 $title="delete";
-include'datebase.php';
+include'../include/database.php';
 $id=$_GET['var'];
 
 if(isset($_GET['delete']) and $_GET['delete']==1){
@@ -26,5 +28,5 @@ if(isset($_GET['delete']) and $_GET['delete']==1){
 </div>
 
 <?php
-include'footer.php';
+include'../include/footer.php';
 ?>

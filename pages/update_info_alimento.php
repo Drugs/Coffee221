@@ -1,7 +1,7 @@
 <?php
 $title = "Atualizar - Alimento";
 include "../include/header.php";
-include '../include/database_projeto.php';
+include '../include/database.php';
 $id = $_GET['var'];
 
 if (isset($_GET['submit']) and $_GET['submit'] = 'send') {

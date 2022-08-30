@@ -1,7 +1,8 @@
 <?php
 $title = "DELETAR - Alimento";
 include "../include/header.php";
-include '../include/database_projeto.php';
+include '../include/database.php';
+
 $id = $_GET['var'];
 
 if (isset($_GET['del']) and $_GET['del'] == 1) {

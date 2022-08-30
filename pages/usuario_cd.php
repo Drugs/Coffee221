@@ -1,7 +1,9 @@
 <?php
-include'header.php';
+//autor:Ana Clara
+//arquivo com conexão com o BD
+include'../include/header.php';
 $title="usuario relatorio";
-include'datebase.php';
+include'../include/database.php';
 $pesquisa = '';
 
 if(isset($_GET['pesqui']) and $_GET['pesqui'] == 'busca'){
@@ -35,7 +37,7 @@ echo $consulta;
             <h1  style="margin-botton:1cm;margin-top:1cm;">relatorio usuario </h1>
       <a class="btn mb-3 btn-warning float-start" href="cadastro_usuario.php">cadastre-se</a>
       <div class="col-12">
-               <table class="mt-3 table table-dark" style="box-shadow:10px 10px 50px #350068,10px 10px 10px #9644C2;">
+               <table class="mt-3 table table-dark" style="box-shadow:10px 10px 50px  #000000,10px 10px 10px  #000000;">
                 <thead class="table table-dark table-striped">
                 <tr>
                 <th scope ="col">#</th>  
@@ -82,5 +84,5 @@ echo $consulta;
    </div>
 
 <?php
-include'footer.php';
+include'../include/footer.php';
 ?>
