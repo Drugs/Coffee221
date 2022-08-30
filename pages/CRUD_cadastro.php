@@ -1,7 +1,9 @@
 <?php
-include 'header.php';
+//autor:Ana Clara
+//arquivo com conexão com o BD
+include'../include/header.php';
 $title = "relatorio";
-include 'datebase.php';
+include'../include/database.php';
 $consulta = "select * from pessoa";
 $query = mysqli_query($con, $consulta);
 $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
@@ -19,7 +21,7 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
       <h1 style="margin-botton:1cm;margin-top:1cm;">cadastro pessoas</h1>
       <a class="btn mb-3 btn-warning float-start" href="cd_pessoas.php"> cadastre-se</a>
       <div class="col-12">
-        <table class="mt-3 table table-dark" style="box-shadow:10px 10px 50px #350068,10px 10px 10px #9644C2;">
+        <table class="mt-3 table table-dark" style="box-shadow:10px 10px 50px  #000000,10px 10px 10px  #000000;">
           <thead class="table table-dark table- striped">
             <tr>
               <th scope="col">#</th>
@@ -67,5 +69,5 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
   </div>
 
   <?php
-  include 'footer.php';
+  include'../include/footer.php';
   ?>

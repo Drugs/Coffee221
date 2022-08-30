@@ -1,7 +1,9 @@
 <?php
-include'header.php';
+//autor:Ana Clara
+//arquivo com conexão com o BD
+include'../include/header.php';
 $title="relatorio";
-include'datebase.php';
+include'../include/database.php';
 $id= $_GET['var'];
  #echo'<pre>';
 #var_dump($result);
@@ -72,5 +74,5 @@ $result = mysqli_fetch_assoc($query);
         </form>
 
 <?php
-include'footer.php';
+include'../include/footer.php';
 ?>
