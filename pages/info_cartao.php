@@ -38,7 +38,7 @@ $tradu = mysqli_fetch_all($query, MYSQLI_ASSOC);
                         </div>
                     </form>
                     <div class="col-2">
-                        <!--<a class="btn mb-3 btn-success float-start" href="cadastro_produtos.php">Cadastrar</a>-->
+                        <a class="btn mb-3 btn-success float-start" href="info_cadastro_cartao.php">Cadastrar</a>
                     </div>
                     <div class="col-4">
                         <!--<a class="btn mb-3 btn-success float-start" href="info_produto.php">Acessar informações dos produtos</a>-->
