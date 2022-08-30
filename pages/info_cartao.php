@@ -4,9 +4,10 @@ $title = "Informações - cartão";
 include "../include/database.php";
 include "../include/header.php";
 
-$inf = "SELECT * FROM cartoes JOIN pessoa ON id_pessoa = fk_id_cartao";
+$inf = "SELECT * FROM cartoes JOIN pessoa ON id_pessoa = fk_id_pessoa";
 $query = mysqli_query($con, $inf);
 $tradu = mysqli_fetch_all($query, MYSQLI_ASSOC);
+#var_dump($tradu);
 ?>
 
 <body class="tabela">
@@ -14,7 +15,7 @@ $tradu = mysqli_fetch_all($query, MYSQLI_ASSOC);
         <div class="row">
             <div class="col-12">
                 <div class="row">
-                    <h1 style="margin-bottom: 1cm; margin-top: 1cm;" class="text-center">Tabela produtos</h1>
+                    <h1 style="margin-bottom: 1cm; margin-top: 1cm;" class="text-center">Tabela cartões</h1>
                     <form action="">
                         <div class="col-12">
                             <div class="row">
@@ -75,6 +76,7 @@ $tradu = mysqli_fetch_all($query, MYSQLI_ASSOC);
                             <th scope="col">Validade</th>
                             <th scope="col">CVV</th>
                             <th scope="col">Número do cartão</th>
+                            <th scope="col">ID usuário</th>
                             <th scope="col">Atualizar</th>
                             <th scope="col">Deletar</th>
                         </tr>
@@ -88,8 +90,9 @@ $tradu = mysqli_fetch_all($query, MYSQLI_ASSOC);
                             <td>{$dados['validade']}</td>
                             <td>{$dados['cvv']}</td>
                             <td>{$dados['numero']}</td>
-                            <td><a class='btn btn-warning' href='update_produtos.php?var={$dados['id_info_cartao']}'>Atualizar</a></td>
-                            <td><a class='btn btn-danger' href='deletar_produtos.php?var={$dados['id_info_cartao']}'>Deletar</a></td>
+                            <td>{$dados['id_pessoa']}</td>
+                            <td><a class='btn btn-warning' href='update_info_cartao.php?var={$dados['id_info_cartao']}'>Atualizar</a></td>
+                            <td><a class='btn btn-danger' href='deletar_info_cartao.php?var={$dados['id_info_cartao']}'>Deletar</a></td>
                         </tr>";
                         }
                         ?>
