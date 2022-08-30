@@ -1,4 +1,5 @@
 <?php
+//autor:Ana Clara
 include'../include/header.php'
 $id = $_GET['var'];
 ?>

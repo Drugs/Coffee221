@@ -74,17 +74,17 @@
                         <div class="text-end">
                             <button type="button" class="btn btn-outline-light me-2">
                                 <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">Conecte-se</font>
+                                    <font style="vertical-align: inherit;">Login</font>
                                 </font>
                             </button>
                             <button type="button" class="btn btn-warning">
                                 <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">Inscrever-se</font>
+                                    <font style="vertical-align: inherit;">Carrinho</font>
                                 </font>
                             </button>
                         </div>
                     </div>
-                </div>
+                </div><br>
                 
             </header>
   
@@ -117,6 +117,7 @@
 
 
 <div class="container">
+    
             <div class="row justify-content-evenly">
         <div class="col-md-4"><br>
                 <div class="card shadow-sm">
