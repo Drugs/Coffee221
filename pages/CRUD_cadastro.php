@@ -1,9 +1,9 @@
 <?php
 //autor:Ana Clara
 //arquivo com conexão com o BD
-include'../include/header.php';
+include '../include/header.php';
 $title = "relatorio";
-include'../include/database.php';
+include '../include/database.php';
 $consulta = "select * from pessoa";
 $query = mysqli_query($con, $consulta);
 $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
@@ -25,7 +25,6 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
               <th scope="col">Nome</th>
               <th scope="col">Email</th>
               <th scope="col">Telefone</th>
-              <th scope="col">Endereço</th>
               <th scope="col">Pais</th>
               <th scope="col">Atualizar</th>
               <th scope="col">Deletar</th>
@@ -46,7 +45,6 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
      <td>{$pessoa['nome']}</td>
      <td>{$pessoa['email']}</td>
      <td>{$pessoa['telefone']}</td>
-     <td>{$pessoa['endereco']}</td>
      <td>{$pessoa['pais']}</td>
 
      <td><a class='btn btn-warning' href='atualizar_cd.php?var={$pessoa['id_pessoa']}'>Atualizar</a> 
@@ -66,5 +64,5 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
   </div>
 
   <?php
-  include'../include/footer.php';
+  include '../include/footer.php';
   ?>
