@@ -77,62 +77,57 @@
             <body><br>
        
             <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-3"><br>
                 <div class="card shadow-sm">
-                    <img src="Imagens/xicaraleit.jpeg" heigth="">
-                    <div class="card-body">
-                        <p class="card-text">
+                <p class="card-text">
                             <font style="vertical-align: inherit;">
                                 <font style="vertical-align: inherit;">
+                                <div class="col-6">
                                     <h2 class="text-center">Cafeteira Delux</h2>
                                 </font>
-                                <font style="vertical-align: inherit;"><h6>Procura menos gastos de energia e maior eficiencia quando falamos de cafeteira? Então vocè achou a Cafeteira Delux COFFE'JOIN te entrega tudo isso e mais um pouco, atribuindo o processador de grãos e a cabine para capsulas de café.</h6></font>
+                                <font style="vertical-align: inherit;"><h6>Procura menos gastos de energia e maior eficiencia quando falamos de cafeteira? Então vocè achou a Cafeteira Delux COFFE'JOIN...</h6></font>
                             </font>
+    </div>
                         </p>
+                       
+                    <img src="Imagens/xicaraleit.jpeg"  style="height:200px;">
+  
+                    <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">
+                            <button type="button" class="btn btn-sm btn-outline-primary"
                                     <font style="vertical-align: inherit;">
-                                        <font style="vertical-align: inherit;">Mais</font>
+                                        <font style="vertical-align: inherit;">R$12,00</font>
                                     </font>
                                 </button>
                             </div>
-                            <small class="text-muted">
-                                <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">COFFE'JOIN</font>
-                                </font>
-                            </small>
+    
                         </div>
                     </div>
                 </div>
             </div>
             
-<div class="row">
             <div class="col-md-4"><br>
                 <div class="card shadow-sm">
-                    <img src="Imagens/xicaraleit.jpeg" heigth="">
-                    <div class="card-body">
-                        <p class="card-text">
+                <p class="card-text">
                             <font style="vertical-align: inherit;">
                                 <font style="vertical-align: inherit;">
                                     <h2 class="text-center">Cafeteira Delux</h2>
                                 </font>
-                                <font style="vertical-align: inherit;"><h6>Procura menos gastos de energia e maior eficiencia quando falamos de cafeteira? Então vocè achou a Cafeteira Delux COFFE'JOIN te entrega tudo isso e mais um pouco, atribuindo o processador de grãos e a cabine para capsulas de café.</h6></font>
+                                <font style="vertical-align: inherit;"><h6>Procura menos gastos de energia e maior eficiencia quando falamos de cafeteira? Então vocè achou a Cafeteira Delux COFFE'JOIN...</h6></font>
                             </font>
                         </p>
+                    <img src="Imagens/xicaraleit.jpeg" heigth="">
+                    <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">
+                                <button type="button" class="btn btn-sm btn-outline-primary"
                                     <font style="vertical-align: inherit;">
-                                        <font style="vertical-align: inherit;">Mais</font>
+                                        <font style="vertical-align: inherit;">R$12,00</font>
                                     </font>
                                 </button>
                             </div>
-                            <small class="text-muted">
-                                <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">COFFE'JOIN</font>
-                                </font>
-                            </small>
+    
                         </div>
                     </div>
                 </div>
