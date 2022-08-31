@@ -26,7 +26,6 @@ if(isset($_GET['login'])and $_GET['login'] == 'send'){
        }
     }
 }
-
 ?>
 <body class="bianca">
     <div class="container py-5 h-100">

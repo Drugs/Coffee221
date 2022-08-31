@@ -69,13 +69,24 @@ include '../include/header.php';
                             <input type="search" class="form-control form-control-dark" placeholder="Procurar..."
                                 aria-label="Procurar">
                         </form>
+                         
+                             if(isset($_SESSION['id_usuario'] != '' and $_SESSION['id_usuario'])){
+                            <div class="text-end">
+                            <button type="button" class="btn btn-outline-light me-2">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Sair</font>
+                                </font>
+                            </button>
 
-                        <div class="text-end">
+                        }else{
+                            <div class="text-end">
                             <button type="button" class="btn btn-outline-light me-2">
                                 <font style="vertical-align: inherit;">
                                     <font style="vertical-align: inherit;">Login</font>
                                 </font>
                             </button>
+                        }
+                    
                             <button type="button" class="btn btn-warning">
                                 <font style="vertical-align: inherit;">
                                     <font style="vertical-align: inherit;">Carrinho</font>
