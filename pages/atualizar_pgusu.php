@@ -1,4 +1,5 @@
 <?php
+session_start();
 //autor:Ana Clara
 include'../include/header.php';
 include'../include/database.php';
@@ -6,7 +7,7 @@ $title="Atualizar pagina usuário";
 #echo'<pre>';
 #var_dump($_GET);
 #echo'</pre>';
-$id_usu=$_GET['var'];
+$id_usu= $result['id_usuario'];
 if(isset($_GET['cadastro']) and $_GET['cadastro'] == 'update'){
 $cripton=base64_encode($_GET['senha']);
 
@@ -80,7 +81,7 @@ $result=mysqli_fetch_assoc($query);
                                 <input type="date" class="form-control" name='data'value="<?php echo $result['data'];?>">
                                 <label for="exampleFormControlTextarea1" class="form-label"><strong>data</strong></label>
 
-                                <input type="hidden" name="var" value="<?=$_GET['var']?>" />
+                                <input type="hidden" name="var" value="<?=$_GET['id_usuario']?>" />
                             </div>
                                 
                            

@@ -16,7 +16,7 @@ $consulta = "UPDATE pessoa SET nome = '{$_GET['nome']}', telefone = '{$_GET['tel
 $query=mysqli_query($con, $consulta);
   if($query){
   echo"sucesso!!";
-    header("Location:CRUD_cadastro.php");
+    header("Location:relatorio_pessoa.php");
   }else{
     echo"Fracasso";
 
@@ -61,7 +61,7 @@ $result = mysqli_fetch_assoc($query);
                             </div>
                             <div class="row">
                                 <div class="col-6">
-                                    <a class="w-100 btn btn-lg btn-secondary" href="CRUD_cadastro.php">Voltar</a>
+                                    <a class="w-100 btn btn-lg btn-secondary" href="relatorio_pessoa.php">Voltar</a>
                          </div>
                             <div class="col-6">
                                 <button type="submit" name='submit' value='send' class="w-100 btn btn-lg btn-primary">Enviar</button>
