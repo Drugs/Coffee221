@@ -1,5 +1,6 @@
 <?php
-$title = "CRUD - Informações dos produtos";
+# BY - JONAS
+$title = "Informações - Produtos";
 include "../include/header.php";
 include '../include/database.php';
 $pesquisa = '';
