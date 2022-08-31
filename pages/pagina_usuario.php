@@ -84,7 +84,7 @@ $id_usu= $result['id_usuario'];
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-primary" href="atualizar_pgusu.php">atualizar</button>
+                  <button type="button"  onclick="document.location= 'atualizar_pgusu.php '" class="btn btn-sm btn-outline-primary" >atualizar</button>
                 </div>
                 <small class="text-muted">9 mins</small>
               </div>
