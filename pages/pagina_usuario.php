@@ -6,8 +6,8 @@ $id_usu= $result['id_usuario'];
 ?>
 <body>
 
-<div class='container'>
-  <div class='row'>
+
+<div class='row'>
 
   <div class='col-12'>
   <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
@@ -24,7 +24,7 @@ $id_usu= $result['id_usuario'];
   </header>
 
 
-<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse show" style="">
+ <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse show" style="">
       <div class="position-sticky pt-3">
         <ul class="nav flex-column">
           <li class="nav-item">
@@ -73,13 +73,13 @@ $id_usu= $result['id_usuario'];
             </a>
           </li>
         </ul>
+  </nav>                 
 </div>
-  </div>
-</nav>
 
-<div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
+<div> 
+ <main class="col-md-9 ms-sm-auto col-lg-5 px-md-6">
+      <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="50%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Foto de usuário</text></svg>
             <div class="card-body">
               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
               <div class="d-flex justify-content-between align-items-center">
@@ -90,8 +90,12 @@ $id_usu= $result['id_usuario'];
                 <small class="text-muted">9 mins</small>
               </div>
             </div>
-          </div>
-
+        </div>
+  </main>  
+</div> 
+ 
 <?php 
-include'../include/footer.php'
+include'../include/footer.php';
 ?>
+
+       
