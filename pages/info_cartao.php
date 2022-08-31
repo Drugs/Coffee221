@@ -46,7 +46,7 @@ $tradu = mysqli_fetch_all($query, MYSQLI_ASSOC);
                     </div>
                     <div class="col-6">
                         <?php
-                        /*if (isset($_GET['del']) and $_GET['del'] == 'sucesso') {
+                        if (isset($_GET['del']) and $_GET['del'] == 'sucesso') {
                             echo '<div class="alert alert-dark" style="padding-top: 5px;
                                     padding-bottom: 5px; margin-bottom: 1mm;" role="alert">
                                     <strong>Os dados foram deletados com sucesso!</strong>
@@ -65,7 +65,7 @@ $tradu = mysqli_fetch_all($query, MYSQLI_ASSOC);
                                     </div>';
                         }
                         #echo var_dump((isset($_GET["submit == sucesso"])));
-                        */ ?>
+                        ?>
                     </div>
                 </div>
                 <table class="table table-dark table-hover" class="shadow-lg p-3 mb-5 bg-body rounded">

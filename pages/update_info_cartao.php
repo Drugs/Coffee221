@@ -1,4 +1,5 @@
 <?php
+# BY - JONAS
 $title = "Atualizar - Cartão";
 include "../include/header.php";
 include '../include/database.php';
@@ -8,7 +9,7 @@ if (isset($_GET['submit']) and $_GET['submit'] == 'send') {
     $inf = "UPDATE cartoes SET nome_cartao = '{$_GET['nome_cartao']}', validade = '{$_GET['validade']}',
     cvv = '{$_GET['cvv']}', numero = '{$_GET['numero']}' WHERE id_info_cartao = {$id}";
     $query = mysqli_query($con, $inf);
-    #header("location: info_cartao.php?submit=sucesso");
+    header("location: info_cartao.php?submit=sucesso");
     echo $inf;
 }
 $inf2 = "SELECT * FROM cartoes JOIN pessoa ON id_pessoa = fk_id_pessoa
