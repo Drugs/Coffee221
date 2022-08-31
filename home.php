@@ -3,9 +3,10 @@
 
 <head>
     <title>The COFFE'JOIN</title>
-    <?php
-include '../include/header.php';
-?>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css">
+    
     <style>
         .feature-icon {
             display: inline-flex;
@@ -69,13 +70,24 @@ include '../include/header.php';
                             <input type="search" class="form-control form-control-dark" placeholder="Procurar..."
                                 aria-label="Procurar">
                         </form>
+                         
+                             if(isset($_SESSION['id_usuario'] != '' and $_SESSION['id_usuario'])){
+                            <div class="text-end">
+                            <button type="button" class="btn btn-outline-light me-2">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Sair</font>
+                                </font>
+                            </button>
 
-                        <div class="text-end">
+                        }else{
+                            <div class="text-end">
                             <button type="button" class="btn btn-outline-light me-2">
                                 <font style="vertical-align: inherit;">
                                     <font style="vertical-align: inherit;">Login</font>
                                 </font>
                             </button>
+                        }
+                    
                             <button type="button" class="btn btn-warning">
                                 <font style="vertical-align: inherit;">
                                     <font style="vertical-align: inherit;">Carrinho</font>
@@ -478,9 +490,12 @@ include '../include/header.php';
 
 
 
- <?php
-include '../include/footer.php';
-?>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
