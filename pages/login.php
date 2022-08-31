@@ -15,7 +15,8 @@ if(isset($_GET['login'])and $_GET['login'] == 'send'){
     if($loginuse !='' AND $senhauser !=''){
         if($loginuse==$result["email"]){
         if($senhauser==$result["senha"]){
-           $_SESSION['$id_usu']=$result['id_usuario'];
+           $_SESSION['id_usu']=$result['id_usuario'];
+           $_SESSION['id_pessoa']=$result['fk_id_pessoa'];
            header('Location:../home.php');
         }else{
             header('Location:login.php?senha=erro');
@@ -45,7 +46,7 @@ if(isset($_GET['login'])and $_GET['login'] == 'send'){
                             
                             ?>
                 </div>
-                    <form action="">
+                    <form action="home.php">
                         <div class="form-floating mt-3">
                             <input type="text" class="form-control" id="floatingPassword" placeholder="Password" name="email">
                             <label for="floatingPassword">Digite seu Username</label>

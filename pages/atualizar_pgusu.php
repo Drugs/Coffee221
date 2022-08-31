@@ -1,5 +1,6 @@
 <?php
 session_start();
+var_dump ($_SESSION);
 //autor:Ana Clara
 include'../include/header.php';
 include'../include/database.php';
@@ -8,6 +9,7 @@ $title="Atualizar pagina usuário";
 #var_dump($_GET);
 #echo'</pre>';
 $id_usu= $result['id_usuario'];
+
 if(isset($_GET['cadastro']) and $_GET['cadastro'] == 'update'){
 $cripton=base64_encode($_GET['senha']);
 
