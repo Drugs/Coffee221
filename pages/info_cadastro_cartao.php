@@ -10,7 +10,7 @@ if (isset($_GET['cadastrar']) and $_GET['cadastrar'] == 'send') {
     $query = mysqli_query($con, $inf);
     #header("location: info_cartao.php");
 }
-echo $inf;
+#echo $inf;
 $inf2 = "SELECT * FROM pessoa";
 $query = mysqli_query($con, $inf2);
 $resultado = mysqli_fetch_all($query, MYSQLI_ASSOC);
