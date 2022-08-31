@@ -1,5 +1,5 @@
 <?php
-#
+# BY - JONAS
 $title = "Cadastro - Cartão";
 include "../include/header.php";
 include '../include/database.php';
@@ -8,7 +8,7 @@ if (isset($_GET['cadastrar']) and $_GET['cadastrar'] == 'send') {
     $inf = "INSERT INTO cartoes (`nome_cartao`,`validade`,`cvv`,`numero`,`fk_id_pessoa`)
     VALUES ('{$_GET['nome_cartao']}','{$_GET['validade']}','{$_GET['cvv']}','{$_GET['numero']}','1')"; # Substituir o valor pelo ID da sessão
     $query = mysqli_query($con, $inf);
-    #header("location: info_cartao.php");
+    header("location: info_cartao.php?cadastrar=sucesso");
 }
 #echo $inf;
 $inf2 = "SELECT * FROM pessoa";
