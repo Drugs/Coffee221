@@ -1,8 +1,16 @@
 <?php
 session_start();
 //autor:Ana Clara
+$title="pagina usuário-".$_SESSION['id_usu'];
+include'../include/database.php';
+$consulta="SELECT * FROM pessoa 
+join usuario on usuario.fk_id_pessoa = id_pessoa 
+WHERE id_usuario={$_SESSION['id_usu']}";
+$query=mysqli_query($con, $consulta);
+$pessoa=mysqli_fetch_assoc($query);
+$id_usu=1;
+ var_dump($pessoa['nome'] );
 include'../include/header.php';
-$id_usu= $result['id_usuario'];
 ?>
 <body>
 

@@ -125,73 +125,64 @@ include '../include/header.php';
 
 <div class="container">
     
-<?php
-
-
-
-?>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-5">
                 <h2 style="color: blue;">
                     <p>Itens</p>
                 </h2>
-               <img src="../Imagens/xicaraleit.jpeg"  style="height:90px;">
+                <img src="../Imagens/xicaraleit.jpeg"  style="height:70px;">
                Café Caramelo e Baunilha (Nova Caps...
+            
+           
             </div>
-            <br>
-            <br>
+            
 
-            <div class="col-md-6">
-                <div class="row">
-                    <div class="col-md-6">
+            
+                
+                    <div class="col">
                         <h2 style="color:blueviolet;">
-                            <p>Experiência</p>
+                            <p>Quantidade</p>
                         </h2>
-                        Experiência profissional em atendimento ao cliente, trabalhei sendo Menor Aprendiz no ano de
-                        2021 ate
-                        2022 nas Lojas Americanas.<br>
+                       <form>
+                        
+                       </form>
                     </div>
 
-                    <div class="col-md-6">
-                        <h2>
-                            <p>Experiência 2</p>
+                    <div class="col-md-2">
+            
+                        <h2 style="color:blueviolet;">
+                            <p>Preço</p>
                         </h2>
-                        Experiência profissional em atendimento ao cliente, trabalhei sendo Menor Aprendiz no
-                        ano de 2021 ate
-                        2022 nas Lojas Americanas.
+                       
                     </div>
-                </div>
-                <h2>
-            </div>
 
-            <br>
-
-            <div class="col-md-6">
-                <h2>
-                    <p>Formação Acadêmica</p>
-                </h2>
-                2022- Ensino Médio, Colegio Estadual Praia Grande (cursando). <br>
-                2022- Coletivo Online (Preparação para o Mercado de Trabalho), Instituto Coca-Cola Brasil. (completo)
-                <br>
-                2021 - 2022 Aprendizagem Profissional de Qualificação e Serviços de Supermercados, Instituição Senac.
-                (completo)
-                <br>
-                2020- Empreendedorismo com Coach Jovens+. (completo) <br>
-                2017- Os codigos da Inteligência 1 e 2, EI (Escola da Inteligência de Augusto Curry). (completo) <br>
-                <br>
-            </div>
-            <br>
-
-            <table class= "table">
-    <thead>
-<tr>
-    <th scop="col">Itens</th>
-    <th scop="col">Quantidade</th>
-    <th scop="col">Preço</th>
-    <th scop="col">Deletar</th>
+                    <div class="col-md-2">
+                        <h2  style="color: red;">
+                            <p>Deletar</p>
+                        </h2>
+                    </div>
     
-</tr>
-</thead>
+
+            
+            
+
+              
+
+    
+               
+               
+        
+
+           
+            <div class="col-md-6">
+                <h2 style="color: blue;">
+                    <p></p>
+                </h2>
+               <img src="../Imagens/xicaraleit.jpeg"  style="height:70px;">
+               Café Caramelo e Baunilha (Nova Caps...
+
+            </div>
+
     </div>
 
 
