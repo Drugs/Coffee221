@@ -6,8 +6,8 @@ $id_usu= $result['id_usuario'];
 ?>
 <body>
 
-<div class='container'>
-  <div class='row'>
+
+<div class='row'>
 
   <div class='col-12'>
   <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
@@ -15,7 +15,6 @@ $id_usu= $result['id_usuario'];
     <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-   <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
     <div class="navbar-nav">
      <div class="nav-item text-nowrap">
        <a class="nav-link px-3" href="#">Sair</a>
@@ -24,7 +23,7 @@ $id_usu= $result['id_usuario'];
   </header>
 
 
-<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse show" style="">
+ <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse show" style="">
       <div class="position-sticky pt-3">
         <ul class="nav flex-column">
           <li class="nav-item">
@@ -53,7 +52,7 @@ $id_usu= $result['id_usuario'];
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="atualizar_pgusu.php">
+            <a class="nav-link" href="#">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
             <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"></path>
             </svg>
@@ -73,25 +72,29 @@ $id_usu= $result['id_usuario'];
             </a>
           </li>
         </ul>
+  </nav>                 
 </div>
-  </div>
-</nav>
 
-<div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
+<div> 
+ <main class="col-md-9 ms-sm-auto col-lg-5 px-md-6">
+      <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="50%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Foto de usuário</text></svg>
             <div class="card-body">
               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  <button type="button" class="btn btn-sm btn-outline-primary" href="atualizar_pgusu.php">atualizar</button>
                 </div>
                 <small class="text-muted">9 mins</small>
               </div>
             </div>
-          </div>
-
+        </div>
+  </main>  
+</div> 
+ 
 <?php 
-include'../include/footer.php'
+include'../include/footer.php';
 ?>
+
+       
