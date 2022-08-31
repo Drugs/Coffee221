@@ -63,7 +63,7 @@
                     </ul>
 
 
-                    <h3><i class="bi bi-search"></i>
+                    <h3><i class="bi bi-search" style="margin-right: 5mm;"></i>
                         <h3>
                             <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
                                 <input type="search" class="form-control form-control-dark" placeholder="Procurar..." aria-label="Procurar">
