@@ -46,7 +46,7 @@ if(isset($_GET['login'])and $_GET['login'] == 'send'){
                             
                             ?>
                 </div>
-                    <form action="">
+                    <form action="home.php">
                         <div class="form-floating mt-3">
                             <input type="text" class="form-control" id="floatingPassword" placeholder="Password" name="email">
                             <label for="floatingPassword">Digite seu Username</label>
