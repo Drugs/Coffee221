@@ -73,12 +73,12 @@
                          
                         if(isset($_SESSION['id_usu']) and  $_SESSION['id_usu'] != '' ){
                             <div class="text-end">
-                            <a type="button" class="btn btn-outline-light me-2" href="logout.php">
+                            <a class="btn btn-outline-light me-2" href="logout.php">
                                  Sair
                             </a>
                         }else{
                             <div class="text-end">
-                            <a type="button" class="btn btn-outline-light me-2" href="login.php">Login
+                            <a class="btn btn-outline-light me-2" href="login.php">Login
 
                             </a>
                         }
