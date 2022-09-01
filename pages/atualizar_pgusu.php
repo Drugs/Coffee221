@@ -4,11 +4,11 @@ var_dump ($_SESSION);
 //autor:Ana Clara
 include'../include/header.php';
 include'../include/database.php';
-$title="Atualizar pagina usuário";
+$title="Atualizar pagina usuário".$_SESSION['id_usu'];
 #echo'<pre>';
 #var_dump($_GET);
 #echo'</pre>';
-$id_usu= $result['id_usuario'];
+$id_usu=2;
 
 if(isset($_GET['cadastro']) and $_GET['cadastro'] == 'update'){
 $cripton=base64_encode($_GET['senha']);
@@ -83,7 +83,7 @@ $result=mysqli_fetch_assoc($query);
                                 <input type="date" class="form-control" name='data'value="<?php echo $result['data'];?>">
                                 <label for="exampleFormControlTextarea1" class="form-label"><strong>data</strong></label>
 
-                                <input type="hidden" name="var" value="<?=$_GET['id_usuario']?>" />
+                                <input type="hidden" name="var" value="<?=$_SESSION['id_usu']?>" />
                             </div>
                                 
                            

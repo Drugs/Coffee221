@@ -17,7 +17,7 @@ if(isset($_GET['login'])and $_GET['login'] == 'send'){
         if($senhauser==$result["senha"]){
            $_SESSION['id_usu']=$result['id_usuario'];
            $_SESSION['id_pessoa']=$result['fk_id_pessoa'];
-           header('Location:../home.php');
+           header('Location:home.php');
         }else{
             header('Location:login.php?senha=erro');
         }
@@ -26,7 +26,6 @@ if(isset($_GET['login'])and $_GET['login'] == 'send'){
        }
     }
 }
-
 ?>
 <body class="bianca">
     <div class="container py-5 h-100">
