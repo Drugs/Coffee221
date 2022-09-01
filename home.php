@@ -70,7 +70,6 @@
                             <input type="search" class="form-control form-control-dark" placeholder="Procurar..."
                                 aria-label="Procurar">
                         </form>
-                         
                         if(isset($_SESSION['id_usu']) and  $_SESSION['id_usu'] != '' ){
                             <div class="text-end">
                             <a type="button" class="btn btn-outline-light me-2" href="logout.php">
