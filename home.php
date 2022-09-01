@@ -70,17 +70,15 @@
                             <input type="search" class="form-control form-control-dark" placeholder="Procurar..."
                                 aria-label="Procurar">
                         </form>
+                        <?php
                         if(isset($_SESSION['id_usu']) and  $_SESSION['id_usu'] != '' ){
-                            <div class="text-end">
-                            <a class="btn btn-outline-light me-2" href="logout.php">
-                                 Sair
-                            </a>
+                           echo'<div class="text-end">';
+                            echo'<a class="btn btn-outline-light me-2" href="logout.php"> Sair</a>';
                         }else{
-                            <div class="text-end">
-                            <a class="btn btn-outline-light me-2" href="login.php">Login
-
-                            </a>
+                            echo'<div class="text-end">';
+                           echo'<a class="btn btn-outline-light me-2" href="login.php">Login</a>';
                         }
+                        ?>
                             <button type="button" class="btn btn-warning">
                                 <font style="vertical-align: inherit;">
                                     <font style="vertical-align: inherit;">Carrinho</font>
