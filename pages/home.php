@@ -71,20 +71,17 @@
                                 aria-label="Procurar">
                         </form>
                          
-                        if(isset($_SESSION['id_usuario'] != '' and $_SESSION['id_usuario'])){
+                        if(isset($_SESSION['id_usu']) and  $_SESSION['id_usu'] != '' ){
                             <div class="text-end">
-                            <button type="button" class="btn btn-outline-light me-2">
-                                    <font style="vertical-align: inherit;">Sair</font>
-                                </font>
-                            </button>
+                            <a type="button" class="btn btn-outline-light me-2" href="logout.php">
+                                 Sair
+                            </a>
                         }else{
                             <div class="text-end">
-                            <button type="button" class="btn btn-outline-light me-2">
-                                    <font style="vertical-align: inherit;">Login</font>
-                                </font>
-                            </button>
+                            <a type="button" class="btn btn-outline-light me-2" href="login.php">Login
+
+                            </a>
                         }
-                    
                             <button type="button" class="btn btn-warning">
                                 <font style="vertical-align: inherit;">
                                     <font style="vertical-align: inherit;">Carrinho</font>
@@ -92,7 +89,7 @@
                             </button>
                         </div>
                     </div>
-                </div><br>
+                </div>
                 
             </header>
   
