@@ -130,22 +130,61 @@ include '../include/header.php';
                 <h2 style="color: blue;">
                     <p>Itens</p>
                 </h2>
-                <img src="../Imagens/xicaraleit.jpeg"  style="height:70px;">
-               Café Caramelo e Baunilha (Nova Caps...)
-            
-           
-            </div>
-            
+                 
+            <div class="col">
+              
+            <p></p>
 
+               <img src="../Imagens/xicaraleit.jpeg"  style="height:70px;">
+               Café Caramelo e Baunilha (Nova Caps...)
+
+            </div>
+             
+            <div class="col">
+
+            <p></p>
+              
+               <img src="../Imagens/xicaraleit.jpeg"  style="height:70px;">
+               Café Caramelo e Baunilha (Nova Caps...)
+            </div>
+
+            <div class="col">
+               
+                    <p></p>
+               
+               <img src="../Imagens/xicaraleit.jpeg"  style="height:70px;">
+               Café Caramelo e Baunilha (Nova Caps...)
+    </div>
+    </div>
             
-                
-                    <div class="col">
+                    <div class="col-2">
                         <h2 style="color:blueviolet;">
                             <p>Quantidade</p>
                         </h2>
-                       <form>
-                        
-                       </form>
+                  <div class="col">    
+                <form action="" method="get">
+                    <label for="nome" class="form-label" ></label>
+                    <input type="text" class="form-control" placeholder="1" name="14"/>  
+                    <input type="hidden" name="samuel" value="sla" />
+                    <input type="submit" value="Adicionar" />
+                    </form>
+    </div>
+    <div class="col">    
+                <form action="" method="get">
+                    <label for="nome" class="form-label" ></label>
+                    <input type="text" class="form-control" placeholder="1" name="12" />
+                    <input type="hidden" name="samuel" value="sla" />
+                    <input type="submit" value="Adicionar" />
+                    </form>
+    </div>
+    <div class="col">    
+                <form action="" method="get">
+                    <label for="nome" class="form-label" ></label>
+                    <input type="text" class="form-control" placeholder="1" name="17" />
+                    <input type="hidden" name="samuel" value="sla" />
+                    <input type="submit" value="Adicionar" />
+                    </form>
+    </div>
                     </div>
 
                     <div class="col-md-2">
@@ -153,35 +192,65 @@ include '../include/header.php';
                         <h2 style="color:blueviolet;">
                             <p>Preço</p>
                         </h2>
+
+                       <div class="col">
+                       <p></p>
+                       <button type="button" class="btn btn-sm btn-outline-primary">R$14,OO</button>
+                       
+                    </div><br>
+                       <div class="col">
+                       <p></p>
+                       <button type="button" class="btn btn-sm btn-outline-primary">R$12,OO</button>
+                       
+                    </div><br>
+                       <p></p>
+                       <div class="col">
+                       <button type="button" class="btn btn-sm btn-outline-primary">R$17,OO</button>
                        
                     </div>
+                    </div>
+
 
                     <div class="col-md-2">
                         <h2  style="color: red;">
                             <p>Deletar</p>
                         </h2>
                     </div>
+
+
+<div class="row">
+                    <div class="col">
+                        <h2  style="color: red;">
+                            <strong><p>Total</p></strong>
+                        </h2>
+                        <div class="col">
+
+<?php
+                        
+$one=$_GET ["14"];
+$two=$_GET ["12"];
+$tree=$_GET["17"];
+
+
+if($op == $one){
+    echo  ($one + $tree + $two );
+}
+ if($op == $two){
+    echo  ($one + $two + $tree );
+} 
+if($op == $tree){
+    echo  ($one + $two + $tree );
+} 
     
+                        
+?>
+
+
+                        </div>
+                    </div>
+    </div>
 
             
-            
-
-              
-
-    
-               
-               
-        
-
-           
-            <div class="col-md-6">
-                <h2 style="color: blue;">
-                    <p></p>
-                </h2>
-               <img src="../Imagens/xicaraleit.jpeg"  style="height:70px;">
-               Café Caramelo e Baunilha (Nova Caps...
-
-            </div>
 
     </div>
 
