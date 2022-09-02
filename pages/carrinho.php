@@ -131,7 +131,7 @@ include '../include/header.php';
                     <p>Itens</p>
                 </h2>
                 <img src="../Imagens/xicaraleit.jpeg"  style="height:70px;">
-               Café Caramelo e Baunilha (Nova Caps...
+               Café Caramelo e Baunilha (Nova Caps...)
             
            
             </div>
