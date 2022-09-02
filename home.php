@@ -54,17 +54,14 @@
                         if(isset($_SESSION['id_usu']) and  $_SESSION['id_usu'] != '' ){
                            echo'<div class="text-end">';
                             echo'<a class="btn btn-outline-light me-2" href="pages/logout.php"> Sair</a>';
+                            echo'<div class="text-end">';
+                            echo'<a class="btn btn-outline-light me-2" href="">Carrinho</a>';
                         }else{
                             echo'<div class="text-end">';
                            echo'<a class="btn btn-outline-light me-2" href="pages/login.php">Login</a>';
+                           
                         }
                         ?>
-                            <button type="button" class="btn btn-warning">
-                                <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">Carrinho</font>
-                                </font>
-                            </button>
-                        </div>
                     </div>
                 </div>
                 
