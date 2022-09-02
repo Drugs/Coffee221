@@ -42,7 +42,6 @@ if(isset($_GET['login'])and $_GET['login'] == 'send'){
                             if (isset($_GET['senha']) and $_GET['senha'] == 'erro' ){
                                 echo '<div class="alert alert-warning" role="alert">Errou a senha!</div>';
                                  }
-                            
                             ?>
                 </div>
                     <form action="home.php">
