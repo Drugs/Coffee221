@@ -67,9 +67,9 @@ echo $consulta;
      <td>{$pessoa['data']}</td>
      <td>{$pessoa['login']}</td>
      </td>
-     <td><a class='btn btn-warning' href='usu_update.php?var={$pessoa['id_pessoa']}'>Atualizar</a> 
+     <td><a class='btn btn-warning' href='update_usuario.php?var={$pessoa['id_pessoa']}'>Atualizar</a> 
      </td>
-     <td><a class='btn btn-outline-warning' href='usu_delete.php?var={$pessoa['id_pessoa']}'>Deletar</a> </td>
+     <td><a class='btn btn-outline-warning' href='deletar_usuario.php?var={$pessoa['id_pessoa']}'>Deletar</a> </td>
                </tr>";
                  }
                  

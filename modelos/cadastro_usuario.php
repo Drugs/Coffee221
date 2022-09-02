@@ -76,7 +76,7 @@ header("Location:usuario_cd.php");
                            
                             <div class="row">
                                 <div class="col-6">
-                                    <a class="w-100 btn btn-lg btn-secondary" href="usuario_cd.php">Voltar</a>
+                                    <a class="w-100 btn btn-lg btn-secondary" href="relatorio_usuario.php">Voltar</a>
                                 </div>
                                 <div class="col-6">
                                     <button type="submit" name='submit' value='send' class="w-100 btn btn-lg btn-primary">Enviar</button>

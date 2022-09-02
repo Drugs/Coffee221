@@ -16,7 +16,7 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
   <div class="container">
     <div class="row">
       <h1 style="margin-bottom:1cm;margin-top:1cm;">cadastro pessoas</h1>
-      <a class="btn mb-3 btn-warning float-start" href="cd_pessoas.php">cadastre-se</a>
+      <a class="btn mb-3 btn-warning float-start" href="cadastro_pessoas.php">cadastre-se</a>
       <div class="col-12">
         <table class="mt-3 table table-dark" style="box-shadow:10px 10px 50px  #000000,10px 10px 10px  #000000;">
           <thead class="table table-dark table- striped">
@@ -47,9 +47,9 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
      <td>{$pessoa['telefone']}</td>
      <td>{$pessoa['pais']}</td>
 
-     <td><a class='btn btn-warning' href='atualizar_cd.php?var={$pessoa['id_pessoa']}'>Atualizar</a> 
+     <td><a class='btn btn-warning' href='atualizar_pessoa.php?var={$pessoa['id_pessoa']}'>Atualizar</a> 
      </td>
-       <td> <a class='btn btn-outline-warning' href='delete_cd.php?var={$pessoa['id_pessoa']}'>Deletar</a>
+       <td> <a class='btn btn-outline-warning' href='delete_pessoa.php?var={$pessoa['id_pessoa']}'>Deletar</a>
        </td>
   </tr>";
             }
