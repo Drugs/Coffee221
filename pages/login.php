@@ -44,7 +44,7 @@ if(isset($_GET['login'])and $_GET['login'] == 'send'){
                                  }
                             ?>
                 </div>
-                    <form action="home.php">
+                    <form action="">
                         <div class="form-floating mt-3">
                             <input type="text" class="form-control" id="floatingPassword" placeholder="Password" name="email">
                             <label for="floatingPassword">Digite seu Username</label>
@@ -56,9 +56,10 @@ if(isset($_GET['login'])and $_GET['login'] == 'send'){
                         </div>
                         <div class="mt-2 d-grid gap-2">
                         <button type="submit" value='send' name='login' class="btn btn-outline-light">Entrar</button>
-                                <p style="color:white;">Ainda não tem uma conta?<a href="usuario_cadastro.php"> Clique aqui</p>
-                        </div>
                     </form>
+						<span style="color:white;">Ainda não tem uma conta?</span>
+						<a class='btn btn-danger' href="usuario_cadastro.php"> Clique aqui</a>
+						</div>
                 </div>
             </div>
         </div>
