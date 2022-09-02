@@ -23,12 +23,11 @@
 
 </head>
 
-<body style="background-color:ligthsmoke">
-<div class="row" style="background-color:rgb(44, 44, 44);height:50px;">
-            <p></p>
+<body >
+
 
             <header class="p-3 bg-dark text-white">
-                <div class="container">
+                
                     <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                         <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
                             <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
@@ -79,15 +78,8 @@
                            echo'<a class="btn btn-outline-light me-2" href="pages/login.php">Login</a>';
                         }
                         ?>
-                            <button type="button" class="btn btn-warning">
-                                <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">Carrinho</font>
-                                </font>
-                            </button>
                         </div>
-                    </div>
-                </div>
-                
+            
             </header>
   
 
@@ -102,6 +94,7 @@
     </div>
     <div class="carousel-item">
       <img src="Imagens/graoedit.jpeg"  style="height:500px;" class="d-block w-100" alt="...">
+    
     </div>
   </div>
     </div>
@@ -113,12 +106,13 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
-</div>
+                    
+                    
     
 
 
 
-<div class="container">
+
     
             <div class="row justify-content-evenly">
         <div class="col-md-4"><br>
@@ -304,173 +298,30 @@
                             </small>
                         </div>
                     </div>
-                </div><br>
+                </div>
             </div>
-    </div>
-    </div>
+    
+    
 
     
         
 
-
-        <div class="row" style="background-color: whitesmoke;height:300px;">
-            <div class="col" style="background-color:whitesmoke;">
-                <p>
-                    <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;">Seção</font>
-                    </font>
-                    </h5>
-                <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Casa</font>
-                            </font>
-                        </a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Características</font>
-                            </font>
-                        </a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Preços</font>
-                            </font>
-                        </a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Perguntas frequentes</font>
-                            </font>
-                        </a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Sobre</font>
-                            </font>
-                        </a></li>
-                </ul>
-            </div>
-
-            <div class="col-2">
-                <h5>
-                    <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;">Seção</font>
-                    </font>
-                </h5>
-                <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Casa</font>
-                            </font>
-                        </a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Características</font>
-                            </font>
-                        </a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Preços</font>
-                            </font>
-                        </a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Perguntas frequentes</font>
-                            </font>
-                        </a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Sobre</font>
-                            </font>
-                        </a></li>
-                </ul>
-            </div>
-
-            <div class="col-2">
-                <h5>
-                    <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;">Seção</font>
-                    </font>
-                </h5>
-                <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Casa</font>
-                            </font>
-                        </a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Características</font>
-                            </font>
-                        </a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Preços</font>
-                            </font>
-                        </a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Perguntas frequentes</font>
-                            </font>
-                        </a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Sobre</font>
-                            </font>
-                        </a></li>
-                </ul>
-            </div>
-
-            <div class="col-4 offset-1">
-                <form>
-                    <h5>
-                        <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">Assine a nossa newsletter</font>
-                        </font>
-                    </h5>
-                    <p>
-                        <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">Resumo mensal do que há de novo e emocionante de nós.
-                            </font>
-                        </font>
-                    </p>
-                    <div class="d-flex w-100 gap-2">
-                        <label for="newsletter1" class="visually-hidden">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Endereço de email</font>
-                            </font>
-                        </label>
-                        <input id="newsletter1" type="text" class="form-control" placeholder="Endereço de email">
-                        <button class="btn btn-primary" type="button">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Se inscrever</font>
-                            </font>
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <div class="d-flex justify-content-between py-4 my-4 border-top">
-            <p>
-                <font style="vertical-align: inherit;">
-                    <font style="vertical-align: inherit;">© 2021 Company, Inc. Todos os direitos reservados.</font>
-                </font>
-            </p>
-            <ul class="list-unstyled d-flex">
-                <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
-                            <use xlink:href="#twitter"></use>
-                        </svg></a></li>
-                <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
-                            <use xlink:href="#instagram"></use>
-                        </svg></a></li>
-                <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
-                            <use xlink:href="#facebook"></use>
-                        </svg></a></li>
-            </ul>
-        </div>
-        </footer>
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+      <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+        <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+      </a>
+      <span class="mb-3 mb-md-0 text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">© 2022 Company, Inc</font></font></span>
     </div>
-    </p>
-    </div>
+
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+    </ul>
+  </footer>
+                    
+                 
 
 
 
