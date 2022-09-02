@@ -68,3 +68,12 @@ Ata da reunião 02/09
 		Adicionar título
 		Integrar com a sessão e o BD
 	---------------------------------------------------------------------------------------------
+	Galeria
+		Busca - IMPORTANTEEEEEEEEEEEEEEE
+		Carregar as informações do BD
+		Carregar as imagens
+		Adicionar o Menu
+		Adicionar footer
+		Adicionar navegação
+		Informação de categorias [Adicionar menu com as categorias]
+		
