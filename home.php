@@ -1,7 +1,27 @@
-<?php
-	$title = 'The COFFEE N\'JOY';
-	include 'include/header.php';
-?>
+<!DOCTYPE >
+<html>
+
+<head>
+    <title>The COFFE'JOIN</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css">
+    
+    <style>
+        .feature-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 4rem;
+            height: 4rem;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            color: #fff;
+            border-radius: 0.75rem;
+        }
+    </style>
+
+</head>
 
 <body >
 
@@ -53,22 +73,13 @@
                         if(isset($_SESSION['id_usu']) and  $_SESSION['id_usu'] != '' ){
                            echo'<div class="text-end">';
                             echo'<a class="btn btn-outline-light me-2" href="pages/logout.php"> Sair</a>';
-                            echo'<div class="text-end">';
-                            echo'<a class="btn btn-outline-light me-2" href="">Carrinho</a>';
                         }else{
                             echo'<div class="text-end">';
                            echo'<a class="btn btn-outline-light me-2" href="pages/login.php">Login</a>';
-                           
                         }
                         ?>
-<<<<<<< HEAD
                         </div>
             
-=======
-                    </div>
-                </div>
-                
->>>>>>> 79c29fa550a834f799a3833ae0680d159933566b
             </header>
   
 
@@ -104,7 +115,7 @@
 
     
             <div class="row justify-content-evenly">
-        <div class="col-md-4">
+        <div class="col-md-4"><br>
                 <div class="card shadow-sm">
                     <img src="Imagens/xicaraleit.jpeg" heigth=''  >
                     <div class="card-body">
@@ -135,7 +146,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4"><br>
                 <div class="card shadow-sm">
                     <img src="Imagens/xicaraleit.jpeg" heigth="">
                     <div class="card-body">
@@ -166,7 +177,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-4"><br>
                 <div class="card shadow-sm">
                     <img src="Imagens/xicaraleit.jpeg" heigth="">
                     <div class="card-body">
@@ -195,7 +206,10 @@
                     </div>
                 </div>
             </div>
-        <div class="col-md-3">
+            
+
+
+        <div class="col-md-3"><br>
                 <div class="card shadow-sm">
                     <img src="Imagens/xicaraleit.jpeg" heigth=''  >
                     <div class="card-body">
@@ -226,7 +240,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3"><br>
                 <div class="card shadow-sm">
                     <img src="Imagens/xicaraleit.jpeg" heigth="">
                     <div class="card-body">
@@ -257,7 +271,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3">
+            <div class="col-md-3"><br>
                 <div class="card shadow-sm">
                     <img src="Imagens/xicaraleit.jpeg" heigth="">
                     <div class="card-body">
