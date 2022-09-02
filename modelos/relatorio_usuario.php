@@ -34,7 +34,7 @@ echo $consulta;
             </div>
           </form>
     
-            <h1  style="margin-botton:1cm;margin-top:1cm;">relatorio usuario </h1>
+            <h1  style="margin-botton:1cm;margin-top:1cm;">Relatório usuario </h1>
       <a class="btn mb-3 btn-warning float-start" href="cadastro_usuario.php">cadastre-se</a>
       <div class="col-12">
                <table class="mt-3 table table-dark" style="box-shadow:10px 10px 50px  #000000,10px 10px 10px  #000000;">
