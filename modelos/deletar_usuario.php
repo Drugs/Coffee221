@@ -18,7 +18,7 @@ if(isset($_GET['delete']) and $_GET['delete']==''){
 <body>
  <div class="container">
      <div class="row">
-       <h3 class="text-center"> Deleção de usuario</h3>
+       <h3 class="text-center">Deleção de usuario</h3>
         <div class="col-12">
         <h2 class="text-center">Tem Definitiva Absoluta Certeza que deseja deletar?</h2>
         <div class="mb-4">
