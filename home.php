@@ -60,36 +60,39 @@
 	</header>
   
 
+
+
+
+
+
+
+
+
+
 	<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-		<div class="col" style="background-color:#AA6C39;">
-		<div class="carousel-inner">
-		<div class="carousel-item active">
-		  <img src="Imagens/xicaraleit.jpeg" style="height:500px;" class="d-block w-100" alt="...">
+	    	<div class="col" style="background-color:#AA6C39;">
+		        <div class="carousel-inner">
+		        <div class="carousel-item active">
+		  <img src="Imagens/cofe2.png" style="height:500px;" class="d-block w-100" alt="...">
 		</div>
+        <div class="carousel-item">
+            <img src="Imagens/coffe1.png" class="d-block w-100" alt="...">
+              </div>
 		<div class="carousel-item">
-		  <img src="Imagens/grao.jpeg"  style="height:500px;" class="d-block w-100" alt="...">
-		</div>
-		<div class="carousel-item">
-		  <img src="Imagens/graoedit.jpeg"  style="height:500px;" class="d-block w-100" alt="...">
+		  <img src="Imagens/cofe3.png"  style="height:500px;" class="d-block w-100" alt="...">
 		</div>
 		</div>
 		</div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+   </button>
+   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
-  </button>
-                    </div>  
-        </div>      
+   </button>
+     </div>       
                     
-    
-
-
-
-
     
             <div class="row justify-content-evenly">
         <div class="col-md-4">
@@ -293,17 +296,6 @@
       <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
     </ul>
   </footer>
-                    
-                 
-
-
-
-
-  
-
-
-
-
 
   <?php
    
