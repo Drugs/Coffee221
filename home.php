@@ -59,22 +59,6 @@
 	</header>
   
 
-<<<<<<< HEAD
-            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-            <div class="col" style="background-color:#AA6C39;">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="Imagens/xicaraleit.jpeg" style="height:500px;" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="Imagens/grao.jpeg"  style="height:500px;" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="Imagens/graoedit.jpeg"  style="height:500px;" class="d-block w-100" alt="...">
-    
-    </div>
-  </div>
-=======
 	<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
 		<div class="col" style="background-color:#AA6C39;">
 		<div class="carousel-inner">
@@ -86,11 +70,9 @@
 		</div>
 		<div class="carousel-item">
 		  <img src="Imagens/graoedit.jpeg"  style="height:500px;" class="d-block w-100" alt="...">
-		
 		</div>
-	  </div>
 		</div>
->>>>>>> 6f880413ebaa59f5f0412c8ce62a9f07fa2f8358
+		</div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
@@ -99,8 +81,8 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
-<<<<<<< HEAD
-                    </div>        
+                    </div>  
+        </div>      
                     
     
 
@@ -109,12 +91,7 @@
 
     
             <div class="row justify-content-evenly">
-        <div class="col-md-4"><br>
-=======
-                    
-	<div class="row justify-content-evenly">
         <div class="col-md-4">
->>>>>>> 6f880413ebaa59f5f0412c8ce62a9f07fa2f8358
                 <div class="card shadow-sm">
                     <img src="Imagens/xicaraleit.jpeg" heigth=''  >
                     <div class="card-body">
