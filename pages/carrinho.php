@@ -5,7 +5,7 @@
     <title>The COFFE'JOIN</title>
 
     <?php
-    include './include/header.php';
+    include '../include/header.php';
     ?>
     <style>
         .feature-icon {
@@ -251,7 +251,7 @@
 
 
         <?php
-        include './include/footer.php';
+        include '../include/footer.php';
         ?>
 
 
