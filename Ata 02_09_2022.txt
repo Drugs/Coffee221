@@ -24,20 +24,20 @@ Ata da reunião 02/09
 	---------------------------------------------------------------------------------------------
 	
 	Login
-		Resolver o gradiente do login ->Resolvido
-		Verificar a SESSION ->Relaxa na nave
-		Arrumar o botao de logout -> Andamento que caiu
-		Adicionar navegação pra voltar pra home[logo] ->  ok
-		Modificar link-> Ah?
+		Resolver o gradiente do login -> FEITO
+		Verificar a SESSION -> FEITO
+		Arrumar o botao de logout -> FEITO
+		Adicionar navegação pra voltar pra home[logo] -> FEITO
+		Modificar link-> FEITO
 	---------------------------------------------------------------------------------------------
 	Cadastro
-		Pesquisar mascaras ->
-		Entrar/Cadastrar/Enviar? -> Feito
-		Cadastro de usuário com defeito -> Feito
+		Pesquisar mascaras -> ANDAMENTO
+		Entrar/Cadastrar/Enviar? -> FEITO
+		Cadastro de usuário com defeito -> FEITO
 	--------------------------------------------------------------------------------------------
 	Produtos
-		Encasular o cabeçalho da pagina principal[colocar no include]
-		WTF this freaking gradient man!!!!!
+		Encasular o cabeçalho da pagina principal[colocar no include] -> FEITO
+		WTF this freaking gradient man!!!!! -> FEITO
 		Carregar as informações do produto do BD
 		Adicionar chamadas de ação [Adicionar ao carrinho, Compre AGORA!!!!]
 		Mostrar informações de estoque
