@@ -11,7 +11,7 @@ if(isset($_GET['login'])and $_GET['login'] == 'send'){
     $consulta="Select * From `usuario` where email='{$loginuse}'";
     $query=mysqli_query($con, $consulta);
     $result= mysqli_fetch_assoc($query);
-   //var_dump($result);
+  //var_dump($result);
     if($loginuse !='' AND $senhauser !=''){
         if($loginuse==$result["email"]){
         if($senhauser==$result["senha"]){
