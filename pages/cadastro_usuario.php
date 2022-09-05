@@ -4,15 +4,16 @@ $title = "Cadastro";
 include "../include/header.php";
 include "../include/database.php";
 if (isset($_GET['cadastra']) and $_GET['cadastra'] == 'send') {
-    $consulta = "insert into pessoa(nome,email,telefone,endereco,pais)
+    $consulta = "Insert into pessoa (nome,email,telefone,endereco,pais)
     VALUES ('{$_GET['nome']}','{$_GET['email']}','{$_GET['telefone']}','{$_GET['endereco']}','{$_GET['pais']}')";
+    var_dump($consulta);
     $query = mysqli_query($con, $consulta);
     $id_usu = mysqli_insert_id($con);
     $cripton = base64_encode($_GET['senha']);
-    $consulta = "insert into usuario ( `email`, `senha`, `nivel`, `fk_id_pessoa`, `data`) 
-VALUES ('{$_GET['email']}','{$cripton}','{$id_usu}', '{$_GET['data']}')";
-    echo '<br>';
+    $consulta = "Insert INTO usuario (email, senha, nivel, fk_id_pessoa, data) 
+    VALUES ('{$_GET['email']}','{$cripton}','{$_GET['nivel']}','{$id_usu}', '{$_GET['data']}')";
     $query = mysqli_query($con, $consulta);
+    var_dump($consulta);
     header("Location:../home.php");
 }
 ?>
@@ -31,31 +32,31 @@ VALUES ('{$_GET['email']}','{$cripton}','{$id_usu}', '{$_GET['data']}')";
                             </div>
 
                             <div class="form-floating mt-2">
-                                <input type="email" class="form-control" id="floatingPassword" placeholder="Password" name='email'>
+                                <input type="email" class="form-control" id="floatingPassword" placeholder="Password" name='email' required>
                                 <label for="floatingPassword">Digite seu Email</label>
                             </div>
                             <div class="form-floating mt-2">
-                                <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name='senha'>
+                                <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name='senha' required>
                                 <label for="floatingPassword">Digite sua Senha</label>
                             </div>
                             <div class="form-floating mt-3">
-                                <input type="tel" class="form-control" id="floatingPassword" placeholder="Password" name='telefone'>
+                                <input type="tel" class="form-control" id="floatingPassword" placeholder="Password" name='telefone' pattern="\([0-9]{2}\)[\s][0-9]{4}-[0-9]{4,5}"  required>
                                 <label for="floatingPassword">Digite seu Telefone</label>
                             </div>
                             <div class="form-floating mt-3">
-                                <input type="endereco" class="form-control" id="floatingPassword" placeholder="Password" name='endereco'>
+                                <input type="endereco" class="form-control" id="floatingPassword" placeholder="Password" name='endereco' required>
                                 <label for="floatingPassword">Digite seu Endereço</label>
                             </div>
                             <div class="form-floating mt-3">
-                                <input type="text" class="form-control" id="floatingPassword" placeholder="Password" name='pais'>
+                                <input type="text" class="form-control" id="floatingPassword" placeholder="Password" name='pais' required>
                                 <label for="floatingPassword">Digite seu País</label>
                             </div>
                             <div class="form-floating mt-3">
-                                <input type="text" class="form-control" id="floatingPassword" placeholder="Nivel" name='nivel'>
+                                <input type="text" class="form-control" id="floatingPassword" placeholder="Nivel" name='nivel' required>
                                 <label for="floatingPassword">Digite o Nivel</label>
                             </div>
                             <div class="form-floating mt-3">
-                                <input type="date" class="form-control" id="floatingPassword" placeholder="Data" name='data'>
+                                <input type="date" class="form-control" id="floatingPassword" placeholder="Data" name='data' required>
                                 <label for="floatingPassword">Data</label>
                             </div>
                             <div class="mt-2 d-grid gap-2">
