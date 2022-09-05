@@ -21,10 +21,10 @@ VALUES ('{$_GET['email']}','{$cripton}','{$id_usu}', '{$_GET['data']}')";
     <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-                <div class="card bg-dark " style="border-radius: 1rem;" id="card">
+                <div class="card bg-dark " style="border-radius: 1rem; padding-top: 2cm;" id="card">
                     <div class="card-body p-5 text-center">
                         <form action="">
-                            <h2 style="color:white; margin-top: 5mm;">Cadastrar-se</h2>
+                            <h2 style="color:white;">Cadastrar-se</h2>
                             <div class="form-floating mt-3">
                                 <input type="text" class="form-control" id="floatingPassword" placeholder="Password" name='nome'>
                                 <label for="floatingPassword">Digite seu nome</label>
@@ -60,7 +60,7 @@ VALUES ('{$_GET['email']}','{$cripton}','{$id_usu}', '{$_GET['data']}')";
                             </div>
                             <div class="mt-2 d-grid gap-2">
                                 <button type="submit" value='send' name='cadastra' class="btn btn-outline-light">Cadastrar </button>
-                                <span  style="color:white;">Fazer login?</span>
+                                <span style="color:white;">Fazer login?</span>
                                 <a href="login.php" class="btn btn-outline-light"> Clique aqui</a>
                             </div>
                         </form>
