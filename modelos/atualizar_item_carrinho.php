@@ -3,10 +3,10 @@
 include'../include/header.php';
 $title="Atualizar item de carrinho";
 include'../include/database.php';
-$id= $_GET['var'];
+$var=$_GET['id_produto'];
 
 if(isset($_GET['submit']) and $_GET['submit']=='send'){
-    $consulta = "UPDATE item_de_carrinho SET  nome = '{$_GET['id_item_carrinho']}', id_produto = '{$_GET['fk_id_info_produto']}', quantidade = '{$_GET['quantidade']}' WHERE  {$id}";
+    $consulta = "UPDATE item_de_carrinho SET  nome = '{$_GET['id_item_carrinho']}', id_produto = '{$_GET['fk_id_info_produto']}', quantidade = '{$_GET['quantidade']}' WHERE id_item_carrinho = ";
 
     $query=mysqli_query($con, $consulta);
       if($query){
@@ -16,6 +16,11 @@ if(isset($_GET['submit']) and $_GET['submit']=='send'){
         echo"Fracasso";
       }
     }
+
+    $consulta="select * from item_carrinho where =";
+    var_dump($consulta);
+    $query=mysqli_query($con, $consulta);
+    $result = mysqli_fetch_assoc($query);
 ?>
 
 
@@ -38,9 +43,6 @@ if(isset($_GET['submit']) and $_GET['submit']=='send'){
                             <div class="form-floating" style="margin-bottom: 5mm;">
                                  <input type="text" class="form-control" name='quantidade' value="<?php echo $result['quantidade'];?>">
                                 <label for="exampleFormControlInput1" class="form-label"><strong>Quantidade</strong></label>
-
-                                <input type="hidden" name="var" value="<?=$_GET['var']?>"/>
-
                             </div>
                             <div class="row">
                                 <div class="col-6">
