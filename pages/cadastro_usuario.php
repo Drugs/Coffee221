@@ -59,8 +59,9 @@ VALUES ('{$_GET['email']}','{$cripton}','{$id_usu}', '{$_GET['data']}')";
                                 <label for="floatingPassword">Data</label>
                             </div>
                             <div class="mt-2 d-grid gap-2">
-                                <button type="submit" value='send' name='cadastra' class="btn btn-outline-light">Entrar</button>
-                                <p style="color:white;">Fazer login?<a href="login.php"> Clique aqui</p>
+                                <button type="submit" value='send' name='cadastra' class="btn btn-outline-light">Cadastrar </button>
+                                <span  style="color:white;">Fazer login?</span>
+                                <a href="login.php" class="btn btn-outline-light"> Clique aqui</a>
                             </div>
                         </form>
                     </div>
