@@ -9,7 +9,7 @@ if(isset($_GET['submit']) and $_GET['submit']=='send'){
     $consulta = "UPDATE item_de_carrinho SET  carrinho = '{$_GET['id_item_carrinho']}', id_produto = '{$_GET['fk_id_info_produto']}', 
     quantidade = '{$_GET['quantidade']}' WHERE id_item_carrinho = {$id}";
     echo $consulta;
-    $query=mysqli_query($con, $consulta);
+    $query=mysqli_query ($con, $consulta);
       if($query){
       echo "Sucesso!!";
       }else{
@@ -20,10 +20,8 @@ if(isset($_GET['submit']) and $_GET['submit']=='send'){
     $consulta="Select * From item_carrinho where id_item_carrinho = {$id}";
    // var_dump($consulta);
     $query=mysqli_query($con, $consulta);
-    //$result = mysqli_fetch_assoc($query);
-    echo"<pre>";
-    var_dump($_GET);
-    echo"</pre>";
+    $result = mysqli_fetch_assoc($query);
+
 ?>
 
 
@@ -37,7 +35,7 @@ if(isset($_GET['submit']) and $_GET['submit']=='send'){
                         <div class="col-12">
                             <div class="form-floating" style="margin-top: 1cm;">
                             <input type="text" class="form-control" name='carrinho' value="<?php echo $result['id_item_carrinho'];?>">
-                                <label class="form-label"><strong>ID do carrinho</strong></label>
+                                <label for="exampleFormControlInput1" class="form-label"><strong>ID do carrinho</strong></label>
                             </div>
                             <div class="form-floating">
                             <input type="text" class="form-control" name='id_produto' value="<?php echo $result['fk_id_info_produto'];?>">
