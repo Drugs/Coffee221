@@ -62,11 +62,11 @@ Ata da reunião 02/09
 		Adicionar value do campo telefone
 	---------------------------------------------------------------------------------------------
 	Checkout Page
-		Adicionar o Menu
-		Adicionar footer
-		Adicionar navegação
-		Adicionar título
-		Integrar com a sessão e o BD
+		Adicionar o Menu -> FEITO
+		Adicionar footer -> FEITO
+		Adicionar navegação -> ?
+		Adicionar título -> ?
+		Integrar com a sessão e o BD -> FALTA
 	---------------------------------------------------------------------------------------------
 	Galeria
 		Busca - IMPORTANTEEEEEEEEEEEEEEE

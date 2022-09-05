@@ -1,9 +1,71 @@
 <?php
-#BY GUSTAVO
+#BY GUSTAVO INC © 2022
 include "../include/header.php";
 ?>
-    <div class="container">
-        <main>
+    <header class="p-3 bg-dark text-white">
+                
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+                    <use xlink:href="#bootstrap"></use>
+                </svg>
+            </a>
+
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <h2><i class="bi bi-cup-hot"></i></h2>
+                <li>
+                    <a href="../home.php" class="nav-link px-2 text-warning">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">The COFFE'JOIN</font>
+                        </font>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link px-2 text-white">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Mais Sabores</font>
+                        </font>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link px-2 text-white">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Preços</font>
+                        </font>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link px-2 text-white">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Perguntas frequentes</font>
+                        </font>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link px-2 text-white">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Sobre</font>
+                        </font>
+                    </a>
+                </li>
+            </ul>
+
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">    
+                <input type="search" class="form-control form-control-dark" placeholder="Procurar..."aria-label="Procurar">
+            </form>
+            <?php
+                if(isset($_SESSION['id_usu']) and  $_SESSION['id_usu'] != '' ) {
+                    echo'<div class="text-end">';
+                    echo'<a class="btn btn-outline-light me-2" href="pages/logout.php"> Sair</a>';
+                }else{
+                    echo'<div class="text-end">';
+                    echo'<a class="btn btn-outline-light me-2" href="../pages/login.php">Login</a>';
+                }
+            ?>
+        </div>
+    </header>
+    <main>
+        <div class="container">
             <div class="row g-5 mt-3">
                 <div class="col-md-5 col-lg-4 order-md-last">
                     <h4 class="d-flex justify-content-between align-content-center mb-3">
@@ -189,8 +251,30 @@ include "../include/header.php";
                     </form>
                 </div>
             </div>
-        </main>
-    </div>  
+        </div>  
+    </main>
+
+    <footer>
+        <section class="footer-1 d-flex justify-content-md-center align-items-md-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-muted d-flex justify-content-md-center align-items-md-center">
+                        <span>© Copyright 2022. All Rights Reserved. Last Update: 2022-09-04</span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </footer>
+
+    <style>
+        .footer-1{
+            background-color: rgb(172, 162, 162);
+            margin-top: 50px;
+            height: 200px;
+        }
+    </style>
+
 <?php
 include "../include/footer.php";
 ?>
