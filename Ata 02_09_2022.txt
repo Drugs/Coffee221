@@ -1,0 +1,79 @@
+Ata da reunião 02/09
+	Careca não gravou a reunião
+	---------------------------------------------------------------------------------------------
+	Produtos - IMPORTANTEEEEEEEEEEEEEEE
+		Imagens - ok!
+		Descrições
+		Preço
+		Cadastrar no BD
+	---------------------------------------------------------------------------------------------
+	Pagina home>
+		Página "Sambando";
+		Imagem do carroussel
+			>Ajustar as imagens
+			>Colocar as imagens dos produtos
+		Páginas acessórias->[Página de produtos/Busca, Sobre, Categorias, Carrinho]
+		Criar um botao de busca, ou mandar o formulário com JS
+		Botao de detalhes do produto - [Deixar cheguei ヽ⁠(｡⁠◕⁠o⁠◕⁠｡⁠)ﾉ⁠.]
+		Separar os cards 
+			Sugestão - Parallax
+		Arrumar o footer - Caos
+			>Modificar por um footer mais simples?
+		Adicionar link para o perfil
+	
+	---------------------------------------------------------------------------------------------
+	
+	Login
+		Resolver o gradiente do login
+		Verificar a SESSION - IMPORTANTEEEEEEEEEEEEEEE
+		Arrumar o botao de logout
+		Adicionar navegação pra voltar pra home[logo]
+		Modificar link
+	---------------------------------------------------------------------------------------------
+	Cadastro
+		Pesquisar mascaras
+		Entrar/Cadastrar/Enviar?
+		Cadastro de usuário com defeito
+	--------------------------------------------------------------------------------------------
+	Produtos
+		Encasular o cabeçalho da pagina principal[colocar no include]
+		WTF this freaking gradient man!!!!!
+		Carregar as informações do produto do BD
+		Adicionar chamadas de ação [Adicionar ao carrinho, Compre AGORA!!!!]
+		Mostrar informações de estoque
+	---------------------------------------------------------------------------------------------
+	Usuário
+		WTF nome voando?!?!?!?!?!? (╯°□°）╯︵ ┻━┻
+		Samba tevez
+		Botão de logout
+		Adicionar um link pra página principal
+			Links do menu
+				>Perfil - Atualizar as informações de pessoa e usuário
+				>Perfil - Adicionar forma de pagamento [Checkout????]
+				>Perfil - Adicionar endereço de entrega
+				>Histórico de Compras
+				>Carrinho
+				>Loja
+		Estudar o Dashboard do Bootstrap
+	---------------------------------------------------------------------------------------------
+	Atualizar usuário
+		Adicionar o titulo da página
+		Remover o var_dump
+		Adicionar value do campo telefone
+	---------------------------------------------------------------------------------------------
+	Checkout Page
+		Adicionar o Menu -> FEITO
+		Adicionar footer -> FEITO
+		Adicionar navegação -> ?
+		Adicionar título -> ?
+		Integrar com a sessão e o BD -> FALTA
+	---------------------------------------------------------------------------------------------
+	Galeria
+		Busca - IMPORTANTEEEEEEEEEEEEEEE
+		Carregar as informações do BD
+		Carregar as imagens
+		Adicionar o Menu
+		Adicionar footer
+		Adicionar navegação
+		Informação de categorias [Adicionar menu com as categorias]
+		

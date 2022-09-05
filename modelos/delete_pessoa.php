@@ -18,7 +18,7 @@ if(isset($_GET['delete']) and $_GET['delete']==1){
 <body>
 <div class="container">
    <div class="row">
-       <h3 class="text-center"> Deleção de pessoa</h3>
+       <h3 class="text-center">Deleção de pessoa</h3>
       <div class="col-10">
         <h2 class="text-center">Tem Definitiva Absoluta Certeza que deseja deletar?</h2>
         <a href="CRUD_cadastro.php" class="btn btn-secondary">voltar</a>

@@ -1,20 +1,20 @@
 <?php
 # BY - JONAS
-$title = "Cadastro - Alimento";
+$title = "Cadastro - Roupa";
 include "../include/header.php";
 include '../include/database.php';
 
 if (isset($_GET['cadastrar']) and $_GET['cadastrar'] == 'send') {
-    $inf_a = "INSERT INTO info_alimento (`estoque`,`preco`,`embalagem`,`peso`,`sabor`,`fk_id_alimento`)
-    VALUES ('{$_GET['estoque']}','{$_GET['preco']}','{$_GET['embalagem']}', 
-    '{$_GET['peso']}','{$_GET['sabor']}',{$_GET['id_produto']})";
+    $inf = "INSERT INTO info_roupa (`estoque`,`preco`,`cor`,`tamanho`,`genero`,`fk_id_produto`)
+    VALUES ('{$_GET['estoque']}','{$_GET['preco']}','{$_GET['cor']}', 
+    '{$_GET['tamanho']}','{$_GET['genero']}',{$_GET['id_produto']})";
     #echo $inf;
-    $query = mysqli_query($con, $inf_a);
+    $query = mysqli_query($con, $inf);
     header("location: info_produto.php?cadastrar=sucesso");
 }
-$inf_a2 = "SELECT * FROM produto";
-$query = mysqli_query($con, $inf_a2);
-$resultado2 = mysqli_fetch_all($query, MYSQLI_ASSOC)
+$inf2 = "SELECT * FROM produto";
+$query = mysqli_query($con, $inf2);
+$resultado = mysqli_fetch_all($query, MYSQLI_ASSOC);
 ?>
 
 <body class="text-center">
@@ -24,14 +24,14 @@ $resultado2 = mysqli_fetch_all($query, MYSQLI_ASSOC)
                 <div class="row justify-content-center">
                     <div class="col-6">
                         <div class="col-12">
-                            <h1 class="h3 mb-3 fw-normal" style="margin-top: 1cm;">Informações do alimento</h1>
+                            <h1 class="h3 mb-3 fw-normal" style="margin-top: 1cm;">Informações da roupa</h1>
                             <div class="form-floating" style="margin-top: 1cm;">
                                 <label for="select" class="form-label"></label>
                                 <select class="form-select" name="id_produto" required="">
                                     <option></option>
                                     <?php
-                                    foreach ($resultado2 as $produtos) {
-                                        if (isset($produtos['categoria']) and $produtos['categoria'] == 'Alimento') {
+                                    foreach ($resultado as $produtos) {
+                                        if (isset($produtos['categoria']) and $produtos['categoria'] == 'Roupa') {
                                             echo "
                                                 <option value='{$produtos['id_produto']}'>{$produtos['nome_produto']}</option>
                                                 ";
@@ -52,16 +52,16 @@ $resultado2 = mysqli_fetch_all($query, MYSQLI_ASSOC)
                                 <label for="exampleFormControlTextarea1" class="form-label"><strong>Preço</strong></label>
                             </div>
                             <div class="form-floating">
-                                <input type="text" class="form-control" name="embalagem">
-                                <label for="exampleFormControlTextarea1" class="form-label"><strong>Embalagem</strong></label>
+                                <input type="text" class="form-control" name="cor">
+                                <label for="exampleFormControlTextarea1" class="form-label"><strong>Cor</strong></label>
                             </div>
                             <div class="form-floating">
-                                <input type="text" class="form-control" name="peso">
-                                <label for="exampleFormControlTextarea1" class="form-label"><strong>Peso</strong></label>
+                                <input type="text" class="form-control" name="tamanho">
+                                <label for="exampleFormControlTextarea1" class="form-label"><strong>Tamanho</strong></label>
                             </div>
                             <div class="form-floating" style="margin-bottom: 5mm;">
-                                <input type="text" class="form-control" name="sabor">
-                                <label for="exampleFormControlTextarea1" class="form-label"><strong>Sabor</strong></label>
+                                <input type="text" class="form-control" name="genero">
+                                <label for="exampleFormControlTextarea1" class="form-label"><strong>Gênero</strong></label>
                             </div>
                             <input type='hidden' name='var' value='<?php echo $_GET['var']; ?>'>
                             <div class="row">
@@ -70,6 +70,9 @@ $resultado2 = mysqli_fetch_all($query, MYSQLI_ASSOC)
                                 </div>
                                 <div class="col-6">
                                     <button class="w-100 btn btn-lg btn-primary" style="margin-bottom: 5mm;" type="submit" value="send" name="cadastrar">Enviar</button>
+                                </div>
+                                <div class="col-12">
+                                    <a class="w-100 btn btn-lg btn-primary" style="margin-bottom: 5mm;" href="info_cadastro_alimento.php">Cadastrar produto alimentício</a>
                                 </div>
                             </div>
                         </div>

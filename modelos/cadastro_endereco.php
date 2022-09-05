@@ -61,7 +61,7 @@ header("Location:endereco_pessoa.php");
                         <div class="container">
                             <div class="row">
                                 <div class="col-6">
-                                    <a class="w-100 btn btn-lg btn-secondary" href="endereco_pessoa.php">Voltar</a>
+                                    <a class="w-100 btn btn-lg btn-secondary" href="relatorio_pessoa.php">Voltar</a>
                                 </div>
 
                                 <div class="col-6">

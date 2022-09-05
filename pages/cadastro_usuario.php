@@ -1,92 +1,75 @@
 <?php
-//autor:Ana Clara
-//arquivo com conexão com o BD
-include'../include/header.php';
-$title="usuario cadastro";
-include'../include/database.php';
-
-#echo'<pre>';
-#var_dump($_GET);
-#echo'</pre>';
-if(isset($_GET['submit'])and $_GET['submit']=='send'){
-    $consulta="insert into pessoa(nome,email,telefone,endereco,pais)
-     VALUES ('{$_GET['nome']}','{$_GET['email']}','{$_GET['telefone']}','{$_GET['endereco']}','{$_GET['pais']}')";
-
-$query= mysqli_query($con,$consulta);
-
-$id_usu=mysqli_insert_id($con);
-#echo $id_pessoa;
-$cripton=base64_encode($_GET['senha']);
-$consulta="insert into usuario ( `email`, `senha`, `nivel`, `fk_id_pessoa`, `data`) 
-VALUES ('{$_GET['login']}','{$cripton}','{$_GET['nivel']}','{$id_usu}',
-'{$_GET['data']}')"; 
-echo'<br>';
-$query=mysqli_query($con,$consulta);
-header("Location:usuario_cd.php");
+//bianca nogueira
+$title = "Cadastro";
+include "../include/header.php";
+include "../include/database.php";
+if (isset($_GET['cadastra']) and $_GET['cadastra'] == 'send') {
+    $consulta = "insert into pessoa(nome,email,telefone,endereco,pais)
+    VALUES ('{$_GET['nome']}','{$_GET['email']}','{$_GET['telefone']}','{$_GET['endereco']}','{$_GET['pais']}')";
+    $query = mysqli_query($con, $consulta);
+    $id_usu = mysqli_insert_id($con);
+    $cripton = base64_encode($_GET['senha']);
+    $consulta = "insert into usuario ( `email`, `senha`, `nivel`, `fk_id_pessoa`, `data`) 
+VALUES ('{$_GET['email']}','{$cripton}','{$id_usu}', '{$_GET['data']}')";
+    echo '<br>';
+    $query = mysqli_query($con, $consulta);
+    header("Location:../home.php");
 }
-
-
 ?>
-<form action="" method="get">
-            <h1 class="text-center" style="margin-top: 1cm;">Cadastro de pessoas</h1>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-6">
-                        <div class="col-12">
-                            <div class="form-floating" style="margin-top: 1cm;">
-                                <input type="text" class="form-control" name='nome'>
-                                <label for="exampleFormControlInput1" class="form-label"><strong>Nome</strong></label>
-                            </div>
-                            <div class="form-floating">
-                                <input type="email" class="form-control" name='email'>
-                                <label for="exampleFormControlInput1" class="form-label"><strong>Email</strong></label>
-                            </div>
-                            <div class="form-floating">
-                                <input type="number" class="form-control" name='telefone'>
-                                <label for="exampleFormControlInput1" class="form-label"><strong>Telefone</strong></label>
-                            </div>
-                            <div class="form-floating">
-                                <input type="text" class="form-control" name='endereco'>
-                                <label for="exampleFormControlInput1" class="form-label"><strong>Endereco</strong></label>
-                            </div>
-                            <div class="form-floating" style="margin-bottom: 5mm;">
-                                <input type="text" class="form-control" name='pais'>
-                                <label for="exampleFormControlTextarea1" class="form-label"><strong>Pais</strong></label>
+
+<body class="bianca">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div class="card bg-dark " style="border-radius: 1rem; padding-top: 2cm;" id="card">
+                    <div class="card-body p-5 text-center">
+                        <form action="">
+                            <h2 style="color:white;">Cadastrar-se</h2>
+                            <div class="form-floating mt-3">
+                                <input type="text" class="form-control" id="floatingPassword" placeholder="Password" name='nome'>
+                                <label for="floatingPassword">Digite seu nome</label>
                             </div>
 
-
-                            
-                            <div class="form-floating">
-                                <input type="text" class="form-control" name='login'>
-                                <label for="exampleFormControlInput1" class="form-label"><strong>login</strong></label>
+                            <div class="form-floating mt-2">
+                                <input type="email" class="form-control" id="floatingPassword" placeholder="Password" name='email'>
+                                <label for="floatingPassword">Digite seu Email</label>
                             </div>
-                            <div class="form-floating">
-                                <input type="text" class="form-control" name='senha'>
-                                <label for="exampleFormControlInput1" class="form-label"><strong>senha</strong></label>
+                            <div class="form-floating mt-2">
+                                <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name='senha'>
+                                <label for="floatingPassword">Digite sua Senha</label>
                             </div>
-                            <div class="form-floating">
-                                <input type="text" class="form-control" name='nivel'>
-                                <label for="exampleFormControlInput1" class="form-label"><strong>nivel</strong></label>
+                            <div class="form-floating mt-3">
+                                <input type="tel" class="form-control" id="floatingPassword" placeholder="Password" name='telefone'>
+                                <label for="floatingPassword">Digite seu Telefone</label>
                             </div>
-                            <div class="form-floating" style="margin-bottom: 5mm;">
-                                <input type="date" class="form-control" name='data'>
-                                <label for="exampleFormControlTextarea1" class="form-label"><strong>data</strong></label>
+                            <div class="form-floating mt-3">
+                                <input type="endereco" class="form-control" id="floatingPassword" placeholder="Password" name='endereco'>
+                                <label for="floatingPassword">Digite seu Endereço</label>
                             </div>
-
-                           
-                            <div class="row">
-                                <div class="col-6">
-                                    <a class="w-100 btn btn-lg btn-secondary" href="usuario_cd.php">Voltar</a>
-                                </div>
-                                <div class="col-6">
-                                    <button type="submit" name='submit' value='send' class="w-100 btn btn-lg btn-primary">Enviar</button>
-                                </div>
+                            <div class="form-floating mt-3">
+                                <input type="text" class="form-control" id="floatingPassword" placeholder="Password" name='pais'>
+                                <label for="floatingPassword">Digite seu País</label>
                             </div>
-                        </div>
+                            <div class="form-floating mt-3">
+                                <input type="text" class="form-control" id="floatingPassword" placeholder="Nivel" name='nivel'>
+                                <label for="floatingPassword">Digite o Nivel</label>
+                            </div>
+                            <div class="form-floating mt-3">
+                                <input type="date" class="form-control" id="floatingPassword" placeholder="Data" name='data'>
+                                <label for="floatingPassword">Data</label>
+                            </div>
+                            <div class="mt-2 d-grid gap-2">
+                                <button type="submit" value='send' name='cadastra' class="btn btn-outline-light">Cadastrar </button>
+                                <span style="color:white;">Fazer login?</span>
+                                <a href="login.php" class="btn btn-outline-light"> Clique aqui</a>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
-        </form>
-<?
-include'../include/footer.php'
+        </div>
+    </div>
+</body>
+<?php
+include "../include/footer.php";
 ?>

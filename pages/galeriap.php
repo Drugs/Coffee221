@@ -1,6 +1,6 @@
 <?php
     $title= 'GALERIA-PRODUTOS';
-    include 'header.php';
+    include '../include/header.php';
 ?>
 <div class='container'> 
   <div class='row'>
@@ -18,7 +18,7 @@
             <div class="row row-cols-3">
                 <div class="col">
                   <div class="card" style="width: 14rem;">
-                    <img src="imagens/foco.jpg" class="card-img-top" alt="...">
+                    <img src="../imagens/foco.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                      <h6 class="card-title">camisa foco, força, café TAM:M</h6>
                      <p class="card-text">adicionar ao carrinho</p>
@@ -28,7 +28,7 @@
                 </div>   
                 <div class="col">
                      <div class="card" style="width: 14rem;">
-                        <img src="imagens/caffeine2.jpg" class="card-img-top" alt="...">
+                        <img src="../imagens/caffeine2.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                           <h6 class="card-title">descrição do produto</h6>
                           <p class="card-text">comprar/add ao carrinho</p>
@@ -38,7 +38,7 @@
                 </div>
                 <div class="col">
                     <div class="card" style="width: 14rem;">
-                      <img src="imagens/CA.jpg" class="card-img-top" alt="...">
+                      <img src="../imagens/CA.jpg" class="card-img-top" alt="...">
                       <div class="card-body">
                        <h6 class="card-title">descrição do produto</h6>
                        <p class="card-text">comprar/add ao carrinho</p>
@@ -51,5 +51,5 @@
 
 
 <?php
-    include 'footer.php';
+    include '../include/footer.php';
 ?>

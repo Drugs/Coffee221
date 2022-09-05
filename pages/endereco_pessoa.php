@@ -15,7 +15,7 @@ echo $consulta;
     <h1 class='text-center'>endereço </h1>
       <a class="btn mb-3 btn-warning float-start" href="cadastro_endereco.php">cadastre-se</a>
       <div class="col-12">
-               <table class="mt-3 table table-dark" style="box-shadow:10px 10px 50px  #000000,10px 10px 10px  #000000;">
+ <table class="mt-3 table table-dark" style="box-shadow:10px 10px 50px  #000000,10px 10px 10px  #000000;">
                 <thead class="table table-dark table-striped">
                 <tr>
                 <th scope ="col">#</th>  
@@ -31,37 +31,35 @@ echo $consulta;
                  <th scope ="col">Deletar</th> 
                  </tr>
                   </thead>
-
-
     <tbody>
+
                     <?php
                   
-  foreach($result as $endereco){
-     echo"
-      <tr>
-      <th scope='row'>{$endereco['id_endereco']}</th>
-     <td>{$endereco['cidade']}</td>
-     <td>{$endereco['rua']}</td>
-     <td>{$endereco['avenida']}</td>
-     <td>{$endereco['numero']}</td>
-     <td>{$endereco['id_pessoa']}</td>
-     <td>{$endereco['cep']}</td>
-     <td>{$endereco['estado']}</td>
-     </td>
-     <td>{$endereco['complemento']}</td>
-     <td><a class='btn btn-warning' href='.php?var={$endereco['id_endereco']}'>Atualizar</a> 
-     </td>
-     <td><a class='btn btn-outline-warning' href='.php?var={$endereco['id_endereco']}'>Deletar</a> </td>
+     foreach($result as $endereco){
+       echo"
+         <tr>
+        <td >{$endereco['id_endereco']}</td>
+       <td>{$endereco['cidade']}</td>
+       <td>{$endereco['rua']}</td>
+       <td>{$endereco['avenida']}</td>
+       <td>{$endereco['numero']}</td>
+       <td>{$endereco['id_pessoa']}</td>
+       <td>{$endereco['cep']}</td>
+       <td>{$endereco['estado']}</td>
+       <td>{$endereco['complemento']}</td>
+       <td><a class='btn btn-warning' href='.php?var={$endereco['id_endereco']}'>Atualizar</a> 
+       </td>
+       <td><a class='btn btn-outline-warning' href='.php?var={$endereco['id_endereco']}'>Deletar</a> </td>
                </tr>";
                  }
                  
                ?>
                  
-     </tbody>
+    </tbody>
 
-        </table>
-        </div>
-     </div>
+  </table>        
+         </div>
+       </div>
      </div> 
    </div>
 

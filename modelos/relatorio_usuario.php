@@ -34,7 +34,7 @@ echo $consulta;
             </div>
           </form>
     
-            <h1  style="margin-botton:1cm;margin-top:1cm;">relatorio usuario </h1>
+            <h1  style="margin-botton:1cm;margin-top:1cm;">Relatório usuario </h1>
       <a class="btn mb-3 btn-warning float-start" href="cadastro_usuario.php">cadastre-se</a>
       <div class="col-12">
                <table class="mt-3 table table-dark" style="box-shadow:10px 10px 50px  #000000,10px 10px 10px  #000000;">
@@ -67,9 +67,9 @@ echo $consulta;
      <td>{$pessoa['data']}</td>
      <td>{$pessoa['login']}</td>
      </td>
-     <td><a class='btn btn-warning' href='usu_update.php?var={$pessoa['id_pessoa']}'>Atualizar</a> 
+     <td><a class='btn btn-warning' href='update_usuario.php?var={$pessoa['id_pessoa']}'>Atualizar</a> 
      </td>
-     <td><a class='btn btn-outline-warning' href='usu_delete.php?var={$pessoa['id_pessoa']}'>Deletar</a> </td>
+     <td><a class='btn btn-outline-warning' href='deletar_usuario.php?var={$pessoa['id_pessoa']}'>Deletar</a> </td>
                </tr>";
                  }
                  
