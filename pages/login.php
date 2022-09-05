@@ -4,20 +4,20 @@ $title="Login";
 include "../include/header.php";
 include "../include/database.php";
 session_start();
-//var_dump($_GET);
+var_dump($_GET);
 if(isset($_GET['login'])and $_GET['login'] == 'send'){
     $loginuse=$_GET['email'];
     $senhauser= base64_encode($_GET['senha']);
     $consulta="Select * From `usuario` where email='{$loginuse}'";
     $query=mysqli_query($con, $consulta);
     $result= mysqli_fetch_assoc($query);
-   //var_dump($result);
+  var_dump($result);
     if($loginuse !='' AND $senhauser !=''){
         if($loginuse==$result["email"]){
         if($senhauser==$result["senha"]){
            $_SESSION['id_usu']=$result['id_usuario'];
            $_SESSION['id_pessoa']=$result['fk_id_pessoa'];
-           header('Location:../home.php');
+           header('');
         }else{
             header('Location:login.php?senha=erro');
         }

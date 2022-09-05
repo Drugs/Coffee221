@@ -10,7 +10,7 @@ if (isset($_GET['del']) and $_GET['del'] == 1) {
     $query = mysqli_query($con, $inf);
     header("location: info_produto.php?del=sucesso");
 }
-$inf2 = "SELECT * FROM info_roupa JOIN produto ON id_produto = fk_id_roupa
+$inf2 = "SELECT * FROM info_roupa JOIN produto ON id_produto = fk_id_produto
 WHERE id_info_roupa = {$id}";
 $query = mysqli_query($con, $inf2);
 $result = mysqli_fetch_assoc($query);
