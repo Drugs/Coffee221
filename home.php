@@ -1,7 +1,4 @@
-<!DOCTYPE >
-<html>
-
-    <?php
+<?php
 		$title ='The COFFE\'N\'JOIN';
 		include './include/header.php';
 	?>
