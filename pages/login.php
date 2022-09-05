@@ -31,7 +31,7 @@ if(isset($_GET['login'])and $_GET['login'] == 'send'){
     <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
         <div> 
-        <a class=' btn btn-outline-light' href="../home.php"> Home </a>
+        <a class=' btn btn-dark' href="../home.php"> Home </a>
             </div>
                 <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                     <div class="card bg-dark " style="border-radius: 1rem;" id="card">
