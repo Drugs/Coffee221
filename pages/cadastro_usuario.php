@@ -21,7 +21,7 @@ VALUES ('{$_GET['email']}','{$cripton}','{$id_usu}', '{$_GET['data']}')";
     <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-                <div class="card bg-dark " style="border-radius: 1rem; height: 115%" id="card">
+                <div class="card bg-dark " style="border-radius: 1rem;" id="card">
                     <div class="card-body p-5 text-center">
                         <form action="">
                             <h2 style="color:white; margin-top: 5mm;">Cadastrar-se</h2>
