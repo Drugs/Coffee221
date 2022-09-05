@@ -1,7 +1,11 @@
-	<?php
+<!DOCTYPE >
+<html>
+
+    <?php
 		$title ='The COFFE\'N\'JOIN';
 		include './include/header.php';
 	?>
+    
 <body>
 	<header class="p-3 bg-dark text-white">
 		<div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
@@ -116,6 +120,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-md-4">
                 <div class="card shadow-sm">
                     <img src="Imagens/xicaraleit.jpeg" heigth="">
@@ -210,6 +215,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-md-3">
                 <div class="card shadow-sm">
                     <img src="Imagens/xicaraleit.jpeg" heigth="">
