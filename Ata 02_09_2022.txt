@@ -8,6 +8,20 @@ Ata da reunião 02/09
 		Cadastrar no BD
 	---------------------------------------------------------------------------------------------
 	Pagina home>
+
+		Página "Sambando" -> FEITO
+		Imagem do carroussel -> FEITO
+			>Ajustar as imagens -> FEITO
+			>Colocar as imagens dos produtos -> EM ANDAMENTO
+		Páginas acessórias->[Página de produtos/Busca, Sobre, Categorias, Carrinho] -> A FAZER
+		Criar um botao de busca, ou mandar o formulário com JS -> EM ANDAMENTO
+		Botao de detalhes do produto - [Deixar cheguei ヽ⁠(｡⁠◕⁠o⁠◕⁠｡⁠)ﾉ⁠.] -> EM ANDAMENTO
+		Separar os cards -> FEITO
+			Sugestão - Parallax
+		Arrumar o footer - Caos -> FEITO
+			>Modificar por um footer mais simples?
+		Adicionar link para o perfil -> EM ANDAMENTO
+
 		Página "Sambando";
 		Imagem do carroussel
 			>Ajustar as imagens
@@ -15,20 +29,21 @@ Ata da reunião 02/09
 		Páginas acessórias->[Página de produtos/Busca, Sobre, Categorias, Carrinho]
 		Criar um botao de busca, ou mandar o formulário com JS
 		Botao de detalhes do produto - [Deixar cheguei ヽ⁠(｡⁠◕⁠o⁠◕⁠｡⁠)ﾉ⁠.]
-		Separar os cards 
-			Sugestão - Parallax
-		Arrumar o footer - Caos
-			>Modificar por um footer mais simples?
+		Separar os cards ->ok
+			Sugestão - Parallax->ok
+		Arrumar o footer - Caos ->jonas fez
+			>Modificar por um footer mais simples? ->
 		Adicionar link para o perfil
+
 	
 	---------------------------------------------------------------------------------------------
 	
 	Login
-		Resolver o gradiente do login ->Resolvido
-		Verificar a SESSION ->Relaxa na nave
-		Arrumar o botao de logout -> Andamento que caiu
-		Adicionar navegação pra voltar pra home[logo] ->  ok
-		Modificar link-> ok
+		Resolver o gradiente do login -> FEITO
+		Verificar a SESSION -> FEITO
+		Arrumar o botao de logout -> FEITO
+		Adicionar navegação pra voltar pra home[logo] -> FEITO
+		Modificar link-> FEITO
 	---------------------------------------------------------------------------------------------
 	Cadastro
 		Pesquisar mascaras ->
@@ -36,11 +51,11 @@ Ata da reunião 02/09
 		Cadastro de usuário com defeito -> Feito
 	--------------------------------------------------------------------------------------------
 	Produtos
-		Encasular o cabeçalho da pagina principal[colocar no include]
-		WTF this freaking gradient man!!!!!
-		Carregar as informações do produto do BD
-		Adicionar chamadas de ação [Adicionar ao carrinho, Compre AGORA!!!!]
-		Mostrar informações de estoque
+		Encasular o cabeçalho da pagina principal[colocar no include] -feito
+		WTF this freaking gradient man!!!!!->feito
+		Carregar as informações do produto do BD->
+		Adicionar chamadas de ação [Adicionar ao carrinho, Compre AGORA!!!!]->
+		Mostrar informações de estoque->
 	---------------------------------------------------------------------------------------------
 	Usuário
 		WTF nome voando?!?!?!?!?!? (╯°□°）╯︵ ┻━┻
@@ -57,23 +72,22 @@ Ata da reunião 02/09
 		Estudar o Dashboard do Bootstrap
 	---------------------------------------------------------------------------------------------
 	Atualizar usuário
-		Adicionar o titulo da página
-		Remover o var_dump
-		Adicionar value do campo telefone
+		Adicionar o titulo da página->
+		Remover o var_dump->
+		Adicionar value do campo telefone->
 	---------------------------------------------------------------------------------------------
 	Checkout Page
 		Adicionar o Menu -> FEITO
 		Adicionar footer -> FEITO
 		Adicionar navegação -> ?
 		Adicionar título -> FEITO
-		Integrar com a sessão e o BD -> FALTA
+		Integrar com a sessão e o BD -> A FAZER
 	---------------------------------------------------------------------------------------------
 	Galeria
 		Busca - IMPORTANTEEEEEEEEEEEEEEE
-		Carregar as informações do BD
-		Carregar as imagens
-		Adicionar o Menu
-		Adicionar footer
-		Adicionar navegação
+		Carregar as informações do BD-
+		Carregar as imagens-
+		Adicionar o Menu-
+		Adicionar footer-
+		Adicionar navegação-
 		Informação de categorias [Adicionar menu com as categorias]
-		
