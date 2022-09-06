@@ -15,14 +15,13 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
 <body>
   <div class="container">
     <div class="row">
-      <h1 style="margin-bottom:1cm;margin-top:1cm;">cadastro item carrinho</h1>
+      <h1 style="margin-bottom:1cm;margin-top:1cm;">Cadastro item carrinho</h1>
       <a class="btn mb-3 btn-warning float-start" href="cadastro_item_de_carrinho.php">cadastar</a>
       <div class="col-12">
         <table class="mt-3 table table-dark" style="box-shadow:10px 10px 50px  #000000,10px 10px 10px  #000000;">
           <thead class="table table-dark table- striped">
             <tr>
               <th scope="col">#</th>
-              <th scope="col">Nome</th>
               <th scope="col">id_produto</th>
               <th scope="col">id_carrinho</th>
               <th scope="col">Quantidade</th>
@@ -38,11 +37,10 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
           <tbody>
             <?php
 
-            foreach ($result as $item_carrinho) {
+            foreach ($result as $item_carrinho){
               echo "
   <tr>
       <th scope='row'>{$item_carrinho['id_item_carrinho']}</th>
-     <td>{$item_carrinho['nome']}</td>
      <td>{$item_carrinho['fk_id_info_produto']}</td>
      <td>{$item_carrinho['fk_id_carrinho']}</td>
      <td>{$item_carrinho['quantidade']}</td>
