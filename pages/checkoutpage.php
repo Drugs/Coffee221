@@ -1,5 +1,6 @@
 <?php
 #BY GUSTAVO INC © 2022
+$title = "Página de Pagamento";
 include "../include/header.php";
 ?>
     <header class="p-3 bg-dark text-white">
@@ -67,6 +68,7 @@ include "../include/header.php";
     <main>
         <div class="container">
             <div class="row g-5 mt-3">
+                <!--
                 <div class="col-md-5 col-lg-4 order-md-last">
                     <h4 class="d-flex justify-content-between align-content-center mb-3">
                         <span class="text-primary">Seu carrinho</span>
@@ -108,14 +110,13 @@ include "../include/header.php";
                             <span class="text-muted"><strong>R$X</strong></span>
                         </li>
                     </ul>
-                </div>
+                </div> !-->
                 
                 <div class="col-md-7 col-lg-8">
-                    <!--
-                    <h4>Endereço de cobrança
-                    </h4>
-                    <form class="needs-validation" action="" method="post">
-                        <div class="row g-3">
+                    
+                    <!-- <h4>Endereço de cobrança</h4> !-->
+                    <form class="needs-validation" action="pagdeobrigado.php" method="post">
+                        <!--<div class="row g-3">
                             <div class="col-sm-6">
                                 <label class="form-label" for="nome">Primeiro nome:</label>
                                 <input class="form-control" type="text" name="nome" id="name">
@@ -207,17 +208,18 @@ include "../include/header.php";
 
 
                         <h4 class="mb-4">Forma de Pagamento</h4>
-                        <div class="my-3">
+                        <div class="my-3" >
+                            <span id="debitt" class="text-muted"></span>
                             <div class="form-check">
-                                <input type="radio" class="form-check-input" name="metodopagamento" id="debit">
+                                <input type="radio" class="form-check-input" name="metodopagamento" id="debit" required>
                                 <label for="debit" class="form-check-label">Cartão de débito</label>
                             </div>
                             <div class="form-check">
-                                <input type="radio" class="form-check-input" name="metodopagamento" id="credit">
+                                <input type="radio" class="form-check-input" name="metodopagamento" id="credit" required>
                                 <label for="credit" class="form-check-label">Cartão de crédito</label>
                             </div>
                             <div class="form-check">
-                                <input type="radio" class="form-check-input" name="metodopagamento" id="paypal">
+                                <input type="radio" class="form-check-input" name="metodopagamento" id="paypal" required>
                                 <label for="paypal" class="form-check-label">Paypal</label>
                             </div>
                             <div class="form-check">
@@ -227,28 +229,33 @@ include "../include/header.php";
                                 </label>
                             </div>
                         </div>
+                        
                         <div class="row gy-3">
                             <div class="col-md-6">
                                 <label for="cartao-name" class="form-label">Nome no cartão</label>
-                                <input class="form-control" type="text" name="cartao-name" id="">
+                                <input class="form-control" type="text" name="cartao-name" required maxlength="80">
                                 <small class="text-muted">Nome completo como aparece no cartão</small>
                             </div>
                             <div class="col-md-6">
                                 <label for="cartao-number" class="form-label">Número do cartão</label>
-                                <input class="form-control" type="text" name="cartao-number" id="">
+                                <input class="form-control" type="number" name="cartao-number"  required>
                             </div>
                             <div class="col-md-3">
                                 <label class="form-label" for="valid">Validade</label>
-                                <input class="form-control" type="text" name="valid" id="">
+                                <input class="form-control" type="number" name="valid" required>
                             </div>
                             <div class="col-md-3">
                                 <label class="form-label" for="cc-cvv">CVV</label>
-                                <input class="form-control" type="text" name="cc-cvv" id="">
+                                <input class="form-control" type="number" name="cc-cvv" required> 
                             </div>
                         </div>
                         <hr class="my-4">
-                        <button class="btn btn-primary w-100 btn-lg" type="submit" value="send">Finalizar compra</button>
+                        <button id="comprar" type="submit" class="btn btn-primary w-100 btn-lg"  name="confirme" >Comprar Agora</button>
                     </form>
+
+    
+                    <!-- <button class="btn btn-primary" id="mensagem" onclick="mudarr()">clique</button> !-->
+
                 </div>
             </div>
         </div>  
@@ -270,10 +277,12 @@ include "../include/header.php";
     <style>
         .footer-1{
             background-color: rgb(172, 162, 162);
-            margin-top: 50px;
-            height: 200px;
+            margin-top: 80px;
+            height: 100px;
         }
     </style>
+
+
 
 <?php
 include "../include/footer.php";

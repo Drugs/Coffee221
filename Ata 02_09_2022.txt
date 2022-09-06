@@ -65,7 +65,7 @@ Ata da reunião 02/09
 		Adicionar o Menu -> FEITO
 		Adicionar footer -> FEITO
 		Adicionar navegação -> ?
-		Adicionar título -> ?
+		Adicionar título -> FEITO
 		Integrar com a sessão e o BD -> FALTA
 	---------------------------------------------------------------------------------------------
 	Galeria
