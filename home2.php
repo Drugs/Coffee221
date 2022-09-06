@@ -1,10 +1,22 @@
 <?php
-$title = 'The COFFE\'N\'JOIN';
+$title = 'The COFFEE\'N\'JOIN';
 include './include/header.php';
 include './include/nave.php'
 ?>
-
 <body class="parallax-home">
+	<script>
+			function rodinhas(id_info_prod){
+				console.log(id_info_prod)
+				var xmlhttp = new XMLHttpRequest();
+				xmlhttp.onreadystatechange = function(){
+					if (this.readyState==4 && this.status==200) {
+						console.log(this.responseText)
+					}
+				}
+				xmlhttp.open("GET", "pages/botanocarrinho.php?id=" + id_info_prod);
+				xmlhttp.send();
+			}
+		</script>
 	<!-- Slider da Home do site -->
 	<div class="container slider">
 		<div class="row">
@@ -63,7 +75,7 @@ include './include/nave.php'
 				</div>
 			</div>
 		</div>
-
+		
 		<div class="col-md-3">
 			<div class="card shadow-sm">
 				<img src="./Imagens/fototeste.jpg" heigth="">
