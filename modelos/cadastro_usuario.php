@@ -22,7 +22,7 @@ VALUES ('{$_GET['login']}','{$cripton}','{$_GET['nivel']}','{$id_usu}',
 '{$_GET['data']}')"; 
 echo'<br>';
 $query=mysqli_query($con,$consulta);
-header("Location:usuario_cd.php");
+header("Location:cadastro_usuario.php");
 }
 
 
