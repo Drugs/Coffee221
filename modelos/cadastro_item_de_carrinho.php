@@ -15,6 +15,7 @@ if(isset($_GET['submit'])and $_GET['submit']=='send'){
         $consulta="INSERT INTO item_de_carrinho(nome, fk_id_info_produto, fk_id_carrinho, quantidade)
          VALUES ('{$_GET['nome']},'{$_GET['fk_id_info_produto']},'{$_GET['fk_id_carrinho']},'{$_GET['quantidade']})";
           $query=mysqli_query($con, $consulta);
+          SELECT *, id_item_carrinho FROM carrinho  join item_de_carrinho on carrinho.id_carrinho=item_de_carrinho.fk_id_carrinho WHERE carrinho.id_carrinho=1;
         echo$consulta;
           
             header("Location:relatorio_item_de_carrinho.php");
@@ -29,10 +30,7 @@ if(isset($_GET['submit'])and $_GET['submit']=='send'){
                 <div class="row justify-content-center">
                     <div class="col-6">
                         <div class="col-12">
-                            <div class="form-floating" style="margin-top: 1cm;">
-                                <input type="text" class="form-control" name='nome'>
-                                <label for="exampleFormControlInput1" class="form-label"><strong>Nome</strong></label>
-                            </div>
+                      
                             <div class="form-floating">
                                 <input type="number" class="form-control" name='fk_id_info_produto'>
                                 <label for="exampleFormControlInput1" class="form-label"><strong>Id_produto</strong></label>
