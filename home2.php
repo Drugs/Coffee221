@@ -78,6 +78,7 @@ include './include/nave.php'
 <<<<<<< Updated upstream
 		
 =======
+<<<<<<< HEAD
         <script>
 			function rodinhas(id_info_prod){
 				console.log(id_info_prod)
@@ -89,6 +90,26 @@ include './include/nave.php'
           xmlhttp.send();
            }
 		</script>	
+=======
+
+<script>
+
+function rodinhas(id_info_prod){
+	console.log(id_info_prod)
+	var xmlhttp= new XMLHttpRequest();
+	xmlhttp.onredystatechange= function(){
+		if(this.readyState==4 && this.tatus==20){
+		console.log(this.responseText)
+		}
+	}
+	xmlhttp.open("GET", "pages/carrinhoinhu.php?id="+ id_info_prod)
+	xmlhttp.send();
+}
+
+</script>
+
+
+>>>>>>> 65011d36b6fabaf9218de59a1e6439ec523f93d5
 >>>>>>> Stashed changes
 		<div class="col-md-3">
 			<div class="card shadow-sm">
