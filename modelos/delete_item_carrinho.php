@@ -7,9 +7,9 @@ include'../include/database.php';
 $id=$_GET['var'];
 
 if(isset($_GET['delete']) and $_GET['delete']==''){
-    $consulta="DELETE from pessoa WHERE id_pessoa={$id}";
+    $consulta="DELETE from pessoa WHERE id_item_carrinho={$id}";
     $query=mysqli_query($con,$consulta);
-    #header('Location:cadastro_item_de_carrinho.php');
+    #header('Location:relatorio_item_de_carrinho.php');
 }
 
 ?>
@@ -22,7 +22,7 @@ if(isset($_GET['delete']) and $_GET['delete']==''){
         <div class="col-12">
         <h2 class="text-center">Tem Definitiva Absoluta Certeza que deseja deletar?</h2>
         <div class="mb-4">
-          <a href="cadastro_item_de_carrinho.php" class="btn btn-secondary">voltar</a>
+          <a href="relatorio_item_de_carrinho.php" class="btn btn-secondary">voltar</a>
           <a href="delete_item_carrinho.php?delete=1&var=<?=$id?>" class="btn btn-danger">Deletar</a>
          </div>
      </div>

@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <?php 
 	session_start();
 	#echo 'O id é: '.$_GET['id'];
@@ -12,4 +13,8 @@
 		$query=mysqli_query($con, $consulta);
 		#header("Location:relatorio_item_de_carrinho.php");
 	}
+=======
+<?php
+echo 'O id é:'.$_GET['id'];
+>>>>>>> Stashed changes
 ?>

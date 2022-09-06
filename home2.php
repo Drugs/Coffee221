@@ -75,7 +75,21 @@ include './include/nave.php'
 				</div>
 			</div>
 		</div>
+<<<<<<< Updated upstream
 		
+=======
+        <script>
+			function rodinhas(id_info_prod){
+				console.log(id_info_prod)
+				var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function(){
+               console.log(this.responseText)
+            }
+          xmlhttp.open("GET", "pages/botanocarrinho.php?id=" + id_info_prod);
+          xmlhttp.send();
+           }
+		</script>	
+>>>>>>> Stashed changes
 		<div class="col-md-3">
 			<div class="card shadow-sm">
 				<img src="./Imagens/fototeste.jpg" heigth="">
