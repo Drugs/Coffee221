@@ -1,23 +1,31 @@
 <?php
 //autor: Bianca Nogueira
-include'../include/header.php';
 $title="Atualizar item de carrinho";
+include'../include/header.php';
 include'../include/database.php';
 $id=$_GET['var'];
 
 if(isset($_GET['submit']) and $_GET['submit']=='send'){
-    $consulta = "UPDATE item_de_carrinho SET   id_produto = '{$_GET['fk_id_info_produto']}', carrinho={$_GET['fk_id_carrinho']}, 
-    quantidade = '{$_GET['quantidade']}' Join  produto On id_produto =fk_id_info_produto    WHERE id_item_carrinho = {$id}";
+    $consulta = "UPDATE carrinho
+     JOIN item_de_carrinho ON carrinho.id_carrinho = item_de_carrinho.fk_id_carrinho
+      SET fk_id_info_produto='{$_GET['fk_id_info_produto']}', fk_id_carrinho='{$_GET['fk_id_carrinho']}'
+      , quantidade = '{$_GET['quantidade']}'
+      WHERE id_item_carrinho ={$_GET['var']}  ";
+
     echo $consulta;
+    
     $query=mysqli_query ($con, $consulta);
       if($query){
       echo "Sucesso!!";
+      header("Location:relatorio_item_de_carrinho.php");
       }else{
         echo "Fracasso";
       }
     }
 
-    $consulta2="Select * From item_de_carrinho where id_item_carrinho = {$id}";
+    $consulta2="Select *, item_de_carrinho, carrinho from carrinho join item_de_carrinho
+    on carrinho.id_carrinho=item_de_carrinho.fk_id_carrinho where carrinho.id_carrinho = 1
+   ";
    // var_dump($consulta);
     $query=mysqli_query($con, $consulta2);
     $result = mysqli_fetch_assoc($query);

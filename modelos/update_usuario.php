@@ -1,8 +1,8 @@
 <?php
 //autor:Ana Clara
 //arquivo com conexão com o BD
-include '../include/header.php';
 $title = "usuario update";
+include '../include/header.php';
 include '../include/database.php';
 #echo'<pre>';
 #var_dump($_GET);
