@@ -1,2 +1,2 @@
-<?php 
-	include 'home2.php';
+<?php
+include 'home2.php';
