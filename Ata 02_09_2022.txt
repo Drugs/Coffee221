@@ -15,10 +15,10 @@ Ata da reunião 02/09
 		Páginas acessórias->[Página de produtos/Busca, Sobre, Categorias, Carrinho]
 		Criar um botao de busca, ou mandar o formulário com JS
 		Botao de detalhes do produto - [Deixar cheguei ヽ⁠(｡⁠◕⁠o⁠◕⁠｡⁠)ﾉ⁠.]
-		Separar os cards 
-			Sugestão - Parallax
-		Arrumar o footer - Caos
-			>Modificar por um footer mais simples?
+		Separar os cards ->ok
+			Sugestão - Parallax->ok
+		Arrumar o footer - Caos ->jonas fez
+			>Modificar por um footer mais simples? ->
 		Adicionar link para o perfil
 	
 	---------------------------------------------------------------------------------------------
@@ -37,10 +37,10 @@ Ata da reunião 02/09
 	--------------------------------------------------------------------------------------------
 	Produtos
 		Encasular o cabeçalho da pagina principal[colocar no include] -feito
-		WTF this freaking gradient man!!!!!-feito
-		Carregar as informações do produto do BD
-		Adicionar chamadas de ação [Adicionar ao carrinho, Compre AGORA!!!!]
-		Mostrar informações de estoque
+		WTF this freaking gradient man!!!!!->feito
+		Carregar as informações do produto do BD->
+		Adicionar chamadas de ação [Adicionar ao carrinho, Compre AGORA!!!!]->
+		Mostrar informações de estoque->
 	---------------------------------------------------------------------------------------------
 	Usuário
 		WTF nome voando?!?!?!?!?!? (╯°□°）╯︵ ┻━┻
@@ -57,9 +57,9 @@ Ata da reunião 02/09
 		Estudar o Dashboard do Bootstrap
 	---------------------------------------------------------------------------------------------
 	Atualizar usuário
-		Adicionar o titulo da página
-		Remover o var_dump
-		Adicionar value do campo telefone
+		Adicionar o titulo da página->
+		Remover o var_dump->
+		Adicionar value do campo telefone->
 	---------------------------------------------------------------------------------------------
 	Checkout Page
 		Adicionar o Menu -> FEITO
@@ -70,10 +70,10 @@ Ata da reunião 02/09
 	---------------------------------------------------------------------------------------------
 	Galeria
 		Busca - IMPORTANTEEEEEEEEEEEEEEE
-		Carregar as informações do BD
-		Carregar as imagens
-		Adicionar o Menu
-		Adicionar footer
-		Adicionar navegação
-		Informação de categorias [Adicionar menu com as categorias]
+		Carregar as informações do BD-
+		Carregar as imagens-
+		Adicionar o Menu-
+		Adicionar footer-
+		Adicionar navegação-
+		Informação de categorias [Adicionar menu com as categorias]-
 		
