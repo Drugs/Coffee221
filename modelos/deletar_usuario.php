@@ -6,10 +6,10 @@ $title="delete";
 include'../include/database.php';
 $id=$_GET['var'];
 
-if(isset($_GET['delete']) and $_GET['delete']==''){
+if(isset($_GET['delete']) and $_GET['delete']==1){
     $consulta="DELETE from pessoa WHERE id_pessoa={$id}";
     $query=mysqli_query($con,$consulta);
-    #header('Location:cadastro_usuario.php');
+    header('Location:cadastro_usuario.php');
 }
 
 ?>
