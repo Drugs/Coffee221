@@ -1,8 +1,9 @@
 <?php
 //autor:Ana Clara
 //arquivo com conexão com o BD
+
+$title="Item de carrinho cadastro";
 include'../include/header.php';
-$title="usuario cadastro";
 include'../include/database.php';
 
 #echo'<pre>';
@@ -12,12 +13,12 @@ if(isset($_GET['submit'])and $_GET['submit']=='send'){
     echo'<pre>';
     var_dump($_GET);
     echo'</pre>';
-        $consulta="INSERT INTO item_de_carrinho(nome, fk_id_info_produto, fk_id_carrinho, quantidade)
-         VALUES ('{$_GET['nome']},'{$_GET['fk_id_info_produto']},'{$_GET['fk_id_carrinho']},'{$_GET['quantidade']})";
-          $query=mysqli_query($con, $consulta);
-          SELECT *, id_item_carrinho FROM carrinho  join item_de_carrinho on carrinho.id_carrinho=item_de_carrinho.fk_id_carrinho WHERE carrinho.id_carrinho=1;
-        echo$consulta;
-          
+
+    $consulta="INSERT INTO item_de_carrinho( fk_id_info_produto, fk_id_carrinho, quantidade)
+    VALUES ({$_GET['fk_id_info_produto']},{$_GET['fk_id_carrinho']},{$_GET['quantidade']})";
+    $query=mysqli_query($con, $consulta);
+        
+        echo $consulta;
             header("Location:relatorio_item_de_carrinho.php");
 
           
