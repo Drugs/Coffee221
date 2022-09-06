@@ -36,8 +36,8 @@ Ata da reunião 02/09
 		Cadastro de usuário com defeito -> Feito
 	--------------------------------------------------------------------------------------------
 	Produtos
-		Encasular o cabeçalho da pagina principal[colocar no include]
-		WTF this freaking gradient man!!!!!
+		Encasular o cabeçalho da pagina principal[colocar no include] -feito
+		WTF this freaking gradient man!!!!!-feito
 		Carregar as informações do produto do BD
 		Adicionar chamadas de ação [Adicionar ao carrinho, Compre AGORA!!!!]
 		Mostrar informações de estoque
