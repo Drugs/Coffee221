@@ -231,6 +231,6 @@ include './include/nave.php'
 	</div>
 
 	<?php
-	include './js/rodape.php';
+	include './include/rodape.php';
 	include './include/footer.php';
 	?>
