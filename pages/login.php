@@ -11,7 +11,7 @@ if(isset($_GET['login'])and $_GET['login'] == 'send'){
     $consulta="Select * From `usuario` where email='{$loginuse}'";
     $query=mysqli_query($con, $consulta);
     $result= mysqli_fetch_assoc($query);
-   //var_dump($result);
+  //var_dump($result);
     if($loginuse !='' AND $senhauser !=''){
         if($loginuse==$result["email"]){
         if($senhauser==$result["senha"]){
@@ -29,10 +29,13 @@ if(isset($_GET['login'])and $_GET['login'] == 'send'){
 ?>
 <body class="bianca">
     <div class="container py-5 h-100">
-        <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-                <div class="card bg-dark " style="border-radius: 1rem;" id="card">
-                    <div class="card-body p-5 text-center">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+        <div> 
+        <a class=' btn btn-dark' href="../home.php"> Home </a>
+            </div>
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                    <div class="card bg-dark " style="border-radius: 1rem;" id="card">
+                        <div class="card-body p-5 text-center">
                         <h2 style="color:white;">LOGIN </h2>
                         <div>
                             <?php
@@ -58,7 +61,7 @@ if(isset($_GET['login'])and $_GET['login'] == 'send'){
                         <button type="submit" value='send' name='login' class="btn btn-outline-light">Entrar</button>
                     </form>
 						<span style="color:white;">Ainda não tem uma conta?</span>
-						<a class='btn btn-danger' href="usuario_cadastro.php"> Clique aqui</a>
+						<a class='mt-1 btn btn-outline-light' href="cadastro_usuario.php"> Clique aqui</a>
 						</div>
                 </div>
             </div>

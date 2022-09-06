@@ -21,7 +21,7 @@ if(isset($_GET['delete']) and $_GET['delete']==1){
        <h3 class="text-center">Deleção de pessoa</h3>
       <div class="col-10">
         <h2 class="text-center">Tem Definitiva Absoluta Certeza que deseja deletar?</h2>
-        <a href="CRUD_cadastro.php" class="btn btn-secondary">voltar</a>
+        <a href="relatorio_pessoa.php" class="btn btn-secondary">voltar</a>
         <a href="delete_cd.php?delete=1&var=<?=$id?>" class="btn btn-danger">Deletar</a>
      </div>
    </div>

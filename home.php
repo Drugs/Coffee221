@@ -1,122 +1,101 @@
-<!DOCTYPE >
-<html>
-
-<head>
-    <title>The COFFE'JOIN</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css">
+<?php
+		$title ='The COFFE\'N\'JOIN';
+		include './include/header.php';
+	?>
     
-    <style>
-        .feature-icon {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 4rem;
-            height: 4rem;
-            margin-bottom: 1rem;
-            font-size: 2rem;
-            color: #fff;
-            border-radius: 0.75rem;
-        }
-    </style>
+<body>
+	<header class="p-3 bg-dark text-white">
+		<div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+			<a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+				<svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+					<use xlink:href="#bootstrap"></use>
+				</svg>
+			</a>
 
-</head>
+			<ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+				<h2><i class="bi bi-cup-hot"></i> </h2>
 
-<body >
+				<li><a href="#" class="nav-link px-2 text-warning">
+						<font style="vertical-align: inherit;">
+							<font style="vertical-align: inherit;">The COFFE'JOIN</font>
+						</font>
+					</a></li>
+				<li><a href="#" class="nav-link px-2 text-white">
+						<font style="vertical-align: inherit;">
+							<font style="vertical-align: inherit;">Mais Sabores</font>
+						</font>
+					</a></li>
+				<li><a href="#" class="nav-link px-2 text-white">
+						<font style="vertical-align: inherit;">
+							<font style="vertical-align: inherit;">Preços</font>
+						</font>
+					</a></li>
+				<li><a href="#" class="nav-link px-2 text-white">
+						<font style="vertical-align: inherit;">
+							<font style="vertical-align: inherit;">Perguntas frequentes</font>
+						</font>
+					</a></li>
+				<li><a href="#" class="nav-link px-2 text-white">
+						<font style="vertical-align: inherit;">
+							<font style="vertical-align: inherit;">Sobre</font>
+						</font>
+					</a></li>
+			</ul>
 
-
-            <header class="p-3 bg-dark text-white">
-                
-                    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
-                                <use xlink:href="#bootstrap"></use>
-                            </svg>
-                        </a>
-
-                        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                            <h2><i class="bi bi-cup-hot"></i> </h2>
-
-                            <li><a href="#" class="nav-link px-2 text-warning">
-                                    <font style="vertical-align: inherit;">
-                                        <font style="vertical-align: inherit;">The COFFE'JOIN</font>
-                                    </font>
-                                </a></li>
-                            <li><a href="#" class="nav-link px-2 text-white">
-                                    <font style="vertical-align: inherit;">
-                                        <font style="vertical-align: inherit;">Mais Sabores</font>
-                                    </font>
-                                </a></li>
-                            <li><a href="#" class="nav-link px-2 text-white">
-                                    <font style="vertical-align: inherit;">
-                                        <font style="vertical-align: inherit;">Preços</font>
-                                    </font>
-                                </a></li>
-                            <li><a href="#" class="nav-link px-2 text-white">
-                                    <font style="vertical-align: inherit;">
-                                        <font style="vertical-align: inherit;">Perguntas frequentes</font>
-                                    </font>
-                                </a></li>
-                            <li><a href="#" class="nav-link px-2 text-white">
-                                    <font style="vertical-align: inherit;">
-                                        <font style="vertical-align: inherit;">Sobre</font>
-                                    </font>
-                                </a></li>
-                        </ul>
-
-                        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-                            
-                            <input type="search" class="form-control form-control-dark" placeholder="Procurar..."
-                                aria-label="Procurar">
-                        </form>
-                        <?php
-                        if(isset($_SESSION['id_usu']) and  $_SESSION['id_usu'] != '' ){
-                           echo'<div class="text-end">';
-                            echo'<a class="btn btn-outline-light me-2" href="pages/logout.php"> Sair</a>';
-                        }else{
-                            echo'<div class="text-end">';
-                           echo'<a class="btn btn-outline-light me-2" href="pages/login.php">Login</a>';
-                        }
-                        ?>
-                        </div>
-            
-            </header>
+			<form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+				
+				<input type="search" class="form-control form-control-dark" placeholder="Procurar..."
+					aria-label="Procurar">
+			</form>
+			<?php
+			if(isset($_SESSION['id_usu']) and  $_SESSION['id_usu'] != '' ){
+			   echo'<div class="text-end">';
+				echo'<a class="btn btn-outline-light me-2" href="pages/logout.php"> Sair</a>';
+			}else{
+				echo'<div class="text-end">';
+			   echo'<a class="btn btn-outline-light me-2" href="pages/login.php">Login</a>';
+			}
+			?>
+			</div>
+	</header>
   
 
-            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-            <div class="col" style="background-color:#AA6C39;">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="Imagens/xicaraleit.jpeg" style="height:500px;" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="Imagens/grao.jpeg"  style="height:500px;" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="Imagens/graoedit.jpeg"  style="height:500px;" class="d-block w-100" alt="...">
-    
-    </div>
-  </div>
-    </div>
+
+
+
+
+
+
+
+
+
+	<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+	    	<div class="col" style="background-color:#AA6C39;">
+		        <div class="carousel-inner">
+		        <div class="carousel-item active">
+		  <img src="Imagens/cofe2.png" style="height:500px;" class="d-block w-100" alt="...">
+		</div>
+        <div class="carousel-item">
+            <img src="Imagens/coffe1.png" class="d-block w-100" alt="...">
+              </div>
+		<div class="carousel-item">
+		  <img src="Imagens/cofe3.png"  style="height:500px;" class="d-block w-100" alt="...">
+		</div>
+		</div>
+		</div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+   </button>
+   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
-  </button>
+   </button>
+     </div>       
                     
-                    
-    
-
-
-
-
     
             <div class="row justify-content-evenly">
-        <div class="col-md-4"><br>
+        <div class="col-md-4">
                 <div class="card shadow-sm">
                     <img src="Imagens/xicaraleit.jpeg" heigth=''  >
                     <div class="card-body">
@@ -130,13 +109,7 @@
                         </p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                               
-                                   
-                                <button type="button" class="btn btn-sm btn-outline-secondary">
-                                    
-                                        <font style="vertical-align: inherit;">Mais</font>
-                                    </font>
-                                </button>
+                                <button type="button" id='alvo' onclick='rodinhas(1)' class="btn btn-sm btn-warning">Adicionar ao carrinho</button>
                             </div>
                             <small class="text-muted">
                                 <font style="vertical-align: inherit;">
@@ -147,7 +120,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4"><br>
+
+            <div class="col-md-4">
                 <div class="card shadow-sm">
                     <img src="Imagens/xicaraleit.jpeg" heigth="">
                     <div class="card-body">
@@ -178,7 +152,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4"><br>
+            <div class="col-md-4">
                 <div class="card shadow-sm">
                     <img src="Imagens/xicaraleit.jpeg" heigth="">
                     <div class="card-body">
@@ -210,7 +184,7 @@
             
 
 
-        <div class="col-md-3"><br>
+        <div class="col-md-3">
                 <div class="card shadow-sm">
                     <img src="Imagens/xicaraleit.jpeg" heigth=''  >
                     <div class="card-body">
@@ -241,7 +215,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3"><br>
+
+            <div class="col-md-3">
                 <div class="card shadow-sm">
                     <img src="Imagens/xicaraleit.jpeg" heigth="">
                     <div class="card-body">
@@ -272,7 +247,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3"><br>
+            <div class="col-md-3">
                 <div class="card shadow-sm">
                     <img src="Imagens/xicaraleit.jpeg" heigth="">
                     <div class="card-body">
@@ -321,24 +296,12 @@
       <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
     </ul>
   </footer>
-                    
-                 
 
-
-
-
-  
-
-
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-        crossorigin="anonymous"></script>
+  <?php
+   
+   include './include/footer.php';
+   
+   ?>
 </body>
 
 </html>

@@ -5,7 +5,7 @@ include "../include/header.php";
 include '../include/database.php';
 
 if (isset($_GET['cadastrar']) and $_GET['cadastrar'] == 'send') {
-    $inf_a = "INSERT INTO info_alimento (`estoque`,`preco`,`embalagem`,`peso`,`sabor`,`fk_id_alimento`)
+    $inf_a = "INSERT INTO info_alimento (`estoque`,`preco`,`embalagem`,`peso`,`sabor`,`fk_id_produto`)
     VALUES ('{$_GET['estoque']}','{$_GET['preco']}','{$_GET['embalagem']}', 
     '{$_GET['peso']}','{$_GET['sabor']}',{$_GET['id_produto']})";
     #echo $inf;
