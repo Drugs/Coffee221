@@ -51,7 +51,7 @@ $result2 = mysqli_fetch_all($query, MYSQLI_ASSOC);
                         <a class="btn mb-3 btn-success float-start" href="info_cadastro_roupa.php">Cadastrar</a>
                     </div>
                     <div class="col-4">
-                        <a class="btn mb-3 btn-success float-start" href="relatorioProdutos.php">Acessar produtos</a>
+                        <a class="btn mb-3 btn-success float-start" href="relatorio_produto.php">Acessar produtos</a>
                     </div>
                     <div class="col-6">
                         <?php

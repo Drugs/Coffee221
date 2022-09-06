@@ -24,16 +24,16 @@ Ata da reunião 02/09
 	---------------------------------------------------------------------------------------------
 	
 	Login
-		Resolver o gradiente do login
-		Verificar a SESSION - IMPORTANTEEEEEEEEEEEEEEE
-		Arrumar o botao de logout
-		Adicionar navegação pra voltar pra home[logo]
-		Modificar link
+		Resolver o gradiente do login ->Resolvido
+		Verificar a SESSION ->Relaxa na nave
+		Arrumar o botao de logout -> Andamento que caiu
+		Adicionar navegação pra voltar pra home[logo] ->  ok
+		Modificar link-> ok
 	---------------------------------------------------------------------------------------------
 	Cadastro
-		Pesquisar mascaras
-		Entrar/Cadastrar/Enviar?
-		Cadastro de usuário com defeito
+		Pesquisar mascaras ->
+		Entrar/Cadastrar/Enviar? -> Feito
+		Cadastro de usuário com defeito -> Feito
 	--------------------------------------------------------------------------------------------
 	Produtos
 		Encasular o cabeçalho da pagina principal[colocar no include]
@@ -65,7 +65,7 @@ Ata da reunião 02/09
 		Adicionar o Menu -> FEITO
 		Adicionar footer -> FEITO
 		Adicionar navegação -> ?
-		Adicionar título -> ?
+		Adicionar título -> FEITO
 		Integrar com a sessão e o BD -> FALTA
 	---------------------------------------------------------------------------------------------
 	Galeria

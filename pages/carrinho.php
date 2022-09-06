@@ -1,11 +1,11 @@
-<!DOCTYPE>
+<!DOCTYPE >
 <html>
 
 <head>
     <title>The COFFE'JOIN</title>
 
     <?php
-    include './include/header.php';
+    include '../include/header.php';
     ?>
     <style>
         .feature-icon {
@@ -207,8 +207,20 @@
 
             <div class="col-md-2">
                 <h2 style="color: red;">
-                    <p>Deletar</p>
-                </h2>
+                    <p>Remover</p>
+    </h2>
+    <div class="col">
+                    <p></p>
+                <button type='button' class='btn btn-secondary btn-sm'>Deletar</button>
+    </div>
+    <div class="col">
+                    <p></p>
+                <button type='button' class='btn btn-secondary btn-sm'>Deletar</button>
+    </div>
+    <div class="col">
+                    <p></p>
+                <button type='button' class='btn btn-secondary btn-sm'>Deletar</button>
+    </div>
             </div>
 
             <div class="row">
@@ -251,7 +263,7 @@
 
 
         <?php
-        include './include/footer.php';
+        include '../include/footer.php';
         ?>
 
 

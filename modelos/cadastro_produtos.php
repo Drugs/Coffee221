@@ -8,7 +8,7 @@ if (isset($_GET['cadastrar']) and $_GET['cadastrar'] == 'send') {
     $inf = "INSERT INTO produto (`nome_produto`,`descricao`,`categoria`,`marca`)
     VALUES ('{$_GET['nome_produto']}','{$_GET['descricao']}','{$_GET['categoria']}','{$_GET['marca']}')";
     $query = mysqli_query($con, $inf);
-    header("location: relatorioProdutos.php?cadastrar=sucesso");
+    header("location: relatorio_produto.php?cadastrar=sucesso");
 }
 $inf2 = "SELECT * FROM produto GROUP BY categoria";
 $query = mysqli_query($con, $inf2);
@@ -63,7 +63,7 @@ $resultado = mysqli_fetch_all($query, MYSQLI_ASSOC);
 
                             <div class="row">
                                 <div class="col-6">
-                                    <a class="w-100 btn btn-lg btn-primary" style="margin-bottom: 5mm;" href="relatorioProdutos.php">Voltar</a>
+                                    <a class="w-100 btn btn-lg btn-primary" style="margin-bottom: 5mm;" href="relatorio_produto.php">Voltar</a>
                                 </div>
                                 <div class="col-6">
                                     <button class="w-100 btn btn-lg btn-primary" style="margin-bottom: 5mm;" type="submit" value="send" name="cadastrar">Enviar</button>
