@@ -8,27 +8,27 @@ Ata da reunião 02/09
 		Cadastrar no BD
 	---------------------------------------------------------------------------------------------
 	Pagina home>
-		Página "Sambando";
-		Imagem do carroussel
-			>Ajustar as imagens
-			>Colocar as imagens dos produtos
-		Páginas acessórias->[Página de produtos/Busca, Sobre, Categorias, Carrinho]
-		Criar um botao de busca, ou mandar o formulário com JS
-		Botao de detalhes do produto - [Deixar cheguei ヽ⁠(｡⁠◕⁠o⁠◕⁠｡⁠)ﾉ⁠.]
-		Separar os cards 
+		Página "Sambando" -> FEITO
+		Imagem do carroussel -> FEITO
+			>Ajustar as imagens -> FEITO
+			>Colocar as imagens dos produtos -> EM ANDAMENTO
+		Páginas acessórias->[Página de produtos/Busca, Sobre, Categorias, Carrinho] -> A FAZER
+		Criar um botao de busca, ou mandar o formulário com JS -> EM ANDAMENTO
+		Botao de detalhes do produto - [Deixar cheguei ヽ⁠(｡⁠◕⁠o⁠◕⁠｡⁠)ﾉ⁠.] -> EM ANDAMENTO
+		Separar os cards -> FEITO
 			Sugestão - Parallax
-		Arrumar o footer - Caos
+		Arrumar o footer - Caos -> FEITO
 			>Modificar por um footer mais simples?
-		Adicionar link para o perfil
+		Adicionar link para o perfil -> EM ANDAMENTO
 	
 	---------------------------------------------------------------------------------------------
 	
 	Login
-		Resolver o gradiente do login ->Resolvido
-		Verificar a SESSION ->Relaxa na nave
-		Arrumar o botao de logout -> Andamento que caiu
-		Adicionar navegação pra voltar pra home[logo] ->  ok
-		Modificar link-> ok
+		Resolver o gradiente do login -> FEITO
+		Verificar a SESSION -> FEITO
+		Arrumar o botao de logout -> FEITO
+		Adicionar navegação pra voltar pra home[logo] -> FEITO
+		Modificar link-> FEITO
 	---------------------------------------------------------------------------------------------
 	Cadastro
 		Pesquisar mascaras ->
@@ -66,7 +66,7 @@ Ata da reunião 02/09
 		Adicionar footer -> FEITO
 		Adicionar navegação -> ?
 		Adicionar título -> FEITO
-		Integrar com a sessão e o BD -> FALTA
+		Integrar com a sessão e o BD -> A FAZER
 	---------------------------------------------------------------------------------------------
 	Galeria
 		Busca - IMPORTANTEEEEEEEEEEEEEEE
