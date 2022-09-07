@@ -3,11 +3,10 @@
 $title = "Página de Pagamento";
 include "../include/header.php";
 ?>
-    <header class="p-3 bg-dark text-white">
-                
-        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+<header class="p-3 bg-dark text-white">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
                     <use xlink:href="#bootstrap"></use>
                 </svg>
             </a>
@@ -15,7 +14,7 @@ include "../include/header.php";
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                 <h2><i class="bi bi-cup-hot"></i></h2>
                 <li>
-                    <a href="../home.php" class="nav-link px-2 text-warning">
+                    <a href="../home2.php" class="nav-link px-2 text-warning">
                         <font style="vertical-align: inherit;">
                             <font style="vertical-align: inherit;">The COFFE'JOIN</font>
                         </font>
@@ -50,7 +49,7 @@ include "../include/header.php";
                     </a>
                 </li>
             </ul>
-
+            
             <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">    
                 <input type="search" class="form-control form-control-dark" placeholder="Procurar..."aria-label="Procurar">
             </form>
@@ -68,6 +67,9 @@ include "../include/header.php";
     <main>
         <div class="container">
             <div class="row g-5 mt-3">
+                <div class="col-md-5 col-lg-6 order-md-last">
+                    <img src="../Imagens\Mobile payments-rafiki.svg" alt="svg payment">
+                </div>
                 <!--
                 <div class="col-md-5 col-lg-4 order-md-last">
                     <h4 class="d-flex justify-content-between align-content-center mb-3">
@@ -112,7 +114,7 @@ include "../include/header.php";
                     </ul>
                 </div> !-->
                 
-                <div class="col-md-7 col-lg-8">
+                <div class="col-md-7 col-lg-6">
                     
                     <!-- <h4>Endereço de cobrança</h4> !-->
                     <form class="needs-validation" action="pagdeobrigado.php" method="post">
@@ -209,17 +211,22 @@ include "../include/header.php";
 
                         <h4 class="mb-4">Forma de Pagamento</h4>
                         <div class="my-3" >
-                            <span id="debitt" class="text-muted"></span>
+                                <select class="selecaoop" name="selecao" id="">
+                                    <option value="Cartao_débito">Cartão de débito</option>
+                                    <option value="Cartao_crédito">Cartão de crédito</option>
+                                    <option value="PayPal">Paypal</option>
+                                </select>
+                            <!-- <span id="debitt" class="text-muted"></span>
                             <div class="form-check">
-                                <input type="radio" class="form-check-input" name="metodopagamento" id="debit" required>
+                                <input type="radio" class="form-check-input" name="metodopagamento_debitt" id="debit" required>
                                 <label for="debit" class="form-check-label">Cartão de débito</label>
                             </div>
                             <div class="form-check">
-                                <input type="radio" class="form-check-input" name="metodopagamento" id="credit" required>
+                                <input type="radio" class="form-check-input" name="metodopagamento_credit" id="credit" required>
                                 <label for="credit" class="form-check-label">Cartão de crédito</label>
                             </div>
                             <div class="form-check">
-                                <input type="radio" class="form-check-input" name="metodopagamento" id="paypal" required>
+                                <input type="radio" class="form-check-input" name="metodopagamento" id="paypal" disabled>
                                 <label for="paypal" class="form-check-label">Paypal</label>
                             </div>
                             <div class="form-check">
@@ -227,26 +234,27 @@ include "../include/header.php";
                                 <label for="pix" class="form-check-label"><strong>Pix</strong>
                                 <span class="text-muted">(em breve)</span>
                                 </label>
-                            </div>
+                            </div> -->
                         </div>
                         
                         <div class="row gy-3">
                             <div class="col-md-6">
                                 <label for="cartao-name" class="form-label">Nome no cartão</label>
-                                <input class="form-control" type="text" name="cartao-name" required maxlength="80">
+                                <input class=" estilo" type="text" name="cartao-name" required maxlength="80" id="upcase" placeholder="DIGITE SEU NOME">
                                 <small class="text-muted">Nome completo como aparece no cartão</small>
                             </div>
                             <div class="col-md-6">
                                 <label for="cartao-number" class="form-label">Número do cartão</label>
-                                <input class="form-control" type="number" name="cartao-number"  required>
+                                <input class=" estilo" type="" id="number_card" name="cartao-number" required maxlength="19" placeholder="0000 0000 0000 0000" onkeyup="number_valid()" pattern="[0-9]{4}[ ][0-9]{4}[ ][0-9]{4}[ ][0-9]{4}">
                             </div>
                             <div class="col-md-3">
                                 <label class="form-label" for="valid">Validade</label>
-                                <input class="form-control" type="number" name="valid" required>
+                                <input class=" estilo" type="" maxlength="5" pattern="[0-9]{2}[/][0-9]{2}" name="valid" required autocomplete="off" placeholder="00/00" id="validade" onkeyup="mask_valid()">
+                                <script src="../js/maks_valid.js"></script>
                             </div>
                             <div class="col-md-3">
                                 <label class="form-label" for="cc-cvv">CVV</label>
-                                <input class="form-control" type="number" name="cc-cvv" required> 
+                                <input class=" estilo" type="" name="cc-cvv" required autocomplete="off" placeholder="000" pattern="[0-9]{3}" maxlength="3"> 
                             </div>
                         </div>
                         <hr class="my-4">
@@ -275,14 +283,39 @@ include "../include/header.php";
     </footer>
 
     <style>
+        body{
+            background-color: ;
+            color: black;
+            font-size: 20px;
+        }
+        .estilo{
+            background-color: transparent;
+            border-radius: 0px ;
+            border: none;
+            border-bottom: 1px solid black;
+            width: 100%;
+            padding: 4px;
+        }
         .footer-1{
             background-color: rgb(172, 162, 162);
-            margin-top: 80px;
+            margin-top: 115px;
             height: 100px;
+        }
+
+        .selecaoop{
+            background-color: transparent;
+            padding: 4px;
+            border:none;
+            border-bottom: 1px solid ;
+            background-color: ;
+            color: black;
+            font-family: sans-serif;
+            font-size: 21px;
         }
     </style>
 
 
+<script src="../js/maks_valid.js"></script>
 
 <?php
 include "../include/footer.php";
