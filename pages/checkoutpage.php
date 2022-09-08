@@ -1,13 +1,15 @@
 <?php
 #BY GUSTAVO INC © 2022
+session_start();
 $title = "Página de Pagamento";
 include "../include/header.php";
 include "../include/database.php";
 include "../include/nave-site.php";
 
-$inf = "SELECT * FROM cartoes JOIN pessoa ON id_pessoa = fk_id_pessoa";
-$query = mysqli_query($con, $inf);
-$tradu = mysqli_fetch_all($query, MYSQLI_ASSOC);
+$inf2 = "SELECT * FROM cartoes JOIN pessoa ON id_pessoa = fk_id_pessoa
+WHERE id_info_cartao = '13' ";
+$query = mysqli_query($con, $inf2);
+$result = mysqli_fetch_assoc($query);
 ?>
 
 <main>
@@ -182,29 +184,55 @@ $tradu = mysqli_fetch_all($query, MYSQLI_ASSOC);
                                 </label>
                             </div> -->
                     </div>
-
-                    <div class="row gy-3">
-                        <div class="col-md-6">
-                            <label for="cartao-name" class="form-label">Nome no cartão</label>
-                            <input class=" estilo" type="text" name="cartao-name" required maxlength="80" id="upcase" placeholder="DIGITE SEU NOME">
-                            <small class="text-muted">Nome completo como aparece no cartão</small>
+                    <?php
+                    if (isset($_SESSION['id_usu']) and $_SESSION['id_usu'] != '') {
+                        echo "
+                    <div class='row gy-3'>
+                        <div class='col-md-6'>
+                            <label for='nome_cartao' class='form-label'>Nome no cartão</label>
+                            <input class=' estilo' type='text' name='nome_cartao' required maxlength='80' id='upcase' placeholder='DIGITE SEU NOME' value='$result[nome_cartao]'>
+                            <small class='text-muted'>Nome completo como aparece no cartão</small>
                         </div>
-                        <div class="col-md-6">
-                            <label for="cartao-number" class="form-label">Número do cartão</label>
-                            <input class=" estilo" type="" id="number_card" name="cartao-number" required maxlength="19" placeholder="0000 0000 0000 0000" onkeyup="number_valid()" pattern="[0-9]{4}[ ][0-9]{4}[ ][0-9]{4}[ ][0-9]{4}">
+                        <div class='col-md-6'>
+                            <label for='numero' class='form-label'>Número do cartão</label>
+                            <input class=' estilo' type='' id='number_card' name='numero' required maxlength='19' placeholder='0000 0000 0000 0000' onkeyup='number_valid()' pattern='[0-9]{4}[ ][0-9]{4}[ ][0-9]{4}[ ][0-9]{4}' value='$result[numero]'>
                         </div>
-                        <div class="col-md-3">
-                            <label class="form-label" for="valid">Validade</label>
-                            <input class=" estilo" type="" maxlength="5" pattern="[0-9]{2}[/][0-9]{2}" name="valid" required autocomplete="off" placeholder="00/00" id="validade" onkeyup="mask_valid()">
-                            <script src="../js/maks_valid.js"></script>
+                        <div class='col-md-3'>
+                            <label class='form-label' for='validade'>Validade</label>
+                            <input class=' estilo' type='' maxlength='5' pattern='[0-9]{2}[/][0-9]{2}' name='validade' required autocomplete='off' placeholder='00/00' id='validade' onkeyup='mask_valid()' value='$result[validade]'>
+                            <script src='../js/maks_valid.js'></script>
                         </div>
-                        <div class="col-md-3">
-                            <label class="form-label" for="cc-cvv">CVV</label>
-                            <input class=" estilo" type="" name="cc-cvv" required autocomplete="off" placeholder="000" pattern="[0-9]{3}" maxlength="3">
+                        <div class='col-md-3'>
+                            <label class='form-label' for='cvv'>CVV</label>
+                            <input class=' estilo' type='' name='cvv' required autocomplete='off' placeholder='000' pattern='[0-9]{3}' maxlength='3' value='$result[cvv]'>
                         </div>
-                    </div>
+                    </div>";
+                    } else {
+                        echo "
+                        <div class='row gy-3'>
+                            <div class='col-md-6'>
+                                <label for='nome_cartao' class='form-label'>Nome no cartão</label>
+                                <input class=' estilo' type='text' name='nome_cartao' required maxlength='80' id='upcase' placeholder='DIGITE SEU NOME'>
+                                <small class='text-muted'>Nome completo como aparece no cartão</small>
+                            </div>
+                            <div class='col-md-6'>
+                                <label for='numero' class='form-label'>Número do cartão</label>
+                                <input class=' estilo' type='' id='number_card' name='numero' required maxlength='19' placeholder='0000 0000 0000 0000' onkeyup='number_valid()' pattern='[0-9]{4}[ ][0-9]{4}[ ][0-9]{4}[ ][0-9]{4}'>
+                            </div>
+                            <div class='col-md-3'>
+                                <label class='form-label' for='validade'>Validade</label>
+                                <input class=' estilo' type='' maxlength='5' pattern='[0-9]{2}[/][0-9]{2}' name='validade' required autocomplete='off' placeholder='00/00' id='validade' onkeyup='mask_valid()'>
+                                <script src='../js/maks_valid.js'></script>
+                            </div>
+                            <div class='col-md-3'>
+                                <label class='form-label' for='cvv'>CVV</label>
+                                <input class=' estilo' type='' name='cvv' required autocomplete='off' placeholder='000' pattern='[0-9]{3}' maxlength='3'>
+                            </div>
+                        </div>";
+                    }
+                    ?>
                     <hr class="my-4">
-                    <button id="comprar" type="submit" class="btn btn-primary w-100 btn-lg" name="confirme">Comprar Agora</button>
+                    <button id="comprar" type="submit" class="btn btn-primary w-100 btn-lg" value="send" name="confirme">Comprar Agora</button>
                 </form>
 
 

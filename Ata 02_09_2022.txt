@@ -41,9 +41,9 @@ Ata da reunião 02/09
 	Produtos
 		Encasular o cabeçalho da pagina principal[colocar no include] -> FEITO
 		WTF this freaking gradient man!!!!! -> FEITO
-		Carregar as informações do produto do BD ->
-		Adicionar chamadas de ação [Adicionar ao carrinho, Compre AGORA!!!!] 
-		Mostrar informações de estoque 
+		Carregar as informações do produto do BD -> EM ANDAMENTO
+		Adicionar chamadas de ação [Adicionar ao carrinho, Compre AGORA!!!!] -> A FAZER
+		Mostrar informações de estoque -> EM ANDAMENTO
 	---------------------------------------------------------------------------------------------
 	Usuário
 		WTF nome voando?!?!?!?!?!? (╯°□°）╯︵ ┻━┻

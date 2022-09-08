@@ -18,7 +18,7 @@ include "header.php";
                         <font style="vertical-align: inherit;">The COFFE'JOIN</font>
                     </font>
                 </a></li>
-            <li><a href="#" class="nav-link px-2 text-white">
+            <li><a href="pages/checkoutpage.php" class="nav-link px-2 text-white">
                     <font style="vertical-align: inherit;">
                         <font style="vertical-align: inherit;">Mais Sabores</font>
                     </font>
