@@ -6,22 +6,21 @@ include'../include/database.php';
 $id=$_GET['var'];
 
     if(isset($_GET['submit']) and $_GET['submit']=='send'){
-       $teste="select * from carrinho where id_carrinho={$_GET['fk_id_carrinho']}";
-       $query=mysqli_query ($con, $teste);
-       $result = mysqli_fetch_assoc($query);
-          var_dump($result);
-
-       $consulta = "UPDATE item_de_carrinho
-        SET fk_id_info_produto='{$_GET['fk_id_info_produto']}', fk_id_carrinho='{$_GET['fk_id_carrinho']}'
-        , quantidade = '{$_GET['quantidade']}'
-        WHERE id_item_carrinho ={$_GET['var']} ";
-
-        echo $consulta;
-        
-        $query=mysqli_query ($con, $consulta);
-    
-        header("Location:relatorio_item_de_carrinho.php");
-        
+		$teste="select * from carrinho where id_carrinho={$_GET['fk_id_carrinho']}";
+		$query=mysqli_query ($con, $teste);
+		if(mysqli_num_rows($query)){
+			#echo 'tem o carrinho';
+			$consulta = "UPDATE item_de_carrinho
+			SET fk_id_info_produto='{$_GET['fk_id_info_produto']}', fk_id_carrinho='{$_GET['fk_id_carrinho']}'
+			, quantidade = '{$_GET['quantidade']}'
+			WHERE id_item_carrinho ={$_GET['var']} ";
+			$query=mysqli_query ($con, $consulta);
+			#header("Location:relatorio_item_de_carrinho.php");
+		}else{
+			#echo 'nao tem';
+			#header("Location:manda de volta.php");
+		}
+		
     }
 
     $consulta2="SELECT *
