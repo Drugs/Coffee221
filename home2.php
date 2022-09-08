@@ -55,7 +55,7 @@ include './include/nave.php';
 					<img src="Imagens/choa.png" class="d-block w-100" alt="..." height="480px;">
 				</div>
 				<div class="carousel-item">
-					<img src="Imagens/cofe3.png" class="d-block w-100" alt="..." height="480px;">
+					<img src="Imagens/cafe.png" class="d-block w-100" alt="..." height="480px;">
 				</div>
 			</div>
 			<button class="carousel-control-prev" type="button" data-bs-target="#cafeb" data-bs-slide="prev">
@@ -73,12 +73,12 @@ include './include/nave.php';
 		<div class="row justify-content-evenly mt-5">
 
 			<div class="col-md-3">
-				<div class="card shadow-sm hide-text">
+				<div class="card shadow-sm ">
 					<img src="./Imagens/fototeste.jpg" heigth=''>
 					<div class="card-body">
 						<p class="card-text">
 						<h2 class="text-center">Grão de café</h2>
-						<h6>Maior seletividade de grãos, sabor acentuado com notas de uma torra de qualidade tendo sua humidade e sabor prezervados.</h6>
+						<p class="bia">Maior seletividade de grãos, sabor qualidade.</p>
 						</p>
 						<div class="d-flex justify-content-between align-items-center">
 							<div class="btn-group">
@@ -104,9 +104,7 @@ include './include/nave.php';
 									<h2 class="text-center">Caramelo Cremoso </h2>
 								</font>
 								<font style="vertical-align: inherit;">
-									<h6>Capsula caramelo cremoso<spam id="pontos">...</spam>
-										<spam id="mais">uma explosão de sabores com a doçura na medida certa. Com notas de baunilha com canela e caramelo.</spam>
-									</h6>
+								<p class="bia">Maior seletividade de grãos, sabor qualidade.</p>
 								</font>
 							</font>
 						</div>
@@ -127,20 +125,20 @@ include './include/nave.php';
 				</div>
 			</div>
 
-			<div class="col-md-3">
-				<div class="card shadow-sm hide-text">
+			<div class="ms-2 col-md-3 ">
+				<div class="card shadow-sm ">
 					<img src="./Imagens/fototeste.jpg" heigth="">
 					<div class="card-body">
-						<p class="card-text">
+					<div class="card-text feed-item-body post-body">
 							<font style="vertical-align: inherit;">
 								<font style="vertical-align: inherit;">
-									<h2 class="text-center">Cafeteira Delux</h2>
+									<h2 class="text-center">Cafeteira Delux </h2>
 								</font>
 								<font style="vertical-align: inherit;">
-									<h6>Procura menos gastos de energia e maior eficiencia quando falamos de cafeteira? Então vocè achou a Cafeteira Delux COFFE'JOIN te entrega tudo isso e mais um pouco, atribuindo o processador de grãos e a cabine para capsulas de café.</h6>
+								<p class="bia">Maior seletividade de grãos, sabor qualidade.</p>
 								</font>
 							</font>
-						</p>
+						</div>
 						<div class="d-flex justify-content-between align-items-center">
 							<div class="btn-group">
 								<button type="button" class="btn btn-sm btn-outline-secondary">
@@ -161,22 +159,22 @@ include './include/nave.php';
 		</div>
 	</div>
 	<!-- Parallax -->
-	<div class="parallax-home"></div>
+	<div class="mt-2 mb-2 parallax-home"></div>
 	<!-- Cards Home do site -->
 	<div class="container">
 		<div class="row justify-content-evenly">
 
 			<div class="col-md-4">
-				<div class="card shadow-sm hide-text">
+				<div class="card shadow-sm ">
 					<img src="./Imagens/fototeste.jpg" heigth=''>
 					<div class="card-body">
 						<p class="card-text">
 							<font style="vertical-align: inherit;">
 								<font style="vertical-align: inherit;">
-									<h2 class="text-center">Grão de café PREMIUM</h2>
+									<h2 class="text-center">Grão de café PREMIUM </h2>
 								</font>
 								<font style="vertical-align: inherit;">
-									<h6 class="card-growth">Maior seletividade de grãos, sabor acentuado com notas de uma torra de qualidade tendo sua humidade e sabor prezervados.</h6>
+									<h6 class="car">Nossa mais nova capsula Caramelo Cremoso, uma explosão de sabores com a doçura na medida certa. Com notas de baunilha com canela e o nosso mais refinado caramelo.</h6>
 								</font>
 							</font>
 						</p>
@@ -201,7 +199,7 @@ include './include/nave.php';
 			</div>
 
 			<div class="col-md-4">
-				<div class="card shadow-sm hide-text">
+				<div class="card shadow-sm ">
 					<img src="./Imagens/fototeste.jpg" heigth="">
 					<div class="card-body">
 						<p class="card-text">
@@ -210,7 +208,7 @@ include './include/nave.php';
 									<h2 class="text-center">Caramelo Cremoso </h2>
 								</font>
 								<font style="vertical-align: inherit;">
-									<h6 class="card-growth">Nossa mais nova capsula Caramelo Cremoso, uma explosão de sabores com a doçura na medida certa. Com notas de baunilha com canela e o nosso mais refinado caramelo.</h6>
+									<h6 class="car">Nossa mais nova capsula Caramelo Cremoso, uma explosão de sabores com a doçura na medida certa. Com notas de baunilha com canela e o nosso mais refinado caramelo.</h6>
 								</font>
 							</font>
 						</p>
@@ -234,16 +232,16 @@ include './include/nave.php';
 			</div>
 
 			<div class="col-md-4">
-				<div class="card shadow-sm hide-text">
+				<div class="card shadow-sm ">
 					<img src="./Imagens/fototeste.jpg" heigth="">
 					<div class="card-body">
-						<p class="card-text">
+					<p class="card-text">
 							<font style="vertical-align: inherit;">
 								<font style="vertical-align: inherit;">
-									<h2 class="text-center">Cafeteira Delux</h2>
+									<h2 class="text-center">Caramelo Cremoso </h2>
 								</font>
 								<font style="vertical-align: inherit;">
-									<h6 class="card-growth">Procura menos gastos de energia e maior eficiencia quando falamos de cafeteira? Então vocè achou a Cafeteira Delux COFFE'JOIN te entrega tudo isso e mais um pouco, atribuindo o processador de grãos e a cabine para capsulas de café.</h6>
+									<h6 class="car">Nossa mais nova capsula Caramelo Cremoso, uma explosão de sabores com a doçura na medida certa. Com notas de baunilha com canela e o nosso mais refinado caramelo.</h6>
 								</font>
 							</font>
 						</p>

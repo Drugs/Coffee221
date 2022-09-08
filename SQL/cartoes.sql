@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 08, 2022 at 09:09 AM
+-- Generation Time: Sep 08, 2022 at 10:00 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.0.19
 
@@ -41,14 +41,10 @@ CREATE TABLE `cartoes` (
 --
 
 INSERT INTO `cartoes` (`id_info_cartao`, `nome_cartao`, `validade`, `cvv`, `numero`, `fk_id_pessoa`) VALUES
-(1, '', '12/2026', 666, '2147483647', 0),
-(2, '', '12/2026', 666, '2147483647', 0),
-(3, '', '12/2026', 666, '2147483647', 0),
-(4, 'Jonas', '10/2026', 666, '2147483647', 0),
-(5, 'Jonas', '10/2026', 666, '2147483647', 0),
-(6, 'Jonas', '12/2026', 656, '2341938483239471', 1),
-(7, 'Costa', '11/2222', 666, '2147483647', 0),
-(10, 'Cuca', '09/2022', 999, '923647852342445', 1);
+(12, 'Jonas Carvalho', '09/2028', 282, '923647852342445', 33),
+(14, 'Careca', '02/2088', 123, '21342351567879', 66),
+(20, 'Bibi', '02/2030', 892, '123984719238471923', 81),
+(21, 'Jobsnelson', '10/2022', 888, '9238759823475', 31);
 
 --
 -- Indexes for dumped tables
@@ -68,7 +64,7 @@ ALTER TABLE `cartoes`
 -- AUTO_INCREMENT for table `cartoes`
 --
 ALTER TABLE `cartoes`
-  MODIFY `id_info_cartao` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_info_cartao` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
