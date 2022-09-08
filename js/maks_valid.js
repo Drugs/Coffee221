@@ -14,3 +14,13 @@ function number_valid() {
         number_card.value += " ";
     }
 }
+
+function mascara(cartao) {
+    if (cartao.value.length == 4)
+        cartao.value = cartao.value + '-';
+    if (cartao.value.length == 9)
+        cartao.value = cartao.value + '-';
+
+    if (cartao.value.length == 14)
+        cartao.value = cartao.value + '-';
+}

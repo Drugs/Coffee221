@@ -14,23 +14,24 @@ if (isset($_SESSION['id_pessoa']) and $_SESSION['id_pessoa'] > 0) {
         $query = mysqli_query($con, $inf2);
         $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
     } else {
-        header("location: cadastro_cartao.php");
+        header("location: cadastro_cartao.php?cadastro-cartao=erro");
     }
     # Realizar um SELECT com javascript para o usuário escolher qual dos cartões irá usar
 } else {
-    header("location: login-nave.php");
+    header("location: login-nave.php?compra=erro");
 }
 include "../include/header.php";
 include "../include/nave-site.php";
 ?>
 
-<main>
-    <div class="container">
-        <div class="row g-5 mt-3">
-            <div class="col-md-5 col-lg-6 order-md-last">
-                <img src="../Imagens\Mobile payments-rafiki.svg" alt="svg payment">
-            </div>
-            <!--
+<body class="responsive">
+    <main>
+        <div class="container">
+            <div class="row g-5 mt-3">
+                <div class="col-md-5 col-lg-6 order-md-last">
+                    <img src="../Imagens\Mobile payments-rafiki.svg" alt="svg payment">
+                </div>
+                <!--
                 <div class="col-md-5 col-lg-4 order-md-last">
                     <h4 class="d-flex justify-content-between align-content-center mb-3">
                         <span class="text-primary">Seu carrinho</span>
@@ -74,11 +75,10 @@ include "../include/nave-site.php";
                     </ul>
                 </div> !-->
 
-            <div class="col-md-7 col-lg-6">
-
-                <!-- <h4>Endereço de cobrança</h4> !-->
-                <form class="needs-validation" action="pagdeobrigado.php" method="post">
-                    <!--<div class="row g-3">
+                <div class="col-md-7 col-lg-6">
+                    <!-- <h4>Endereço de cobrança</h4> !-->
+                    <form class="needs-validation" action="pagdeobrigado.php" method="post">
+                        <!--<div class="row g-3">
                             <div class="col-sm-6">
                                 <label class="form-label" for="nome">Primeiro nome:</label>
                                 <input class="form-control" type="text" name="nome" id="name">
@@ -168,15 +168,19 @@ include "../include/nave-site.php";
                         -->
 
 
-
-                    <h4 class="mb-4">Forma de Pagamento</h4>
-                    <div class="my-3">
-                        <select class="selecaoop" name="selecao" id="">
-                            <option value="Cartao_débito">Cartão de débito</option>
-                            <option value="Cartao_crédito">Cartão de crédito</option>
-                            <option value="PayPal">Paypal</option>
-                        </select>
-                        <!-- <span id="debitt" class="text-muted"></span>
+                        <?php
+                        if (isset($_GET['cadastro']) and $_GET['cadastro'] == 'feito') {
+                            echo '<div class="alert alert-warning" role="alert">Você cadastrou seu cartão com sucesso.</div>';
+                        }
+                        ?>
+                        <h4 class="mb-4">Forma de Pagamento</h4>
+                        <div class="my-3">
+                            <select class="selecaoop" name="selecao" id="">
+                                <option value="Cartao_débito">Cartão de débito</option>
+                                <option value="Cartao_crédito">Cartão de crédito</option>
+                                <option value="PayPal">Paypal</option>
+                            </select>
+                            <!-- <span id="debitt" class="text-muted"></span>
                             <div class="form-check">
                                 <input type="radio" class="form-check-input" name="metodopagamento_debitt" id="debit" required>
                                 <label for="debit" class="form-check-label">Cartão de débito</label>
@@ -195,10 +199,10 @@ include "../include/nave-site.php";
                                 <span class="text-muted">(em breve)</span>
                                 </label>
                             </div> -->
-                    </div>
-                    <?php
-                    if (isset($_SESSION['id_usu']) and $_SESSION['id_usu'] != '') {
-                        echo "
+                        </div>
+                        <?php
+                        if (isset($_SESSION['id_usu']) and $_SESSION['id_usu'] != '') {
+                            echo "
                     <div class='row gy-3'>
                         <div class='col-md-6'>
                             <label for='nome_cartao' class='form-label'>Nome no cartão</label>
@@ -219,8 +223,8 @@ include "../include/nave-site.php";
                             <input class=' estilo' type='' name='cvv' required autocomplete='off' placeholder='000' pattern='[0-9]{3}' maxlength='3' value='{$result[0]['cvv']}'>
                         </div>
                     </div>";
-                    } else {
-                        echo "
+                        } else {
+                            echo "
                         <div class='row gy-3'>
                             <div class='col-md-6'>
                                 <label for='nome_cartao' class='form-label'>Nome no cartão</label>
@@ -241,23 +245,23 @@ include "../include/nave-site.php";
                                 <input class=' estilo' type='' name='cvv' required autocomplete='off' placeholder='000' pattern='[0-9]{3}' maxlength='3'>
                             </div>
                         </div>";
-                    }
-                    ?>
-                    <hr class="my-4">
-                    <button id="comprar" type="submit" class="btn btn-primary w-100 btn-lg" value="send" name="confirme">Comprar Agora</button>
-                </form>
+                        }
+                        ?>
+                        <hr class="my-4">
+                        <button id="comprar" type="submit" class="btn btn-primary w-100 btn-lg" value="send" name="confirme">Comprar Agora</button>
+                    </form>
 
 
-                <!-- <button class="btn btn-primary" id="mensagem" onclick="mudarr()">clique</button> !-->
+                    <!-- <button class="btn btn-primary" id="mensagem" onclick="mudarr()">clique</button> !-->
 
+                </div>
             </div>
         </div>
-    </div>
-</main>
+    </main>
 
-<script src="../js/maks_valid.js"></script>
+    <script src="../js/maks_valid.js"></script>
 
-<?php
-include "../include/rodape.php";
-include "../include/footer.php";
-?>
+    <?php
+    include "../include/rodape.php";
+    include "../include/footer.php";
+    ?>

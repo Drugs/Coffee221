@@ -46,16 +46,20 @@ include './include/nave.php';
 				<button type="button" data-bs-target="#cafeb" data-bs-slide-to="0" class="active slide-button" aria-current="true" aria-label="Slide 1"></button>
 				<button type="button" data-bs-target="#cafeb" data-bs-slide-to="1" class="slide-button" aria-label="Slide 2"></button>
 				<button type="button" data-bs-target="#cafeb" data-bs-slide-to="2" class="slide-button" aria-label="Slide 3"></button>
+				<button type="button" data-bs-target="#cafeb" data-bs-slide-to="3" class="slide-button" aria-label="Slide 4"></button>
 			</div>
 			<div class="carousel-inner center-block">
 				<div class="carousel-item active">
 					<img src="Imagens/cafe1.png" class="d-block w-100" alt="..." height="480px;">
 				</div>
 				<div class="carousel-item">
-					<img src="Imagens/choa.png" class="d-block w-100" alt="..." height="480px;">
+					<img src="Imagens/cafe2.png" class="d-block w-100" alt="..." height="480px;">
 				</div>
 				<div class="carousel-item">
-					<img src="Imagens/cafe.png" class="d-block w-100" alt="..." height="480px;">
+					<img src="Imagens/cafe3.png" class="d-block w-100" alt="..." height="480px;">
+				</div>
+				<div class="carousel-item">
+					<img src="Imagens/cafe4.png" class="d-block w-100" alt="..." height="480px;">
 				</div>
 			</div>
 			<button class="carousel-control-prev" type="button" data-bs-target="#cafeb" data-bs-slide="prev">
@@ -104,7 +108,7 @@ include './include/nave.php';
 									<h2 class="text-center">Caramelo Cremoso </h2>
 								</font>
 								<font style="vertical-align: inherit;">
-								<p class="bia">Maior seletividade de grãos, sabor qualidade.</p>
+									<p class="bia">Maior seletividade de grãos, sabor qualidade.</p>
 								</font>
 							</font>
 						</div>
@@ -129,13 +133,13 @@ include './include/nave.php';
 				<div class="card shadow-sm ">
 					<img src="./Imagens/fototeste.jpg" heigth="">
 					<div class="card-body">
-					<div class="card-text feed-item-body post-body">
+						<div class="card-text feed-item-body post-body">
 							<font style="vertical-align: inherit;">
 								<font style="vertical-align: inherit;">
 									<h2 class="text-center">Cafeteira Delux </h2>
 								</font>
 								<font style="vertical-align: inherit;">
-								<p class="bia">Maior seletividade de grãos, sabor qualidade.</p>
+									<p class="bia">Maior seletividade de grãos, sabor qualidade.</p>
 								</font>
 							</font>
 						</div>
@@ -235,7 +239,7 @@ include './include/nave.php';
 				<div class="card shadow-sm ">
 					<img src="./Imagens/fototeste.jpg" heigth="">
 					<div class="card-body">
-					<p class="card-text">
+						<p class="card-text">
 							<font style="vertical-align: inherit;">
 								<font style="vertical-align: inherit;">
 									<h2 class="text-center">Caramelo Cremoso </h2>

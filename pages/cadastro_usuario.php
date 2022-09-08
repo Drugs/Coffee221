@@ -27,7 +27,6 @@ if (isset($_GET['cadastra']) and $_GET['cadastra'] == 'send') {
 
         if (telefone.value.length == 10)
             telefone.value = telefone.value + '-';
-
     }
 </script>
 
