@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 25, 2022 at 08:32 AM
+-- Generation Time: Sep 08, 2022 at 10:00 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.0.19
 
@@ -34,20 +34,20 @@ CREATE TABLE `info_alimento` (
   `embalagem` varchar(150) NOT NULL,
   `peso` varchar(100) NOT NULL,
   `sabor` varchar(150) NOT NULL,
-  `fk_id_alimento` int(11) NOT NULL
+  `fk_id_produto` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `info_alimento`
 --
 
-INSERT INTO `info_alimento` (`id_info_alimento`, `estoque`, `preco`, `embalagem`, `peso`, `sabor`, `fk_id_alimento`) VALUES
+INSERT INTO `info_alimento` (`id_info_alimento`, `estoque`, `preco`, `embalagem`, `peso`, `sabor`, `fk_id_produto`) VALUES
 (1, '300', 8.99, 'Garrafa de vidro', '1 Litro', 'Suco de uva', 14),
 (2, '250', 4.99, 'Cápsula', '200 Gramas', 'Chocolate', 13),
 (3, '350', 8.99, 'Garrafa de vidro', '1 Litro', 'Suco de laranja', 14),
 (4, '300', 8.99, 'Garrafa de vidro', '1 Litro', 'Suco de abacaxi', 14),
 (5, '300', 4.99, 'Cápsula', '200 Gramas', 'Clássico', 13),
-(6, '300', 8.99, 'Garrafa de vidro', '1 Litro', 'Suco de pêssego', 14);
+(8, '101', 59.69, 'Garrafa de vidro', '200 Gramas', 'Chocolate', 14);
 
 --
 -- Indexes for dumped tables
@@ -67,7 +67,7 @@ ALTER TABLE `info_alimento`
 -- AUTO_INCREMENT for table `info_alimento`
 --
 ALTER TABLE `info_alimento`
-  MODIFY `id_info_alimento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_info_alimento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
