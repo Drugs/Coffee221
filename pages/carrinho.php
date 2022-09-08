@@ -1,33 +1,10 @@
-<!DOCTYPE>
-<html>
-
-<head>
-    <title>The COFFE'JOIN</title>
-
     <?php
+	$title = 'Carrinho';
     include '../include/header.php';
     ?>
-    <style>
-        .feature-icon {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 4rem;
-            height: 4rem;
-            margin-bottom: 1rem;
-            font-size: 2rem;
-            color: #fff;
-            border-radius: 0.75rem;
-        }
-    </style>
 
-
-
-</head>
-
-<body>
-
-    <header class="p-3 bg-dark text-white">
+	<body>
+		<header class="p-3 bg-dark text-white">
 
         <div class="container">
 
@@ -126,7 +103,7 @@
     <div class="container">
 
         <div class="row">
-            <div class="col-md-5">
+            <div class="col-md-4">
                 <h2 style="color: blue;">
                     <p>Itens</p>
                 </h2>
@@ -135,7 +112,7 @@
 
                     <p></p>
 
-                    <img src="../Imagens/xicaraleit.jpeg" style="height:70px;">
+                    <img src="../Imagens/cafe1.png" style="height:70px;">
                     Café Caramelo e Baunilha (Nova Caps...)
 
                 </div>
@@ -144,7 +121,7 @@
 
                     <p></p>
 
-                    <img src="../Imagens/xicaraleit.jpeg" style="height:70px;">
+                    <img src="../Imagens/cafe1.png" style="height:70px;">
                     Café Caramelo e Baunilha (Nova Caps...)
                 </div>
 
@@ -152,7 +129,7 @@
 
                     <p></p>
 
-                    <img src="../Imagens/xicaraleit.jpeg" style="height:70px;">
+                    <img src="../Imagens/cafe1.png" style="height:70px;">
                     Café Caramelo e Baunilha (Nova Caps...)
                 </div>
             </div>
@@ -164,25 +141,25 @@
                 <div class="col">
                     <form action="" method="get">
                         <label for="nome" class="form-label"></label>
-                        <input type="text" class="form-control" placeholder="1" name="14" />
-                        <input type="hidden" name="samuel" value="sla" />
-                        <input type="submit" value="Adicionar" />
+                        <input type="number" class="form-control" placeholder="1" id='quantidade' name="quantidade" data-preco='17.65' onchange='atualiza(this.value , this.dataset.preco)' step="1" />
+                        <input type="submit">
+                    </form>
+					
+                </div>
+                <div class="col">
+                    <form action="" method="get">
+                        <label for="nome" class="form-label"></label>
+                        <input type="number" class="form-control" placeholder="1" id='quantidade2' name="quantidade" step="1" />
+                        <input type="submit">
+                        
                     </form>
                 </div>
                 <div class="col">
                     <form action="" method="get">
                         <label for="nome" class="form-label"></label>
-                        <input type="text" class="form-control" placeholder="1" name="12" />
-                        <input type="hidden" name="samuel" value="sla" />
-                        <input type="submit" value="Adicionar" />
-                    </form>
-                </div>
-                <div class="col">
-                    <form action="" method="get">
-                        <label for="nome" class="form-label"></label>
-                        <input type="text" class="form-control" placeholder="1" name="17" />
-                        <input type="hidden" name="samuel" value="sla" />
-                        <input type="submit" value="Adicionar" />
+                        <input type="number" class="form-control" placeholder="1" id='quantidade3' name="quantidade" step="1" />
+                        <input type="submit">
+                       
                     </form>
                 </div>
             </div>
@@ -193,17 +170,25 @@
                 </h2>
                 <div class="col">
                     <p></p>
-                    <button type="button" class="btn btn-sm btn-outline-primary">R$14,OO</button>
+                    <button type="button" class="btn btn-sm btn-outline-primary" >R$14,OO</button>
                 </div><br>
                 <div class="col">
                     <p></p>
-                    <button type="button" class="btn btn-sm btn-outline-primary">R$12,OO</button>
+                    <button type="button" class="btn btn-sm btn-outline-primary" >R$12,OO</button>
                 </div><br>
                 <p></p>
                 <div class="col">
-                    <button type="button" class="btn btn-sm btn-outline-primary">R$17,OO</button>
+                    <button type="button" class="btn btn-sm btn-outline-primary" >R$17,OO</button>
                 </div>
             </div>
+
+			<script>
+				
+				function atualiza(bixo , coiso){
+					console.dir( coiso * bixo)
+				}
+			</script>
+
 
             <div class="col-md-2">
                 <h2 style="color: red;">
@@ -224,36 +209,12 @@
             </div>
 
             <div class="row">
-                <div class="col">
+                <div class="col-">
                     <h2 style="color: red;">
                         <strong>
-                            <p>Total</p>
+                            <p id='total'>Total</p>
                         </strong>
-                    </h2>
-                    <div class="col">
-
-                        <?php
-
-                        $one = $_GET["14"];
-                        $two = $_GET["12"];
-                        $tree = $_GET["17"];
-
-
-                        if ($op == $one) {
-                            echo ($one + $tree + $two);
-                        }
-                        if ($op == $two) {
-                            echo ($one + $two + $tree);
-                        }
-                        if ($op == $tree) {
-                            echo ($one + $two + $tree);
-                        }
-
-
-                        ?>
-
-
-                    </div>
+                    </h2>             
                 </div>
             </div>
 
