@@ -9,3 +9,9 @@
 		margin-right: -50%;
 		transform: translate(-50%, -50%)
 	}
+	.bia{
+		min-height: 50px;
+	}
+	.car{
+		min-height: 55px;
+	}
