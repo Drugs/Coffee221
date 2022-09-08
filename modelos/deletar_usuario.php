@@ -1,8 +1,9 @@
 <?php
 //autor:Ana Clara
 //arquivo com conexão com o BD
+$title="delete usuário";
 include'../include/header.php';
-$title="delete";
+
 include'../include/database.php';
 $id=$_GET['var'];
 

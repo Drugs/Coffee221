@@ -1,8 +1,8 @@
 <?php
 //autor:Ana Clara
 //arquivo com conexão com o BD
-include '../include/header.php';
 $title = "relatorio item de carrinho";
+include '../include/header.php';
 include '../include/database.php';
 $consulta = "select * from item_de_carrinho";
 $query = mysqli_query($con, $consulta);

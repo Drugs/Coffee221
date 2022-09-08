@@ -1,6 +1,7 @@
 <?php
 //autor:Ana Clara
 //arquivo com conexão com o BD
+$title="usuario cadastro";
 include'../include/header.php';
 $title="usuario cadastro";
 include'../include/database.php';
