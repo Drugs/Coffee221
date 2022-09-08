@@ -55,7 +55,7 @@ include './include/nave.php';
 					<img src="Imagens/choa.png" class="d-block w-100" alt="..." height="480px;">
 				</div>
 				<div class="carousel-item">
-					<img src="Imagens/cofe3.png" class="d-block w-100" alt="..." height="480px;">
+					<img src="Imagens/cafe.png" class="d-block w-100" alt="..." height="480px;">
 				</div>
 			</div>
 			<button class="carousel-control-prev" type="button" data-bs-target="#cafeb" data-bs-slide="prev">

@@ -1,33 +1,10 @@
-<!DOCTYPE>
-<html>
-
-<head>
-    <title>The COFFE'JOIN</title>
-
     <?php
+	$title = 'Carrinho';
     include '../include/header.php';
     ?>
-    <style>
-        .feature-icon {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 4rem;
-            height: 4rem;
-            margin-bottom: 1rem;
-            font-size: 2rem;
-            color: #fff;
-            border-radius: 0.75rem;
-        }
-    </style>
 
-
-
-</head>
-
-<body>
-
-    <header class="p-3 bg-dark text-white">
+	<body>
+		<header class="p-3 bg-dark text-white">
 
         <div class="container">
 
@@ -167,6 +144,7 @@
                         <input type="number" class="form-control" placeholder="1" id='quantidade1' name="quantidade" data-preco='14' 
                         onchange='atualiza(this.value, this.dataset.preco)' step="1" />
                     </form>
+					
                 </div>
                 <div class="col">
                     <form action="" method="get">
@@ -240,7 +218,7 @@
                 <div class="col-">
                     <h2 style="color: red;">
                         <strong>
-                            <p>Total</p>
+                            <p id='total'>Total</p>
                         </strong>
                     </h2>             
                 </div>
