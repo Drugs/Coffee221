@@ -24,7 +24,7 @@ $id=$_GET['var'];
         
     }
 
-    $consulta2="Select *, item_de_carrinho.fk_id_carrinho, carrinho.id_carrinho 
+    $consulta2="SELECT *
     from carrinho 
     join item_de_carrinho 
     on carrinho.id_carrinho=item_de_carrinho.fk_id_carrinho 
