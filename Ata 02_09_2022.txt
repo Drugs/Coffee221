@@ -69,7 +69,7 @@ Ata da reunião 02/09
 		Adicionar footer -> FEITO
 		Adicionar navegação -> ?
 		Adicionar título -> FEITO
-		Integrar com a sessão e o BD -> EM ANDAMENTO
+		Integrar com a sessão e o BD -> FEITO
 	---------------------------------------------------------------------------------------------
 	Galeria
 		Busca - IMPORTANTEEEEEEEEEEEEEEE

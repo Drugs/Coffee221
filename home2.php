@@ -1,11 +1,13 @@
 <?php
 session_start();
 $title = 'The COFFEE\'N\'JOIN';
+include './include/database.php';
 include './include/header.php';
-include './include/nave.php'
+include './include/nave.php';
 ?>
 
 <body class="responsive">
+	<!-- JavaScript da Home -->
 	<script>
 		// AJAX do carrinho de compras
 		function rodinhas(id_info_prod) {
@@ -75,13 +77,8 @@ include './include/nave.php'
 					<img src="./Imagens/fototeste.jpg" heigth=''>
 					<div class="card-body">
 						<p class="card-text">
-							<font style="vertical-align: inherit;">
-								<h2 class="text-center">Grão de café</h2>
-							</font>
-							<font style="vertical-align: inherit;">
-								<h6>Maior seletividade de grãos, sabor acentuado com notas de uma torra de qualidade tendo sua humidade e sabor prezervados.</h6>
-							</font>
-							</font>
+						<h2 class="text-center">Grão de café</h2>
+						<h6>Maior seletividade de grãos, sabor acentuado com notas de uma torra de qualidade tendo sua humidade e sabor prezervados.</h6>
 						</p>
 						<div class="d-flex justify-content-between align-items-center">
 							<div class="btn-group">
