@@ -2,14 +2,26 @@
 #BY GUSTAVO INC © 2022
 session_start();
 $title = "Página de Pagamento";
-include "../include/header.php";
 include "../include/database.php";
+if (isset($_SESSION['id_pessoa']) and $_SESSION['id_pessoa'] > 0) {
+    $id_pessoa = $_SESSION['id_pessoa'];
+    $inf = "SELECT * FROM cartoes WHERE fk_id_pessoa = {$id_pessoa}";
+    $query = mysqli_query($con, $inf);
+    $resultado = mysqli_fetch_assoc($query);
+    if ($resultado != NULL) {
+        $inf2 = "SELECT * FROM cartoes JOIN pessoa ON id_pessoa = fk_id_pessoa
+        WHERE id_pessoa = {$_SESSION['id_pessoa']}";
+        $query = mysqli_query($con, $inf2);
+        $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
+    } else {
+        header("location: cadastro_cartao.php");
+    }
+    # Realizar um SELECT com javascript para o usuário escolher qual dos cartões irá usar
+} else {
+    header("location: login-nave.php");
+}
+include "../include/header.php";
 include "../include/nave-site.php";
-
-$inf2 = "SELECT * FROM cartoes JOIN pessoa ON id_pessoa = fk_id_pessoa
-WHERE id_info_cartao = '13' ";
-$query = mysqli_query($con, $inf2);
-$result = mysqli_fetch_assoc($query);
 ?>
 
 <main>
@@ -190,21 +202,21 @@ $result = mysqli_fetch_assoc($query);
                     <div class='row gy-3'>
                         <div class='col-md-6'>
                             <label for='nome_cartao' class='form-label'>Nome no cartão</label>
-                            <input class=' estilo' type='text' name='nome_cartao' required maxlength='80' id='upcase' placeholder='DIGITE SEU NOME' value='$result[nome_cartao]'>
+                            <input class=' estilo' type='text' name='nome_cartao' required maxlength='80' id='upcase' placeholder='DIGITE SEU NOME' value='{$result[0]['nome_cartao']}'>
                             <small class='text-muted'>Nome completo como aparece no cartão</small>
                         </div>
                         <div class='col-md-6'>
                             <label for='numero' class='form-label'>Número do cartão</label>
-                            <input class=' estilo' type='' id='number_card' name='numero' required maxlength='19' placeholder='0000 0000 0000 0000' onkeyup='number_valid()' pattern='[0-9]{4}[ ][0-9]{4}[ ][0-9]{4}[ ][0-9]{4}' value='$result[numero]'>
+                            <input class=' estilo' type='' id='number_card' name='numero' required maxlength='19' placeholder='0000 0000 0000 0000' onkeyup='number_valid()' pattern='[0-9]{4}[ ][0-9]{4}[ ][0-9]{4}[ ][0-9]{4}' value='{$result[0]['numero']}'>
                         </div>
                         <div class='col-md-3'>
                             <label class='form-label' for='validade'>Validade</label>
-                            <input class=' estilo' type='' maxlength='5' pattern='[0-9]{2}[/][0-9]{2}' name='validade' required autocomplete='off' placeholder='00/00' id='validade' onkeyup='mask_valid()' value='$result[validade]'>
+                            <input class=' estilo' type='' maxlength='5' pattern='[0-9]{2}[/][0-9]{2}' name='validade' required autocomplete='off' placeholder='00/00' id='validade' onkeyup='mask_valid()' value='{$result[0]['validade']}'>
                             <script src='../js/maks_valid.js'></script>
                         </div>
                         <div class='col-md-3'>
                             <label class='form-label' for='cvv'>CVV</label>
-                            <input class=' estilo' type='' name='cvv' required autocomplete='off' placeholder='000' pattern='[0-9]{3}' maxlength='3' value='$result[cvv]'>
+                            <input class=' estilo' type='' name='cvv' required autocomplete='off' placeholder='000' pattern='[0-9]{3}' maxlength='3' value='{$result[0]['cvv']}'>
                         </div>
                     </div>";
                     } else {
