@@ -1,33 +1,10 @@
-<!DOCTYPE>
-<html>
-
-<head>
-    <title>The COFFE'JOIN</title>
-
     <?php
+	$title = 'Carrinho';
     include '../include/header.php';
     ?>
-    <style>
-        .feature-icon {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 4rem;
-            height: 4rem;
-            margin-bottom: 1rem;
-            font-size: 2rem;
-            color: #fff;
-            border-radius: 0.75rem;
-        }
-    </style>
 
-
-
-</head>
-
-<body>
-
-    <header class="p-3 bg-dark text-white">
+	<body>
+		<header class="p-3 bg-dark text-white">
 
         <div class="container">
 
@@ -164,14 +141,15 @@
                 <div class="col">
                     <form action="" method="get">
                         <label for="nome" class="form-label"></label>
-                        <input type="number" class="form-control" placeholder="1" id='quantidade' name="quantidade" step="1" />
+                        <input type="number" class="form-control" placeholder="1" id='quantidade' name="quantidade" data-preco='17.65' onchange='atualiza(this.value , this.dataset.preco)' step="1" />
                         <input type="submit">
                     </form>
+					
                 </div>
                 <div class="col">
                     <form action="" method="get">
                         <label for="nome" class="form-label"></label>
-                        <input type="number" class="form-control" placeholder="1" id='quantidade' name="quantidade" step="1" />
+                        <input type="number" class="form-control" placeholder="1" id='quantidade2' name="quantidade" step="1" />
                         <input type="submit">
                         
                     </form>
@@ -179,7 +157,7 @@
                 <div class="col">
                     <form action="" method="get">
                         <label for="nome" class="form-label"></label>
-                        <input type="number" class="form-control" placeholder="1" id='quantidade' name="quantidade" step="1" />
+                        <input type="number" class="form-control" placeholder="1" id='quantidade3' name="quantidade" step="1" />
                         <input type="submit">
                        
                     </form>
@@ -204,11 +182,12 @@
                 </div>
             </div>
 
-           <script>
-
-                document.
-
-           </script>
+			<script>
+				
+				function atualiza(bixo , coiso){
+					console.dir( coiso * bixo)
+				}
+			</script>
 
 
             <div class="col-md-2">
@@ -233,7 +212,7 @@
                 <div class="col-">
                     <h2 style="color: red;">
                         <strong>
-                            <p>Total</p>
+                            <p id='total'>Total</p>
                         </strong>
                     </h2>             
                 </div>
