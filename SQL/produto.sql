@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 25, 2022 at 08:32 AM
+-- Generation Time: Sep 08, 2022 at 10:01 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.0.19
 
@@ -40,10 +40,11 @@ CREATE TABLE `produto` (
 --
 
 INSERT INTO `produto` (`id_produto`, `nome_produto`, `descricao`, `categoria`, `marca`) VALUES
-(2, 'Camisa de Vaca', 'blablabla', 'Roupa', 'Cute'),
+(2, 'Camisa de Vaca', 'blabla', 'Roupa', 'Cute'),
 (8, 'Camisa de Café', 'A descrição condiz com o nome do produto', 'Roupa', 'Cute'),
 (13, 'Capuccino', 'o nome condiz com o produto', 'Alimento', 'Cleiton'),
-(14, 'Suco', 'perfeito para quebrar uma dieta', 'Alimento', 'DellVale');
+(14, 'Suco', 'perfeito para quebrar uma dieta', 'Alimento', 'DellVale'),
+(25, 'Camisa Swile', 'A camisa sorridente que te faz feliz', 'Roupa', 'Kawaii');
 
 --
 -- Indexes for dumped tables
@@ -65,7 +66,7 @@ ALTER TABLE `produto`
 -- AUTO_INCREMENT for table `produto`
 --
 ALTER TABLE `produto`
-  MODIFY `id_produto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id_produto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
