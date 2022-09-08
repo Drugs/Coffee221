@@ -46,12 +46,12 @@ include "header.php";
         <?php
         if (isset($_SESSION['id_usu']) and $_SESSION['id_usu'] != '') {
             echo '<div class="text-end">
-                    <a href="pages/pagina_usuario.php"><i class="bi bi-person-circle login-icon" style="margin-right: 5mm; margin-left: 5mm;"></i></a>
-                    <a class="btn btn-outline-light me-2" style="margin-bottom: 6mm;" href="pages/logout.php">Desconectar</a>
+                    <a href="pagina_usuario.php"><i class="bi bi-person-circle login-icon" style="margin-right: 5mm; margin-left: 5mm;"></i></a>
+                    <a class="btn btn-outline-light me-2" style="margin-bottom: 6mm;" href="logout.php">Desconectar</a>
                 </div>';
         } else {
             echo '<div class="text-end">';
-            echo '<a class="btn btn-outline-light" style="margin-bottom: 8px;" href="pages/login.php">Login</a>';
+            echo '<a class="btn btn-outline-light" style="margin-bottom: 8px;" href="login-nave.php">Login</a>';
         }
         ?>
     </div>

@@ -1,4 +1,4 @@
-<!DOCTYPE >
+<!DOCTYPE>
 <html>
 
 <head>
@@ -208,19 +208,19 @@
             <div class="col-md-2">
                 <h2 style="color: red;">
                     <p>Remover</p>
-    </h2>
-    <div class="col">
+                </h2>
+                <div class="col">
                     <p></p>
-                <button type='button' class='btn btn-secondary btn-sm'>Deletar</button>
-    </div>
-    <div class="col">
+                    <button type='button' class='btn btn-secondary btn-sm'>Deletar</button>
+                </div>
+                <div class="col">
                     <p></p>
-                <button type='button' class='btn btn-secondary btn-sm'>Deletar</button>
-    </div>
-    <div class="col">
+                    <button type='button' class='btn btn-secondary btn-sm'>Deletar</button>
+                </div>
+                <div class="col">
                     <p></p>
-                <button type='button' class='btn btn-secondary btn-sm'>Deletar</button>
-    </div>
+                    <button type='button' class='btn btn-secondary btn-sm'>Deletar</button>
+                </div>
             </div>
 
             <div class="row">

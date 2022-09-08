@@ -2,75 +2,21 @@
 #BY GUSTAVO INC © 2022
 $title = "Página de Pagamento";
 include "../include/header.php";
-?>
-<header class="p-3 bg-dark text-white">
-    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
-                    <use xlink:href="#bootstrap"></use>
-                </svg>
-            </a>
+include "../include/database.php";
+include "../include/nave-site.php";
 
-            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                <h2><i class="bi bi-cup-hot"></i></h2>
-                <li>
-                    <a href="../home2.php" class="nav-link px-2 text-warning">
-                        <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">The COFFE'JOIN</font>
-                        </font>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="nav-link px-2 text-white">
-                        <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">Mais Sabores</font>
-                        </font>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="nav-link px-2 text-white">
-                        <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">Preços</font>
-                        </font>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="nav-link px-2 text-white">
-                        <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">Perguntas frequentes</font>
-                        </font>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="nav-link px-2 text-white">
-                        <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">Sobre</font>
-                        </font>
-                    </a>
-                </li>
-            </ul>
-            
-            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">    
-                <input type="search" class="form-control form-control-dark" placeholder="Procurar..."aria-label="Procurar">
-            </form>
-            <?php
-                if(isset($_SESSION['id_usu']) and  $_SESSION['id_usu'] != '' ) {
-                    echo'<div class="text-end">';
-                    echo'<a class="btn btn-outline-light me-2" href="pages/logout.php"> Sair</a>';
-                }else{
-                    echo'<div class="text-end">';
-                    echo'<a class="btn btn-outline-light me-2" href="../pages/login.php">Login</a>';
-                }
-            ?>
-        </div>
-    </header>
-    <main>
-        <div class="container">
-            <div class="row g-5 mt-3">
-                <div class="col-md-5 col-lg-6 order-md-last">
-                    <img src="../Imagens\Mobile payments-rafiki.svg" alt="svg payment">
-                </div>
-                <!--
+$inf = "SELECT * FROM cartoes JOIN pessoa ON id_pessoa = fk_id_pessoa";
+$query = mysqli_query($con, $inf);
+$tradu = mysqli_fetch_all($query, MYSQLI_ASSOC);
+?>
+
+<main>
+    <div class="container">
+        <div class="row g-5 mt-3">
+            <div class="col-md-5 col-lg-6 order-md-last">
+                <img src="../Imagens\Mobile payments-rafiki.svg" alt="svg payment">
+            </div>
+            <!--
                 <div class="col-md-5 col-lg-4 order-md-last">
                     <h4 class="d-flex justify-content-between align-content-center mb-3">
                         <span class="text-primary">Seu carrinho</span>
@@ -113,12 +59,12 @@ include "../include/header.php";
                         </li>
                     </ul>
                 </div> !-->
-                
-                <div class="col-md-7 col-lg-6">
-                    
-                    <!-- <h4>Endereço de cobrança</h4> !-->
-                    <form class="needs-validation" action="pagdeobrigado.php" method="post">
-                        <!--<div class="row g-3">
+
+            <div class="col-md-7 col-lg-6">
+
+                <!-- <h4>Endereço de cobrança</h4> !-->
+                <form class="needs-validation" action="pagdeobrigado.php" method="post">
+                    <!--<div class="row g-3">
                             <div class="col-sm-6">
                                 <label class="form-label" for="nome">Primeiro nome:</label>
                                 <input class="form-control" type="text" name="nome" id="name">
@@ -209,14 +155,14 @@ include "../include/header.php";
 
 
 
-                        <h4 class="mb-4">Forma de Pagamento</h4>
-                        <div class="my-3" >
-                                <select class="selecaoop" name="selecao" id="">
-                                    <option value="Cartao_débito">Cartão de débito</option>
-                                    <option value="Cartao_crédito">Cartão de crédito</option>
-                                    <option value="PayPal">Paypal</option>
-                                </select>
-                            <!-- <span id="debitt" class="text-muted"></span>
+                    <h4 class="mb-4">Forma de Pagamento</h4>
+                    <div class="my-3">
+                        <select class="selecaoop" name="selecao" id="">
+                            <option value="Cartao_débito">Cartão de débito</option>
+                            <option value="Cartao_crédito">Cartão de crédito</option>
+                            <option value="PayPal">Paypal</option>
+                        </select>
+                        <!-- <span id="debitt" class="text-muted"></span>
                             <div class="form-check">
                                 <input type="radio" class="form-check-input" name="metodopagamento_debitt" id="debit" required>
                                 <label for="debit" class="form-check-label">Cartão de débito</label>
@@ -235,90 +181,43 @@ include "../include/header.php";
                                 <span class="text-muted">(em breve)</span>
                                 </label>
                             </div> -->
-                        </div>
-                        
-                        <div class="row gy-3">
-                            <div class="col-md-6">
-                                <label for="cartao-name" class="form-label">Nome no cartão</label>
-                                <input class=" estilo" type="text" name="cartao-name" required maxlength="80" id="upcase" placeholder="DIGITE SEU NOME">
-                                <small class="text-muted">Nome completo como aparece no cartão</small>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="cartao-number" class="form-label">Número do cartão</label>
-                                <input class=" estilo" type="" id="number_card" name="cartao-number" required maxlength="19" placeholder="0000 0000 0000 0000" onkeyup="number_valid()" pattern="[0-9]{4}[ ][0-9]{4}[ ][0-9]{4}[ ][0-9]{4}">
-                            </div>
-                            <div class="col-md-3">
-                                <label class="form-label" for="valid">Validade</label>
-                                <input class=" estilo" type="" maxlength="5" pattern="[0-9]{2}[/][0-9]{2}" name="valid" required autocomplete="off" placeholder="00/00" id="validade" onkeyup="mask_valid()">
-                                <script src="../js/maks_valid.js"></script>
-                            </div>
-                            <div class="col-md-3">
-                                <label class="form-label" for="cc-cvv">CVV</label>
-                                <input class=" estilo" type="" name="cc-cvv" required autocomplete="off" placeholder="000" pattern="[0-9]{3}" maxlength="3"> 
-                            </div>
-                        </div>
-                        <hr class="my-4">
-                        <button id="comprar" type="submit" class="btn btn-primary w-100 btn-lg"  name="confirme" >Comprar Agora</button>
-                    </form>
-
-    
-                    <!-- <button class="btn btn-primary" id="mensagem" onclick="mudarr()">clique</button> !-->
-
-                </div>
-            </div>
-        </div>  
-    </main>
-
-    <footer>
-        <section class="footer-1 d-flex justify-content-md-center align-items-md-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 text-muted d-flex justify-content-md-center align-items-md-center">
-                        <span>© Copyright 2022. All Rights Reserved. Last Update: 2022-09-04</span>
                     </div>
-                </div>
+
+                    <div class="row gy-3">
+                        <div class="col-md-6">
+                            <label for="cartao-name" class="form-label">Nome no cartão</label>
+                            <input class=" estilo" type="text" name="cartao-name" required maxlength="80" id="upcase" placeholder="DIGITE SEU NOME">
+                            <small class="text-muted">Nome completo como aparece no cartão</small>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="cartao-number" class="form-label">Número do cartão</label>
+                            <input class=" estilo" type="" id="number_card" name="cartao-number" required maxlength="19" placeholder="0000 0000 0000 0000" onkeyup="number_valid()" pattern="[0-9]{4}[ ][0-9]{4}[ ][0-9]{4}[ ][0-9]{4}">
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label" for="valid">Validade</label>
+                            <input class=" estilo" type="" maxlength="5" pattern="[0-9]{2}[/][0-9]{2}" name="valid" required autocomplete="off" placeholder="00/00" id="validade" onkeyup="mask_valid()">
+                            <script src="../js/maks_valid.js"></script>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label" for="cc-cvv">CVV</label>
+                            <input class=" estilo" type="" name="cc-cvv" required autocomplete="off" placeholder="000" pattern="[0-9]{3}" maxlength="3">
+                        </div>
+                    </div>
+                    <hr class="my-4">
+                    <button id="comprar" type="submit" class="btn btn-primary w-100 btn-lg" name="confirme">Comprar Agora</button>
+                </form>
+
+
+                <!-- <button class="btn btn-primary" id="mensagem" onclick="mudarr()">clique</button> !-->
+
             </div>
-
-        </section>
-    </footer>
-
-    <style>
-        body{
-            background-color: ;
-            color: black;
-            font-size: 20px;
-        }
-        .estilo{
-            background-color: transparent;
-            border-radius: 0px ;
-            border: none;
-            border-bottom: 1px solid black;
-            width: 100%;
-            padding: 4px;
-        }
-        .footer-1{
-            background-color: rgb(172, 162, 162);
-            margin-top: 115px;
-            height: 100px;
-        }
-
-        .selecaoop{
-            background-color: transparent;
-            padding: 4px;
-            border:none;
-            border-bottom: 1px solid ;
-            background-color: ;
-            color: black;
-            font-family: sans-serif;
-            font-size: 21px;
-        }
-    </style>
-
+        </div>
+    </div>
+</main>
 
 <script src="../js/maks_valid.js"></script>
 
 <?php
+include "../include/rodape.php";
 include "../include/footer.php";
 ?>
-
-

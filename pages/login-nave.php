@@ -1,5 +1,5 @@
 <?php
-//bianca nogueira
+// BY JONAS
 $title = "Login";
 include "../include/header.php";
 include "../include/database.php";
@@ -17,12 +17,12 @@ if (isset($_GET['login']) and $_GET['login'] == 'send') {
             if ($senhauser == $result["senha"]) {
                 $_SESSION['id_usu'] = $result['id_usuario'];
                 $_SESSION['id_pessoa'] = $result['fk_id_pessoa'];
-                header('Location:../index.php');
+                header('Location:checkoutpage.php');
             } else {
-                header('Location:login.php?senha=erro');
+                header('Location:login-nave.php?senha=erro');
             }
         } else {
-            header('Location:login.php?login=email');
+            header('Location:login-nave.php?login=email');
         }
     }
 }

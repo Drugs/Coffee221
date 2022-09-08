@@ -1,36 +1,48 @@
 <?php
 //bianca nogueira
+session_start();
 $title = "Cadastro";
 include "../include/header.php";
 include "../include/database.php";
 if (isset($_GET['cadastra']) and $_GET['cadastra'] == 'send') {
-    $consulta = "Insert into pessoa (nome,email,telefone,endereco,pais)
+    $consulta = "INSERT INTO pessoa (nome,email,telefone,endereco,pais)
     VALUES ('{$_GET['nome']}','{$_GET['email']}','{$_GET['telefone']}','{$_GET['endereco']}','{$_GET['pais']}')";
-    var_dump($consulta);
+    #var_dump($consulta);
     $query = mysqli_query($con, $consulta);
     $id_usu = mysqli_insert_id($con);
     $cripton = base64_encode($_GET['senha']);
-    $consulta = "Insert INTO usuario (email, senha, nivel, fk_id_pessoa, data) 
+    $consulta2 = "INSERT INTO usuario (email, senha, nivel, fk_id_pessoa, data) 
     VALUES ('{$_GET['email']}','{$cripton}','{$_GET['nivel']}','{$id_usu}', '{$_GET['data']}')";
-    $query = mysqli_query($con, $consulta);
-    var_dump($consulta);
-    header("Location:../home.php");
+    $query = mysqli_query($con, $consulta2);
+    #var_dump($consulta2);
+    header("Location: login.php?cadastro=sucesso");
 }
 ?>
+<script>
+    function mascara(telefone) {
+        if (telefone.value.length == 0)
+            telefone.value = '(' + telefone.value;
+        if (telefone.value.length == 3)
+            telefone.value = telefone.value + ') 9';
 
-<body class="bianca">
+        if (telefone.value.length == 10)
+            telefone.value = telefone.value + '-';
+
+    }
+</script>
+
+<body class="bianca responsive">
     <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                 <div class="card bg-dark " style="border-radius: 1rem; padding-top: 2cm;" id="card">
                     <div class="card-body p-5 text-center">
-                        <form action="">
+                        <form action="" method="get">
                             <h2 style="color:white;">Cadastrar-se</h2>
                             <div class="form-floating mt-3">
-                                <input type="text" class="form-control" id="floatingPassword" placeholder="Password" name='nome'>
+                                <input type="text" class="form-control" id="floatingPassword" placeholder="Password" name='nome' required>
                                 <label for="floatingPassword">Digite seu nome</label>
                             </div>
-
                             <div class="form-floating mt-2">
                                 <input type="email" class="form-control" id="floatingPassword" placeholder="Password" name='email' required>
                                 <label for="floatingPassword">Digite seu Email</label>
@@ -40,7 +52,7 @@ if (isset($_GET['cadastra']) and $_GET['cadastra'] == 'send') {
                                 <label for="floatingPassword">Digite sua Senha</label>
                             </div>
                             <div class="form-floating mt-3">
-                                <input type="tel" class="form-control" id="floatingPassword" placeholder="Password" name='telefone' pattern="\([0-9]{2}\)[\s][0-9]{4}-[0-9]{4,5}"  required>
+                                <input type="tel" class="form-control" id="telefone" placeholder="Password" name='telefone' data-mask="(00) 0000-0000" onkeypress="mascara(this)" pattern="^\(?\d{2}\)?[\s-]?[\s9]?\d{4}-?\d{4}$" required>
                                 <label for="floatingPassword">Digite seu Telefone</label>
                             </div>
                             <div class="form-floating mt-3">
@@ -52,13 +64,11 @@ if (isset($_GET['cadastra']) and $_GET['cadastra'] == 'send') {
                                 <label for="floatingPassword">Digite seu País</label>
                             </div>
                             <div class="form-floating mt-3">
-                                <input type="text" class="form-control" id="floatingPassword" placeholder="Nivel" name='nivel' required>
-                                <label for="floatingPassword">Digite o Nivel</label>
-                            </div>
-                            <div class="form-floating mt-3">
                                 <input type="date" class="form-control" id="floatingPassword" placeholder="Data" name='data' required>
                                 <label for="floatingPassword">Data</label>
                             </div>
+                            <!-- ESTE INPUT DEFINE QUAL SERÁ O NÍVEL DO USUÁRIO -->
+                            <input type="hidden" class="form-control" id="nivel" name='nivel' value="1">
                             <div class="mt-2 d-grid gap-2">
                                 <button type="submit" value='send' name='cadastra' class="btn btn-outline-light">Cadastrar </button>
                                 <span style="color:white;">Fazer login?</span>

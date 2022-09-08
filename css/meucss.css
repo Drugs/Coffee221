@@ -53,6 +53,8 @@ background: linear-gradient(90deg, rgba(200,140,51,1) 0%, rgba(235,154,92,1) 74%
     border-bottom: 2px solid rgb(131, 128, 128);
 }
 
+/* Arquivos CSS da home --------------------------------------------------------*/
+
 .slider{
 
     width: 100%;
@@ -86,3 +88,42 @@ background: linear-gradient(90deg, rgba(200,140,51,1) 0%, rgba(235,154,92,1) 74%
     width: 20px !important;
     height: 15px !important;
 }
+
+.login-icon{
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+}
+
+.responsive{
+    min-width: 320px;
+    max-width: 1920px;
+    min-height: 480px;
+    max-height: 1080px;
+}
+
+/* ArquivosCSSdeGustavo checkoutpage.php ----------------------------------------------*/
+
+.estilo {
+    background-color: transparent;
+    border-radius: 0px;
+    border: none;
+    border-bottom: 1px solid black;
+    width: 100%;
+    padding: 4px;
+}
+
+.selecaoop {
+    background-color: transparent;
+    padding: 4px;
+    border: none;
+    border-bottom: 1px solid;
+    color: black;
+    font-family: sans-serif;
+    font-size: 21px;
+}
+
+.checkoutpage{
+    color: black;
+    font-size: 20px;
+}
+
