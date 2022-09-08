@@ -1,10 +1,12 @@
 <?php
+session_start();
 $title = 'The COFFEE\'N\'JOIN';
 include './include/header.php';
 include './include/nave.php'
 ?>
-<!-- AJAX do carrinho de compras -->
+
 <script>
+	// AJAX do carrinho de compras
 	function rodinhas(id_info_prod) {
 		console.log(id_info_prod)
 		var xmlhttp = new XMLHttpRequest();
@@ -15,6 +17,22 @@ include './include/nave.php'
 		}
 		xmlhttp.open("GET", "pages/botanocarrinho.php?id=" + id_info_prod);
 		xmlhttp.send();
+	}
+	// Script do encurtador de texto dos cards
+	function leiamore() {
+		var pontos = document.getElementById("pontos");
+		var maisTexto = document.getElementById("mais");
+		var btnLeiaMais = document.getElementById("btnLeiaMais");
+
+		if (pontos.style.display === "none") {
+			pontos.style.display = "inline";
+			maisTexto.style.display = "none";
+			btnLeiaMais.innerHTML = "Leia Mais";
+		} else {
+			pontos.style.display = "none";
+			maisTexto.style.display = "inline";
+			btnLeiaMais.innerHTML = "Leia Menos";
+		}
 	}
 </script>
 
@@ -79,23 +97,24 @@ include './include/nave.php'
 		</div>
 
 		<div class="col-md-3">
-			<div class="card shadow-sm hide-text">
+			<div class="card shadow-sm">
 				<img src="./Imagens/fototeste.jpg" heigth="">
 				<div class="card-body">
-					<p class="card-text">
+					<div class="card-text feed-item-body post-body">
 						<font style="vertical-align: inherit;">
 							<font style="vertical-align: inherit;">
 								<h2 class="text-center">Caramelo Cremoso </h2>
 							</font>
 							<font style="vertical-align: inherit;">
-								<h6>Capsula Caramelo Cremoso, uma explosão de sabores com a doçura na medida certa. Com notas de baunilha com canela e caramelo.</h6>
+								<h6>Capsula caramelo cremoso<spam id="pontos">...</spam>
+									<spam id="mais">uma explosão de sabores com a doçura na medida certa. Com notas de baunilha com canela e caramelo.</spam>
+								</h6>
 							</font>
 						</font>
-					</p>
+					</div>
 					<div class="d-flex justify-content-between align-items-center">
 						<div class="btn-group">
-							<button type="button" class="btn btn-sm btn-outline-secondary">
-
+							<button type="button" class="btn btn-sm btn-outline-secondary" onclick="leiamore()" id="btnLeiaMais">
 								<font style="vertical-align: inherit;">Mais</font>
 								</font>
 							</button>

@@ -45,7 +45,7 @@ include "header.php";
             <input type="search" class="form-control form-control-dark" placeholder="Procurar..." aria-label="Procurar">
         </form>
         <?php
-        if (isset($_SESSION['id_usu']) and  $_SESSION['id_usu'] != '') {
+        if (isset($_SESSION['id_usu']) and $_SESSION['id_usu'] != '') {
             echo '<div class="text-end">';
             echo '<a class="btn btn-outline-light me-2" href="pages/logout.php"> Sair</a>';
         } else {
