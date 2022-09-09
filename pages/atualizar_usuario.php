@@ -8,7 +8,7 @@ $title="Atualizar pagina usuário".$_SESSION['id_usu'];
 #echo'<pre>';
 #var_dump($_GET);
 #echo'</pre>';
-$id_usu=2;
+$id_usu=$_SESSION['id_pessoa'];
 
 if(isset($_GET['cadastro']) and $_GET['cadastro'] == 'update'){
 $cripton=base64_encode($_GET['senha']);
@@ -20,7 +20,7 @@ endereco = '{$_GET['endereco']}',pais = '{$_GET['pais']}', usuario.email = '{$_G
 '{$cripton}', nivel= '{$_GET['nivel']}', data = '{$_GET['data']}'
 WHERE id_pessoa = {$_GET['var']} ";
 $query=mysqli_query($con,$consulta_up);
-#header("Location:pagina_usuario.php");
+header("Location:pagina_usuario.php");
 #echo'<pre>';
 #var_dump($consulta_up);
 #echo'</pre>';
@@ -51,7 +51,7 @@ $result=mysqli_fetch_assoc($query);
                                 <label for="exampleFormControlInput1" class="form-label"><strong>Email</strong></label>
                             </div>
                             <div class="form-floating">
-                                <input type="number" class="form-control" name='telefone'value="<?php echo $result['telefone'];?>">
+                                <input type="tel" class="form-control" name='telefone'data-mask="(00) 0000-0000" onkeypress="mascara(this)" pattern="^\(?\d{2}\)?[\s-]?[\s9]?\d{4}-?\d{4}$" required value="<?php echo $result['telefone'];?>">
                                 <label for="exampleFormControlInput1" class="form-label"><strong>Telefone</strong></label>
                             </div>
                             <div class="form-floating">
