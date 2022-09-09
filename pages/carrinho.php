@@ -141,14 +141,16 @@
                     <div class="col">
                         <form action="" method="get">
                             <label for="nome" class="form-label"></label>
-                            <input type="number" class="form-control" placeholder="1" id='quantidade1' name="quantidade" data-preco='14' onchange='atualiza(this.value, this.dataset.preco)' step="1" />
+                            <input type="number" class="form-control" placeholder="1" id='quantidade1' name="quantidade" data-preco='14' 
+                            onchange='atualiza(this.value, this.dataset.preco)' step="1" />
                         </form>
 
                     </div>
                     <div class="col">
                         <form action="" method="get">
                             <label for="nome" class="form-label"></label>
-                            <input type="number" class="form-control" placeholder="1" id='quantidade2' name="quantidade" data-preco='12' onchange='atualiza(this.value, this.dataset.preco)' step="1" />
+                            <input type="number" class="form-control" placeholder="1" id='quantidade2' name="quantidade" data-preco='12'
+                             onchange='atualiza(this.value, this.dataset.preco)' step="1" />
 
 
                         </form>
@@ -156,7 +158,8 @@
                     <div class="col">
                         <form action="" method="get">
                             <label for="nome" class="form-label"></label>
-                            <input type="number" class="form-control" placeholder="1" id='quantidade3' name="quantidade" data-preco='17' onchange='atualiza(this.value, this.dataset.preco)' step="1" />
+                            <input type="number" class="form-control" placeholder="1" id='quantidade3' name="quantidade" data-preco='17'
+                             onchange='atualiza(this.value, this.dataset.preco)' step="1" />
 
 
                         </form>
@@ -185,9 +188,12 @@
                     function atualiza(quant, prc) {
                         console.dir(prc)
 
+                    }function quantidade(){
 
-
+                        let valor= document.getElementById('quantidade1')
+                        let valor1=
                     }
+
                 </script>
 
 
