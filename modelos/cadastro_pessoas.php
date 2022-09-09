@@ -15,7 +15,7 @@ if(isset($_GET['submit'])and $_GET['submit']=='send'){
     echo$consulta;
       if($query){
       #echo"sucesso!!";
-        header("Location:CRUD_cadastro.php");
+        header("Location:relatorio_pessoa.php");
       }else{
         #echo"sem sucesso:(";
     
@@ -39,7 +39,7 @@ if(isset($_GET['submit'])and $_GET['submit']=='send'){
                                 <label for="exampleFormControlInput1" class="form-label"><strong>Email</strong></label>
                             </div>
                             <div class="form-floating">
-                                <input type="number" class="form-control" name='telefone'>
+                                <input type="number.mask('(000) 000-0000')" class="form-control" name='telefone'>
                                 <label for="exampleFormControlInput1" class="form-label"><strong>Telefone</strong></label>
                             </div>
                             <div class="form-floating">

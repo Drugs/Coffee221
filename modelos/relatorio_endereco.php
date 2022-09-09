@@ -1,17 +1,46 @@
 <?php
+
+$title="Relatório endereço";
 include '../include/header.php';
 include '../include/database.php';
+$pesquisa = '';
 
-$consulta = "SELECT *,endereco.cidade from pessoa 
-join endereco on pessoa.id_pessoa=endereco.fk_id_pessoa where pessoa.id_pessoa='2'
-";
+		if (isset($_GET["submit"]) and $_GET["submit"] == "buscar"){
+			$pesquisa = $_GET['buscar'];
 
-echo $consulta;
-$query  = mysqli_query($con, $consulta);
-$result = mysqli_fetch_all($query, MYSQLI_ASSOC);
+		$consulta = "SELECT *,id_endereco,cidade, rua, avenida, numero, fk_id_pessoa, cep, estado, complemento 
+		from pessoa join endereco on pessoa.id_pessoa=endereco.fk_id_pessoa where endereco.id_endereco LIKE'%{$pesquisa}%' 
+		";
+
+		$query  = mysqli_query($con, $consulta);
+		$result = mysqli_fetch_all($query, MYSQLI_ASSOC);
+		
+
+}
+
+$consulta2="SELECT *,id_endereco,cidade, rua, avenida, numero, fk_id_pessoa, cep, estado, complemento
+ from pessoa join endereco on pessoa.id_pessoa=endereco.fk_id_pessoa";
+ $query  = mysqli_query($con, $consulta2);
+ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
+echo $consulta2;
+#var_dump($_GET);
+
+ 
 ?>
  <div class='container'>
      <div class='row'>  
+	 <form action="" method="get">
+            <div class="col-12">
+               <input type="text" name="buscar" 
+               class="form-control"/>
+            </div>
+
+            <div class="col-2">
+            <button type="submit" name='submit' value='buscar'
+             class="btn btn-warning">Buscar</button>
+            </div>
+          </form>
+    
     <h1 class='text-center'>Relatório de endereços</h1>
       <a class="btn mb-3 btn-warning float-start" href="cadastro_endereco.php">Cadastrar</a>
       <div class="col-12">
@@ -33,7 +62,7 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
 				</thead>
 				<tbody>
 	<?php
-		foreach ($result as $endereco) {
+		foreach ($result as $endereco){
 			echo "<tr>
 			<th scope='row'>{$endereco['id_endereco']}</th>
 			 <td>{$endereco['cidade']}</td>
@@ -49,7 +78,7 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
 			 </td>
 			 <td><a class='btn btn-outline-warning' href='.php?var={$endereco['id_endereco']}'>Deletar</a> </td>
 					   </tr>";
-}
+        }
 
 ?>
                
