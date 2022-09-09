@@ -1,28 +1,16 @@
 Ata da reunião 02/09
-	Careca não gravou a reunião
 	---------------------------------------------------------------------------------------------
-	Produtos - IMPORTANTEEEEEEEEEEEEEEE
+	Produtos - IMPORTANTEEEEEEEEEEEEEEEEEEEEEEEE
 		Imagens - ok!
 		Descrições
 		Preço
-		Cadastrar no BD
 	---------------------------------------------------------------------------------------------
 	Pagina home>
-
-		Página "Sambando" -> FEITO
-		Imagem do carroussel -> FEITO
-			>Ajustar as imagens -> FEITO
-			>Colocar as imagens dos produtos -> FEITO
 		Páginas acessórias->[Página de produtos/Busca, Sobre, Categorias, Carrinho] -> A FAZER
 		Criar um botao de busca, ou mandar o formulário com JS -> EM ANDAMENTO
 		Botao de detalhes do produto - [Deixar cheguei ヽ⁠(｡⁠◕⁠o⁠◕⁠｡⁠)ﾉ⁠.] -> EM ANDAMENTO
-		Separar os cards -> FEITO
-			Sugestão - Parallax -> FEITO
-		Arrumar o footer - Caos -> FEITO
-			>Modificar por um footer mais simples? -> FEITO
-		Adicionar link para o perfil -> FEITO
-		Página "Sambando"; -> FEITO
-		Separar os cards -> FEITO
+		Sugestão - Mudar o diabo da imagem do Parallax 
+		Adicionar ao carrinho		
 	
 	---------------------------------------------------------------------------------------------
 	
