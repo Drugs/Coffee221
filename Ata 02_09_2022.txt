@@ -7,6 +7,14 @@ Ata da reunião 02/09
 		Preço
 		Cadastrar no BD
 	---------------------------------------------------------------------------------------------
+	Carrinho 
+		-O carrinho só mostra conjuntos de compras em aberto
+		-Centralizar os itens
+		-Alterar o subtotal
+		-Adicionar o botão de ação
+		-Link da home
+		-Possibilidade de vc pegar o header do index.php
+	---------------------------------------------------------------------------------------------
 	Pagina home>
 
 		Página "Sambando" -> FEITO
@@ -16,65 +24,52 @@ Ata da reunião 02/09
 		Páginas acessórias->[Página de produtos/Busca, Sobre, Categorias, Carrinho] -> A FAZER
 		Criar um botao de busca, ou mandar o formulário com JS -> EM ANDAMENTO
 		Botao de detalhes do produto - [Deixar cheguei ヽ⁠(｡⁠◕⁠o⁠◕⁠｡⁠)ﾉ⁠.] -> EM ANDAMENTO
-		Separar os cards -> FEITO
-			Sugestão - Parallax -> FEITO
-		Arrumar o footer - Caos -> FEITO
-			>Modificar por um footer mais simples? -> FEITO
-		Adicionar link para o perfil -> FEITO
-		Página "Sambando"; -> FEITO
-		Separar os cards -> FEITO
+
+Sugestão - Mudar o diabo da imagem do Parallax 
+		Adicionar ao carrinho
+		Ajustar descrição e link pro produto
+
 	
 	---------------------------------------------------------------------------------------------
-	
-	Login
-		Resolver o gradiente do login -> FEITO
-		Verificar a SESSION -> FEITO
-		Arrumar o botao de logout -> FEITO
-		Adicionar navegação pra voltar pra home[logo] -> FEITO
-		Modificar link -> FEITO
-	---------------------------------------------------------------------------------------------
-	Cadastro
-		Pesquisar mascaras -> FEITO
-		Entrar/Cadastrar/Enviar? -> FEITO
-		Cadastro de usuário com defeito -> FEITO
-	--------------------------------------------------------------------------------------------
 	Produtos
-		Encasular o cabeçalho da pagina principal[colocar no include] -> FEITO
-		WTF this freaking gradient man!!!!! -> FEITO
 		Carregar as informações do produto do BD -> EM ANDAMENTO
 		Adicionar chamadas de ação [Adicionar ao carrinho, Compre AGORA!!!!] -> A FAZER
 		Mostrar informações de estoque -> EM ANDAMENTO
 	---------------------------------------------------------------------------------------------
 	Usuário
-		WTF nome voando?!?!?!?!?!? (╯°□°）╯︵ ┻━┻ -já não tem
-		Botão de logout-> feito
-		Adicionar um link pra página principal -feito
-			Links do menu
-				>Perfil - Atualizar as informações de pessoa e usuário ->
-				>Perfil - Adicionar forma de pagamento [Checkout????] ->
-				>Perfil - Adicionar endereço de entrega ->
-				>Histórico de Compras ->
-				>Carrinho->
-				>Loja ->
+
+		(╯°□°）╯︵ ┻━┻
+		Botão de logout-> 
+		Links do menu
+			>Perfil - Atualizar as informações de pessoa e usuário ->
+				>Pegar o usuario da SESSAO - IMPorTANteEEEEEEEEEEEEEEEEE
+				>Adicionar link
+				>Remover o botao de deletar
+				>organizar o menu lateral
+				>Corrigir telefone
+			>Perfil - Adicionar forma de pagamento [Checkout????] ->
+			>Perfil - Adicionar endereço de entrega ->
+			>Histórico de Compras -> Ultima coisa
+			>Carrinho->
+
 		Estudar o Dashboard do Bootstrap
+		Encapsular o menu e o cabeçalho
 	---------------------------------------------------------------------------------------------
 	Atualizar usuário
 		Adicionar o titulo da página->
 		Remover o var_dump->
 		Adicionar value do campo telefone->
 	---------------------------------------------------------------------------------------------
-	Checkout Page
-		Adicionar o Menu -> FEITO
-		Adicionar footer -> FEITO
-		Adicionar navegação -> ?
-		Adicionar título -> FEITO
-		Integrar com a sessão e o BD -> FEITO
-	---------------------------------------------------------------------------------------------
 	Galeria
 		Busca - IMPORTANTEEEEEEEEEEEEEEE
 		Carregar as informações do BD-
-		Carregar as imagens-
-		Adicionar o Menu-
-		Adicionar footer-
-		Adicionar navegação-
 		Informação de categorias [Adicionar menu com as categorias]
+	---------------------------------------------------------------------------------------------
+	Finalizar compra
+		Revisão dos itens, sumário, subtotal.
+		-Mudar o status do carrinho
+			>Definir o status em aberto [1]
+			>Definir o status em concluído [2]
+		Redireciona para uma página feliz da alegria, obrigado pela sua compra, sua ligação é muito importante para nossa alegria.
+		
+		
