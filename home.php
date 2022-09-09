@@ -75,91 +75,94 @@ include './include/nave.php';
 	<!-- Cards da Home do site -->
 	<div class="container">
 		<div class="row justify-content-evenly mt-5">
-			<div class="col-md-3">
-				<div class="card shadow-sm ">
-					<img src="./Imagens/fototeste.jpg" >
-				
+		<div class="col-md-3">
+				<div class="card shadow-sm">
+					<img src="./Imagens/fototeste.jpg" heigth="">
 					<div class="card-body">
-						<p class="card-text">
-						<h2 class="text-center">Grão de café</h2>
-						<p class="bia">Maior seletividade de grãos, sabor qualidade.</p>
-						</p>
+						<div class="card-text feed-item-body post-body">
+							<div style="vertical-align: inherit;">
+								<div style="vertical-align: inherit;">
+									<h2 class="text-center">Caramelo Cremoso </h2>
+								</div>
+								<div style="vertical-align: inherit;">
+									<p class="bia">Maior seletividade de grãos, sabor qualidade.</p>
+								</div>
+							</div>
+						</div>
 						<div class="d-flex justify-content-between align-items-center">
 							<div class="btn-group">
-								<button type="button" id='alvo' onclick='rodinhas(1)' class="btn btn-sm btn-warning">Adicionar ao carrinho</button>
+								<button type="button" class="btn btn-sm btn-outline-secondary" onclick="leiamore()" id="btnLeiaMais">
+									<div style="vertical-align: inherit;">Mais</div>
+								</button>
 							</div>
 							<small class="text-muted">
-								COFFE'JOIN
+								<div style="vertical-align: inherit;">
+									<div style="vertical-align: inherit;">COFFE'JOIN</div>
+								</div>
 							</small>
 						</div>
 					</div>
 				</div>
 			</div>
-
 			<div class="col-md-3">
 				<div class="card shadow-sm">
 					<img src="./Imagens/fototeste.jpg" heigth="">
 					<div class="card-body">
 						<div class="card-text feed-item-body post-body">
-							<font style="vertical-align: inherit;">
-								<font style="vertical-align: inherit;">
+							<div style="vertical-align: inherit;">
+								<div style="vertical-align: inherit;">
 									<h2 class="text-center">Caramelo Cremoso </h2>
-								</font>
-								<font style="vertical-align: inherit;">
+								</div>
+								<div style="vertical-align: inherit;">
 									<p class="bia">Maior seletividade de grãos, sabor qualidade.</p>
-								</font>
-							</font>
+								</div>
+							</div>
 						</div>
 						<div class="d-flex justify-content-between align-items-center">
 							<div class="btn-group">
 								<button type="button" class="btn btn-sm btn-outline-secondary" onclick="leiamore()" id="btnLeiaMais">
-									<font style="vertical-align: inherit;">Mais</font>
-									</font>
+									<div style="vertical-align: inherit;">Mais</div>
 								</button>
 							</div>
 							<small class="text-muted">
-								<font style="vertical-align: inherit;">
-									<font style="vertical-align: inherit;">COFFE'JOIN</font>
-								</font>
+								<div style="vertical-align: inherit;">
+									<div style="vertical-align: inherit;">COFFE'JOIN</div>
+								</div>
 							</small>
 						</div>
 					</div>
 				</div>
 			</div>
-
-			<div class="ms-2 col-md-3 ">
-				<div class="card shadow-sm ">
+			
+			<div class="col-md-3">
+				<div class="card shadow-sm">
 					<img src="./Imagens/fototeste.jpg" heigth="">
 					<div class="card-body">
 						<div class="card-text feed-item-body post-body">
-							<font style="vertical-align: inherit;">
-								<font style="vertical-align: inherit;">
-									<h2 class="text-center">Cafeteira Delux </h2>
-								</font>
-								<font style="vertical-align: inherit;">
+							<div style="vertical-align: inherit;">
+								<div style="vertical-align: inherit;">
+									<h2 class="text-center">Caramelo Cremoso </h2>
+								</div>
+								<div style="vertical-align: inherit;">
 									<p class="bia">Maior seletividade de grãos, sabor qualidade.</p>
-								</font>
-							</font>
+								</div>
+							</div>
 						</div>
 						<div class="d-flex justify-content-between align-items-center">
 							<div class="btn-group">
-								<button type="button" class="btn btn-sm btn-outline-secondary">
-
-									<font style="vertical-align: inherit;">Mais</font>
-									</font>
+								<button type="button" class="btn btn-sm btn-outline-secondary" onclick="leiamore()" id="btnLeiaMais">
+									<div style="vertical-align: inherit;">Mais</div>
 								</button>
 							</div>
 							<small class="text-muted">
-								<font style="vertical-align: inherit;">
-									<font style="vertical-align: inherit;">COFFE'JOIN</font>
-								</font>
+								<div style="vertical-align: inherit;">
+									<div style="vertical-align: inherit;">COFFE'JOIN</div>
+								</div>
 							</small>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
 	<!-- Parallax -->
 	<div class="mt-2 mb-2 parallax-home"></div>
 	<!-- Cards Home do site -->
@@ -171,14 +174,14 @@ include './include/nave.php';
 					<img src="./Imagens/fototeste.jpg" heigth=''>
 					<div class="card-body">
 						<p class="card-text">
-							<font style="vertical-align: inherit;">
-								<font style="vertical-align: inherit;">
+							<div style="vertical-align: inherit;">
+								<div style="vertical-align: inherit;">
 									<h2 class="text-center">Grão de café PREMIUM </h2>
-								</font>
-								<font style="vertical-align: inherit;">
+								</div>
+								<div style="vertical-align: inherit;">
 									<h6 class="car">Nossa mais nova capsula Caramelo Cremoso, uma explosão de sabores com a doçura na medida certa. Com notas de baunilha com canela e o nosso mais refinado caramelo.</h6>
-								</font>
-							</font>
+								</div>
+							</div>
 						</p>
 						<div class="d-flex justify-content-between align-items-center">
 							<div class="btn-group">
@@ -186,14 +189,13 @@ include './include/nave.php';
 
 								<button type="button" class="btn btn-sm btn-outline-secondary">
 
-									<font style="vertical-align: inherit;">Mais</font>
-									</font>
+									<div style="vertical-align: inherit;">Mais</div>
 								</button>
 							</div>
 							<small class="text-muted">
-								<font style="vertical-align: inherit;">
-									<font style="vertical-align: inherit;">COFFE'JOIN</font>
-								</font>
+								<div style="vertical-align: inherit;">
+									<div style="vertical-align: inherit;">COFFE'JOIN</div>
+								</div>
 							</small>
 						</div>
 					</div>
@@ -205,28 +207,27 @@ include './include/nave.php';
 					<img src="./Imagens/fototeste.jpg" heigth="">
 					<div class="card-body">
 						<p class="card-text">
-							<font style="vertical-align: inherit;">
-								<font style="vertical-align: inherit;">
+							<div style="vertical-align: inherit;">
+								<div style="vertical-align: inherit;">
 									<h2 class="text-center">Caramelo Cremoso </h2>
-								</font>
-								<font style="vertical-align: inherit;">
+								</div>
+								<div style="vertical-align: inherit;">
 									<h6 class="car">Nossa mais nova capsula Caramelo Cremoso, uma explosão de sabores com a doçura na medida certa. Com notas de baunilha com canela e o nosso mais refinado caramelo.</h6>
-								</font>
-							</font>
+								</div>
+							</div>
 						</p>
 						<div class="d-flex justify-content-between align-items-center">
 							<div class="btn-group">
 
 								<button type="button" class="btn btn-sm btn-outline-secondary">
 
-									<font style="vertical-align: inherit;">Mais</font>
-									</font>
+									<div style="vertical-align: inherit;">Mais</div>
 								</button>
 							</div>
 							<small class="text-muted">
-								<font style="vertical-align: inherit;">
-									<font style="vertical-align: inherit;">COFFE'JOIN</font>
-								</font>
+								<div style="vertical-align: inherit;">
+									<div style="vertical-align: inherit;">COFFE'JOIN</div>
+								</div>
 							</small>
 						</div>
 					</div>
@@ -238,27 +239,27 @@ include './include/nave.php';
 					<img src="./Imagens/fototeste.jpg" heigth="">
 					<div class="card-body">
 						<p class="card-text">
-							<font style="vertical-align: inherit;">
-								<font style="vertical-align: inherit;">
+							<div style="vertical-align: inherit;">
+								<div style="vertical-align: inherit;">
 									<h2 class="text-center">Caramelo Cremoso </h2>
-								</font>
-								<font style="vertical-align: inherit;">
+								</div>
+								<div style="vertical-align: inherit;">
 									<h6 class="car">Nossa mais nova capsula Caramelo Cremoso, uma explosão de sabores com a doçura na medida certa. Com notas de baunilha com canela e o nosso mais refinado caramelo.</h6>
-								</font>
-							</font>
+								</div>
+							</div>
 						</p>
 						<div class="d-flex justify-content-between align-items-center">
 							<div class="btn-group">
 								<button type="button" class="btn btn-sm btn-outline-secondary">
-									<font style="vertical-align: inherit;">
-										<font style="vertical-align: inherit;">Mais</font>
-									</font>
+									<div style="vertical-align: inherit;">
+										<div style="vertical-align: inherit;">Mais</div>
+									</div>
 								</button>
 							</div>
 							<small class="text-muted">
-								<font style="vertical-align: inherit;">
-									<font style="vertical-align: inherit;">COFFE'JOIN</font>
-								</font>
+								<div style="vertical-align: inherit;">
+									<div style="vertical-align: inherit;">COFFE'JOIN</div>
+								</div>
 							</small>
 						</div>
 					</div>
