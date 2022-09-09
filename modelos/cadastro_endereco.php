@@ -59,7 +59,7 @@ header("Location:relatorio_endereco.php");
                             </div>
 
                            
-                        <div class="container">
+                      
                             <div class="row">
                                 <div class="col-6">
                                     <a class="w-100 btn btn-lg btn-secondary" href="relatorio_endereco.php">Voltar</a>
@@ -71,7 +71,7 @@ header("Location:relatorio_endereco.php");
                             </div>
                         </div>
                     </div>
-                
+                </div>
             
         </form>
 
