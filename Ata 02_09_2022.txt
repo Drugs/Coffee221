@@ -47,16 +47,15 @@ Ata da reunião 02/09
 	---------------------------------------------------------------------------------------------
 	Usuário
 		WTF nome voando?!?!?!?!?!? (╯°□°）╯︵ ┻━┻
-		Samba tevez
-		Botão de logout
+		Botão de logout-> 
 		Adicionar um link pra página principal
 			Links do menu
-				>Perfil - Atualizar as informações de pessoa e usuário
-				>Perfil - Adicionar forma de pagamento [Checkout????]
-				>Perfil - Adicionar endereço de entrega
-				>Histórico de Compras
-				>Carrinho
-				>Loja
+				>Perfil - Atualizar as informações de pessoa e usuário ->
+				>Perfil - Adicionar forma de pagamento [Checkout????] ->
+				>Perfil - Adicionar endereço de entrega ->
+				>Histórico de Compras ->
+				>Carrinho->
+				>Loja ->
 		Estudar o Dashboard do Bootstrap
 	---------------------------------------------------------------------------------------------
 	Atualizar usuário
