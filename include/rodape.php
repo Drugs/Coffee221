@@ -12,7 +12,7 @@
     </footer>
 
     <style>
-        .footer-1{
+        .footer-1 {
             background-color: rgb(172, 162, 162);
             margin-top: 80px;
             height: 100px;

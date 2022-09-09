@@ -1,8 +1,8 @@
 <?php
 //autor:Ana Clara
 //arquivo com conexão com o BD
-include '../include/header.php';
 $title = "usuario update";
+include '../include/header.php';
 include '../include/database.php';
 #echo'<pre>';
 #var_dump($_GET);
@@ -18,7 +18,7 @@ endereco = '{$_GET['endereco']}',pais = '{$_GET['pais']}', usuario.email = '{$_G
 '{$cripton}', nivel= '{$_GET['nivel']}', data = '{$_GET['data']}'
 WHERE id_pessoa = {$_GET['var']} ";
     $query = mysqli_query($con, $consulta_up);
-    #header("Location:cadastro_usuario.php");
+    header("Location:cadastro_usuario.php");
     #echo'<pre>';
     #var_dump($consulta_up);
     #echo'</pre>';

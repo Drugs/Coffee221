@@ -1,8 +1,8 @@
 <?php
 //autor:Ana Clara
 //arquivo com conexão com o BD
-include '../include/header.php';
 $title = "relatorio item de carrinho";
+include '../include/header.php';
 include '../include/database.php';
 $consulta = "select * from item_de_carrinho";
 $query = mysqli_query($con, $consulta);
@@ -18,6 +18,15 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
       <h1 style="margin-bottom:1cm;margin-top:1cm;">Cadastro item carrinho</h1>
       <a class="btn mb-3 btn-warning float-start" href="cadastro_item_de_carrinho.php">cadastar</a>
       <div class="col-12">
+         <?php
+          if(isset($_GET['submit']) and $_GET['submit']=='erro'){
+          echo '<div class="alert alert-info " style="padding-top: 5px;
+          padding-bottom: 5px; margin-bottom: 1mm;" role="alert">
+          <strong>Esse id carrinho não existe</strong>
+          </div>';  
+          }       
+         ?>
+
         <table class="mt-3 table table-dark" style="box-shadow:10px 10px 50px  #000000,10px 10px 10px  #000000;">
           <thead class="table table-dark table- striped">
             <tr>

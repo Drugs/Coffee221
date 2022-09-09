@@ -11,14 +11,14 @@ include "header.php";
         </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-            <h2><i class="bi bi-cup-hot"></i> </h2>
+            <h2><i class="bi bi-cup-hot"></i></h2>
 
             <li><a href="#" class="nav-link px-2 text-warning">
                     <font style="vertical-align: inherit;">
                         <font style="vertical-align: inherit;">The COFFE'JOIN</font>
                     </font>
                 </a></li>
-            <li><a href="#" class="nav-link px-2 text-white">
+            <li><a href="pages/checkoutpage.php" class="nav-link px-2 text-white">
                     <font style="vertical-align: inherit;">
                         <font style="vertical-align: inherit;">Mais Sabores</font>
                     </font>
@@ -41,16 +41,17 @@ include "header.php";
         </ul>
 
         <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-
-            <input type="search" class="form-control form-control-dark" placeholder="Procurar..." aria-label="Procurar">
+            <input type="search" class="form-control form-control-dark" style="margin-bottom: 2mm;" placeholder="Procurar..." aria-label="Procurar">
         </form>
         <?php
-        if (isset($_SESSION['id_usu']) and  $_SESSION['id_usu'] != '') {
-            echo '<div class="text-end">';
-            echo '<a class="btn btn-outline-light me-2" href="pages/logout.php"> Sair</a>';
+        if (isset($_SESSION['id_usu']) and $_SESSION['id_usu'] != '') {
+            echo '<div class="text-end">
+                    <a href="pages/pagina_usuario.php"><i class="bi bi-person-circle login-icon" style="margin-right: 5mm; margin-left: 5mm;"></i></a>
+                    <a class="btn btn-outline-light me-2" style="margin-bottom: 6mm;" href="pages/logout.php">Desconectar</a>
+                </div>';
         } else {
             echo '<div class="text-end">';
-            echo '<a class="btn btn-outline-light me-2" href="pages/login.php">Login</a>';
+            echo '<a class="btn btn-outline-light" style="margin-bottom: 8px;" href="pages/login.php">Login</a>';
         }
         ?>
     </div>

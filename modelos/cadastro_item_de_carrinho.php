@@ -19,7 +19,7 @@ if(isset($_GET['submit'])and $_GET['submit']=='send'){
     $query=mysqli_query($con, $consulta);
         
         echo $consulta;
-            #header("Location:relatorio_item_de_carrinho.php");
+            header("Location:relatorio_item_de_carrinho.php");
 
           
         }
