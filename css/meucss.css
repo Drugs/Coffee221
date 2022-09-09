@@ -95,10 +95,8 @@ background: linear-gradient(90deg, rgba(200,140,51,1) 0%, rgba(235,154,92,1) 74%
 }
 
 .responsive{
-    min-width: 320px;
-    max-width: 1920px;
-    min-height: 480px;
-    max-height: 1080px;
+    max-width: 100%;
+    max-height: 108%;
 }
 
 /* ArquivosCSSdeGustavo checkoutpage.php ----------------------------------------------*/

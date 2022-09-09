@@ -49,6 +49,9 @@ if (isset($_GET['login']) and $_GET['login'] == 'send') {
                             if (isset($_GET['cadastro']) and $_GET['cadastro'] == 'sucesso') {
                                 echo '<div class="alert alert-warning" role="alert">Agora que se cadastrou, efetue login em sua conta!</div>';
                             }
+                            if (isset($_GET['compra']) and $_GET['compra'] == 'erro') {
+                                echo '<div class="alert alert-warning" role="alert">Você necessita estar logado antes de realizar uma compra!</div>';
+                            }
                             ?>
                         </div>
                         <form action="">

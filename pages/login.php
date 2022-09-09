@@ -49,6 +49,9 @@ if (isset($_GET['login']) and $_GET['login'] == 'send') {
                             if (isset($_GET['cadastro']) and $_GET['cadastro'] == 'sucesso') {
                                 echo '<div class="alert alert-warning" role="alert">Agora que se cadastrou, efetue login em sua conta!</div>';
                             }
+                            if (isset($_GET['logout']) and $_GET['logout'] == 'confirm') {
+                                echo '<div class="alert alert-warning" role="alert">Você se desconectou!</div>';
+                            }
                             ?>
                         </div>
                         <form action="">
@@ -65,7 +68,7 @@ if (isset($_GET['login']) and $_GET['login'] == 'send') {
                                 <button type="submit" value='send' name='login' class="btn btn-outline-light">Entrar</button>
                         </form>
                         <span style="color:white;">Ainda não tem uma conta?</span>
-                        <a class='mt-1 btn btn-outline-light' href="cadastro_usuario.php"> Clique aqui</a>
+                        <a class='mt-1 btn btn-outline-light' href="cadastro_usuario.php"> Cadastre-se aqui</a>
                     </div>
                 </div>
             </div>

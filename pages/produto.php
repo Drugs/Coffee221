@@ -1,10 +1,11 @@
 <?php
 //bianca nogueira
+session_start();
 $title = "Produto";
 include "../include/database.php";
 include "../include/header.php";
 include "../include/nave.php";
-$inf = "SELECT * FROM produto JOIN info_roupa ON id_produto = fk_id_produto";
+$inf = "SELECT * FROM info_roupa JOIN produto ON id_produto = fk_id_produto WHERE id_info_roupa = 26";
 $query = mysqli_query($con, $inf);
 $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
 ?>
@@ -48,8 +49,13 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
                     <h4>{$produtos['descricao']}</h4>
                 </center>";
                     }
+                    if (isset($tamanhos['nome_produto']) and $tamanhos['nome_produto'] == 'Camisa Swile') {
+                        echo "
+                    <p>{$tamanhos['tamanho']}</p>
+                    </div>";
+                    }
                 }
-                echo "
+                ?>
                 <p><i class='bi bi-star-fill'></i><i class='bi bi-star-fill'></i><i class='bi bi-star-fill'></i><i class='bi bi-star-fill'></i><i class='bi bi-star-fill'></i><i class='bi bi-star-fill'></i>
                 </p>
                 <h2>R$ 77,99</h2>
@@ -61,95 +67,61 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
                     </h5>
                     <h6 class='card-subtitle'>Guia de tamanhos</h6>
                     <p class='card-text'>
-                ";
-                foreach ($result as $tamanhos) {
-                    if (isset($tamanhos['nome_produto']) and $tamanhos['nome_produto'] == 'Camisa Swile') {
-                        echo "
-                    <p>{$tamanhos['tamanho']}</p>
-                    </div>";
-                    }
-                }
-                foreach ($result as $estoque) {
-                    if (isset($estoque['nome_produto']) and $estoque['nome_produto'] == 'Camisa Swile') {
-                        echo "
-                    <p>{$estoque['estoque']}</p>
-                    </div>";
-                    }
-                }
-                ?>
-            </div>
-        </div>
-
-        <div class="album py-5 bg-light">
-            <div class="container">
-                <h3>Sugestão</h3>
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img src="../Imagens/caf2.png" alt="">
-
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                    </div>
-                                    <small class="text-muted">
-                                        <h5>Camisa do café</h5>
-                                    </small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img src="../Imagens/caf2.png" alt="">
-
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                    </div>
-                                    <small class="text-muted">
-                                        <h5>Camisa do café</h5>
-                                    </small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img src="../Imagens/caf2.png" alt="">
-
-                            <div class="card-body">
-
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                    </div>
-                                    <small class="text-muted">
-                                        <h5>Camisa do café</h5>
-                                    </small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
                 </div>
-
-            </div>
-        </div>
-
-        <footer class="d-flex flex-nowrap justify-content-between align-items-center py-3 my-4 border-top">
-            <div class="col-md-4 d-flex align-items-center">
-                <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-                    <svg class="bi" width="30" height="24">
-                        <use xlink:href="#bootstrap"></use>
-                    </svg>
-                </a>
-                <span class="text-muted ">© 2022, Coffe221 .</span>
             </div>
 
-        </footer>
+            <div class="album py-5 bg-light">
+                <div class="container">
+                    <h3>Sugestão</h3>
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <img src="../Imagens/caf2.png" alt="">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                        </div>
+                                        <small class="text-muted">
+                                            <h5>Camisa do café</h5>
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <img src="../Imagens/caf2.png" alt="">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                        </div>
+                                        <small class="text-muted">
+                                            <h5>Camisa do café</h5>
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <img src="../Imagens/caf2.png" alt="">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                        </div>
+                                        <small class="text-muted">
+                                            <h5>Camisa do café</h5>
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-
-
-        <?php
-        include "../include/footer.php";
-        ?>
+            <?php
+            include "../include/rodape.php";
+            include "../include/footer.php";
+            ?>
