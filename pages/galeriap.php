@@ -4,7 +4,7 @@ include '../include/header.php';
 include '../include/nave-site.php';
 ?>
 <div class="container">
-  <div class="row d-flex justify-content-center align-items-center h-100">
+  <div class="mt-5 row d-flex justify-content-center align-items-center h-100">
     <div class="col-4">
         <div class="card" style="width: 18rem;">
       <img src="..." class="card-img-top" alt="...">
