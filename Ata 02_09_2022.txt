@@ -34,9 +34,9 @@ Ata da reunião 02/09
 		Mostrar informações de estoque -> EM ANDAMENTO
 	---------------------------------------------------------------------------------------------
 	Usuário
-		WTF nome voando?!?!?!?!?!? (╯°□°）╯︵ ┻━┻
-		Botão de logout-> 
-		Adicionar um link pra página principal
+		WTF nome voando?!?!?!?!?!? (╯°□°）╯︵ ┻━┻ já não tem
+		Botão de logout-> feito
+		Adicionar um link pra página principal feito
 			Links do menu
 				>Perfil - Atualizar as informações de pessoa e usuário ->
 				>Perfil - Adicionar forma de pagamento [Checkout????] ->

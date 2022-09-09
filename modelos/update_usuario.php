@@ -48,7 +48,7 @@ $result = mysqli_fetch_assoc($query);
                         <label for="exampleFormControlInput1" class="form-label"><strong>Email</strong></label>
                     </div>
                     <div class="form-floating">
-                        <input type="number" class="form-control" name='telefone' value="<?php echo $result['telefone']; ?>">
+                        <input type="number.mask('(000) 000-0000')" class="form-control" name='telefone' value="<?php echo $result['telefone']; ?>">
                         <label for="exampleFormControlInput1" class="form-label"><strong>Telefone</strong></label>
                     </div>
                     <div class="form-floating">
