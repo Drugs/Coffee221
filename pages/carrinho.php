@@ -9,7 +9,7 @@
         <div class="container">
 
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-5">
                     <h2 style="color: blue;">
                         <p>Itens</p>
                     </h2>
@@ -37,14 +37,14 @@
 
                         <img src="../Imagens/cafe1.png" style="height:70px;">
                         Café Caramelo e Baunilha (Nova Caps...)
-                    </div>
+                    </div><br>
                 </div>
 
-                <div class="col-2">
+                <div class="col-md-3">
                     <h2 style="color:blueviolet;">
                         <p>Quantidade</p>
                     </h2>
-                    <div class="col">
+                    <div class="col-2">
                         <form action="" method="get">
                             <label for="nome" class="form-label"></label>
                             <input type="number" class="form-control" placeholder="1" id='quantidade1' name="quantidade" data-preco='14' 
@@ -52,7 +52,7 @@
                         </form>
 
                     </div>
-                    <div class="col">
+                    <div class="col-2">
                         <form action="" method="get">
                             <label for="nome" class="form-label"></label>
                             <input type="number" class="form-control" placeholder="1" id='quantidade2' name="quantidade" data-preco='12'
@@ -61,7 +61,7 @@
 
                         </form>
                     </div>
-                    <div class="col">
+                    <div class="col-2">
                         <form action="" method="get">
                             <label for="nome" class="form-label"></label>
                             <input type="number" class="form-control" placeholder="1" id='quantidade3' name="quantidade" data-preco='17'
