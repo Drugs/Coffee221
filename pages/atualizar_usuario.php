@@ -1,10 +1,11 @@
 <?php
 session_start();
-var_dump ($_SESSION);
+#var_dump ($_SESSION);
 //autor:Ana Clara
+$title="Atualizar pagina usuário".$_SESSION['id_usu'];
 include'../include/header.php';
 include'../include/database.php';
-$title="Atualizar pagina usuário".$_SESSION['id_usu'];
+
 #echo'<pre>';
 #var_dump($_GET);
 #echo'</pre>';
@@ -17,8 +18,8 @@ $consulta_up= "UPDATE pessoa
 JOIN usuario ON pessoa.id_pessoa = usuario.fk_id_pessoa
 SET nome = '{$_GET['nome']}', pessoa.email = '{$_GET['email']}', telefone = '{$_GET['telefone']}',
 endereco = '{$_GET['endereco']}',pais = '{$_GET['pais']}', usuario.email = '{$_GET['login']}',senha=
-'{$cripton}', nivel= '{$_GET['nivel']}', data = '{$_GET['data']}'
-WHERE id_pessoa = {$_GET['var']} ";
+'{$cripton}', data = '{$_GET['data']}'
+WHERE id_usuario = {$_GET['var']} ";
 $query=mysqli_query($con,$consulta_up);
 header("Location:pagina_usuario.php");
 #echo'<pre>';
@@ -54,6 +55,9 @@ $result=mysqli_fetch_assoc($query);
                                 <input type="tel" class="form-control" name='telefone'data-mask="(00) 0000-0000" onkeypress="mascara(this)" pattern="^\(?\d{2}\)?[\s-]?[\s9]?\d{4}-?\d{4}$" required value="<?php echo $result['telefone'];?>">
                                 <label for="exampleFormControlInput1" class="form-label"><strong>Telefone</strong></label>
                             </div>
+                            <script>
+
+                            </script>
                             <div class="form-floating">
                                 <input type="text" class="form-control" name='endereco'value="<?php echo $result['endereco'];?>">
                                 <label for="exampleFormControlInput1" class="form-label"><strong>Endereco</strong></label>
@@ -75,10 +79,7 @@ $result=mysqli_fetch_assoc($query);
                                 <input type="password" class="form-control" name='senha' required>
                                 <label for="exampleFormControlInput1" class="form-label"><strong>senha</strong></label>
                             </div>
-                            <div class="form-floating">
-                                <input type="text" class="form-control" name='nivel'value="<?php echo $result['nivel'];?>">
-                                <label for="exampleFormControlInput1" class="form-label"><strong>nivel</strong></label>
-                            </div>
+                          
                             <div class="form-floating" style="margin-bottom: 5mm;">
                                 <input type="date" class="form-control" name='data'value="<?php echo $result['data'];?>">
                                 <label for="exampleFormControlTextarea1" class="form-label"><strong>data</strong></label>
