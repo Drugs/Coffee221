@@ -37,7 +37,12 @@ include "header.php";
                     <font style="vertical-align: inherit;">
                         <font style="vertical-align: inherit;">Sobre</font>
                     </font>
-                </a></li>
+                </a></li>      
+            <li><a href="pages\nossotime.php" class="nav-link px-2 text-white">
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Nossa equipe</font>
+                </font>
+            </a></li>
         </ul>
 
         <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
