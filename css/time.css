@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
-::-webkit-scrollbar{
+.corpo::-webkit-scrollbar{
     width: 10px;
     background-color: transparent;
 }
 
-::-webkit-scrollbar-thumb{
+.corpo::-webkit-scrollbar-thumb{
     background-color: dodgerblue;
     border-radius: 10px;
 }
 
-body{
+.corpo{
     background-color: #20c997;
     display: flex;
     flex-direction: column;

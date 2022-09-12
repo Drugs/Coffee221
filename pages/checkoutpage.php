@@ -18,7 +18,7 @@ if (isset($_SESSION['id_pessoa']) and $_SESSION['id_pessoa'] > 0) {
     }
     # Realizar um SELECT com javascript para o usuário escolher qual dos cartões irá usar
 } else {
-    header("location: login-nave.php?compra=erro");
+    header("location: login.php?compra=erro");
 }
 include "../include/header.php";
 include "../include/nave-site.php";
@@ -211,11 +211,11 @@ include "../include/nave-site.php";
                         </div>
                         <div class='col-md-6'>
                             <label for='numero' class='form-label'>Número do cartão</label>
-                            <input class=' estilo' type='' id='number_card' name='numero' required maxlength='19' placeholder='0000 0000 0000 0000' onkeyup='number_valid()' pattern='[0-9]{4}[ ][0-9]{4}[ ][0-9]{4}[ ][0-9]{4}' value='{$result[0]['numero']}'>
+                            <input class=' estilo' type='text' id='numero' name='numero' required maxlength='19' placeholder='' onkeyup='mascara(this)' pattern='[0-9]{4}[-][0-9]{4}[-][0-9]{4}[-][0-9]{4}' value='{$result[0]['numero']}'>
                         </div>
                         <div class='col-md-3'>
                             <label class='form-label' for='validade'>Validade</label>
-                            <input class=' estilo' type='' maxlength='5' pattern='[0-9]{2}[/][0-9]{2}' name='validade' required autocomplete='off' placeholder='00/00' id='validade' onkeyup='mask_valid()' value='{$result[0]['validade']}'>
+                            <input class=' estilo' type='text'  maxlength='7' pattern='[0-1]{1}[0-9]{1}[/][2]{1}[0]{1}[2-9]{1}[0-9]{1}' name='validade' placeholder='' id='validade' onkeyup='mask_valid()' value='{$result[0]['validade']}'>
                             <script src='../js/maks_valid.js'></script>
                         </div>
                         <div class='col-md-3'>
