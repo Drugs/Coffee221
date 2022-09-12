@@ -52,5 +52,5 @@ include "header.php";
     </div>
 </header>
 <?php
-include "footer.php"
+include "footer.php";
 ?>

@@ -13,29 +13,24 @@ include "header.php";
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
             <h2><i class="bi bi-cup-hot"></i></h2>
 
-            <li><a href="#" class="nav-link px-2 text-warning">
+                <li><a href="../index.php" class="nav-link px-2 text-warning">
                     <font style="vertical-align: inherit;">
                         <font style="vertical-align: inherit;">The COFFE'JOIN</font>
                     </font>
                 </a></li>
-            <li><a href="pages/checkoutpage.php" class="nav-link px-2 text-white">
+            <li><a href="./pages/galeriap.php" class="nav-link px-2 text-white">
                     <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;">Mais Sabores</font>
+                        <font style="vertical-align: inherit;">Itens</font>
                     </font>
                 </a></li>
-            <li><a href="pages/produto.php" class="nav-link px-2 text-white">
+            <li><a href="./" class="nav-link px-2 text-white">
                     <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;">Preços</font>
+                        <font style="vertical-align: inherit;">Sobre Cartão</font>
                     </font>
                 </a></li>
             <li><a href="#" class="nav-link px-2 text-white">
                     <font style="vertical-align: inherit;">
                         <font style="vertical-align: inherit;">Perguntas frequentes</font>
-                    </font>
-                </a></li>
-            <li><a href="#" class="nav-link px-2 text-white">
-                    <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;">Sobre</font>
                     </font>
                 </a></li>
         </ul>

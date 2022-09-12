@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+.corpo::-webkit-scrollbar{
+    width: 10px;
+    background-color: transparent;
+}
+
+.corpo::-webkit-scrollbar-thumb{
+    background-color: dodgerblue;
+    border-radius: 10px;
+}
+
+.corpo{
+    background-color: #20c997;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 60px;
+    text-align: center;
+}
+
+.col-md-4, .col-12{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cartao{
+    width: 350px;
+    height: 400PX;
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 2px 2px 10px rgb(85, 84, 84);
+    transition: 200ms linear;
+    cursor: pointer;
+}
+
+.cartao:hover{
+    transform: scale(1.1);
+}
+
+.imagens{
+    width: 160px;
+    padding: 10px;
+    border-radius: 100%;
+}
+
+
+.social-medias{
+    display: flex;
+    gap: 10px;
+}

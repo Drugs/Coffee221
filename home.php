@@ -75,7 +75,7 @@ include './include/nave.php';
 	<!-- Cards da Home do site -->
 	<div class="container">
 		<div class="row justify-content-evenly mt-5">
-		<div class="col-md-3">
+			<div class="col-md-3">
 				<div class="card shadow-sm">
 					<img src="./Imagens/fototeste.jpg" heigth="">
 					<div class="card-body">
@@ -133,7 +133,7 @@ include './include/nave.php';
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="col-md-3">
 				<div class="card shadow-sm">
 					<img src="./Imagens/fototeste.jpg" heigth="">
@@ -163,6 +163,8 @@ include './include/nave.php';
 					</div>
 				</div>
 			</div>
+		</div>
+	</div>
 	<!-- Parallax -->
 	<div class="mt-2 mb-2 parallax-home"></div>
 	<!-- Cards Home do site -->
@@ -174,14 +176,14 @@ include './include/nave.php';
 					<img src="./Imagens/fototeste.jpg" heigth=''>
 					<div class="card-body">
 						<p class="card-text">
+						<div style="vertical-align: inherit;">
 							<div style="vertical-align: inherit;">
-								<div style="vertical-align: inherit;">
-									<h2 class="text-center">Grão de café PREMIUM </h2>
-								</div>
-								<div style="vertical-align: inherit;">
-									<h6 class="car">Nossa mais nova capsula Caramelo Cremoso, uma explosão de sabores com a doçura na medida certa. Com notas de baunilha com canela e o nosso mais refinado caramelo.</h6>
-								</div>
+								<h2 class="text-center">Grão de café PREMIUM </h2>
 							</div>
+							<div style="vertical-align: inherit;">
+								<h6 class="car">Nossa mais nova capsula Caramelo Cremoso, uma explosão de sabores com a doçura na medida certa. Com notas de baunilha com canela e o nosso mais refinado caramelo.</h6>
+							</div>
+						</div>
 						</p>
 						<div class="d-flex justify-content-between align-items-center">
 							<div class="btn-group">
@@ -207,14 +209,14 @@ include './include/nave.php';
 					<img src="./Imagens/fototeste.jpg" heigth="">
 					<div class="card-body">
 						<p class="card-text">
+						<div style="vertical-align: inherit;">
 							<div style="vertical-align: inherit;">
-								<div style="vertical-align: inherit;">
-									<h2 class="text-center">Caramelo Cremoso </h2>
-								</div>
-								<div style="vertical-align: inherit;">
-									<h6 class="car">Nossa mais nova capsula Caramelo Cremoso, uma explosão de sabores com a doçura na medida certa. Com notas de baunilha com canela e o nosso mais refinado caramelo.</h6>
-								</div>
+								<h2 class="text-center">Caramelo Cremoso </h2>
 							</div>
+							<div style="vertical-align: inherit;">
+								<h6 class="car">Nossa mais nova capsula Caramelo Cremoso, uma explosão de sabores com a doçura na medida certa. Com notas de baunilha com canela e o nosso mais refinado caramelo.</h6>
+							</div>
+						</div>
 						</p>
 						<div class="d-flex justify-content-between align-items-center">
 							<div class="btn-group">
@@ -239,14 +241,14 @@ include './include/nave.php';
 					<img src="./Imagens/fototeste.jpg" heigth="">
 					<div class="card-body">
 						<p class="card-text">
+						<div style="vertical-align: inherit;">
 							<div style="vertical-align: inherit;">
-								<div style="vertical-align: inherit;">
-									<h2 class="text-center">Caramelo Cremoso </h2>
-								</div>
-								<div style="vertical-align: inherit;">
-									<h6 class="car">Nossa mais nova capsula Caramelo Cremoso, uma explosão de sabores com a doçura na medida certa. Com notas de baunilha com canela e o nosso mais refinado caramelo.</h6>
-								</div>
+								<h2 class="text-center">Caramelo Cremoso </h2>
 							</div>
+							<div style="vertical-align: inherit;">
+								<h6 class="car">Nossa mais nova capsula Caramelo Cremoso, uma explosão de sabores com a doçura na medida certa. Com notas de baunilha com canela e o nosso mais refinado caramelo.</h6>
+							</div>
+						</div>
 						</p>
 						<div class="d-flex justify-content-between align-items-center">
 							<div class="btn-group">
@@ -265,7 +267,6 @@ include './include/nave.php';
 					</div>
 				</div>
 			</div>
-
 		</div>
 	</div>
 
