@@ -195,7 +195,7 @@
                             <label for="nome" class="form-label"></label>
                             <input type="number" class="form-control" placeholder="1" id='quantidade1' name="quantidade" data-preco='14' 
                             onchange='atualiza(this.value, this.dataset.preco)' step="1" />
-</form>
+                        </form>
 
                     </div>
                     <div class="col-2">
