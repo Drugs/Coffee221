@@ -1,27 +1,17 @@
 <?php
-session_start();
-//autor:Ana Clara
-$title = "Área de usuário";
-include '../include/database.php';
-$consulta = "SELECT * FROM pessoa 
-join usuario on usuario.fk_id_pessoa = id_pessoa 
-WHERE id_usuario={$_SESSION['id_usu']}";
-$query = mysqli_query($con, $consulta);
-$pessoa = mysqli_fetch_assoc($query);
-include'../include/cabecalho_usuario.php';
-
-if(isset($_GET['submit']) and $_GET['submit']=='send'){
-  
-}
-
+	session_start();
+	//autor:Ana Clara
+	$title = "Área de usuário";
+	include '../include/database.php';
+	$consulta = "SELECT * FROM pessoa 
+	join usuario on usuario.fk_id_pessoa = id_pessoa 
+	WHERE id_usuario={$_SESSION['id_usu']}";
+	$query = mysqli_query($con, $consulta);
+	$pessoa = mysqli_fetch_assoc($query);
+	include'../include/cabecalho_usuario.php';
 ?>
-
-
-
- 
-
-
 <body>
+
         
         <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
           <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3"  href="../index.php">Coffee 221</a>
@@ -33,6 +23,7 @@ if(isset($_GET['submit']) and $_GET['submit']=='send'){
             <div class="nav-item text-nowrap">
             <a class=" btn  btn-warning me-2"    href="logout.php">Desconectar</a>
             </div>
+
           </div>
         </header>
         

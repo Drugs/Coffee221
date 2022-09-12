@@ -10,7 +10,7 @@
 		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
 		<link rel="stylesheet" href="/coffee221/css/meu.css" />
 		<link rel="stylesheet" href="/coffee221/css/meucss.css" />
-		<link rel="stylesheet" href="/coffee221/css//alert.css" />
+		<link rel="stylesheet" href="/coffee221/css/alert.css" />
 	
     <style>
       .bd-placeholder-img {
@@ -30,5 +30,5 @@
 
     
     <!-- Custom styles for this template -->
-    <link href="dashboard.css" rel="stylesheet"></head>
+    <link href="/coffee221/css/dashboard.css" rel="stylesheet"></head>
   

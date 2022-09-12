@@ -10,7 +10,7 @@ include './include/nave.php';
 	<!-- JavaScript da Home -->
 	<script>
 		// AJAX do carrinho de compras
-		function rodinhas(id_info_prod) {
+		function carrinho(id_info_prod) {
 			console.log(id_info_prod)
 			var xmlhttp = new XMLHttpRequest();
 			xmlhttp.onreadystatechange = function() {
@@ -21,7 +21,7 @@ include './include/nave.php';
 			xmlhttp.open("GET", "pages/botanocarrinho.php?id=" + id_info_prod);
 			xmlhttp.send();
 		}
-		// Script do encurtador de texto dos cards
+		/* Script do encurtador de texto dos cards
 		function leiamore() {
 			var pontos = document.getElementById("pontos");
 			var maisTexto = document.getElementById("mais");
@@ -36,7 +36,7 @@ include './include/nave.php';
 				maisTexto.style.display = "inline";
 				btnLeiaMais.innerHTML = "Leia Menos";
 			}
-		}
+		}*/
 	</script>
 
 	<!-- Slider da Home do site -->
@@ -91,15 +91,8 @@ include './include/nave.php';
 						</div>
 						<div class="d-flex justify-content-between align-items-center">
 							<div class="btn-group">
-								<button type="button" class="btn btn-sm btn-outline-secondary" onclick="leiamore()" id="btnLeiaMais">
-									<div style="vertical-align: inherit;">Mais</div>
-								</button>
+								<button type="button" class="btn btn-sm btn-outline-secondary" onclick="carrinho()" id="alvo">Adicionar ao carrinho</button>
 							</div>
-							<small class="text-muted">
-								<div style="vertical-align: inherit;">
-									<div style="vertical-align: inherit;">COFFE'JOIN</div>
-								</div>
-							</small>
 						</div>
 					</div>
 				</div>
@@ -119,16 +112,11 @@ include './include/nave.php';
 							</div>
 						</div>
 						<div class="d-flex justify-content-between align-items-center">
-							<div class="btn-group">
-								<button type="button" class="btn btn-sm btn-outline-secondary" onclick="leiamore()" id="btnLeiaMais">
-									<div style="vertical-align: inherit;">Mais</div>
-								</button>
-							</div>
-							<small class="text-muted">
-								<div style="vertical-align: inherit;">
-									<div style="vertical-align: inherit;">COFFE'JOIN</div>
+							<div class="d-flex justify-content-between align-items-center">
+								<div class="btn-group">
+									<button type="button" class="btn btn-sm btn-outline-secondary" onclick="carrinho()" id="alvo">Adicionar ao carrinho</button>
 								</div>
-							</small>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -149,16 +137,11 @@ include './include/nave.php';
 							</div>
 						</div>
 						<div class="d-flex justify-content-between align-items-center">
-							<div class="btn-group">
-								<button type="button" class="btn btn-sm btn-outline-secondary" onclick="leiamore()" id="btnLeiaMais">
-									<div style="vertical-align: inherit;">Mais</div>
-								</button>
-							</div>
-							<small class="text-muted">
-								<div style="vertical-align: inherit;">
-									<div style="vertical-align: inherit;">COFFE'JOIN</div>
+							<div class="d-flex justify-content-between align-items-center">
+								<div class="btn-group">
+									<button type="button" class="btn btn-sm btn-outline-secondary" onclick="carrinho()" id="alvo">Adicionar ao carrinho</button>
 								</div>
-							</small>
+							</div>
 						</div>
 					</div>
 				</div>
