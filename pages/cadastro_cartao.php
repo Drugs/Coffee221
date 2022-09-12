@@ -49,8 +49,8 @@ include "../include/nave-site.php";
                                 <label for="exampleFormControlTextarea1" class="form-label"><strong>CVV</strong></label>
                             </div>
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="numero" name="numero" maxlength='19' placeholder='' onkeyup='mascara(this)' pattern="[0-9]{4}[-][0-9]{4}[-][0-9]{4}[-][0-9]{4}">
                                 <label for="exampleFormControlTextarea1" class="form-label"><strong>Número do cartão</strong></label>
+                                <input type="text" class="form-control" id="numero" name="numero" maxlength='19' placeholder='' onkeyup='mascara(this)' pattern="[0-9]{4}[-][0-9]{4}[-][0-9]{4}[-][0-9]{4}">
                             </div>
                             <input type='hidden' name='var' value='<?php echo $_GET['var']; ?>'>
                             <div class="row">
