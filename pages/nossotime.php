@@ -4,6 +4,7 @@ include "../include/header.php";
 include "../include/nave.php";
 ?>
 
+<body class="corpo">
 <section>
         <div class="container-fluid">
             <div class="row d-flex g-4">
