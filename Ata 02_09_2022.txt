@@ -43,6 +43,7 @@ Ata da reunião 02/09
 			>Carrinho->
 		Estudar o Dashboard do Bootstrap
 		Encapsular o menu e o cabeçalho
+		Trocar os ícones do menu
 	---------------------------------------------------------------------------------------------
 	Atualizar usuário
 		Adicionar o titulo da página->
