@@ -18,13 +18,13 @@
 }
 
 
-h1{
+.texto_principal{
     font-family: 'Courier New', Courier, monospace;
     font-size: 60px;
     text-align: center;
 }
 
-.flex-col-gustavo{
+.coluna_4, .coluna_12{
     display: flex;
     justify-content: center;
     align-items: center;

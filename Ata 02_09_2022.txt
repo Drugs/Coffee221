@@ -7,6 +7,14 @@ Ata da reunião 02/09
 		Cadastrar no BD
 	---------------------------------------------------------------------------------------------
 	Carrinho 
+		CARRINHO
+		-Logica do script
+		-Ajeitar os butões pra mudar a quantidade
+		-Colocar o icone de lixo pra apagar
+		-Calcular a quantidade e o valor
+		-Colocar o butao de checkout pra tem um location
+		-Pegar as informaçoes do banco de dados
+		-Pegar o id do usuario
 		-O carrinho só mostra conjuntos de compras em aberto
 		-Centralizar os itens
 		-Alterar o subtotal

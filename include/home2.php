@@ -163,114 +163,113 @@ include './include/nave.php';
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-	<!-- Parallax -->
-	<div class="mt-2 mb-2 parallax-home"></div>
-	<!-- Cards Home do site -->
-	<div class="container">
-		<div class="row justify-content-evenly">
+			<!-- Parallax -->
+			<div class="mt-2 mb-2 parallax-home"></div>
+			<!-- Cards Home do site -->
+			<div class="container">
+				<div class="row justify-content-evenly">
 
-			<div class="col-md-4">
-				<div class="card shadow-sm ">
-					<img src="./Imagens/fototeste.jpg" heigth=''>
-					<div class="card-body">
-						<p class="card-text">
-						<div style="vertical-align: inherit;">
-							<div style="vertical-align: inherit;">
-								<h2 class="text-center">Grão de café PREMIUM </h2>
-							</div>
-							<div style="vertical-align: inherit;">
-								<h6 class="car">Nossa mais nova capsula Caramelo Cremoso, uma explosão de sabores com a doçura na medida certa. Com notas de baunilha com canela e o nosso mais refinado caramelo.</h6>
-							</div>
-						</div>
-						</p>
-						<div class="d-flex justify-content-between align-items-center">
-							<div class="btn-group">
-
-
-								<button type="button" class="btn btn-sm btn-outline-secondary">
-
-									<div style="vertical-align: inherit;">Mais</div>
-								</button>
-							</div>
-							<small class="text-muted">
+					<div class="col-md-4">
+						<div class="card shadow-sm ">
+							<img src="./Imagens/fototeste.jpg" heigth=''>
+							<div class="card-body">
+								<p class="card-text">
 								<div style="vertical-align: inherit;">
-									<div style="vertical-align: inherit;">COFFE'JOIN</div>
-								</div>
-							</small>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-md-4">
-				<div class="card shadow-sm ">
-					<img src="./Imagens/fototeste.jpg" heigth="">
-					<div class="card-body">
-						<p class="card-text">
-						<div style="vertical-align: inherit;">
-							<div style="vertical-align: inherit;">
-								<h2 class="text-center">Caramelo Cremoso </h2>
-							</div>
-							<div style="vertical-align: inherit;">
-								<h6 class="car">Nossa mais nova capsula Caramelo Cremoso, uma explosão de sabores com a doçura na medida certa. Com notas de baunilha com canela e o nosso mais refinado caramelo.</h6>
-							</div>
-						</div>
-						</p>
-						<div class="d-flex justify-content-between align-items-center">
-							<div class="btn-group">
-
-								<button type="button" class="btn btn-sm btn-outline-secondary">
-
-									<div style="vertical-align: inherit;">Mais</div>
-								</button>
-							</div>
-							<small class="text-muted">
-								<div style="vertical-align: inherit;">
-									<div style="vertical-align: inherit;">COFFE'JOIN</div>
-								</div>
-							</small>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-md-4">
-				<div class="card shadow-sm ">
-					<img src="./Imagens/fototeste.jpg" heigth="">
-					<div class="card-body">
-						<p class="card-text">
-						<div style="vertical-align: inherit;">
-							<div style="vertical-align: inherit;">
-								<h2 class="text-center">Caramelo Cremoso </h2>
-							</div>
-							<div style="vertical-align: inherit;">
-								<h6 class="car">Nossa mais nova capsula Caramelo Cremoso, uma explosão de sabores com a doçura na medida certa. Com notas de baunilha com canela e o nosso mais refinado caramelo.</h6>
-							</div>
-						</div>
-						</p>
-						<div class="d-flex justify-content-between align-items-center">
-							<div class="btn-group">
-								<button type="button" class="btn btn-sm btn-outline-secondary">
 									<div style="vertical-align: inherit;">
-										<div style="vertical-align: inherit;">Mais</div>
+										<h2 class="text-center">Grão de café PREMIUM </h2>
 									</div>
-								</button>
-							</div>
-							<small class="text-muted">
-								<div style="vertical-align: inherit;">
-									<div style="vertical-align: inherit;">COFFE'JOIN</div>
+									<div style="vertical-align: inherit;">
+										<h6 class="car">Nossa mais nova capsula Caramelo Cremoso, uma explosão de sabores com a doçura na medida certa. Com notas de baunilha com canela e o nosso mais refinado caramelo.</h6>
+									</div>
 								</div>
-							</small>
+								</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<div class="btn-group">
+
+
+										<button type="button" class="btn btn-sm btn-outline-secondary">
+
+											<div style="vertical-align: inherit;">Mais</div>
+										</button>
+									</div>
+									<small class="text-muted">
+										<div style="vertical-align: inherit;">
+											<div style="vertical-align: inherit;">COFFE'JOIN</div>
+										</div>
+									</small>
+								</div>
+							</div>
 						</div>
 					</div>
+
+					<div class="col-md-4">
+						<div class="card shadow-sm ">
+							<img src="./Imagens/fototeste.jpg" heigth="">
+							<div class="card-body">
+								<p class="card-text">
+								<div style="vertical-align: inherit;">
+									<div style="vertical-align: inherit;">
+										<h2 class="text-center">Caramelo Cremoso </h2>
+									</div>
+									<div style="vertical-align: inherit;">
+										<h6 class="car">Nossa mais nova capsula Caramelo Cremoso, uma explosão de sabores com a doçura na medida certa. Com notas de baunilha com canela e o nosso mais refinado caramelo.</h6>
+									</div>
+								</div>
+								</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<div class="btn-group">
+
+										<button type="button" class="btn btn-sm btn-outline-secondary">
+
+											<div style="vertical-align: inherit;">Mais</div>
+										</button>
+									</div>
+									<small class="text-muted">
+										<div style="vertical-align: inherit;">
+											<div style="vertical-align: inherit;">COFFE'JOIN</div>
+										</div>
+									</small>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="card shadow-sm ">
+							<img src="./Imagens/fototeste.jpg" heigth="">
+							<div class="card-body">
+								<p class="card-text">
+								<div style="vertical-align: inherit;">
+									<div style="vertical-align: inherit;">
+										<h2 class="text-center">Caramelo Cremoso </h2>
+									</div>
+									<div style="vertical-align: inherit;">
+										<h6 class="car">Nossa mais nova capsula Caramelo Cremoso, uma explosão de sabores com a doçura na medida certa. Com notas de baunilha com canela e o nosso mais refinado caramelo.</h6>
+									</div>
+								</div>
+								</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<div class="btn-group">
+										<button type="button" class="btn btn-sm btn-outline-secondary">
+											<div style="vertical-align: inherit;">
+												<div style="vertical-align: inherit;">Mais</div>
+											</div>
+										</button>
+									</div>
+									<small class="text-muted">
+										<div style="vertical-align: inherit;">
+											<div style="vertical-align: inherit;">COFFE'JOIN</div>
+										</div>
+									</small>
+								</div>
+							</div>
+						</div>
+					</div>
+
 				</div>
 			</div>
-		</div>
-	</div>
 
-	<?php
-	include './include/rodape.php';
-	include './include/footer.php';
-	?>
+			<?php
+			include './include/rodape.php';
+			include './include/footer.php';
+			?>
