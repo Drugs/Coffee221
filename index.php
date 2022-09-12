@@ -1,3 +1,3 @@
 <?php
-include 'home2.php';
+include 'home.php';
 ?>

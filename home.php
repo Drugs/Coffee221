@@ -1,330 +1,276 @@
 <?php
-$title = 'The COFFE\'N\'JOIN';
+session_start();
+$title = 'The COFFEE\'N\'JOIN';
+include './include/database.php';
 include './include/header.php';
+include './include/nave.php';
 ?>
 
-<body>
-    <header class="p-3 bg-dark text-white">
-        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
-                    <use xlink:href="#bootstrap"></use>
-                </svg>
-            </a>
+<body class="responsive">
+	<!-- JavaScript da Home -->
+	<script>
+		// AJAX do carrinho de compras
+		function rodinhas(id_info_prod) {
+			console.log(id_info_prod)
+			var xmlhttp = new XMLHttpRequest();
+			xmlhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					console.log(this.responseText)
+				}
+			}
+			xmlhttp.open("GET", "pages/botanocarrinho.php?id=" + id_info_prod);
+			xmlhttp.send();
+		}
+		// Script do encurtador de texto dos cards
+		function leiamore() {
+			var pontos = document.getElementById("pontos");
+			var maisTexto = document.getElementById("mais");
+			var btnLeiaMais = document.getElementById("btnLeiaMais");
 
-            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                <h2><i class="bi bi-cup-hot"></i> </h2>
+			if (pontos.style.display === "none") {
+				pontos.style.display = "inline";
+				maisTexto.style.display = "none";
+				btnLeiaMais.innerHTML = "Leia Mais";
+			} else {
+				pontos.style.display = "none";
+				maisTexto.style.display = "inline";
+				btnLeiaMais.innerHTML = "Leia Menos";
+			}
+		}
+	</script>
 
-                <li><a href="#" class="nav-link px-2 text-warning">
-                        <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">The COFFE'JOIN</font>
-                        </font>
-                    </a></li>
-                <li><a href="#" class="nav-link px-2 text-white">
-                        <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">Mais Sabores</font>
-                        </font>
-                    </a></li>
-                <li><a href="#" class="nav-link px-2 text-white">
-                        <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">Preços</font>
-                        </font>
-                    </a></li>
-                <li><a href="#" class="nav-link px-2 text-white">
-                        <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">Perguntas frequentes</font>
-                        </font>
-                    </a></li>
-                <li><a href="#" class="nav-link px-2 text-white">
-                        <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">Sobre</font>
-                        </font>
-                    </a></li>
-            </ul>
+	<!-- Slider da Home do site -->
+	<div class="col-12 col-xl-12 slider">
+		<div id="cafeb" class="carousel slide" data-bs-ride="carousel">
+			<div class="carousel-indicators">
+				<button type="button" data-bs-target="#cafeb" data-bs-slide-to="0" class="active slide-button" aria-current="true" aria-label="Slide 1"></button>
+				<button type="button" data-bs-target="#cafeb" data-bs-slide-to="1" class="slide-button" aria-label="Slide 2"></button>
+				<button type="button" data-bs-target="#cafeb" data-bs-slide-to="2" class="slide-button" aria-label="Slide 3"></button>
+				<button type="button" data-bs-target="#cafeb" data-bs-slide-to="3" class="slide-button" aria-label="Slide 4"></button>
+			</div>
+			<div class="carousel-inner center-block">
+				<div class="carousel-item active">
+					<img src="Imagens/cafe1.png" class="d-block w-100" alt="..." height="480px;">
+				</div>
+				<div class="carousel-item">
+					<img src="Imagens/cafe2.png" class="d-block w-100" alt="..." height="480px;">
+				</div>
+				<div class="carousel-item">
+					<img src="Imagens/cafe3.png" class="d-block w-100" alt="..." height="480px;">
+				</div>
+				<div class="carousel-item">
+					<img src="Imagens/cafe4.png" class="d-block w-100" alt="..." height="480px;">
+				</div>
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#cafeb" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#cafeb" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
+	</div>
+	<!-- Cards da Home do site -->
+	<div class="container">
+		<div class="row justify-content-evenly mt-5">
+			<div class="col-md-3">
+				<div class="card shadow-sm">
+					<img src="./Imagens/fototeste.jpg" heigth="">
+					<div class="card-body">
+						<div class="card-text feed-item-body post-body">
+							<div style="vertical-align: inherit;">
+								<div style="vertical-align: inherit;">
+									<h2 class="text-center">Caramelo Cremoso </h2>
+								</div>
+								<div style="vertical-align: inherit;">
+									<p class="bia">Maior seletividade de grãos, sabor qualidade.</p>
+								</div>
+							</div>
+						</div>
+						<div class="d-flex justify-content-between align-items-center">
+							<div class="btn-group">
+								<button type="button" class="btn btn-sm btn-outline-secondary" onclick="leiamore()" id="btnLeiaMais">
+									<div style="vertical-align: inherit;">Mais</div>
+								</button>
+							</div>
+							<small class="text-muted">
+								<div style="vertical-align: inherit;">
+									<div style="vertical-align: inherit;">COFFE'JOIN</div>
+								</div>
+							</small>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card shadow-sm">
+					<img src="./Imagens/fototeste.jpg" heigth="">
+					<div class="card-body">
+						<div class="card-text feed-item-body post-body">
+							<div style="vertical-align: inherit;">
+								<div style="vertical-align: inherit;">
+									<h2 class="text-center">Caramelo Cremoso </h2>
+								</div>
+								<div style="vertical-align: inherit;">
+									<p class="bia">Maior seletividade de grãos, sabor qualidade.</p>
+								</div>
+							</div>
+						</div>
+						<div class="d-flex justify-content-between align-items-center">
+							<div class="btn-group">
+								<button type="button" class="btn btn-sm btn-outline-secondary" onclick="leiamore()" id="btnLeiaMais">
+									<div style="vertical-align: inherit;">Mais</div>
+								</button>
+							</div>
+							<small class="text-muted">
+								<div style="vertical-align: inherit;">
+									<div style="vertical-align: inherit;">COFFE'JOIN</div>
+								</div>
+							</small>
+						</div>
+					</div>
+				</div>
+			</div>
 
-            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+			<div class="col-md-3">
+				<div class="card shadow-sm">
+					<img src="./Imagens/fototeste.jpg" heigth="">
+					<div class="card-body">
+						<div class="card-text feed-item-body post-body">
+							<div style="vertical-align: inherit;">
+								<div style="vertical-align: inherit;">
+									<h2 class="text-center">Caramelo Cremoso </h2>
+								</div>
+								<div style="vertical-align: inherit;">
+									<p class="bia">Maior seletividade de grãos, sabor qualidade.</p>
+								</div>
+							</div>
+						</div>
+						<div class="d-flex justify-content-between align-items-center">
+							<div class="btn-group">
+								<button type="button" class="btn btn-sm btn-outline-secondary" onclick="leiamore()" id="btnLeiaMais">
+									<div style="vertical-align: inherit;">Mais</div>
+								</button>
+							</div>
+							<small class="text-muted">
+								<div style="vertical-align: inherit;">
+									<div style="vertical-align: inherit;">COFFE'JOIN</div>
+								</div>
+							</small>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Parallax -->
+	<div class="mt-2 mb-2 parallax-home"></div>
+	<!-- Cards Home do site -->
+	<div class="container">
+		<div class="row justify-content-evenly">
 
-                <input type="search" class="form-control form-control-dark" placeholder="Procurar..." aria-label="Procurar">
-            </form>
-            <?php
-            if (isset($_SESSION['id_usu']) and  $_SESSION['id_usu'] != '') {
-                echo '<div class="text-end">';
-                echo '<a class="btn btn-outline-light me-2" href="pages/logout.php"> Sair</a>';
-            } else {
-                echo '<div class="text-end">';
-                echo '<a class="btn btn-outline-light me-2" href="pages/login.php">Login</a>';
-            }
-            ?>
-        </div>
-    </header>
-
-
-
-
-
-
-
-
-
-
-
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="col" style="background-color:#AA6C39;">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="Imagens/cofe2.png" style="height:500px;" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="Imagens/coffe1.png" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="Imagens/cofe3.png" style="height:500px;" class="d-block w-100" alt="...">
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-
-
-    <div class="row justify-content-evenly">
-        <div class="col-md-4">
-            <div class="card shadow-sm">
-                <img src="Imagens/xicaraleit.jpeg" heigth=''>
-                <div class="card-body">
-                    <p class="card-text">
-                        <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">
-                                <h2 class="text-center">Grão de café PREMIUM</h2>
-                            </font>
-                            <font style="vertical-align: inherit;">
-                                <h6>Maior seletividade de grãos, sabor acentuado com notas de uma torra de qualidade tendo sua humidade e sabor prezervados.</h6>
-                            </font>
-                        </font>
-                    </p>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                            <button type="button" id='alvo' onclick='rodinhas(1)' class="btn btn-sm btn-warning">Adicionar ao carrinho</button>
-                        </div>
-                        <small class="text-muted">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">COFFE'JOIN</font>
-                            </font>
-                        </small>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="card shadow-sm">
-                <img src="Imagens/xicaraleit.jpeg" heigth="">
-                <div class="card-body">
-                    <p class="card-text">
-                        <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">
-                                <h2 class="text-center">Caramelo Cremoso </h2>
-                            </font>
-                            <font style="vertical-align: inherit;">
-                                <h6>Nossa mais nova capsula Caramelo Cremoso, uma explosão de sabores com a doçura na medida certa. Com notas de baunilha com canela e o nosso mais refinado caramelo.</h6>
-                            </font>
-                        </font>
-                    </p>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-
-                            <button type="button" class="btn btn-sm btn-outline-secondary">
-
-                                <font style="vertical-align: inherit;">Mais</font>
-                                </font>
-                            </button>
-                        </div>
-                        <small class="text-muted">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">COFFE'JOIN</font>
-                            </font>
-                        </small>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="card shadow-sm">
-                <img src="Imagens/xicaraleit.jpeg" heigth="">
-                <div class="card-body">
-                    <p class="card-text">
-                        <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">
-                                <h2 class="text-center">Cafeteira Delux</h2>
-                            </font>
-                            <font style="vertical-align: inherit;">
-                                <h6>Procura menos gastos de energia e maior eficiencia quando falamos de cafeteira? Então vocè achou a Cafeteira Delux COFFE'JOIN te entrega tudo isso e mais um pouco, atribuindo o processador de grãos e a cabine para capsulas de café.</h6>
-                            </font>
-                        </font>
-                    </p>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-outline-secondary">
-                                <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">Mais</font>
-                                </font>
-                            </button>
-                        </div>
-                        <small class="text-muted">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">COFFE'JOIN</font>
-                            </font>
-                        </small>
-                    </div>
-                </div>
-            </div>
-        </div>
+			<div class="col-md-4">
+				<div class="card shadow-sm ">
+					<img src="./Imagens/fototeste.jpg" heigth=''>
+					<div class="card-body">
+						<p class="card-text">
+						<div style="vertical-align: inherit;">
+							<div style="vertical-align: inherit;">
+								<h2 class="text-center">Grão de café PREMIUM </h2>
+							</div>
+							<div style="vertical-align: inherit;">
+								<h6 class="car">Nossa mais nova capsula Caramelo Cremoso, uma explosão de sabores com a doçura na medida certa. Com notas de baunilha com canela e o nosso mais refinado caramelo.</h6>
+							</div>
+						</div>
+						</p>
+						<div class="d-flex justify-content-between align-items-center">
+							<div class="btn-group">
 
 
+								<button type="button" class="btn btn-sm btn-outline-secondary">
 
-        <div class="col-md-3">
-            <div class="card shadow-sm">
-                <img src="Imagens/xicaraleit.jpeg" heigth=''>
-                <div class="card-body">
-                    <p class="card-text">
-                        <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">
-                                <h2 class="text-center">Grão de café PREMIUM</h2>
-                            </font>
-                            <font style="vertical-align: inherit;">
-                                <h6>Maior seletividade de grãos, sabor acentuado com notas de uma torra de qualidade tendo sua humidade e sabor prezervados.</h6>
-                            </font>
-                        </font>
-                    </p>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
+									<div style="vertical-align: inherit;">Mais</div>
+								</button>
+							</div>
+							<small class="text-muted">
+								<div style="vertical-align: inherit;">
+									<div style="vertical-align: inherit;">COFFE'JOIN</div>
+								</div>
+							</small>
+						</div>
+					</div>
+				</div>
+			</div>
 
+			<div class="col-md-4">
+				<div class="card shadow-sm ">
+					<img src="./Imagens/fototeste.jpg" heigth="">
+					<div class="card-body">
+						<p class="card-text">
+						<div style="vertical-align: inherit;">
+							<div style="vertical-align: inherit;">
+								<h2 class="text-center">Caramelo Cremoso </h2>
+							</div>
+							<div style="vertical-align: inherit;">
+								<h6 class="car">Nossa mais nova capsula Caramelo Cremoso, uma explosão de sabores com a doçura na medida certa. Com notas de baunilha com canela e o nosso mais refinado caramelo.</h6>
+							</div>
+						</div>
+						</p>
+						<div class="d-flex justify-content-between align-items-center">
+							<div class="btn-group">
 
-                            <button type="button" class="btn btn-sm btn-outline-secondary">
+								<button type="button" class="btn btn-sm btn-outline-secondary">
 
-                                <font style="vertical-align: inherit;">Mais</font>
-                                </font>
-                            </button>
-                        </div>
-                        <small class="text-muted">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">COFFE'JOIN</font>
-                            </font>
-                        </small>
-                    </div>
-                </div>
-            </div>
-        </div>
+									<div style="vertical-align: inherit;">Mais</div>
+								</button>
+							</div>
+							<small class="text-muted">
+								<div style="vertical-align: inherit;">
+									<div style="vertical-align: inherit;">COFFE'JOIN</div>
+								</div>
+							</small>
+						</div>
+					</div>
+				</div>
+			</div>
 
-        <div class="col-md-3">
-            <div class="card shadow-sm">
-                <img src="Imagens/xicaraleit.jpeg" heigth="">
-                <div class="card-body">
-                    <p class="card-text">
-                        <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">
-                                <h2 class="text-center">Caramelo Cremoso </h2>
-                            </font>
-                            <font style="vertical-align: inherit;">
-                                <h6>Nossa mais nova capsula Caramelo Cremoso, uma explosão de sabores com a doçura na medida certa. Com notas de baunilha com canela e o nosso mais refinado caramelo.</h6>
-                            </font>
-                        </font>
-                    </p>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
+			<div class="col-md-4">
+				<div class="card shadow-sm ">
+					<img src="./Imagens/fototeste.jpg" heigth="">
+					<div class="card-body">
+						<p class="card-text">
+						<div style="vertical-align: inherit;">
+							<div style="vertical-align: inherit;">
+								<h2 class="text-center">Caramelo Cremoso </h2>
+							</div>
+							<div style="vertical-align: inherit;">
+								<h6 class="car">Nossa mais nova capsula Caramelo Cremoso, uma explosão de sabores com a doçura na medida certa. Com notas de baunilha com canela e o nosso mais refinado caramelo.</h6>
+							</div>
+						</div>
+						</p>
+						<div class="d-flex justify-content-between align-items-center">
+							<div class="btn-group">
+								<button type="button" class="btn btn-sm btn-outline-secondary">
+									<div style="vertical-align: inherit;">
+										<div style="vertical-align: inherit;">Mais</div>
+									</div>
+								</button>
+							</div>
+							<small class="text-muted">
+								<div style="vertical-align: inherit;">
+									<div style="vertical-align: inherit;">COFFE'JOIN</div>
+								</div>
+							</small>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-                            <button type="button" class="btn btn-sm btn-outline-secondary">
-
-                                <font style="vertical-align: inherit;">Mais</font>
-                                </font>
-                            </button>
-                        </div>
-                        <small class="text-muted">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">COFFE'JOIN</font>
-                            </font>
-                        </small>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-3">
-            <div class="card shadow-sm">
-                <img src="Imagens/xicaraleit.jpeg" heigth="">
-                <div class="card-body">
-                    <p class="card-text">
-                        <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">
-                                <h2 class="text-center">Cafeteira Delux</h2>
-                            </font>
-                            <font style="vertical-align: inherit;">
-                                <h6>Procura menos gastos de energia e maior eficiencia quando falamos de cafeteira? Então vocè achou a Cafeteira Delux COFFE'JOIN te entrega tudo isso e mais um pouco, atribuindo o processador de grãos e a cabine para capsulas de café.</h6>
-                            </font>
-                        </font>
-                    </p>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-outline-secondary">
-                                <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">Mais</font>
-                                </font>
-                            </button>
-                        </div>
-                        <small class="text-muted">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">COFFE'JOIN</font>
-                            </font>
-                        </small>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-
-
-
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-            <div class="col-md-4 d-flex align-items-center">
-                <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-                    <svg class="bi" width="30" height="24">
-                        <use xlink:href="#bootstrap"></use>
-                    </svg>
-                </a>
-                <span class="mb-3 mb-md-0 text-muted">
-                    <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;">© 2022 Company, Inc</font>
-                    </font>
-                </span>
-            </div>
-
-            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
-                            <use xlink:href="#twitter"></use>
-                        </svg></a></li>
-                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
-                            <use xlink:href="#instagram"></use>
-                        </svg></a></li>
-                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
-                            <use xlink:href="#facebook"></use>
-                        </svg></a></li>
-            </ul>
-        </footer>
-
-        <?php
-
-        include './include/footer.php';
-
-        ?>
-</body>
-
-</html>
+	<?php
+	include './include/rodape.php';
+	include './include/footer.php';
+	?>

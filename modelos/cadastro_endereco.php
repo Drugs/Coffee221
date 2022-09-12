@@ -1,21 +1,22 @@
 <?php
-include'../include/header.php';
+session_start();
 $title="usuario cadastro";
+include'../include/header.php';
 include'../include/database.php';
 
-#echo'<pre>';
-#var_dump($_GET);
-#echo'</pre>';
+echo'<pre>';
+var_dump($_GET);
+echo'</pre>';
 if(isset($_GET['submit'])and $_GET['submit']=='send'){
 #id_pessoa substituido pelo id_pessoa da sessão
-$id_pessoa=2;
+$id_pessoa=$_SESSION['id_pessoa'];
 
 $consulta="insert into endereco ( cidade,	rua, avenida, numero,	fk_id_pessoa, cep, estado,	complemento	) 
 VALUES ('{$_GET['cidade']}','{$_GET['rua']}','{$_GET['avenida']}','{$_GET['numero']}','{$id_pessoa}'
-'{$_GET['cep']}','{$_GET['estado']}','{$_GET['complementp']}')"; 
+'{$_GET['cep']}','{$_GET['estado']}','{$_GET['complemento']}')"; 
 echo'<br>';
 $query=mysqli_query($con,$consulta);
-header("Location:endereco_pessoa.php");
+header("Location:relatorio_endereco.php");
 }
 
 
@@ -41,7 +42,7 @@ header("Location:endereco_pessoa.php");
                                 <label for="exampleFormControlInput1" class="form-label"><strong>avenida</strong></label>
                             </div>
                             <div class="form-floating">
-                                <input type="text" class="form-control" name='numero'>
+                                <input type="number" class="form-control" name='numero'>
                                 <label for="exampleFormControlInput1" class="form-label"><strong>numero</strong></label>
                             </div>
                             <div class="form-floating" style="margin-bottom: 5mm;">
@@ -58,10 +59,10 @@ header("Location:endereco_pessoa.php");
                             </div>
 
                            
-                        <div class="container">
+                      
                             <div class="row">
                                 <div class="col-6">
-                                    <a class="w-100 btn btn-lg btn-secondary" href="relatorio_pessoa.php">Voltar</a>
+                                    <a class="w-100 btn btn-lg btn-secondary" href="relatorio_endereco.php">Voltar</a>
                                 </div>
 
                                 <div class="col-6">
@@ -70,7 +71,7 @@ header("Location:endereco_pessoa.php");
                             </div>
                         </div>
                     </div>
-                
+                </div>
             
         </form>
 

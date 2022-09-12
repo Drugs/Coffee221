@@ -48,8 +48,8 @@ $result = mysqli_fetch_assoc($query);
                         <label for="exampleFormControlInput1" class="form-label"><strong>Email</strong></label>
                     </div>
                     <div class="form-floating">
-                        <input type="number" class="form-control" name='telefone' value="<?php echo $result['telefone']; ?>">
-                        <label for="exampleFormControlInput1" class="form-label"><strong>Telefone</strong></label>
+                        <input type="tel" data-mask="(00) 0000-0000" class="form-control" name='telefone' value="<?php echo $result['telefone']; ?>">
+                        <label for="floatingPassword" class="form-label"><strong>Telefone</strong></label>
                     </div>
                     <div class="form-floating">
                         <input type="text" class="form-control" name='endereco' value="<?php echo $result['endereco']; ?>">
