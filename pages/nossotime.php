@@ -1,6 +1,5 @@
 <?php
 //BY GUSTAVO INC © 2022
-session_start();
 $title = "Nossa equipe";
 include "../include/header.php";
 include "../include/nave.php";
@@ -9,25 +8,25 @@ include "../include/nave.php";
 <body class="corpo">
 <section>
         <div class="container-fluid">
-            <div class="row d-flex g-4">
-                <div class="col-12 navbar-brand">
-                    <h1>Nossa equipe</h1>
+            <div class="row d-flex g-4 linha">
+                <div class="col-md-12 coluna-12 navbar-brand">
+                    <h1 class="texto_principal">Nossa equipe</h1>
                 </div>
-                <div class="col-12">
+                <div class="col-12 coluna-12">
                     <div class="cartao professor">
                         <img class="imagens" src="https://picsum.photos/160/157" alt="">
                         <h2>Professor</h2>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, dignissimos!</p>
                     </div>
                 </div>
-                <div class="col-md-4 ">
+                <div class="col-md-4 coluna-4 ">
                     <div class="cartao aluno-3">
                         <img class="imagens" src="https://picsum.photos/160/157" alt="">
                         <h2>Aluno 1</h2>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, dignissimos!</p>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 coluna-4 coluna-4">
                     <div class="cartao aluno-1">
                         <img class="imagens" src="../Imagens/imagens-nossotime/myphoto.jpeg" alt="">
                         <h2>Gustavo Henrique</h2>
@@ -40,35 +39,35 @@ include "../include/nave.php";
                         </span>
                     </div>
                 </div>
-                <div class="col-md-4 ">
+                <div class="col-md-4 coluna-4 ">
                     <div class="cartao aluno-3">
                         <img class="imagens" src="https://picsum.photos/160/157" alt="">
                         <h2>Aluno 3</h2>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, dignissimos!</p>
                     </div>
                 </div>
-                <div class="col-md-4 ">
+                <div class="col-md-4 coluna-4 ">
                     <div class="cartao aluno-3">
                         <img class="imagens" src="https://picsum.photos/160/157" alt="">
                         <h2>Aluno 4</h2>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, dignissimos!</p>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 coluna-4">
                     <div class="cartao aluno-3">
                         <img class="imagens" src="https://picsum.photos/160/157" alt="">
                         <h2>Aluno 5</h2>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, dignissimos!</p>
                     </div>
                 </div>
-                <div class="col-md-4  ">
+                <div class="col-md-4 coluna-4">
                     <div class="cartao aluno-3">
                         <img class="imagens" src="https://picsum.photos/160/157" alt="">
                         <h2>Aluno 6</h2>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, dignissimos!</p>
                     </div>
                 </div>
-                <div class="col-12">
+                <div class="col-12 coluna-12">
                     <div class="cartao professor">
                         <img class="imagens" src="https://picsum.photos/160/157" alt="">
                         <h2>Aluno 7</h2>
