@@ -1,9 +1,11 @@
 Ata da reunião 02/09
+	Careca não gravou a reunião
 	---------------------------------------------------------------------------------------------
-	Produtos - IMPORTANTEEEEEEEEEEEEEEEEEEEEEEEE
+	Produtos - IMPORTANTEEEEEEEEEEEEEEE
 		Imagens - ok!
 		Descrições
 		Preço
+		Cadastrar no BD
 	---------------------------------------------------------------------------------------------
 	Carrinho 
 		-O carrinho só mostra conjuntos de compras em aberto
@@ -14,12 +16,19 @@ Ata da reunião 02/09
 		-Possibilidade de vc pegar o header do index.php
 	---------------------------------------------------------------------------------------------
 	Pagina home>
+
+		Página "Sambando" -> FEITO
+		Imagem do carroussel -> FEITO
+			>Ajustar as imagens -> FEITO
+			>Colocar as imagens dos produtos -> FEITO
 		Páginas acessórias->[Página de produtos/Busca, Sobre, Categorias, Carrinho] -> A FAZER
 		Criar um botao de busca, ou mandar o formulário com JS -> EM ANDAMENTO
 		Botao de detalhes do produto - [Deixar cheguei ヽ⁠(｡⁠◕⁠o⁠◕⁠｡⁠)ﾉ⁠.] -> EM ANDAMENTO
-		Sugestão - Mudar o diabo da imagem do Parallax 
+
+Sugestão - Mudar o diabo da imagem do Parallax 
 		Adicionar ao carrinho
 		Ajustar descrição e link pro produto
+
 	
 	---------------------------------------------------------------------------------------------
 	Produtos
@@ -28,6 +37,7 @@ Ata da reunião 02/09
 		Mostrar informações de estoque -> EM ANDAMENTO
 	---------------------------------------------------------------------------------------------
 	Usuário
+
 		(╯°□°）╯︵ ┻━┻
 		Botão de logout-> 
 		Links do menu
@@ -41,6 +51,7 @@ Ata da reunião 02/09
 			>Perfil - Adicionar endereço de entrega ->
 			>Histórico de Compras -> Ultima coisa
 			>Carrinho->
+
 		Estudar o Dashboard do Bootstrap
 		Encapsular o menu e o cabeçalho
 		Trocar os ícones do menu
