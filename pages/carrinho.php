@@ -14,25 +14,16 @@
                     </h2>
 
                     <div class="col">
-
-                        <p></p>
-
                         <img src="../Imagens/cafe1.png" style="height:70px;">
                         Café Caramelo e Baunilha (Nova Caps...)
                     </div>
 
                     <div class="col">
-
-                        <p></p>
-
                         <img src="../Imagens/cafe1.png" style="height:70px;">
                         Café Caramelo e Baunilha (Nova Caps...)
                     </div>
 
                     <div class="col">
-
-                        <p></p>
-
                         <img src="../Imagens/cafe1.png" style="height:70px;">
                         Café Caramelo e Baunilha (Nova Caps...)
                     </div>
@@ -75,7 +66,6 @@
                         <p>Preço</p>
                     </h2>
                     <div class="col">
-                        <p></p>
                         <button type="button" class="btn btn-sm btn-outline-primary">R$14,OO</button>
                     </div>
                     <div class="col">
@@ -106,15 +96,12 @@
                         <p>Remover</p>
                     </h2>
                     <div class="col">
-                        <p></p>
                         <button type='button' class='btn btn-secondary btn-sm'>Deletar</button>
                     </div>
                     <div class="col">
-                        <p></p>
                         <button type='button' class='btn btn-secondary btn-sm'>Deletar</button>
                     </div>
                     <div class="col">
-                        <p></p>
                         <button type='button' class='btn btn-secondary btn-sm'>Deletar</button>
                     </div>
                 </div>
