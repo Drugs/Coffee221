@@ -54,6 +54,7 @@ Sugestão - Mudar o diabo da imagem do Parallax
 
 		Estudar o Dashboard do Bootstrap
 		Encapsular o menu e o cabeçalho
+		Trocar os ícones do menu
 	---------------------------------------------------------------------------------------------
 	Atualizar usuário
 		Adicionar o titulo da página->
