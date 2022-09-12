@@ -52,7 +52,7 @@
                                                 class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
                                             </div>
                                             <div class="ms-3">
-                                            <h5>Samsung galaxy Note 10 </h5>
+                                            <h5>Camisa de café</h5>
                                             <p class="small mb-0">256GB, Navy Blue</p>
                                             </div>
                                         </div>
@@ -77,11 +77,11 @@
                                         <div class="d-flex flex-row align-items-center">
                                             <div>
                                             <img
-                                                src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img3.webp"
+                                                src="../Imagens/caffeine2.jpg"
                                                 class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
                                             </div>
                                             <div class="ms-3">
-                                            <h5>Canon EOS M50</h5>
+                                            <h5>Camisa de café</h5>
                                             <p class="small mb-0">Onyx Black</p>
                                             </div>
                                         </div>
@@ -105,11 +105,11 @@
                                         <div class="d-flex flex-row align-items-center">
                                             <div>
                                             <img
-                                                src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img4.webp"
+                                                src="../Imagens/caffeine2.jpg"
                                                 class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
                                             </div>
                                             <div class="ms-3">
-                                            <h5>MacBook Pro</h5>
+                                            <h5>Camisa de café</h5>
                                             <p class="small mb-0">1TB, Graphite</p>
                                             </div>
                                         </div>
