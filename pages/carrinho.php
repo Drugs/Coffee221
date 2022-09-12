@@ -1,4 +1,5 @@
     <?php
+    	session_start();
     $title = 'Carrinho';
     include '../include/header.php';
     include '../include/nave-site.php'
