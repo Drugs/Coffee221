@@ -24,7 +24,7 @@ h1{
     text-align: center;
 }
 
-.col-md-4, .col-12{
+.flex-col-gustavo{
     display: flex;
     justify-content: center;
     align-items: center;
