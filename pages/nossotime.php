@@ -1,4 +1,5 @@
 <?php
+//BY GUSTAVO INC © 2022
 $title = "Nossa equipe";
 include "../include/header.php";
 include "../include/nave.php";
@@ -13,21 +14,21 @@ include "../include/nave.php";
                 </div>
                 <div class="col-12">
                     <div class="cartao professor">
-                        <img src="https://picsum.photos/160/157" alt="">
+                        <img class="imagens" src="https://picsum.photos/160/157" alt="">
                         <h2>Professor</h2>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, dignissimos!</p>
                     </div>
                 </div>
                 <div class="col-md-4 ">
                     <div class="cartao aluno-3">
-                        <img src="https://picsum.photos/160/157" alt="">
+                        <img class="imagens" src="https://picsum.photos/160/157" alt="">
                         <h2>Aluno 1</h2>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, dignissimos!</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="cartao aluno-1">
-                        <img src="../Imagens/imagens-nossotime/myphoto.jpeg" alt="">
+                        <img class="imagens" src="../Imagens/imagens-nossotime/myphoto.jpeg" alt="">
                         <h2>Gustavo Henrique</h2>
                         <p><strong>Front-end developer &lt;/&gt;</strong></p>
                         <P>HTML, CSS, JS <span>&lt;-/&#x2665;&gt;</span> </P>
@@ -40,35 +41,35 @@ include "../include/nave.php";
                 </div>
                 <div class="col-md-4 ">
                     <div class="cartao aluno-3">
-                        <img src="https://picsum.photos/160/157" alt="">
+                        <img class="imagens" src="https://picsum.photos/160/157" alt="">
                         <h2>Aluno 3</h2>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, dignissimos!</p>
                     </div>
                 </div>
                 <div class="col-md-4 ">
                     <div class="cartao aluno-3">
-                        <img src="https://picsum.photos/160/157" alt="">
+                        <img class="imagens" src="https://picsum.photos/160/157" alt="">
                         <h2>Aluno 4</h2>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, dignissimos!</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="cartao aluno-3">
-                        <img src="https://picsum.photos/160/157" alt="">
+                        <img class="imagens" src="https://picsum.photos/160/157" alt="">
                         <h2>Aluno 5</h2>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, dignissimos!</p>
                     </div>
                 </div>
                 <div class="col-md-4  ">
                     <div class="cartao aluno-3">
-                        <img src="https://picsum.photos/160/157" alt="">
+                        <img class="imagens" src="https://picsum.photos/160/157" alt="">
                         <h2>Aluno 6</h2>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, dignissimos!</p>
                     </div>
                 </div>
                 <div class="col-12">
                     <div class="cartao professor">
-                        <img src="https://picsum.photos/160/157" alt="">
+                        <img class="imagens" src="https://picsum.photos/160/157" alt="">
                         <h2>Aluno 7</h2>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, dignissimos!</p>
                     </div>

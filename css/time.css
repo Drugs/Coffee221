@@ -51,7 +51,7 @@ h1{
     transform: scale(1.1);
 }
 
-img{
+.imagens{
     width: 160px;
     padding: 10px;
     border-radius: 100%;
