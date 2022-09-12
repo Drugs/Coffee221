@@ -5,7 +5,6 @@
     ?>
 
     <body class="responsive">
-       
         <div class="container">
 
             <div class="row">
@@ -20,7 +19,6 @@
 
                         <img src="../Imagens/cafe1.png" style="height:70px;">
                         Café Caramelo e Baunilha (Nova Caps...)
-
                     </div>
 
                     <div class="col">
@@ -37,7 +35,7 @@
 
                         <img src="../Imagens/cafe1.png" style="height:70px;">
                         Café Caramelo e Baunilha (Nova Caps...)
-                    </div><br>
+                    </div>
                 </div>
 
                 <div class="col-md-3">
@@ -79,12 +77,12 @@
                     <div class="col">
                         <p></p>
                         <button type="button" class="btn btn-sm btn-outline-primary">R$14,OO</button>
-                    </div><br>
+                    </div>
                     <div class="col">
-                        <p></p>
+                        
                         <button type="button" class="btn btn-sm btn-outline-primary">R$12,OO</button>
-                    </div><br>
-                    <p></p>
+                    </div>
+                    
                     <div class="col">
                         <button type="button" class="btn btn-sm btn-outline-primary">R$17,OO</button>
                     </div>
@@ -130,17 +128,9 @@
                         </h2>
                     </div>
                 </div>
-
-
-
             </div>
 
 
-            <?php
-            include '../include/footer.php';
-            ?>
-
-
-    </body>
-
-    </html>
+    <?php
+     include '../include/footer.php';
+     ?>
