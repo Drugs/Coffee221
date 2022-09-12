@@ -118,6 +118,8 @@
                                         <div class="d-flex flex-row align-items-center">
                                                     <button type="button" class="mr-2 btn btn-dark">+</button>
                                                     <button type="button" class="ms-4 btn btn-dark"> - </button>
+                                                    
+
                                         </div>
                                         <div class="d-flex flex-row align-items-center">
                                         <div style="width: 60px;">
@@ -144,7 +146,7 @@
                                         <button type="button" class="btn btn-info btn-block btn-lg">
                                         <div class="d-flex justify-content-between">
                                             <span>$4818.00</span>
-                                            <span>Checkout <i class="fas fa-long-arrow-alt-right ms-2"></i></span>
+                                            <span type="button" onclick="document.location= 'checkoutpage.php'">Checkout <i class="fas fa-long-arrow-alt-right ms-2"></i></span>
                                         </div>
                                         </button>
                                 </div>
