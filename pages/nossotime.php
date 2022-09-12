@@ -1,5 +1,6 @@
 <?php
 //BY GUSTAVO INC © 2022
+session_start();
 $title = "Nossa equipe";
 include "../include/header.php";
 include "../include/nave.php";
