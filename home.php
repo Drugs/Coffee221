@@ -10,7 +10,7 @@ include './include/nave.php';
 	<!-- JavaScript da Home -->
 	<script>
 		// AJAX do carrinho de compras
-		function rodinhas(id_info_prod) {
+		function carrinho(id_info_prod) {
 			console.log(id_info_prod)
 			var xmlhttp = new XMLHttpRequest();
 			xmlhttp.onreadystatechange = function() {
@@ -22,7 +22,7 @@ include './include/nave.php';
 			xmlhttp.send();
 		}
 		// Script do encurtador de texto dos cards
-		function leiamore() {
+		/*function leiamore() {
 			var pontos = document.getElementById("pontos");
 			var maisTexto = document.getElementById("mais");
 			var btnLeiaMais = document.getElementById("btnLeiaMais");
@@ -36,7 +36,7 @@ include './include/nave.php';
 				maisTexto.style.display = "inline";
 				btnLeiaMais.innerHTML = "Leia Menos";
 			}
-		}
+		}*/
 	</script>
 
 	<!-- Slider da Home do site -->
@@ -91,44 +91,8 @@ include './include/nave.php';
 						</div>
 						<div class="d-flex justify-content-between align-items-center">
 							<div class="btn-group">
-								<button type="button" class="btn btn-sm btn-outline-secondary" onclick="leiamore()" id="btnLeiaMais">
-									<div style="vertical-align: inherit;">Mais</div>
-								</button>
+								<button type="button" id='alvo' onclick='carrinho()' class="btn btn-sm btn-outline-secondary">Adicionar ao carrinho</button>
 							</div>
-							<small class="text-muted">
-								<div style="vertical-align: inherit;">
-									<div style="vertical-align: inherit;">COFFE'JOIN</div>
-								</div>
-							</small>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="card shadow-sm">
-					<img src="./Imagens/fototeste.jpg" heigth="">
-					<div class="card-body">
-						<div class="card-text feed-item-body post-body">
-							<div style="vertical-align: inherit;">
-								<div style="vertical-align: inherit;">
-									<h2 class="text-center">Caramelo Cremoso </h2>
-								</div>
-								<div style="vertical-align: inherit;">
-									<p class="bia">Maior seletividade de grãos, sabor qualidade.</p>
-								</div>
-							</div>
-						</div>
-						<div class="d-flex justify-content-between align-items-center">
-							<div class="btn-group">
-								<button type="button" class="btn btn-sm btn-outline-secondary" onclick="leiamore()" id="btnLeiaMais">
-									<div style="vertical-align: inherit;">Mais</div>
-								</button>
-							</div>
-							<small class="text-muted">
-								<div style="vertical-align: inherit;">
-									<div style="vertical-align: inherit;">COFFE'JOIN</div>
-								</div>
-							</small>
 						</div>
 					</div>
 				</div>
@@ -150,15 +114,31 @@ include './include/nave.php';
 						</div>
 						<div class="d-flex justify-content-between align-items-center">
 							<div class="btn-group">
-								<button type="button" class="btn btn-sm btn-outline-secondary" onclick="leiamore()" id="btnLeiaMais">
-									<div style="vertical-align: inherit;">Mais</div>
-								</button>
+								<button type="button" id='alvo' onclick='carrinho()' class="btn btn-sm btn-outline-secondary">Adicionar ao carrinho</button>
 							</div>
-							<small class="text-muted">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-3">
+				<div class="card shadow-sm">
+					<img src="./Imagens/fototeste.jpg" heigth="">
+					<div class="card-body">
+						<div class="card-text feed-item-body post-body">
+							<div style="vertical-align: inherit;">
 								<div style="vertical-align: inherit;">
-									<div style="vertical-align: inherit;">COFFE'JOIN</div>
+									<h2 class="text-center">Caramelo Cremoso </h2>
 								</div>
-							</small>
+								<div style="vertical-align: inherit;">
+									<p class="bia">Maior seletividade de grãos, sabor qualidade.</p>
+								</div>
+							</div>
+						</div>
+						<div class="d-flex justify-content-between align-items-center">
+							<div class="btn-group">
+								<button type="button" id='alvo' onclick='carrinho()' class="btn btn-sm btn-outline-secondary">Adicionar ao carrinho</button>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -187,18 +167,8 @@ include './include/nave.php';
 						</p>
 						<div class="d-flex justify-content-between align-items-center">
 							<div class="btn-group">
-
-
-								<button type="button" class="btn btn-sm btn-outline-secondary">
-
-									<div style="vertical-align: inherit;">Mais</div>
-								</button>
+								<button type="button" id='alvo' onclick='carrinho()' class="btn btn-sm btn-outline-secondary">Adicionar ao carrinho</button>
 							</div>
-							<small class="text-muted">
-								<div style="vertical-align: inherit;">
-									<div style="vertical-align: inherit;">COFFE'JOIN</div>
-								</div>
-							</small>
 						</div>
 					</div>
 				</div>
@@ -220,17 +190,8 @@ include './include/nave.php';
 						</p>
 						<div class="d-flex justify-content-between align-items-center">
 							<div class="btn-group">
-
-								<button type="button" class="btn btn-sm btn-outline-secondary">
-
-									<div style="vertical-align: inherit;">Mais</div>
-								</button>
+								<button type="button" id='alvo' onclick='carrinho()' class="btn btn-sm btn-outline-secondary">Adicionar ao carrinho</button>
 							</div>
-							<small class="text-muted">
-								<div style="vertical-align: inherit;">
-									<div style="vertical-align: inherit;">COFFE'JOIN</div>
-								</div>
-							</small>
 						</div>
 					</div>
 				</div>
@@ -252,17 +213,8 @@ include './include/nave.php';
 						</p>
 						<div class="d-flex justify-content-between align-items-center">
 							<div class="btn-group">
-								<button type="button" class="btn btn-sm btn-outline-secondary">
-									<div style="vertical-align: inherit;">
-										<div style="vertical-align: inherit;">Mais</div>
-									</div>
-								</button>
+								<button type="button" id='alvo' onclick='carrinho()' class="btn btn-sm btn-outline-secondary">Adicionar ao carrinho</button>
 							</div>
-							<small class="text-muted">
-								<div style="vertical-align: inherit;">
-									<div style="vertical-align: inherit;">COFFE'JOIN</div>
-								</div>
-							</small>
 						</div>
 					</div>
 				</div>
