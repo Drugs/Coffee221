@@ -38,7 +38,7 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
                 </div>
             </div>
 
-            <div class="col-md-3" style="margin-top: 5mm;">
+            <div class="col-md-3" style="margin-top: 4mm;">
                 <div class='card card-body' style='width: 30rem;'>
                     <?php
                     $produtos = $result[0];
@@ -47,28 +47,50 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
                     echo "
                     <h2>{$produtos['nome_produto']}<i class='bi bi-bookmark-plus'></i></h2>
                     <p>{$produtos['descricao']}</p>
+                    
                     <div class='row'>
-                        <div class='col-md-8'>
-                            <h3 class='card-text'>R$ {$numero}</h3>
+                        <div class='col-md-4'>
+                            <h3 class='card-text' id='priceUpdate'>R$ {$numero}</h3>
                         </div>
-                    </div>
+                            <div class='col-md-5'>
                     <p>";
                     for ($i = 0; $i < 5; $i++) {
                         echo '<i class="bi bi-star-fill"></i>';
                     }
                     ?>
-                    </p>
-
-                    <h5 class='card-title'>Guia de tamanhos</h5>
-                    <?php
-                    foreach ($result as $informacoes) {
-                        echo " 
-                        <button type='button' class='btn btn-dark'>{$informacoes['tamanho']} - Em estoque: {$informacoes['estoque']}</button>";
-                    }
-                    ?>
                 </div>
             </div>
+            <script>
+                function alterar() {
+                    document.getElementById("priceUpdate").innerHTML = "<?php $produtos['preco']; ?>";
+                }
+            </script>
+            </p>
+
+            <h5 class='card-title'>Guia de tamanhos</h5>
+            <p>
+                <?php
+                foreach ($result as $informacoes) {
+                    echo " 
+                            <div class='col-md-12'>
+                                <button type='button' class='btn btn-outline-dark' onclick='alterar()'>{$informacoes['tamanho']}</button>
+                                <spam class='alert alert-secondary' style='margin-left: 2cm;'>- Em estoque: {$informacoes['estoque']}</spam>
+                            </div>
+                    </p>";
+                } #- Em estoque: {$informacoes['estoque']}
+                echo "
+                    <div class= row>
+                        <div class='col-md-6'>
+                            <a type='button' class='btn btn-outline-success buttonprodutos' style='margin-top: 13mm;' href='checkoutpage.php'>COMPRAR</a>
+                        </div>
+                        <div class='col-md-6'>
+                            <a type='button' class='btn btn-outline-dark' style='margin-top: 13mm; height: 60px; padding-top: 4mm;' href='galeriap.php'>Retornar para a galeria</a>
+                        </div>
+                    </div>";
+                ?>
         </div>
+    </div>
+    </div>
     </div>
 
     <div class="album py-5 bg-light">
