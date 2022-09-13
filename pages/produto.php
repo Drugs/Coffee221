@@ -5,7 +5,7 @@ $title = "Produto";
 include "../include/database.php";
 include "../include/header.php";
 include "../include/nave.php";
-$inf = "SELECT * FROM info_roupa JOIN produto ON id_produto = fk_id_produto WHERE id_info_roupa = 26";
+$inf = "SELECT * FROM info_roupa JOIN produto ON id_produto = fk_id_produto WHERE fk_id_produto = 25";
 $query = mysqli_query($con, $inf);
 $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
 ?>
@@ -39,27 +39,34 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
             <div class="col-md-3" style="margin-top: 5mm;">
                 <?php
                 foreach ($result as $produtos) {
-                    if (isset($produtos['nome_produto']) and $produtos['nome_produto'] == 'Camisa Swile') {
+                    if (isset($produtos['id_info_roupa']) and $produtos['id_info_roupa'] == 26) {
                         echo "
                     <h2>{$produtos['nome_produto']}<i class='bi bi-bookmark-plus'></i></h2>
                     <h4>{$produtos['descricao']}</h4>";
                     }
-                    if (isset($produtos['fk_id_produto']) and $produtos['fk_id_produto'] == 25) {
-                        echo "
-                    <div class='card card-body' style='width: 18rem;'>
-                        <h5 class='card-title text-center'>
-                            <p>Tamanho (BR)</p>
-                        </h5>
-                        <h6 class='card-subtitle'>Guia de tamanhos</h6>
-                        <p class='card-text'>
-                        <p>{$produtos['tamanho']}</p>
-                    </div>";
-                    }
+                }
+                $i = 0;
+                for (; $i < 5;) {
+                    echo '<i class="bi bi-star-fill"></i>';
+                    $i++;
                 }
                 ?>
-                <p><i class='bi bi-star-fill'></i><i class='bi bi-star-fill'></i><i class='bi bi-star-fill'></i><i class='bi bi-star-fill'></i><i class='bi bi-star-fill'></i><i class='bi bi-star-fill'></i>
-                </p>
-                <h2>R$ 77,99</h2>
+                <div class='card card-body' style='width: 18rem;'>
+                    <h5 class='card-title text-center'>
+                        <p>Tamanho (BR)</p>
+                    </h5>
+                    <h6 class='card-subtitle'>Guia de tamanhos</h6>
+
+                    <?php
+                    foreach ($result as $informacoes) {
+                        if (isset($informacoes['fk_id_produto']) and $informacoes['fk_id_produto'] == 25) {
+                            echo " 
+                        <p class='card-text'>
+                        <p>{$informacoes['tamanho']}</p>";
+                        }
+                    }
+                    ?>
+                </div>
             </div>
         </div>
     </div>
