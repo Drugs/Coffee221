@@ -42,12 +42,14 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
                 <div class='card card-body' style='width: 30rem;'>
                     <?php
                     $produtos = $result[0];
+                    $numero = $produtos['preco'];
+                    $numero = str_replace('.', ',', $numero);
                     echo "
                     <h2>{$produtos['nome_produto']}<i class='bi bi-bookmark-plus'></i></h2>
                     <p>{$produtos['descricao']}</p>
                     <div class='row'>
                         <div class='col-md-8'>
-                            <h3 class='card-text'>R$ {$produtos['preco']}</h3>
+                            <h3 class='card-text'>R$ {$numero}</h3>
                         </div>
                     </div>
                     <p>";
