@@ -1,8 +1,10 @@
 <?php
 session_start();
 $title = 'Carrinho';
+include "../include/database.php";
 include '../include/header.php';
 include '../include/nave-site.php';
+
 ?>
 
 <div class="container py-5 h-100">
@@ -61,16 +63,13 @@ include '../include/nave-site.php';
                                                     imprime.innerHTML = imprimeQnt
                                                     imprime.dataset.quantidade = imprimeQnt
                                                 }
-                                                
-                                            function repetir(){
-                                                let repetir = document.getElementById('total')
-                                                for(item+x){
-                                                
-                                                }
-                                            }
+
+                                                //function repetir(){
+                                               // let repetir = document.getElementById('total')
+                                                //for(item+x)} 
+                                            
                                             </script>
 
-                                           
                                             <div style="width: 80px;">
                                                 <h5 id='prod1' class="mb-0">R$ 900</h5>
                                             </div>
@@ -94,8 +93,8 @@ include '../include/nave-site.php';
                                             </div>
                                         </div>
                                         <div class="d-flex flex-row align-items-center">
-                                            <button type="button" class="mr-2 btn btn-dark">+</button>
-                                            <button type="button" class="ms-4 btn btn-dark">-</button>
+                                            <button  onclick="quant('item2', 'add')" type="button" class="mr-2 btn btn-dark">+</button>
+                                            <button  onclick="quant('item2', 'sub')" type="button" class="ms-4 btn btn-dark">-</button>
                                         </div>
                                         <div class="d-flex flex-row align-items-center">
                                             <div style="width: 60px;">
@@ -124,8 +123,8 @@ include '../include/nave-site.php';
                                             </div>
                                         </div>
                                         <div class="d-flex flex-row align-items-center">
-                                            <button type="button" class="mr-2 btn btn-dark">+</button>
-                                            <button type="button" class="ms-4 btn btn-dark"> - </button>
+                                        <button onclick="quant('item3', 'add')" type="button" class="mr-2 btn btn-dark">+</button>
+                                            <button onclick="quant('item3', 'sub')" type="button" class="ms-4 btn btn-dark">-</button>
                                         </div>
                                         <div class="d-flex flex-row align-items-center">
                                             <div style="width: 60px;">
@@ -154,8 +153,8 @@ include '../include/nave-site.php';
                                             </div>
                                         </div>
                                         <div class="d-flex flex-row align-items-center">
-                                            <button type="button" class="mr-2 btn btn-dark">+</button>
-                                            <button type="button" class="ms-4 btn btn-dark"> - </button>
+                                        <button onclick="quant('item4', 'add')" type="button" class="mr-2 btn btn-dark">+</button>
+                                            <button onclick="quant('item4', 'sub')" type="button" class="ms-4 btn btn-dark">-</button>
                                         </div>
                                         <div class="d-flex flex-row align-items-center">
                                             <div style="width: 60px;">
