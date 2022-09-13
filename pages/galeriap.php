@@ -86,13 +86,6 @@ include '../include/nave-site.php';
 
 
 
-
-
-
-
-
-
-
 <?php
 include '../include/rodape.php';
 include '../include/footer.php';
