@@ -3,6 +3,7 @@ session_start();
 $title = 'GALERIA-PRODUTOS';
 include '../include/header.php';
 include '../include/nave-site.php';
+
 ?>
 <div class="container">
   <div class="mt-5 row d-flex justify-content-center align-items-center h-100">
