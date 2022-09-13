@@ -1,3 +1,3 @@
-function(){
-    
+function quant(){
+console.log ('oi');
 }
