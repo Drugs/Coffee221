@@ -31,17 +31,24 @@ include '../include/nave-site.php';
                                                 </div>
                                             </div>
                                             <div class="d-flex flex-row align-items-center">
-                                                <button type="button" class="mr-2 btn btn-dark">+</button>
-                                                <button type="button" class="ms-4 btn btn-dark">-</button>
+                                                <button onclick="quant('item1', 'add')" type="button" class="mr-2 btn btn-dark">+</button>
+                                                <button onclick="quant('item1', 'sub')" type="button" class="ms-4 btn btn-dark">-</button>
                                             </div>
                                             <div class="d-flex flex-row align-items-center">
                                                 <div style="width: 60px;">
-                                                    <h5 class="fw-normal mb-0" onclick="quant()" data-quantidade="1">1</h5>
+                                                    <h5 id='item1' class="fw-normal mb-0" data-quantidade="1" data-preco="900">1</h5>
                                                 </div>
                                                 <script>
-                                                    function quant() {
-                                                    console.log ('');
-                                                    console.log ('quant+1');
+													function quant(ide,fun) {
+														let imprime = document.getElementById(ide)
+														let imprimeqnt = imprime.dataset.quantidade
+														let preco = imprime.dataset.preco
+														if (fun == 'add'){
+															imprimeqnt++
+														}
+														console.log (imprimeqnt * preco);
+														imprime.innerHTML = imprimeqnt
+														imprime.dataset.quantidade = imprimeqnt
                                                     }
                                                 </script>
                                                 <div style="width: 80px;">
