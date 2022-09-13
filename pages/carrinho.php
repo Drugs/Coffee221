@@ -38,6 +38,12 @@ include '../include/nave-site.php';
                                                 <div style="width: 60px;">
                                                     <h5 class="fw-normal mb-0" onclick="quant()" data-quantidade="1">1</h5>
                                                 </div>
+                                                <script>
+                                                    function quant() {
+                                                    console.log ('');
+                                                    console.log ('quant+1');
+                                                    }
+                                                </script>
                                                 <div style="width: 80px;">
                                                     <h5 class="mb-0">$900</h5>
                                                 </div>
@@ -66,7 +72,7 @@ include '../include/nave-site.php';
                                             </div>
                                             <div class="d-flex flex-row align-items-center">
                                                 <div style="width: 60px;">
-                                                <h5 class="fw-normal mb-0" onclick="quant()" onchange='atualiza(this.value, this.dataset.preco)' step="1" data-quantidade="1">1</h5>
+                                                <h5 class="fw-normal mb-0" onclick="quant()" data-quantidade="1">1</h5>
                                                 </div>
                                                 <div style="width: 80px;">
                                                     <h5 class="mb-0">$900</h5>
@@ -96,7 +102,7 @@ include '../include/nave-site.php';
                                             </div>
                                             <div class="d-flex flex-row align-items-center">
                                                 <div style="width: 60px;">
-                                                <h5 class="fw-normal mb-0" onclick="quant()" onchange='atualiza(this.value, this.dataset.preco)' step="1" data-quantidade="1">1</h5>
+                                                <h5 class="fw-normal mb-0" onclick="quant()" data-quantidade="1">1</h5>
                                                 </div>
                                                 <div style="width: 80px;">
                                                     <h5 class="mb-0">$1199</h5>
@@ -126,7 +132,7 @@ include '../include/nave-site.php';
                                             </div>
                                             <div class="d-flex flex-row align-items-center">
                                                 <div style="width: 60px;">
-                                                <h5 class="fw-normal mb-0" onchange='atualiza(this.value, this.dataset.preco)' step="1" data-quantidade="1">1</h5>
+                                                <h5 class="fw-normal mb-0" onclick="quant()" data-quantidade="1">1</h5>
                                                 </div>
                                                 <div style="width: 80px;">
                                                     <h5 class="mb-0">$1799</h5>

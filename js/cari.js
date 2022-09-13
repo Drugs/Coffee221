@@ -1,5 +1,6 @@
 function quant(){
 console.log ('oi');
+document.getElementById("demo").innerHTML = "Hello World";
 }
 
 function atualiza(quant, prc) {
