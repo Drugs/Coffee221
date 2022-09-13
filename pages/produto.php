@@ -63,7 +63,7 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
                     <?php
                     foreach ($result as $informacoes) {
                         echo " 
-                        <h5 class='card-text'>{$informacoes['tamanho']} - Em estoque: {$informacoes['estoque']}</h5>";
+                        <button type='button' class='btn btn-dark'>{$informacoes['tamanho']} - Em estoque: {$informacoes['estoque']}</button>";
                     }
                     ?>
                 </div>
