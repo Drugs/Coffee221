@@ -9,6 +9,7 @@ include "header.php";
                 <use xlink:href="#bootstrap"></use>
             </svg>
         </p>
+        <link rel="stylesheet" href="/coffee221/css/meu.css" />
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
             <h2><i class="bi bi-cup-hot"></i></h2>
@@ -23,14 +24,19 @@ include "header.php";
                         <font style="vertical-align: inherit;">Itens</font>
                     </font>
                 </a></li>
-            <li><a href="./" class="nav-link px-2 text-white">
+            <li><a href="./pages/checkoutpage.php" class="nav-link px-2 text-white">
                     <font style="vertical-align: inherit;">
                         <font style="vertical-align: inherit;">Sobre Cartão</font>
                     </font>
                 </a></li>
-            <li><a href="#" class="nav-link px-2 text-white">
+                <li><a href="./pages/nossotime.php" class="nav-link px-2 text-white">
                     <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;">Perguntas frequentes</font>
+                        <font style="vertical-align: inherit;">Nosso Time</font>
+                    </font>
+                </a></li>
+                <li><a href="./pages/carrinho.php" class="nav-link px-2 text-white">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;"><h4 id='icon'><i class="bi bi-cart4"></i></h4></font>
                     </font>
                 </a></li>
         </ul>

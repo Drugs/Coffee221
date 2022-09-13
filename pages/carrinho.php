@@ -4,7 +4,8 @@ $title = 'Carrinho';
 include "../include/database.php";
 include '../include/header.php';
 include '../include/nave-site.php';
-$consulta ='Select';
+$consulta = "SELECT * FROM  `produto`  WHERE id_produto={$_SESSION['id_produto']}";
+var_dump($consulta);
 ?>
 
 <div class="container py-5 h-100">
