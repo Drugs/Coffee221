@@ -5,9 +5,10 @@ $title = "Produto";
 include "../include/database.php";
 include "../include/header.php";
 include "../include/nave.php";
-$inf = "SELECT * FROM info_roupa JOIN produto ON id_produto = fk_id_produto WHERE fk_id_produto = 25";
+$inf = "SELECT * FROM info_roupa JOIN produto ON id_produto = fk_id_produto WHERE fk_id_produto = 2";
 $query = mysqli_query($con, $inf);
 $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
+var_dump($result[0]);
 ?>
 
 <body class="tabela">
@@ -16,6 +17,7 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
             <div class="col-md-7">
                 <div id="cafedama" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner sliderproduto">
+						<!--Pegar imagens dinamicamente-->
                         <div class="carousel-item active">
                             <img src="../Imagens/camisa1.png" class="d-block w-100" alt="...">
                         </div>
@@ -38,18 +40,14 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
             </div>
             <div class="col-md-3" style="margin-top: 5mm;">
                 <?php
-                foreach ($result as $produtos) {
-                    if (isset($produtos['id_info_roupa']) and $produtos['id_info_roupa'] == 26) {
-                        echo "
+					$produtos = $result[0];
+					echo "
                     <h2>{$produtos['nome_produto']}<i class='bi bi-bookmark-plus'></i></h2>
                     <h4>{$produtos['descricao']}</h4>";
-                    }
-                }
-                $i = 0;
-                for (; $i < 5;) {
-                    echo '<i class="bi bi-star-fill"></i>';
-                    $i++;
-                }
+					
+					for ($i = 0; $i < 5; $i++) {
+						echo '<i class="bi bi-star-fill"></i>';
+					}
                 ?>
                 <div class='card card-body' style='width: 18rem;'>
                     <h5 class='card-title text-center'>
@@ -59,11 +57,10 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
 
                     <?php
                     foreach ($result as $informacoes) {
-                        if (isset($informacoes['fk_id_produto']) and $informacoes['fk_id_produto'] == 25) {
                             echo " 
                         <p class='card-text'>
                         <p>{$informacoes['tamanho']}</p>";
-                        }
+						//add quantidade
                     }
                     ?>
                 </div>
