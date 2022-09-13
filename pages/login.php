@@ -70,10 +70,11 @@ if (isset($_GET['login']) and $_GET['login'] == 'send') {
 
                             </div>
                             <div class="mt-2 d-grid gap-2">
-                                <button type="submit" value='send' name='login' class="btn btn-outline-light">Entrar</button>
+                             <button type="submit" value='send' name='login' class="btn btn-outline-light">Entrar</button>
                         </form>
                         <span style="color:white;">Ainda não tem uma conta?</span>
                         <a class='mt-1 btn btn-outline-light' href="cadastro_usuario.php"> Cadastre-se aqui</a>
+                        </div>
                     </div>
                 </div>
             </div>
