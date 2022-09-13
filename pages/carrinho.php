@@ -4,7 +4,7 @@ $title = 'Carrinho';
 include "../include/database.php";
 include '../include/header.php';
 include '../include/nave-site.php';
-
+$consulta ='Select';
 ?>
 
 <div class="container py-5 h-100">
