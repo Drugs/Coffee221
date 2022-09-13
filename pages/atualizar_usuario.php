@@ -18,7 +18,7 @@ $consulta_up= "UPDATE pessoa
 JOIN usuario ON pessoa.id_pessoa = usuario.fk_id_pessoa
 SET nome = '{$_GET['nome']}', pessoa.email = '{$_GET['email']}', telefone = '{$_GET['telefone']}',
 endereco = '{$_GET['endereco']}',pais = '{$_GET['pais']}', usuario.email = '{$_GET['login']}',senha=
-'{$cripton}', data = '{$_GET['data']}'
+'{$cripton}'
 WHERE id_usuario = {$_GET['var']} ";
 $query=mysqli_query($con,$consulta_up);
 header("Location:pagina_usuario.php");
@@ -80,9 +80,7 @@ $result=mysqli_fetch_assoc($query);
                                 <label for="exampleFormControlInput1" class="form-label"><strong>senha</strong></label>
                             </div>
                           
-                            <div class="form-floating" style="margin-bottom: 5mm;">
-                                <input type="date" class="form-control" name='data'value="<?php echo $result['data'];?>">
-                                <label for="exampleFormControlTextarea1" class="form-label"><strong>data</strong></label>
+                           
 
                                 <input type="hidden" name="var" value="<?=$_SESSION['id_usu']?>" />
                             </div>

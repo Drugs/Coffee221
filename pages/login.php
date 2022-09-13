@@ -29,6 +29,9 @@ if (isset($_GET['login']) and $_GET['login'] == 'send') {
         } else {
             header('Location:login.php?login=email');
         }
+    }else{
+        header('Location:login.php?login=inexistente');
+    
     }
 }
 ?>
@@ -57,6 +60,9 @@ if (isset($_GET['login']) and $_GET['login'] == 'send') {
                             if (isset($_GET['logout']) and $_GET['logout'] == 'confirm') {
                                 echo '<div class="alert alert-warning" role="alert">Você se desconectou!</div>';
                             }
+                            if(isset($_GET['login']) and $_GET['login']=='inexistente') {
+                                echo '<div class="alert alert-warning" role="alert">Faça login para acessar o perfil!</div>'; 
+                              }
                             ?>
                         </div>
                         <form action="">

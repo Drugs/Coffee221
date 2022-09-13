@@ -45,15 +45,15 @@ Sugestão - Mudar o diabo da imagem do Parallax
 	Usuário
 
 		(╯°□°）╯︵ ┻━┻
-		Botão de logout-> 
+		Botão de logout-> ok
 		Links do menu
 			>Perfil - Atualizar as informações de pessoa e usuário ->
-				>Pegar o usuario da SESSAO - IMPorTANteEEEEEEEEEEEEEEEEE
+				>Pegar o usuario da SESSAO - IMPorTANteEEEEEEEEEEEEEEEEE ok
 				>Adicionar link
-				>Remover o botao de deletar
-				>organizar o menu lateral
-				>Corrigir telefone
-			>Perfil - Adicionar forma de pagamento [Checkout????] ->
+				>Remover o botao de deletar ok
+				>organizar o menu lateral ok
+				>Corrigir telefoneok 
+			>Perfil - Adicionar forma de pagamento [Checkout????] ->ok
 			>Perfil - Adicionar endereço de entrega ->
 			>Histórico de Compras -> Ultima coisa
 			>Carrinho->
