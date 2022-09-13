@@ -5,6 +5,9 @@ Ata da reunião 02/09
 		Descrições
 		Preço
 		Cadastrar no BD
+		Carregar as informações do produto do BD -> EM ANDAMENTO
+		Adicionar chamadas de ação [Adicionar ao carrinho, Compre AGORA!!!!] -> A FAZER
+		Mostrar informações de estoque -> EM ANDAMENTO
 	---------------------------------------------------------------------------------------------
 	Carrinho 
 		CARRINHO
@@ -38,11 +41,7 @@ Sugestão - Mudar o diabo da imagem do Parallax
 
 	
 	---------------------------------------------------------------------------------------------
-	Produtos
-		Carregar as informações do produto do BD -> EM ANDAMENTO
-		Adicionar chamadas de ação [Adicionar ao carrinho, Compre AGORA!!!!] -> A FAZER
-		Mostrar informações de estoque -> EM ANDAMENTO
-	---------------------------------------------------------------------------------------------
+
 	Usuário
 
 		(╯°□°）╯︵ ┻━┻
