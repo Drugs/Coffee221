@@ -48,8 +48,8 @@ include "../include/nave-site.php";
                 </div>
                 <div class="col-md-4  coluna_4">
                     <div class="cartao aluno-3">
-                        <img class="imagens" src="https://picsum.photos/160/157" alt="">
-                        <h2>Aluno 3</h2>
+                        <img class="imagens" src="../Imagens\imagens-nossotime\anafoto.jpeg" alt="">
+                        <h2>Ana Clara Almeida</h2>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, dignissimos!</p>
                     </div>
                 </div>
