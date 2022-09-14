@@ -61,8 +61,12 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
                 </div>
             </div>
             <script>
-                function alterar() {
-                    document.getElementById("priceUpdate").innerHTML = "<?php $produtos['preco']; ?>";
+                function alterar(idpreco) {
+                    let idteste = document.getElementById(idpreco)
+                    console.log(idteste.dataset.preco)
+                    let printPrice = document.getElementById('priceUpdate')
+                    let changePrice = "R$ "
+                    printPrice.innerHTML = idteste.dataset.preco
                 }
             </script>
             </p>
@@ -70,13 +74,15 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
             <h5 class='card-title'>Guia de tamanhos</h5>
             <p>
                 <?php
+                $id1 = 1;
                 foreach ($result as $informacoes) {
                     echo " 
                             <div class='col-md-12'>
-                                <button type='button' class='btn btn-outline-dark' onclick='alterar()'>{$informacoes['tamanho']}</button>
+                                <button type='button' class='btn btn-outline-dark' data-preco='{$informacoes['preco']}' id='{$id1}'  onclick='alterar({$id1})'>{$informacoes['tamanho']}</button>
                                 <spam class='alert alert-secondary' style='margin-left: 2cm;'>- Em estoque: {$informacoes['estoque']}</spam>
                             </div>
                     </p>";
+                    $id1++;
                 }
                 echo "
                     <div class= row>

@@ -21,7 +21,7 @@ $result2 = mysqli_fetch_all($query, MYSQLI_ASSOC);
         $roupas = $result[0];
         $imagens = $result2[0];
         echo "
-        <img src='{$imagens['endereco']}' class='card-img-top'>
+        <img src='../imagens/{$imagens['endereco']}' class='card-img-top'>
         <div class='card-body'>
           <p class='card-text'>{$roupas['descricao']}</p>
         </div>
