@@ -7,7 +7,6 @@ include '../include/nave-site.php';
 $inf = "SELECT * FROM info_roupa JOIN produto ON id_produto = fk_id_produto";
 $query = mysqli_query($con, $inf);
 $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
-var_dump($result);
 
 $inf2 = "SELECT * FROM produto JOIN galeria ON id_produto = fk_id_produto";
 $query = mysqli_query($con, $inf2);
@@ -19,10 +18,12 @@ $result2 = mysqli_fetch_all($query, MYSQLI_ASSOC);
     <div class="col-4">
       <div class="card" style="width: 18rem;">
         <?php
+        $roupas = $result[0];
+        $imagens = $result2[0];
         echo "
-        <img src='../Imagens/cf1.png' class='card-img-top'>
+        <img src='{$imagens['endereco']}' class='card-img-top'>
         <div class='card-body'>
-          <p class='card-text'></p>
+          <p class='card-text'>{$roupas['descricao']}</p>
         </div>
       </div>";
         ?>
