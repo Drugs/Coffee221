@@ -55,7 +55,7 @@
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="carrinho.php">
                     <i class="bi bi-cart4"></i>
                       Produtos no carrinho
                     </a>
