@@ -177,7 +177,7 @@ var_dump($consulta);
                                 <p class="mt-4 mb-2" id='total'>$4798.00</p>
                             </div>
 
-                            <button type="button" class="btn btn-info btn-block btn-lg" href="checkoutpage.php">
+                            <button type="button" class="btn btn-info btn-block btn-lg"onclick="document.location= 'checkoutpage.php'">
                                 <span>Checkout</span>
                             </button>
                         </div>
