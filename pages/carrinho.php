@@ -4,7 +4,7 @@ $title = 'Carrinho';
 include "../include/database.php";
 include '../include/header.php';
 include '../include/nave-site.php';
-$consulta = "SELECT * FROM  `produto` Join `pessoa` ON WHERE id_pessoa={$_SESSION['id_usu']}";
+$consulta = "SELECT * FROM  `produto`  WHERE id_produto={$_SESSION['id_produto']}";
 var_dump($consulta);
 ?>
 
