@@ -5,7 +5,8 @@ $title = "Produto";
 include "../include/database.php";
 include "../include/header.php";
 include "../include/nave-site.php";
-$inf = "SELECT * FROM info_roupa JOIN produto ON id_produto = fk_id_produto WHERE fk_id_produto = 25";
+$id = $_GET['produto'];
+$inf = "SELECT * FROM info_roupa JOIN produto ON id_produto = fk_id_produto WHERE fk_id_produto = {$id}";
 $query = mysqli_query($con, $inf);
 $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
 ?>
@@ -61,13 +62,12 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
                 </div>
             </div>
             <script>
-				
                 function alterar(idpreco) { //idepreco = contem o id
                     let idteste = document.getElementById(idpreco) //elemento
                     console.log(idteste.dataset.preco)
                     let printPrice = document.getElementById('priceUpdate')
-                    let changePrice = "R$ "+idteste.dataset.preco
-                    printPrice.innerHTML = changePrice.replace('.',',')
+                    let changePrice = "R$ " + idteste.dataset.preco
+                    printPrice.innerHTML = changePrice.replace('.', ',')
                 }
             </script>
             </p>
