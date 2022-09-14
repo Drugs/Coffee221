@@ -61,12 +61,13 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
                 </div>
             </div>
             <script>
-                function alterar(idpreco) {
-                    let idteste = document.getElementById(idpreco)
+				
+                function alterar(idpreco) { //idepreco = contem o id
+                    let idteste = document.getElementById(idpreco) //elemento
                     console.log(idteste.dataset.preco)
                     let printPrice = document.getElementById('priceUpdate')
-                    let changePrice = "R$ "
-                    printPrice.innerHTML = idteste.dataset.preco
+                    let changePrice = "R$ "+idteste.dataset.preco
+                    printPrice.innerHTML = changePrice.replace('.',',')
                 }
             </script>
             </p>
@@ -78,7 +79,7 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
                 foreach ($result as $informacoes) {
                     echo " 
                             <div class='col-md-12'>
-                                <button type='button' class='btn btn-outline-dark' data-preco='{$informacoes['preco']}' id='{$id1}'  onclick='alterar({$id1})'>{$informacoes['tamanho']}</button>
+						<button type='button' class='btn btn-outline-dark' data-preco='{$informacoes['preco']}' id='{$id1}'  onclick='alterar({$id1})'>{$informacoes['tamanho']}</button>
                                 <spam class='alert alert-secondary' style='margin-left: 2cm;'>- Em estoque: {$informacoes['estoque']}</spam>
                             </div>
                     </p>";
