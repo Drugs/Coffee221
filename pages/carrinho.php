@@ -15,8 +15,7 @@ include '../include/nave-site.php';
                 <div class="card-body p-4">
                     <div class="row ">
                         <div class="col">
-
-                        
+                            
                             <!---Titulo-->
                             <div class="d-flex justify-content-between align-items-center mb-4">
                                 <div>
@@ -24,7 +23,7 @@ include '../include/nave-site.php';
                                 </div>
                             </div>
 
-
+                            
                             <!---Primeiro produto-->
                             <div class="card mb-3" style="box-shadow: 10px 5px 5px ;">
                                 <div class="card-body">
@@ -66,12 +65,9 @@ include '../include/nave-site.php';
                                                     dinheiro.innerHTML = 'R$ ' + precoNovo
                                                     imprime.innerHTML = imprimeQnt
                                                     imprime.dataset.quantidade = imprimeQnt
+
                                                 }
 
-                                                //function repetir(){
-                                               // let repetir = document.getElementById('total')
-                                                //for(item+x)} 
-                                            
                                             </script>
 
                                             <div style="width: 80px;">
@@ -104,7 +100,7 @@ include '../include/nave-site.php';
                                         </div>
                                         <div class="d-flex flex-row align-items-center">
                                             <div style="width: 60px;">
-                                            <h5 id='item2' class="fw-normal mb-0" data-quantidade="1" data-preco="1000">1</h5>
+                                            <h5 id='item2' class="fw-normal mb-0" data-quantidade="1" data-preco="1000" >1</h5>
                                             </div>
                                             <div style="width: 80px;">
                                                 <h5 id='prod2' class="mb-0">$1000</h5>
@@ -131,15 +127,15 @@ include '../include/nave-site.php';
                                             </div>
                                         </div>
                                         <div class="d-flex flex-row align-items-center">
-                                        <button onclick="quant('item3', 'add')" type="button" class="mr-2 btn btn-dark">+</button>
-                                        <button onclick="quant('item3', 'sub')" type="button" class="ms-4 btn btn-dark">-</button>
+                                        <button onclick="quant('item3', 'add', 'prod3')" type="button" class="mr-2 btn btn-dark">+</button>
+                                        <button onclick="quant('item3', 'sub', 'prod3')" type="button" class="ms-4 btn btn-dark">-</button>
                                         </div>
                                         <div class="d-flex flex-row align-items-center">
                                             <div style="width: 60px;">
                                             <h5 id='item3' class="fw-normal mb-0" data-quantidade="1" data-preco="1199">1</h5>
                                             </div>
                                             <div style="width: 80px;">
-                                                <h5 class="mb-0">$1199</h5>
+                                                <h5 id='prod3' class="mb-0" >$1199</h5>
                                             </div>
                                             <div style="width: 60px;">
                                                 <a><i class="bi bi-trash3-fill"></i></a>
@@ -149,7 +145,7 @@ include '../include/nave-site.php';
                                 </div>
                             </div>
 
-
+                            
                             <!---QUARTO  produto-->
                             <div class="card mb-3 mb-lg-0" style="box-shadow: 10px 5px 5px ;">
                                 <div class="card-body">
@@ -164,15 +160,15 @@ include '../include/nave-site.php';
                                         </div>
                                         
                                         <div class="d-flex flex-row align-items-center">
-                                        <button onclick="quant('item4', 'add')" type="button" class="mr-2 btn btn-dark">+</button>
-                                        <button onclick="quant('item4', 'sub')" type="button" class="ms-4 btn btn-dark">-</button>
+                                        <button onclick="quant('item4', 'add', 'prod4')" type="button" class="mr-2 btn btn-dark">+</button>
+                                        <button onclick="quant('item4', 'sub', 'prod4')" type="button" class="ms-4 btn btn-dark">-</button>
                                         </div>
                                         <div class="d-flex flex-row align-items-center">
                                             <div style="width: 60px;">
                                             <h5 id='item4' class="fw-normal mb-0" data-quantidade="1" data-preco="1799">1</h5>
                                             </div>
                                             <div style="width: 80px;">
-                                                <h5 class="mb-0">$1799</h5>
+                                                <h5 class="mb-0" id='prod4'>$1799</h5>
                                             </div>
                                             <div style="width: 60px;">
                                                 <a><i class="bi bi-trash3-fill"></i></a>
@@ -184,7 +180,7 @@ include '../include/nave-site.php';
 
                             <div class="d-flex justify-content-between">
                                 <p class="mt-4 mb-2">Total</p>
-                                <p class="mt-4 mb-2" id='total'>$4798.00</p>
+                                <p class="mt-4 mb-2" id='total'></p>
                             </div>
 
                             <button type="button" class="btn btn-info btn-block btn-lg"onclick="document.location= 'checkoutpage.php'">
