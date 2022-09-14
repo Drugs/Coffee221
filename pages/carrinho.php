@@ -179,11 +179,52 @@ include '../include/nave-site.php';
                             </div>
 
                             <div class="d-flex justify-content-between">
-                                <p class="mt-4 mb-2">Total</p>
+                                <p class="mt-4 mb-2" id='total'>Total</p>
                                 <p class="mt-4 mb-2" id='total'></p>
+
+                                <script>
+                                                function quant(ide, fun, prod) {
+                                                    let imprime = document.getElementById(ide)
+                                                    let imprimeQnt = imprime.dataset.quantidade
+                                                    let preco = imprime.dataset.preco
+                                                    let dinheiro = document.getElementById(prod)
+                                                    if (fun == 'add') {
+                                                        imprimeQnt++
+                                                    }
+                                                    if (fun == 'sub') {
+                                                        imprimeQnt--
+                                                        if (imprimeQnt <= 0) {
+                                                            imprimeQnt = 0
+                                                        }
+                                                    }
+                                                    let precoNovo = imprimeQnt * preco
+                                                    console.log(imprimeQnt * preco);
+
+                                                    dinheiro.innerHTML = 'R$ ' + precoNovo
+                                                    imprime.innerHTML = imprimeQnt
+                                                    imprime.dataset.quantidade = imprimeQnt
+
+                                                    let novo = (imprimeQnt*preco+ imprimeQnt*preco+imprimeQnt*preco+imprimeQnt*preco)
+                                                                            
+                                                            console.log (novo)
+                                                            dinheiro.innerHTMAL=novo
+                                                            document.getElementById('total').innerHTML=(novo);
+                                                            }
+                                                            function soma(prod){
+
+                                                          document.getElementById(prod);
+
+                                                            console.log (prod+preco);
+
+                                                            }
+
+                                                
+
+                                            </script>
+
                             </div>
 
-                            <button type="button" class="btn btn-info btn-block btn-lg"onclick="document.location= 'checkoutpage.php'">
+                            <button type="button" class="btn btn-info btn-block btn-lg" onclick="document.location= 'checkoutpage.php'">
                                 <span>Checkout</span>
                             </button>
                         </div>

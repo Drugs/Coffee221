@@ -5,7 +5,7 @@
 	include '../include/database.php';
   
   if(isset($_SESSION['id_usu']) and $_SESSION['id_pessoa']){
-    echo "o usuário existe."; 
+    //echo "o usuário existe."; 
   }else{
 
     echo "o usuário não existe.";
@@ -55,7 +55,7 @@
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="carrinho.php">
                     <i class="bi bi-cart4"></i>
                       Produtos no carrinho
                     </a>
@@ -118,7 +118,28 @@
                           
                             <button type="button" onclick="document.location= 'atualizar_usuario.php '" class="btn btn-sm btn-warning">Atualizar</button>
                           </div>
-                          <small class="text-muted">9 mins</small>
+                          <small class="text-muted"><?php 
+                                    $con=  new mysqli($host, $user, $pass, $db);
+                                    // Check connection
+                                    if ($con->connect_error) {
+                                      die("Conecção falha: " . $con->connect_error);
+                                    }
+
+                                    $sql = "SELECT * FROM pessoa 
+                                    join usuario on usuario.fk_id_pessoa = id_pessoa 
+                                    WHERE id_pessoa={$_SESSION['id_pessoa']}";
+                                    $result = $con->query($sql);
+
+                                    if ($result->num_rows > 0) {
+                                      // output data of each row
+                                      while($_GET= $result->fetch_assoc()) {
+                                        echo "Id: " . $_GET['id_pessoa']. "<br>";
+                                      }
+                                    } else {
+                                      echo "0 resultados";
+                                    }
+                                    $con->close();
+                                    ?></small>
                         </div>
                       </div>
               </main>
