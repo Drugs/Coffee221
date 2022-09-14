@@ -3,8 +3,9 @@
 session_start();
 $title = "Nossa equipe";
 include "../include/header.php";
-include "../include/nave.php";
+include "../include/nave-site.php";
 ?>
+
 <body class="corpo">
     <section>
         <div class="container">
@@ -33,9 +34,15 @@ include "../include/nave.php";
                         <p><strong>Front-end developer &lt;/&gt;</strong></p>
                         <P>HTML, CSS, JS <span>&lt;-/&#x2665;&gt;</span> </P>
                         <span class="social-medias">
-                            <a href="http://www.instagram.com/gustavossantossmk/" target="_blank"><h4><i class="bi bi-instagram"></i></h4></a>
-                            <a href="https://github.com/gustavhuey" target="_blank"><h4><i class="bi bi-github"></i></h4></a>
-                            <a href="http://www.linkedin.com/in/gustavo-henrique-1a1514239/" target="_blank"><h4><i class="bi bi-linkedin"></i></h4></a>
+                            <a href="http://www.instagram.com/gustavossantossmk/" target="_blank">
+                                <h4><i class="bi bi-instagram"></i></h4>
+                            </a>
+                            <a href="https://github.com/gustavhuey" target="_blank">
+                                <h4><i class="bi bi-github"></i></h4>
+                            </a>
+                            <a href="http://www.linkedin.com/in/gustavo-henrique-1a1514239/" target="_blank">
+                                <h4><i class="bi bi-linkedin"></i></h4>
+                            </a>
                         </span>
                     </div>
                 </div>
@@ -73,7 +80,7 @@ include "../include/nave.php";
                         <h2>Aluno 7</h2>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, dignissimos!</p>
                     </div>
-                </div>  
+                </div>
             </div>
         </div>
     </section>
