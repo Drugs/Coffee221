@@ -4,7 +4,7 @@ session_start();
 $title = "Produto";
 include "../include/database.php";
 include "../include/header.php";
-include "../include/nave.php";
+include "../include/nave-site.php";
 $inf = "SELECT * FROM info_roupa JOIN produto ON id_produto = fk_id_produto WHERE fk_id_produto = 25";
 $query = mysqli_query($con, $inf);
 $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
@@ -77,7 +77,7 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
                                 <spam class='alert alert-secondary' style='margin-left: 2cm;'>- Em estoque: {$informacoes['estoque']}</spam>
                             </div>
                     </p>";
-                } #- Em estoque: {$informacoes['estoque']}
+                }
                 echo "
                     <div class= row>
                         <div class='col-md-6'>
