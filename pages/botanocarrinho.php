@@ -2,7 +2,6 @@
 //Bianca
 session_start();
 include '../include/database.php';
-
 $id_produto=$_GET['id']; //id do produto
 
 if(isset($_SESSION['id_usu']) and isset($_SESSION['id_pessoa'])){
