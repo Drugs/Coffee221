@@ -5,7 +5,8 @@ $title = "Produto";
 include "../include/database.php";
 include "../include/header.php";
 include "../include/nave-site.php";
-$inf = "SELECT * FROM info_roupa JOIN produto ON id_produto = fk_id_produto WHERE fk_id_produto = 25";
+$id = $_GET['produto'];
+$inf = "SELECT * FROM info_roupa JOIN produto ON id_produto = fk_id_produto WHERE fk_id_produto = {$id}";
 $query = mysqli_query($con, $inf);
 $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
 ?>
@@ -61,8 +62,12 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
                 </div>
             </div>
             <script>
-                function alterar() {
-                    document.getElementById("priceUpdate").innerHTML = "<?php $produtos['preco']; ?>";
+                function alterar(idpreco) { //idepreco = contem o id
+                    let idteste = document.getElementById(idpreco) //elemento
+                    console.log(idteste.dataset.preco)
+                    let printPrice = document.getElementById('priceUpdate')
+                    let changePrice = "R$ " + idteste.dataset.preco
+                    printPrice.innerHTML = changePrice.replace('.', ',')
                 }
             </script>
             </p>
@@ -70,13 +75,15 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
             <h5 class='card-title'>Guia de tamanhos</h5>
             <p>
                 <?php
+                $id1 = 1;
                 foreach ($result as $informacoes) {
                     echo " 
                             <div class='col-md-12'>
-                                <button type='button' class='btn btn-outline-dark' onclick='alterar()'>{$informacoes['tamanho']}</button>
+						<button type='button' class='btn btn-outline-dark' data-preco='{$informacoes['preco']}' id='{$id1}'  onclick='alterar({$id1})'>{$informacoes['tamanho']}</button>
                                 <spam class='alert alert-secondary' style='margin-left: 2cm;'>- Em estoque: {$informacoes['estoque']}</spam>
                             </div>
                     </p>";
+                    $id1++;
                 }
                 echo "
                     <div class= row>
