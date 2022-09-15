@@ -22,7 +22,7 @@ if(isset($_GET['id'])and $_GET['id'] !=0 ){ //se produto existe passa
 					$query = mysqli_query($con,$consulta2);
 					$id_caro = $query->insert_id; //id do carrinho	
 				}
-				$consulta4="Select * From item_de_carrinho Where fk_id_info_produto = $id_produto "; 
+				$consulta4="Select * From item_de_carrinho Where fk_id_info_produto = {$id_produto } and fk_id_carrinho = {$id_caro}"; 
 				$query = mysqli_query($con,$consulta4);
 				$item=mysqli_fetch_assoc($query);
 				
