@@ -38,12 +38,12 @@ CREATE TABLE `item_de_carrinho` (
 -- Extraindo dados da tabela `item_de_carrinho`
 --
 
-INSERT INTO `item_de_carrinho` (`id_item_carrinho`, `fk_id_info_produto`, `fk_id_carrinho`, `quantidade`) VALUES
-(1, 1, 1, 20),
-(3, 1, 1, 50),
-(4, 1, 1, 12),
-(5, 0, 9, 0),
-(8, 3, 3, 20);
+INSERT INTO `item_de_carrinho` (`id_item_carrinho`, `fk_id_info_produto`, `fk_id_carrinho`, `categoria`, `quantidade`) VALUES
+(1, 1, 2, 'alimento', 20),
+(2, 3, 3, 'alimento', 1),
+(3, 8, 3, 'roupa', 1),
+(4, 4, 3, 'alimento', 1);
+
 
 --
 -- Índices para tabelas despejadas

@@ -75,6 +75,7 @@ echo "</pre>";
                                             <div style="width: 60px;">
                                                 <h5 id='item1' class="fw-normal mb-0" data-quantidade="1" data-preco="900">1</h5>
                                             </div>
+
                                             <div style="width: 80px;">
                                                 <h5 id='prod1' class="mb-0">R$ 900</h5>
                                             </div>
@@ -225,30 +226,31 @@ echo "</pre>";
                                                             }
                                             </script>
                                             <script>
-                                                function quant(ide, fun, prod) {
-                                                    let imprime = document.getElementById(ide)
-                                                    let imprimeQnt = imprime.dataset.quantidade
-                                                    let preco = imprime.dataset.preco
-                                                    let dinheiro = document.getElementById(prod)
-                                                    if (fun == 'add') {
-                                                        imprimeQnt++
-                                                    }
-                                                    if (fun == 'sub') {
-                                                        imprimeQnt--
-                                                        if (imprimeQnt <= 0) {
-                                                            imprimeQnt = 0
-                                                        }
-                                                    }
-                                                    let precoNovo = imprimeQnt * preco
-                                                    console.log(imprimeQnt * preco);
-
-                                                    dinheiro.innerHTML = 'R$ ' + precoNovo
-                                                    imprime.innerHTML = imprimeQnt
-                                                    imprime.dataset.quantidade = imprimeQnt
-
+                                            function quant(ide, fun, prod) {
+                                                let imprime = document.getElementById(ide)
+                                                let imprimeQnt = imprime.dataset.quantidade
+                                                let preco = imprime.dataset.preco
+                                                let dinheiro = document.getElementById(prod)
+                                                if (fun == 'add') {
+                                                    imprimeQnt++
                                                 }
+                                                if (fun == 'sub') {
+                                                    imprimeQnt--
+                                                    if (imprimeQnt <= 0) {
+                                                        imprimeQnt = 0
+                                                    }
+                                                }
+                                                let precoNovo = imprimeQnt * preco
+                                                console.log(imprimeQnt * preco);
 
-                                            </script>
+                                                dinheiro.innerHTML = 'R$ ' + precoNovo
+                                                imprime.innerHTML = imprimeQnt
+                                                imprime.dataset.quantidade = imprimeQnt
+
+                                            }
+                                            
+
+                                        </script>
 
                             </div>
 
