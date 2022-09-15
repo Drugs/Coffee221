@@ -217,9 +217,6 @@ include '../include/nave-site.php';
                                                             console.log (prod+preco);
 
                                                             }
-
-                                                
-
                                             </script>
 
                             </div>
