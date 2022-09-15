@@ -4,8 +4,25 @@ $title = 'Carrinho';
 include "../include/database.php";
 include '../include/header.php';
 include '../include/nave-site.php';
-#$consulta = "SELECT * FROM  `produto`  WHERE id_produto={$_SESSION['id_produto']}";
-#var_dump($consulta);
+//-------------------alimentos------------------------------------
+$consulta = "SELECT * FROM `carrinho` 
+join item_de_carrinho on item_de_carrinho.fk_id_carrinho = carrinho.id_carrinho 
+join info_alimento on info_alimento.id_info_alimento = item_de_carrinho.fk_id_info_produto join produto on produto.id_produto = info_alimento.fk_id_produto 
+WHERE item_de_carrinho.categoria ='alimento' 
+and carrinho.fk_id_pessoa = {$_SESSION['id_pessoa']}";
+$query = mysqli_query($con, $consulta);
+$fetch = mysqli_fetch_all($query , MYSQLI_ASSOC);
+//-------------------roupas------------------------------------
+$consulta = "SELECT * FROM `carrinho` 
+join item_de_carrinho on item_de_carrinho.fk_id_carrinho = carrinho.id_carrinho 
+join info_alimento on info_alimento.id_info_alimento = item_de_carrinho.fk_id_info_produto join produto on produto.id_produto = info_alimento.fk_id_produto 
+WHERE item_de_carrinho.categoria ='roupa' 
+and carrinho.fk_id_pessoa = {$_SESSION['id_pessoa']}";
+$query = mysqli_query($con, $consulta);
+$fetch = mysqli_fetch_all($query , MYSQLI_ASSOC);
+echo "<pre>";
+var_dump($fetch);
+echo "</pre>";
 ?>
 
 <div class="container py-5 h-100">
