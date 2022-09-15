@@ -11,6 +11,10 @@ $query = mysqli_query($con, $inf);
 $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
 ?>
 
+<!-- SELECT * FROM `info_alimento`
+join produto on produto.id_produto = info_alimento.fk_id_produto
+join galeria on galeria.fk_id_produto = produto.id_produto -->
+
 <body class="tabela">
     <div class="container-lg">
         <div class="row">
@@ -96,8 +100,6 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
                     </div>";
                 ?>
         </div>
-    </div>
-    </div>
     </div>
 
     <div class="album py-5 bg-light">

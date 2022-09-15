@@ -10,30 +10,28 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
 
 ?>
 
+
 <div class="container">
   <div class='mt-5 row d-flex justify-content-center align-items-center h-100'>
     <div class='col-12'>
       <div class='row'>
         <div class='col-6'>
-          <?php
-          foreach ($result as $roupas) {
-            echo "
-              <div class='card' style='width: 18rem;'>
+          <div class='card' style='width: 18rem;'>
+            <?php
+            foreach ($result as $roupas) {
+              echo "
                 <a href='produto.php?produto={$roupas['id_produto']}'><img src='../imagens/{$roupas['endereco']}' class='card-img-top'></a>
                 <div class='card-body'>
                   <p class='card-text'>{$roupas['descricao']}</p>
-                </div>
-            </div>";
-          }
-          ?>
+                </div>";
+            }
+            ?>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-
-
 
 <?php
 include '../include/rodape.php';
