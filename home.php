@@ -10,15 +10,16 @@ include './include/nave.php';
 	<!-- JavaScript da Home -->
 	<script>
 		// AJAX do carrinho de compras
-		function carrinho(id_info_prod) {
+		function carrinho(id_info_prod, categoria) { //id info produto, 
+			//categoria: alimento ou roupa
 			//console.log(id_info_prod)
 			var xmlhttp = new XMLHttpRequest();
 			xmlhttp.onreadystatechange = function() {
 				if (this.readyState == 4 && this.status == 200) {
-					//console.log(this.responseText)
+					console.log(this.responseText)
 				}
 			}
-			xmlhttp.open("GET", "pages/botanocarrinho.php?id=" + id_info_prod);
+			xmlhttp.open("GET", "pages/botanocarrinho.php?id=" + id_info_prod+"&cat="+categoria);
 			xmlhttp.send();
 		}
 		// Script do encurtador de texto dos cards
@@ -91,7 +92,7 @@ include './include/nave.php';
 						</div>
 						<div class="d-flex justify-content-between align-items-center">
 							<div class="btn-group">
-								<button type="button" id='alvo' onclick='carrinho()' class="btn btn-sm btn-outline-secondary">Adicionar ao carrinho</button>
+								<button type="button" id='alvo' onclick='carrinho(1)' class="btn btn-sm btn-outline-secondary">Adicionar ao carrinho</button>
 							</div>
 						</div>
 					</div>
@@ -114,7 +115,7 @@ include './include/nave.php';
 						</div>
 						<div class="d-flex justify-content-between align-items-center">
 							<div class="btn-group">
-								<button type="button" id='alvo' onclick='carrinho()' class="btn btn-sm btn-outline-secondary">Adicionar ao carrinho</button>
+								<button type="button" id='alvo' onclick='carrinho(3)' class="btn btn-sm btn-outline-secondary">Adicionar ao carrinho</button>
 							</div>
 						</div>
 					</div>
@@ -137,7 +138,7 @@ include './include/nave.php';
 						</div>
 						<div class="d-flex justify-content-between align-items-center">
 							<div class="btn-group">
-								<button type="button" id='alvo' onclick='carrinho()' class="btn btn-sm btn-outline-secondary">Adicionar ao carrinho</button>
+								<button type="button" id='alvo' onclick='carrinho(4)' class="btn btn-sm btn-outline-secondary">Adicionar ao carrinho</button>
 							</div>
 						</div>
 					</div>
