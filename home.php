@@ -108,7 +108,6 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
 			?>
 		</div>
 	</div>
-	</div>
 	<!-- Parallax -->
 	<div class="mt-2 mb-2 parallax-home"></div>
 	<!-- Cards Home do site -->
