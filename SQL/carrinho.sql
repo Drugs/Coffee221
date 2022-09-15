@@ -40,11 +40,7 @@ CREATE TABLE `carrinho` (
 
 INSERT INTO `carrinho` (`id_carrinho`, `fk_id_pessoa`, `data`, `status`) VALUES
 (1, 31, '2022-09-06', 1),
-(2, 0, '0000-00-00', 0),
-(3, 0, '0000-00-00', 0),
-(4, 0, '0000-00-00', 0),
-(5, 0, '0000-00-00', 0),
-(6, 0, '0000-00-00', 0);
+(3, 34, '2022-09-15', 1);
 
 --
 -- Índices para tabelas despejadas

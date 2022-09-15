@@ -11,7 +11,10 @@ join info_alimento on info_alimento.id_info_alimento = item_de_carrinho.fk_id_in
 WHERE item_de_carrinho.categoria ='alimento' 
 and carrinho.fk_id_pessoa = {$_SESSION['id_pessoa']}";
 $query = mysqli_query($con, $consulta);
-$fetch = mysqli_fetch_all($query , MYSQLI_ASSOC);
+$alimentos = mysqli_fetch_all($query , MYSQLI_ASSOC);
+echo "<pre>";
+var_dump($alimentos);
+echo "</pre>";
 //-------------------roupas------------------------------------
 $consulta2 = "SELECT * FROM `carrinho` 
 join item_de_carrinho on item_de_carrinho.fk_id_carrinho = carrinho.id_carrinho 
@@ -19,9 +22,9 @@ join info_roupa on info_roupa.id_info_roupa = item_de_carrinho.fk_id_info_produt
 WHERE item_de_carrinho.categoria ='roupa' 
 and carrinho.fk_id_pessoa = {$_SESSION['id_pessoa']}";
 $query = mysqli_query($con, $consulta2);
-$fetch = mysqli_fetch_all($query , MYSQLI_ASSOC);
+$roupas = mysqli_fetch_all($query , MYSQLI_ASSOC);
 echo "<pre>";
-var_dump($fetch);
+var_dump($roupas);
 echo "</pre>";
 ?>
 
@@ -84,6 +87,7 @@ echo "</pre>";
                                                     imprime.dataset.quantidade = imprimeQnt
 
                                                 }
+                                                
 
                                             </script>
 
