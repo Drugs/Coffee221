@@ -4,6 +4,9 @@ $title = 'The COFFEE\'N\'JOIN';
 include './include/database.php';
 include './include/header.php';
 include './include/nave.php';
+$inf = "SELECT * FROM `produto` join galeria on galeria.fk_id_produto = produto.id_produto;";
+$query = mysqli_query($con, $inf);
+$result = mysqli_fetch_all($query, MYSQLI_ASSOC);
 ?>
 
 <body class="responsive">
@@ -19,7 +22,7 @@ include './include/nave.php';
 					console.log(this.responseText)
 				}
 			}
-			xmlhttp.open("GET", "pages/botanocarrinho.php?id=" + id_info_prod+"&cat="+categoria);
+			xmlhttp.open("GET", "pages/botanocarrinho.php?id=" + id_info_prod + "&cat=" + categoria);
 			xmlhttp.send();
 		}
 		// Script do encurtador de texto dos cards
@@ -76,75 +79,35 @@ include './include/nave.php';
 	<!-- Cards da Home do site -->
 	<div class="container">
 		<div class="row justify-content-evenly mt-5">
-			<div class="col-md-3">
-				<div class="card shadow-sm">
-					<img src="./Imagens/fototeste.jpg" heigth="">
-					<div class="card-body">
-						<div class="card-text feed-item-body post-body">
-							<div style="vertical-align: inherit;">
-								<div style="vertical-align: inherit;">
-									<h2 class="text-center">Caramelo Cremoso </h2>
+			<?php
+			$id = 1;
+			foreach ($result as $roupas) {
+				echo "
+				<div class='col-md-3'>
+					<div class='card shadow-sm'>
+						<div class='card-body'>
+							<a href='pages/produto.php?produto={$roupas['id_produto']}'><img src='imagens/{$roupas['endereco']}' class='card-img-top'></a>
+							<div class='card-text feed-item-body post-body'>
+								<div style='vertical-align: inherit;'>
+									<h2 class='text-center'>{$roupas['nome_produto']}</h2>
 								</div>
-								<div style="vertical-align: inherit;">
-									<p class="bia">Maior seletividade de grãos, sabor qualidade.</p>
+								<div style='vertical-align: inherit;'>
+									<p class='bia'>{$roupas['descricao']}</p>
 								</div>
-							</div>
-						</div>
-						<div class="d-flex justify-content-between align-items-center">
-							<div class="btn-group">
-								<button type="button" id='alvo' onclick='carrinho(1)' class="btn btn-sm btn-outline-secondary">Adicionar ao carrinho</button>
+								<div class='d-flex justify-content-between align-items-center'>
+									<div class='btn-group'>
+										<button type='button' id='{$id}' onclick='carrinho({$id})' class='btn btn-sm btn-outline-secondary'>Adicionar ao carrinho</button>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>
-
-			<div class="col-md-3">
-				<div class="card shadow-sm">
-					<img src="./Imagens/fototeste.jpg" heigth="">
-					<div class="card-body">
-						<div class="card-text feed-item-body post-body">
-							<div style="vertical-align: inherit;">
-								<div style="vertical-align: inherit;">
-									<h2 class="text-center">Caramelo Cremoso </h2>
-								</div>
-								<div style="vertical-align: inherit;">
-									<p class="bia">Maior seletividade de grãos, sabor qualidade.</p>
-								</div>
-							</div>
-						</div>
-						<div class="d-flex justify-content-between align-items-center">
-							<div class="btn-group">
-								<button type="button" id='alvo' onclick='carrinho(3)' class="btn btn-sm btn-outline-secondary">Adicionar ao carrinho</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-md-3">
-				<div class="card shadow-sm">
-					<img src="./Imagens/fototeste.jpg" heigth="">
-					<div class="card-body">
-						<div class="card-text feed-item-body post-body">
-							<div style="vertical-align: inherit;">
-								<div style="vertical-align: inherit;">
-									<h2 class="text-center">Caramelo Cremoso </h2>
-								</div>
-								<div style="vertical-align: inherit;">
-									<p class="bia">Maior seletividade de grãos, sabor qualidade.</p>
-								</div>
-							</div>
-						</div>
-						<div class="d-flex justify-content-between align-items-center">
-							<div class="btn-group">
-								<button type="button" id='alvo' onclick='carrinho(4)' class="btn btn-sm btn-outline-secondary">Adicionar ao carrinho</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+				</div>";
+				$id++;
+			}
+			?>
 		</div>
+	</div>
 	</div>
 	<!-- Parallax -->
 	<div class="mt-2 mb-2 parallax-home"></div>
