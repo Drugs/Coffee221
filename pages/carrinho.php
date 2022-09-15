@@ -13,12 +13,12 @@ and carrinho.fk_id_pessoa = {$_SESSION['id_pessoa']}";
 $query = mysqli_query($con, $consulta);
 $fetch = mysqli_fetch_all($query , MYSQLI_ASSOC);
 //-------------------roupas------------------------------------
-$consulta = "SELECT * FROM `carrinho` 
+$consulta2 = "SELECT * FROM `carrinho` 
 join item_de_carrinho on item_de_carrinho.fk_id_carrinho = carrinho.id_carrinho 
-join info_alimento on info_alimento.id_info_alimento = item_de_carrinho.fk_id_info_produto join produto on produto.id_produto = info_alimento.fk_id_produto 
+join info_roupa on info_roupa.id_info_roupa = item_de_carrinho.fk_id_info_produto join produto on produto.id_produto = info_roupa.fk_id_produto 
 WHERE item_de_carrinho.categoria ='roupa' 
 and carrinho.fk_id_pessoa = {$_SESSION['id_pessoa']}";
-$query = mysqli_query($con, $consulta);
+$query = mysqli_query($con, $consulta2);
 $fetch = mysqli_fetch_all($query , MYSQLI_ASSOC);
 echo "<pre>";
 var_dump($fetch);
