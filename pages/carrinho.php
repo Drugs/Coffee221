@@ -179,8 +179,8 @@ include '../include/nave-site.php';
                             </div>
 
                             <div class="d-flex justify-content-between">
-                                <p class="mt-4 mb-2" id='total'>Total</p>
-                                <p class="mt-4 mb-2" id='total'></p>
+                                <p class="mt-4 mb-2" >Total</p>
+                                <p class="mt-4 mb-2" id='total' >0</p>
 
                                 <script>
                                                 function quant(ide, fun, prod) {
