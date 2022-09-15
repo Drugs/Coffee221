@@ -1,13 +1,13 @@
 Ata da reunião 02/09
 	---------------------------------------------------------------------------------------------
 	Produtos - IMPORTANTEEEEEEEEEEEEEEE
-		Imagens - ok!
-		Descrições
-		Preço
-		Cadastrar no BD
-		Carregar as informações do produto do BD -> EM ANDAMENTO
+		Imagens - FEITO
+		Descrições - FEITO
+		Preço - FEITO
+		Cadastrar no BD - EM ANDAMENTO
+		Carregar as informações do produto do BD -> FEITO
 		Adicionar chamadas de ação [Adicionar ao carrinho, Compre AGORA!!!!] -> A FAZER
-		Mostrar informações de estoque -> EM ANDAMENTO
+		Mostrar informações de estoque -> FEITO
 	---------------------------------------------------------------------------------------------
 	Carrinho 
 		CARRINHO
@@ -37,7 +37,7 @@ Ata da reunião 02/09
 
 Sugestão - Mudar o diabo da imagem do Parallax 
 		Adicionar ao carrinho
-		Ajustar descrição e link pro produto
+		Ajustar descrição e link pro produto - FEITO
 
 	
 	---------------------------------------------------------------------------------------------
@@ -69,8 +69,8 @@ Sugestão - Mudar o diabo da imagem do Parallax
 	---------------------------------------------------------------------------------------------
 	Galeria
 		Busca - IMPORTANTEEEEEEEEEEEEEEE
-		Carregar as informações do BD-
-		Informação de categorias [Adicionar menu com as categorias]
+		Carregar as informações do BD - FEITO
+		Informação de categorias [Adicionar menu com as categorias] - A FAZER
 	---------------------------------------------------------------------------------------------
 	Finalizar compra
 		Revisão dos itens, sumário, subtotal.
