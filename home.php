@@ -18,7 +18,10 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
 	<!-- JavaScript da Home -->
 	<script>
 		// AJAX do carrinho de compras
-		function carrinho(id_info_prod, categoria) { //id info produto, 
+		function carrinho(id_info_prod, categoria) {
+			let idproduto = document.getElementById(id_info_prod)
+			console.log(idproduto)
+			//id info produto, 
 			//categoria: alimento ou roupa
 			//console.log(id_info_prod)
 			var xmlhttp = new XMLHttpRequest();
@@ -69,7 +72,6 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
 	<div class="container">
 		<div class="row justify-content-evenly mt-5">
 			<?php
-			$id = 1;
 			foreach ($result as $roupas) {
 				echo "
 				<div class='col-md-3'>
@@ -85,14 +87,13 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
 								</div>
 								<div class='d-flex justify-content-between align-items-center'>
 									<div class='btn-group'>
-										<button type='button' id='{$id}' onclick='carrinho({$id})' class='btn btn-sm btn-outline-secondary'>Adicionar ao carrinho</button>
+										<button type='button' onclick='carrinho(id_info_prod, categoria)' class='btn btn-sm btn-outline-secondary'>Adicionar ao carrinho</button>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>";
-				$id++;
 			}
 			?>
 		</div>
