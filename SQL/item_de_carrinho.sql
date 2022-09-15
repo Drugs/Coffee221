@@ -26,11 +26,11 @@ SET time_zone = "+00:00";
 --
 -- Estrutura da tabela `item_de_carrinho`
 --
-
 CREATE TABLE `item_de_carrinho` (
   `id_item_carrinho` int(11) NOT NULL,
   `fk_id_info_produto` int(11) NOT NULL,
   `fk_id_carrinho` int(11) NOT NULL,
+  `categoria` varchar(30) NOT NULL,
   `quantidade` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
