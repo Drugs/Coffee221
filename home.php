@@ -4,7 +4,12 @@ $title = 'The COFFEE\'N\'JOIN';
 include './include/database.php';
 include './include/header.php';
 include './include/nave.php';
-$inf = "SELECT * FROM `produto` join galeria on galeria.fk_id_produto = produto.id_produto;";
+$pesquisa = '';
+if (isset($_GET["submit"]) and $_GET["submit"] == "buscar") {
+	$pesquisa = $_GET['buscar'];
+}
+$inf = "SELECT * FROM `produto` JOIN galeria ON galeria.fk_id_produto = produto.id_produto WHERE produto.nome_produto LIKE '%{$pesquisa}%'
+OR produto.categoria LIKE '%{$pesquisa}%'";
 $query = mysqli_query($con, $inf);
 $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
 ?>

@@ -29,20 +29,22 @@ include "header.php";
                         <font style="vertical-align: inherit;">Sobre Cartão</font>
                     </font>
                 </a></li>
-                <li><a href="./pages/nossotime.php" class="nav-link px-2 text-white">
+            <li><a href="./pages/nossotime.php" class="nav-link px-2 text-white">
                     <font style="vertical-align: inherit;">
                         <font style="vertical-align: inherit;">Nosso Time</font>
                     </font>
                 </a></li>
-                <li><a href="./pages/carrinho.php" class="nav-link px-2 text-white">
+            <li><a href="./pages/carrinho.php" class="nav-link px-2 text-white">
                     <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;"><h4 id='icon'><i class="bi bi-cart4"></i></h4></font>
+                        <font style="vertical-align: inherit;">
+                            <h4 id='icon'><i class="bi bi-cart4"></i></h4>
+                        </font>
                     </font>
                 </a></li>
         </ul>
-
         <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-            <input type="search" class="form-control form-control-dark" style="margin-bottom: 2mm;" placeholder="Procurar..." aria-label="Procurar">
+            <input type="search" name="buscar" class="form-control form-control-dark" style="margin-bottom: 2mm;" placeholder="Procurar..." aria-label="Procurar">
+            <button type="submit" name="submit" value="buscar">Pesquisar</button>
         </form>
         <?php
         if (isset($_SESSION['id_usu']) and $_SESSION['id_usu'] != '') {
