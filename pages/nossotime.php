@@ -24,7 +24,7 @@ include "../include/nave-site.php";
                     <div class="cartao aluno-3">
                         <img class="imagens" src="../Imagens\imagens-nossotime/bian.png" alt="">
                         <h2>Bianca Nogueira</h2>
-                        <p>Chore ou ria, mas o prazo de entrega chaga...</p>
+                        <p>Chore ou ria, mas o prazo de entrega chega...</p>
                     </div>
                 </div>
                 <div class="col-md-4 coluna_4">
@@ -55,15 +55,15 @@ include "../include/nave-site.php";
                 </div>
                 <div class="col-md-4  coluna_4">
                     <div class="cartao aluno-3">
-                        <img class="imagens" src="https://picsum.photos/160/157" alt="">
+                        <img class="imagens" src="../Imagens\imagens-nossotime\" alt="">
                         <h2>Aluno 4</h2>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, dignissimos!</p>
                     </div>
                 </div>
                 <div class="col-md-4 coluna_4">
                     <div class="cartao aluno-3">
-                        <img class="imagens" src="https://picsum.photos/160/157" alt="">
-                        <h2>Aluno 5</h2>
+                        <img class="imagens" src="../Imagens\imagens-nossotime\duda.jpeg" alt="">
+                        <h2>Eduarda Venturini</h2>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, dignissimos!</p>
                     </div>
                 </div>
