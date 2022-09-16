@@ -7,16 +7,17 @@ include '../include/nave-site.php';
 //-------------------alimentos------------------------------------
 $consulta = "SELECT * FROM `carrinho` 
 join item_de_carrinho on item_de_carrinho.fk_id_carrinho = carrinho.id_carrinho 
-join info_alimento on info_alimento.id_info_alimento = item_de_carrinho.fk_id_info_produto join produto on produto.id_produto = info_alimento.fk_id_produto 
+join info_alimento on info_alimento.id_info_alimento = item_de_carrinho.fk_id_info_produto
+ join produto on produto.id_produto = info_alimento.fk_id_produto 
 join galeria on galeria.fk_id_produto = produto.id_produto
 WHERE item_de_carrinho.categoria ='alimento' 
 and carrinho.fk_id_pessoa = {$_SESSION['id_pessoa']}";
 $query = mysqli_query($con, $consulta);
 $alimento = mysqli_fetch_all($query , MYSQLI_ASSOC);
-var_dump($consulta);
-echo "<pre>";
-var_dump($alimento);
-echo "</pre>";
+//var_dump($consulta);
+//echo "<pre>";
+//var_dump($alimento);
+//echo "</pre>";
 //-------------------roupas------------------------------------
 $consulta = "SELECT * FROM `carrinho` 
 join item_de_carrinho on item_de_carrinho.fk_id_carrinho = carrinho.id_carrinho 
@@ -27,10 +28,10 @@ WHERE item_de_carrinho.categoria ='roupa'
 and carrinho.fk_id_pessoa = {$_SESSION['id_pessoa']}";
 $query = mysqli_query($con, $consulta);
 $roupa = mysqli_fetch_all($query , MYSQLI_ASSOC);
-var_dump($consulta);
-echo "<pre>";
-var_dump($roupa);
-echo "</pre>";
+//var_dump($consulta);
+//echo "<pre>";
+//var_dump($roupa);
+//echo "</pre>";
 ?>
 
 <div class="container py-5 h-100">
@@ -51,6 +52,7 @@ echo "</pre>";
                             
 <!---Primeiro produto-->      
 	<?php
+    $bia=0;
 		$anterior = 0; 
 		foreach($roupa as $vestido ){
 			$atual = $vestido['fk_id_info_produto']; 
@@ -69,15 +71,15 @@ echo "</pre>";
                                 </div>
                             </div>
 							<div class='d-flex flex-row align-items-center'>
-								<button onclick=\"quant('item1', 'add', 'prod1')\" type='button' class='mr-2 btn btn-dark'>+</button>
-								<button onclick=\"quant('item1', 'sub', 'prod1')\" type='button' class='ms-4 btn btn-dark'>-</button>
+								<button onclick=\"quant('roup{$bia}', 'add', 'pr{$bia}')\" type='button' class='mr-2 btn btn-dark'>+</button>
+								<button onclick=\"quant('roup{$bia}', 'sub', 'pr{$bia}')\" type='button' class='ms-4 btn btn-dark'>-</button>
 							</div>
 							<div class='d-flex flex-row align-items-center'>
 								<div style='width: 80px;'>
-									<h5 id='item1' class='fw-normal mb-0' data-quantidade='{$vestido['quantidade']}' data-preco='{$vestido['preco']}'>{$vestido['quantidade']}</h5>
+									<h5 id='roup{$bia}' class='fw-normal mb-0' data-quantidade='{$vestido['quantidade']}' data-preco='{$vestido['preco']}'>{$vestido['quantidade']}</h5>
 								</div>
 								<div style='width: 90px;'>
-									<h5 id='prod1' class='mb-0'>R$ {$subtotal}</h5>
+									<h5 id='pr{$bia}' class='mb-0'>R$ {$subtotal}</h5>
 								</div>
 								<div style='width: 60px;'>
 									<a><i class='ms-2 bi bi-trash3-fill'></i></a>
@@ -88,9 +90,10 @@ echo "</pre>";
 				</div>";
 			}
 			$anterior = $atual; 
+            $bia++;
 		}
 
- 
+         $bi=0;
         $anterior = 0; 
 		foreach($alimento as $cafe ){
 			$atual = $cafe['fk_id_info_produto']; 
@@ -109,15 +112,15 @@ echo "</pre>";
                                 </div>
                             </div>
 							<div class='d-flex flex-row align-items-center'>
-								<button onclick=\"quant('item1', 'add', 'prod1')\" type='button' class='mr-2 btn btn-dark'>+</button>
-								<button onclick=\"quant('item1', 'sub', 'prod1')\" type='button' class='ms-4 btn btn-dark'>-</button>
+								<button onclick=\"quant('comida{$bi}', 'add', 'vu{$bi}')\" type='button' class='mr-2 btn btn-dark'>+</button>
+								<button onclick=\"quant('comida{$bi}', 'sub', 'vu{$bi}')\" type='button' class='ms-4 btn btn-dark'>-</button>
 							</div>
 							<div class='d-flex flex-row align-items-center'>
 								<div style='width: 80px;'>
-									<h5 id='item1' class='fw-normal mb-0' data-quantidade='{$cafe['quantidade']}' data-preco='{$cafe['preco']}'>{$cafe['quantidade']}</h5>
+									<h5 id='comida{$bi}' class='fw-normal mb-0' data-quantidade='{$cafe['quantidade']}' data-preco='{$cafe['preco']}'>{$cafe['quantidade']}</h5>
 								</div>
 								<div style='width: 90px;'>
-									<h5 id='prod1' class='mb-0'>R$ {$subtotal}</h5>
+									<h5 id='vu{$bi}' class='mb-0'>R$ {$subtotal}</h5>
 								</div>
 								<div style='width: 60px;'>
 									<a><i class='ms-2 bi bi-trash3-fill'></i></a>
@@ -128,108 +131,11 @@ echo "</pre>";
 				</div>";
 			}
 			$anterior = $atual; 
+            $bi++;
 		}
                                     
-                                        ?>
+        ?>
                                       
-                                       
-
-
-                            <!---Segundo produto-->
-                            <div class="card mb-3" style="box-shadow: 10px 5px 5px ;">
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between">
-                                        <div class="d-flex flex-row align-items-center">
-                                            <div>
-                                                <img src="../Imagens/caffeine2.jpg" class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
-                                            </div>
-                                            <div class="ms-3">
-                                                <h5>Camisa de café</h5>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex flex-row align-items-center">
-                                            <button  onclick="quant('item2', 'add', 'prod2')" type="button" class="mr-2 btn btn-dark">+</button>
-                                            <button  onclick="quant('item2', 'sub', 'prod2')" type="button" class="ms-4 btn btn-dark">-</button>
-                                        </div>
-                                        <div class="d-flex flex-row align-items-center">
-                                            <div style="width: 80px;">
-                                            <h5 id='item2' class="fw-normal mb-0" data-quantidade="1" data-preco="1000" >1</h5>
-                                            </div>
-                                            <div style="width: 90px;">
-                                                <h5 id='prod2' class="mb-0">$1000</h5>
-                                            </div>
-                                            <div style="width: 60px;">
-                                                <a><i class="bi bi-trash3-fill"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <!---Terceiro produto-->
-                            <div class="card mb-3" style="box-shadow: 10px 5px 5px;">
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between">
-                                        <div class="d-flex flex-row align-items-center">
-                                            <div>
-                                                <img src="../Imagens/caffeine2.jpg" class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
-                                            </div>
-                                            <div class="ms-3">
-                                                <h5>Camisa de café</h5>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex flex-row align-items-center">
-                                        <button onclick="quant('item3', 'add', 'prod3')" type="button" class="mr-2 btn btn-dark">+</button>
-                                        <button onclick="quant('item3', 'sub', 'prod3')" type="button" class="ms-4 btn btn-dark">-</button>
-                                        </div>
-                                        <div class="d-flex flex-row align-items-center">
-                                            <div style="width: 60px;">
-                                            <h5 id='item3' class="fw-normal mb-0" data-quantidade="1" data-preco="1199">1</h5>
-                                            </div>
-                                            <div style="width: 80px;">
-                                                <h5 id='prod3' class="mb-0" >$1199</h5>
-                                            </div>
-                                            <div style="width: 60px;">
-                                                <a><i class="bi bi-trash3-fill"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            
-                            <!---QUARTO  produto-->
-                            <div class="card mb-3 mb-lg-0" style="box-shadow: 10px 5px 5px ;">
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between">
-                                        <div class="d-flex flex-row align-items-center">
-                                            <div>
-                                                <img src="../Imagens/caffeine2.jpg" class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
-                                            </div>
-                                            <div class="ms-3">
-                                                <h5>Camisa de café</h5>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="d-flex flex-row align-items-center">
-                                        <button onclick="quant('item4', 'add', 'prod4')" type="button" class="mr-2 btn btn-dark">+</button>
-                                        <button onclick="quant('item4', 'sub', 'prod4')" type="button" class="ms-4 btn btn-dark">-</button>
-                                        </div>
-                                        <div class="d-flex flex-row align-items-center">
-                                            <div style="width: 60px;">
-                                            <h5 id='item4' class="fw-normal mb-0" data-quantidade="1" data-preco="1799">1</h5>
-                                            </div>
-                                            <div style="width: 80px;">
-                                                <h5 class="mb-0" id='prod4'>$1799</h5>
-                                            </div>
-                                            <div style="width: 60px;">
-                                                <a><i class="bi bi-trash3-fill"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
                             <div class="d-flex justify-content-between">
                                 <p class="mt-4 mb-2" >Total</p>
