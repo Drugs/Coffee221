@@ -6,10 +6,6 @@ include '../include/database.php';
 $id_produto = $_GET['id']; //id do produto
 $categoria = $_GET['categoria'];
 
-$id_produto = $_GET['id']; //id do produto
-$categoria = $_GET['categoria'];
-
-
 if (isset($_GET['id']) and $_GET['id'] != 0) { //se produto existe passa
 	if (isset($_SESSION['id_usu']) and isset($_SESSION['id_pessoa'])) {
 		//echo "o usuário existe."; 
