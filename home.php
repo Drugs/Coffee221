@@ -8,8 +8,8 @@ $pesquisa = '';
 if (isset($_GET["submit"]) and $_GET["submit"] == "buscar") {
 	$pesquisa = $_GET['buscar'];
 }
-$inf = "SELECT * FROM `produto` JOIN galeria ON galeria.fk_id_produto = produto.id_produto WHERE produto.nome_produto LIKE '%{$pesquisa}%'
-OR produto.categoria LIKE '%{$pesquisa}%'";
+$inf = "SELECT *, SUBSTRING(descricao, 1, 50) AS descricao FROM `produto` JOIN galeria ON galeria.fk_id_produto = produto.id_produto
+WHERE produto.nome_produto LIKE '%{$pesquisa}%' OR produto.categoria LIKE '%{$pesquisa}%' LIMIT 4";
 $query = mysqli_query($con, $inf);
 $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
 ?>
@@ -18,7 +18,10 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
 	<!-- JavaScript da Home -->
 	<script>
 		// AJAX do carrinho de compras
-		function carrinho(id_info_prod, categoria) { //id info produto, 
+		function carrinho(id_info_prod, categoria) {
+			let idproduto = document.getElementById(id_info_prod)
+			console.log(idproduto)
+			//id info produto, 
 			//categoria: alimento ou roupa
 			//console.log(id_info_prod)
 			var xmlhttp = new XMLHttpRequest();
@@ -30,22 +33,6 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
 			xmlhttp.open("GET", "pages/botanocarrinho.php?id=" + id_info_prod + "&cat=" + categoria);
 			xmlhttp.send();
 		}
-		// Script do encurtador de texto dos cards
-		/*function leiamore() {
-			var pontos = document.getElementById("pontos");
-			var maisTexto = document.getElementById("mais");
-			var btnLeiaMais = document.getElementById("btnLeiaMais");
-
-			if (pontos.style.display === "none") {
-				pontos.style.display = "inline";
-				maisTexto.style.display = "none";
-				btnLeiaMais.innerHTML = "Leia Mais";
-			} else {
-				pontos.style.display = "none";
-				maisTexto.style.display = "inline";
-				btnLeiaMais.innerHTML = "Leia Menos";
-			}
-		}*/
 	</script>
 
 	<!-- Slider da Home do site -->
@@ -85,7 +72,6 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
 	<div class="container">
 		<div class="row justify-content-evenly mt-5">
 			<?php
-			$id = 1;
 			foreach ($result as $roupas) {
 				echo "
 				<div class='col-md-3'>
@@ -97,18 +83,17 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
 									<h2 class='text-center'>{$roupas['nome_produto']}</h2>
 								</div>
 								<div style='vertical-align: inherit;'>
-									<p class='bia'>{$roupas['descricao']}</p>
+									<p class='bia'>{$roupas['descricao']}...</p>
 								</div>
 								<div class='d-flex justify-content-between align-items-center'>
 									<div class='btn-group'>
-										<button type='button' id='{$id}' onclick='carrinho({$id})' class='btn btn-sm btn-outline-secondary'>Adicionar ao carrinho</button>
+										<button type='button' onclick='carrinho(id_info_prod, categoria)' class='btn btn-sm btn-outline-secondary'>Adicionar ao carrinho</button>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>";
-				$id++;
 			}
 			?>
 		</div>

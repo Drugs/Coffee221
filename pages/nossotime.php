@@ -22,9 +22,9 @@ include "../include/nave-site.php";
                 </div>
                 <div class="col-md-4 coluna_4">
                     <div class="cartao aluno-3">
-                        <img class="imagens" src="https://picsum.photos/160/157" alt="">
-                        <h2>Aluno 1</h2>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, dignissimos!</p>
+                        <img class="imagens" src="../Imagens\imagens-nossotime/bian.png" alt="">
+                        <h2>Bianca Nogueira</h2>
+                        <p>Chore ou ria, mas o prazo de entrega chaga...</p>
                     </div>
                 </div>
                 <div class="col-md-4 coluna_4">
