@@ -37,12 +37,12 @@ CREATE TABLE `galeria` (
 -- Extraindo dados da tabela `galeria`
 --
 
-INSERT INTO `galeria` (`id_galeria`, `endereco`, `fk_id_produto`) VALUES
-(1, 'camisa1.png', 1),
-(2, 'camisa2.png', 1),
-(3, 'Camisa3.png', 1),
-(4, 'camisavaca.jpg', 2),
-(5, 'caf2.png', 8);
+INSERT INTO `galeria` ( `endereco`, `fk_id_produto`) VALUES
+('camisa1.png', 1),
+('camisa2.png', 1),
+('Camisa3.png', 1),
+('camisavaca.jpg', 2),
+('caf2.png', 8);
 
 --
 -- Índices para tabelas despejadas
