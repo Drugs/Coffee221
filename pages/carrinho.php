@@ -47,11 +47,9 @@ echo "</pre>";
                             </div>
 
                             
-                            <!---Primeiro produto-->
-                            
-                                        
-                                    <?php
-									$anterior = 0; 
+<!---Primeiro produto-->      
+	<?php
+		$anterior = 0; 
 		foreach($roupa as $vestido ){
 			$atual = $vestido['fk_id_info_produto']; 
 			if ($atual != $anterior){ 
