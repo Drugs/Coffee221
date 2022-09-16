@@ -74,7 +74,7 @@ echo $consulta2;
 			 <td>{$endereco['estado']}</td>
 			 </td>
 			 <td>{$endereco['complemento']}</td>
-			 <td><a class='btn btn-warning' href='.php?var={$endereco['id_endereco']}'>Atualizar</a> 
+			 <td><a class='btn btn-warning' href='atualizar_endereco.php?var={$endereco['id_endereco']}'>Atualizar</a> 
 			 </td>
 			 <td><a class='btn btn-outline-warning' href='.php?var={$endereco['id_endereco']}'>Deletar</a> </td>
 					   </tr>";
