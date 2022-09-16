@@ -116,7 +116,7 @@
                                           
                             <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                            <a class="w-100 btn btn-lg btn-dark" href="atualizar_endereco.php">Atualizar end.</a>
+                            <a class="btn btn-sm btn-dark" href="atualizar_endereco.php">Atualizar end.</a>
                   <button type="button"  onclick="document.location= 'atualizar_usuario.php '"  class="btn btn-sm btn-warning">Atualizar</button>
                 </div>
                               
