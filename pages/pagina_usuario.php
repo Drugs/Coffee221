@@ -11,13 +11,13 @@
     echo "o usuário não existe.";
     header("Location:login.php?login=inexistente");
   }
-	$consulta = "SELECT * FROM pessoa 
-	join usuario on usuario.fk_id_pessoa = id_pessoa 
-	WHERE id_usuario={$_SESSION['id_usu']}";
+	$consulta = "SELECT * FROM pessoa join usuario on usuario.fk_id_pessoa = id_pessoa
+   join endereco on endereco.fk_id_pessoa=id_pessoa WHERE id_pessoa={$_SESSION['id_usu']}";
 	$query = mysqli_query($con, $consulta);
 	$pessoa = mysqli_fetch_assoc($query);
+
 	include'../include/cabecalho_usuario.php';
-  #var_dump($pessoa);
+  #var_dump($endereco);
 
 
 ?>
@@ -80,71 +80,74 @@
                   </li>
                 </ul>
             </nav>
-    
       
-            <main class="col-md-6 ms-sm-auto col-lg-10 px-md-4"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
-              <?php
-              #var_dump($pessoa);?>
-              <canvas width="667" height="281" style="display: block; width: 667px; height: 281px;"></canvas> 
-                      <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Foto de usuário</text>
-                      </svg>
-                      <div class="card-body">
-                          <p class="card-text"><?php 
-                                    $con=  new mysqli($host, $user, $pass, $db);
-                                    // Check connection
-                                    if ($con->connect_error) {
-                                      die("Conecção falha: " . $con->connect_error);
-                                    }
+            <main class="col-md-3 ms-sm-auto col-lg-10 px-md-4">
+                       <?php
+                      //var_dump($endereco);?>
+                  <canvas width="320" height="2" style="display: block; width: 320px; height: 2px;"></canvas> 
+                          <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Foto de usuário</text>
+                          </svg>
+                          <div class="card-body">
+                              <p class="card-text"><?php 
+                                        $con=  new mysqli($host, $user, $pass, $db);
+                                        // Check connection
+                                        if ($con->connect_error) {
+                                          die("Conecção falha: " . $con->connect_error);
+                                        }
 
-                                    $sql = "SELECT * FROM pessoa 
-                                    join usuario on usuario.fk_id_pessoa = id_pessoa 
-                                    WHERE id_pessoa={$_SESSION['id_pessoa']}";
-                                    $result = $con->query($sql);
+                                        $sql = "SELECT * FROM pessoa 
+                                        join usuario on usuario.fk_id_pessoa = id_pessoa 
+                                        WHERE id_pessoa={$_SESSION['id_pessoa']}";
+                                        $result = $con->query($sql);
 
-                                    if ($result->num_rows > 0) {
-                                      // output data of each row
-                                      while($_GET= $result->fetch_assoc()) {
-                                        echo "Usuário: " . $_GET['nome']. "<br>";
-                                      }
-                                    } else {
-                                      echo "0 resultados";
-                                    }
-                                    $con->close();
-                                    ?></p>
-                        <div class="d-flex justify-content-between align-items-center">
-                          <div class="btn-group">
-                          
-                            <button type="button" onclick="document.location= 'atualizar_usuario.php '" class="btn btn-sm btn-warning">Atualizar</button>
-                          </div>
-                          <small class="text-muted"><?php 
-                                    $con=  new mysqli($host, $user, $pass, $db);
-                                    // Check connection
-                                    if ($con->connect_error) {
-                                      die("Conecção falha: " . $con->connect_error);
-                                    }
+                                        if ($result->num_rows > 0) {
+                                          // output data of each row
+                                          while($_GET= $result->fetch_assoc()) {
+                                            echo "Usuário: " . $_GET['nome'].
+                                             "<br> endereço: " . $_GET['endereco'].  "<br>";
+                                          }
+                                        } else {
+                                          echo "0 resultados";
+                                        }
+                                        $con->close();
+                                        ?></p>
+                                          
+                            <div class="d-flex justify-content-between align-items-center">
+                              <div class="btn-group">
+                              
+                                <button type="button" onclick="document.location= 'atualizar_usuario.php '" class="btn btn-sm btn-warning">Atualizar</button>
+                                
+                              </div>
+                              <small class="text-muted"><?php 
+                                        $con=  new mysqli($host, $user, $pass, $db);
+                                        // Check connection
+                                        if ($con->connect_error) {
+                                          die("Conecção falha: " . $con->connect_error);
+                                        }
 
-                                    $sql = "SELECT * FROM pessoa 
-                                    join usuario on usuario.fk_id_pessoa = id_pessoa 
-                                    WHERE id_pessoa={$_SESSION['id_pessoa']}";
-                                    $result = $con->query($sql);
+                                        $sql = "SELECT * FROM pessoa 
+                                        join usuario on usuario.fk_id_pessoa = id_pessoa 
+                                        WHERE id_pessoa={$_SESSION['id_pessoa']}";
+                                        $result = $con->query($sql);
 
-                                    if ($result->num_rows > 0) {
-                                      // output data of each row
-                                      while($_GET= $result->fetch_assoc()) {
-                                        echo "Id: " . $_GET['id_pessoa']. "<br>";
-                                      }
-                                    } else {
-                                      echo "0 resultados";
-                                    }
-                                    $con->close();
-                                    ?></small>
-                        </div>
-                      </div>
-              </main>
-              
- </body>
+                                        if ($result->num_rows > 0) {
+                                          // output data of each row
+                                          while($_GET= $result->fetch_assoc()) {
+                                            echo "Id: " . $_GET['id_pessoa']. "<br>";
+                                          }
+                                        } else {
+                                          echo "0 resultados";
+                                        }
+                                        $con->close();
+                                        ?></small>
+
+                                    </div>
+                                </main>
+                              </div>
+                            </div>  
+    </body>
 
 
   <?php
