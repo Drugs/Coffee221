@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 08-Set-2022 às 20:46
+-- Tempo de geração: 17-Set-2022 às 00:32
 -- Versão do servidor: 10.4.24-MariaDB
 -- versão do PHP: 8.0.19
 
@@ -26,6 +26,7 @@ SET time_zone = "+00:00";
 --
 -- Estrutura da tabela `item_de_carrinho`
 --
+
 CREATE TABLE `item_de_carrinho` (
   `id_item_carrinho` int(11) NOT NULL,
   `fk_id_info_produto` int(11) NOT NULL,
@@ -39,11 +40,12 @@ CREATE TABLE `item_de_carrinho` (
 --
 
 INSERT INTO `item_de_carrinho` (`id_item_carrinho`, `fk_id_info_produto`, `fk_id_carrinho`, `categoria`, `quantidade`) VALUES
-(1, 1, 2, 'alimento', 20),
-(2, 3, 3, 'alimento', 1),
-(3, 8, 3, 'roupa', 1),
-(4, 4, 3, 'alimento', 1);
-
+(4, 1, 1, 'alimento', 12),
+(9, 3, 7, 'alimento', 1),
+(10, 8, 8, 'roupa', 1),
+(11, 3, 8, 'alimento', 1),
+(12, 4, 8, 'alimento', 1),
+(13, 9, 7, 'roupa', 1);
 
 --
 -- Índices para tabelas despejadas
@@ -63,7 +65,7 @@ ALTER TABLE `item_de_carrinho`
 -- AUTO_INCREMENT de tabela `item_de_carrinho`
 --
 ALTER TABLE `item_de_carrinho`
-  MODIFY `id_item_carrinho` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_item_carrinho` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
