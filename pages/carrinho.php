@@ -13,6 +13,7 @@ WHERE item_de_carrinho.categoria ='alimento'
 and carrinho.fk_id_pessoa = {$_SESSION['id_pessoa']}";
 $query = mysqli_query($con, $consulta);
 $alimento = mysqli_fetch_all($query , MYSQLI_ASSOC);
+var_dump($consulta);
 echo "<pre>";
 var_dump($alimento);
 echo "</pre>";
@@ -26,6 +27,7 @@ WHERE item_de_carrinho.categoria ='roupa'
 and carrinho.fk_id_pessoa = {$_SESSION['id_pessoa']}";
 $query = mysqli_query($con, $consulta);
 $roupa = mysqli_fetch_all($query , MYSQLI_ASSOC);
+var_dump($consulta);
 echo "<pre>";
 var_dump($roupa);
 echo "</pre>";
