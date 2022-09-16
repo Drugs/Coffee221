@@ -10,19 +10,19 @@ if (isset($_GET["submit"]) and $_GET["submit"] == "buscar") {
 }
 //-------------------roupas------------------------------------
 $inf = "SELECT *, SUBSTRING(descricao, 1, 50) AS descricao FROM `produto` 
-JOIN info_roupa ON info_roupa.fk_id_produto =produto.id_produto
+JOIN info_roupa ON info_roupa.fk_id_produto = produto.id_produto
 JOIN galeria ON galeria.fk_id_produto = produto.id_produto 
 WHERE produto.nome_produto LIKE '%%' OR produto.categoria LIKE '%%' LIMIT 4";
 #var_dump($inf);
 $query = mysqli_query($con, $inf);
 $roupa = mysqli_fetch_all($query, MYSQLI_ASSOC);
 //-------------------alimentos------------------------------------
-$inf = "SELECT *, SUBSTRING(descricao, 1, 50) AS descricao FROM `produto` 
-JOIN info_alimento ON info_alimento.fk_id_produto =produto.id_produto
+$inf2 = "SELECT *, SUBSTRING(descricao, 1, 50) AS descricao FROM `produto` 
+JOIN info_alimento ON info_alimento.fk_id_produto = produto.id_produto
 JOIN galeria ON galeria.fk_id_produto = produto.id_produto 
 WHERE produto.nome_produto LIKE '%%' OR produto.categoria LIKE '%%' LIMIT 4";
 #var_dump($inf);
-$query = mysqli_query($con, $inf);
+$query = mysqli_query($con, $inf2);
 $alimento = mysqli_fetch_all($query, MYSQLI_ASSOC);
 ?>
 
@@ -30,9 +30,9 @@ $alimento = mysqli_fetch_all($query, MYSQLI_ASSOC);
 	<!-- JavaScript da Home -->
 	<script>
 		// AJAX do carrinho de compras
-		function carrinho(id_info_prod, categoria) {
-			let idproduto = document.getElementById(id_info_prod)
-			console.log(idproduto)
+		function carrinho(id_info_produto, categoria) {
+			console.log(categoria)
+			console.log(id_info_produto)
 			//id info produto, 
 			//categoria: alimento ou roupa
 			//console.log(id_info_prod)
@@ -42,7 +42,7 @@ $alimento = mysqli_fetch_all($query, MYSQLI_ASSOC);
 					console.log(this.responseText)
 				}
 			}
-			xmlhttp.open("GET", "pages/botanocarrinho.php?id=" + id_info_prod + "&cat=" + categoria);
+			xmlhttp.open("GET", "pages/botanocarrinho.php?id=" + id_info_produto + "&cat=" + categoria);
 			xmlhttp.send();
 		}
 	</script>
