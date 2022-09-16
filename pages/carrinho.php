@@ -56,30 +56,31 @@ echo "</pre>";
 			$atual = $vestido['fk_id_info_produto']; 
 			if ($atual != $anterior){ 
 				$subtotal = $vestido['quantidade'] * $vestido['preco'];
-				echo"<div class='card mb-3' style='box-shadow: 10px 5px 5px ;'>
+				echo"
+                <div class='card mb-3' style='box-shadow: 10px 5px 5px ;'>
 					<div class='card-body'>
 						<div class='d-flex justify-content-between'>
 							<div class='d-flex flex-row align-items-center'>
 								<div>
 									<img src = '../imagens/{$vestido['endereco']}' class='img-fluid rounded-3' alt='Shopping item' style='width: 65px;'>
 								</div>
-							</div>
-							<div class='mt-3'>
-								<h5>{$vestido['nome_produto']}</h5>
-							</div>
+                                <div class=' ms-3 '>
+                                    <h5>{$vestido['nome_produto']}</h5>
+                                </div>
+                            </div>
 							<div class='d-flex flex-row align-items-center'>
 								<button onclick=\"quant('item1', 'add', 'prod1')\" type='button' class='mr-2 btn btn-dark'>+</button>
 								<button onclick=\"quant('item1', 'sub', 'prod1')\" type='button' class='ms-4 btn btn-dark'>-</button>
 							</div>
 							<div class='d-flex flex-row align-items-center'>
-								<div style='width: 60px;'>
+								<div style='width: 80px;'>
 									<h5 id='item1' class='fw-normal mb-0' data-quantidade='{$vestido['quantidade']}' data-preco='{$vestido['preco']}'>{$vestido['quantidade']}</h5>
 								</div>
-								<div style='width: 80px;'>
+								<div style='width: 90px;'>
 									<h5 id='prod1' class='mb-0'>R$ {$subtotal}</h5>
 								</div>
 								<div style='width: 60px;'>
-									<a><i class='bi bi-trash3-fill'></i></a>
+									<a><i class='ms-2 bi bi-trash3-fill'></i></a>
 								</div>
 							</div>            
 						</div>
@@ -89,11 +90,45 @@ echo "</pre>";
 			$anterior = $atual; 
 		}
 
-
-                                    foreach($alimento as $consulta ){
-                                       // echo"{$consulta['sabor']}";
  
-									}
+        $anterior = 0; 
+		foreach($alimento as $cafe ){
+			$atual = $cafe['fk_id_info_produto']; 
+			if ($atual != $anterior){ 
+				$subtotal = $cafe['quantidade'] * $cafe['preco'];
+				echo"
+                <div class='card mb-3' style='box-shadow: 10px 5px 5px ;'>
+					<div class='card-body'>
+						<div class='d-flex justify-content-between'>
+							<div class='d-flex flex-row align-items-center'>
+								<div>
+									<img src = '../imagens/{$cafe['endereco']}' class='img-fluid rounded-3' alt='Shopping item' style='width: 65px;'>
+								</div>
+                                <div class=' ms-3 '>
+                                    <h5>{$cafe['sabor']}</h5>
+                                </div>
+                            </div>
+							<div class='d-flex flex-row align-items-center'>
+								<button onclick=\"quant('item1', 'add', 'prod1')\" type='button' class='mr-2 btn btn-dark'>+</button>
+								<button onclick=\"quant('item1', 'sub', 'prod1')\" type='button' class='ms-4 btn btn-dark'>-</button>
+							</div>
+							<div class='d-flex flex-row align-items-center'>
+								<div style='width: 80px;'>
+									<h5 id='item1' class='fw-normal mb-0' data-quantidade='{$cafe['quantidade']}' data-preco='{$cafe['preco']}'>{$cafe['quantidade']}</h5>
+								</div>
+								<div style='width: 90px;'>
+									<h5 id='prod1' class='mb-0'>R$ {$subtotal}</h5>
+								</div>
+								<div style='width: 60px;'>
+									<a><i class='ms-2 bi bi-trash3-fill'></i></a>
+								</div>
+							</div>            
+						</div>
+					</div>
+				</div>";
+			}
+			$anterior = $atual; 
+		}
                                     
                                         ?>
                                       
@@ -117,10 +152,10 @@ echo "</pre>";
                                             <button  onclick="quant('item2', 'sub', 'prod2')" type="button" class="ms-4 btn btn-dark">-</button>
                                         </div>
                                         <div class="d-flex flex-row align-items-center">
-                                            <div style="width: 60px;">
+                                            <div style="width: 80px;">
                                             <h5 id='item2' class="fw-normal mb-0" data-quantidade="1" data-preco="1000" >1</h5>
                                             </div>
-                                            <div style="width: 80px;">
+                                            <div style="width: 90px;">
                                                 <h5 id='prod2' class="mb-0">$1000</h5>
                                             </div>
                                             <div style="width: 60px;">
