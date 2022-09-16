@@ -13,7 +13,7 @@ $inf = "SELECT *, SUBSTRING(descricao, 1, 50) AS descricao FROM `produto`
 JOIN info_roupa ON info_roupa.fk_id_produto =produto.id_produto
 JOIN galeria ON galeria.fk_id_produto = produto.id_produto 
 WHERE produto.nome_produto LIKE '%%' OR produto.categoria LIKE '%%' LIMIT 4";
-var_dump($inf);
+#var_dump($inf);
 $query = mysqli_query($con, $inf);
 $roupa = mysqli_fetch_all($query, MYSQLI_ASSOC);
 //-------------------alimentos------------------------------------
@@ -21,7 +21,7 @@ $inf = "SELECT *, SUBSTRING(descricao, 1, 50) AS descricao FROM `produto`
 JOIN info_alimento ON info_alimento.fk_id_produto =produto.id_produto
 JOIN galeria ON galeria.fk_id_produto = produto.id_produto 
 WHERE produto.nome_produto LIKE '%%' OR produto.categoria LIKE '%%' LIMIT 4";
-var_dump($inf);
+#var_dump($inf);
 $query = mysqli_query($con, $inf);
 $alimento = mysqli_fetch_all($query, MYSQLI_ASSOC);
 ?>
@@ -84,8 +84,8 @@ $alimento = mysqli_fetch_all($query, MYSQLI_ASSOC);
 	<div class="container">
 		<div class="row justify-content-evenly mt-5">
 			<?php
-	foreach ($roupa as $roupas) {
-		echo "
+			foreach ($roupa as $roupas) {
+				echo "
 		<div class='col-md-3'>
 			<div class='card shadow-sm'>
 				<div class='card-body'>
@@ -99,15 +99,24 @@ $alimento = mysqli_fetch_all($query, MYSQLI_ASSOC);
 						</div>
 						<div class='d-flex justify-content-between align-items-center'>
 							<div class='btn-group'>
-								<button type='button' onclick=\"carrinho({$roupas["id_info_roupa"]},'roupa')\" class='btn btn-sm btn-outline-secondary'>Adicionar ao carrinho</button>
+								<button type='button' onclick='carrinho({$roupas["id_info_roupa"]},'roupa')' class='btn btn-sm btn-outline-secondary'>Adicionar ao carrinho</button>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>";
-		//var_dump($roupas);
-	}
+				//var_dump($roupas);
+			}
+			?>
+		</div>
+	</div>
+	<!-- Parallax -->
+	<div class="mt-2 mb-2 parallax-home"></div>
+	<!-- Cards Home do site -->
+	<div class="container">
+		<div class="row justify-content-evenly">
+			<?php
 
 			foreach ($alimento as $alimentos) {
 				echo "
@@ -124,7 +133,7 @@ $alimento = mysqli_fetch_all($query, MYSQLI_ASSOC);
 								</div>
 								<div class='d-flex justify-content-between align-items-center'>
 									<div class='btn-group'>
-										<button type='button' onclick=\"carrinho({$alimentos["id_info_alimento"]},'alimento')\" class='btn btn-sm btn-outline-secondary'>Adicionar ao carrinho</button>
+										<button type='button' onclick='carrinho({$alimentos["id_info_alimento"]},'alimento')' class='btn btn-sm btn-outline-secondary'>Adicionar ao carrinho</button>
 									</div>
 								</div>
 							</div>
@@ -134,82 +143,6 @@ $alimento = mysqli_fetch_all($query, MYSQLI_ASSOC);
 				//var_dump($alimentos);
 			}
 			?>
-		</div>
-	</div>
-	<!-- Parallax -->
-	<div class="mt-2 mb-2 parallax-home"></div>
-	<!-- Cards Home do site -->
-	<div class="container">
-		<div class="row justify-content-evenly">
-
-			<div class="col-md-4">
-				<div class="card shadow-sm ">
-					<img src="./Imagens/fototeste.jpg" heigth=''>
-					<div class="card-body">
-						<p class="card-text">
-						<div style="vertical-align: inherit;">
-							<div style="vertical-align: inherit;">
-								<h2 class="text-center">Grão de café PREMIUM </h2>
-							</div>
-							<div style="vertical-align: inherit;">
-								<h6 class="car">Nossa mais nova capsula Caramelo Cremoso, uma explosão de sabores com a doçura na medida certa. Com notas de baunilha com canela e o nosso mais refinado caramelo.</h6>
-							</div>
-						</div>
-						</p>
-						<div class="d-flex justify-content-between align-items-center">
-							<div class="btn-group">
-								<button type="button" id='alvo' onclick='carrinho()' class="btn btn-sm btn-outline-secondary">Adicionar ao carrinho</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-md-4">
-				<div class="card shadow-sm ">
-					<img src="./Imagens/fototeste.jpg" heigth="">
-					<div class="card-body">
-						<p class="card-text">
-						<div style="vertical-align: inherit;">
-							<div style="vertical-align: inherit;">
-								<h2 class="text-center">Caramelo Cremoso </h2>
-							</div>
-							<div style="vertical-align: inherit;">
-								<h6 class="car">Nossa mais nova capsula Caramelo Cremoso, uma explosão de sabores com a doçura na medida certa. Com notas de baunilha com canela e o nosso mais refinado caramelo.</h6>
-							</div>
-						</div>
-						</p>
-						<div class="d-flex justify-content-between align-items-center">
-							<div class="btn-group">
-								<button type="button" id='alvo' onclick='carrinho()' class="btn btn-sm btn-outline-secondary">Adicionar ao carrinho</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-md-4">
-				<div class="card shadow-sm ">
-					<img src="./Imagens/fototeste.jpg" heigth="">
-					<div class="card-body">
-						<p class="card-text">
-						<div style="vertical-align: inherit;">
-							<div style="vertical-align: inherit;">
-								<h2 class="text-center">Caramelo Cremoso </h2>
-							</div>
-							<div style="vertical-align: inherit;">
-								<h6 class="car">Nossa mais nova capsula Caramelo Cremoso, uma explosão de sabores com a doçura na medida certa. Com notas de baunilha com canela e o nosso mais refinado caramelo.</h6>
-							</div>
-						</div>
-						</p>
-						<div class="d-flex justify-content-between align-items-center">
-							<div class="btn-group">
-								<button type="button" id='alvo' onclick='carrinho()' class="btn btn-sm btn-outline-secondary">Adicionar ao carrinho</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
 		</div>
 	</div>
 
