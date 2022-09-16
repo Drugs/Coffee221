@@ -170,11 +170,13 @@ $roupa = mysqli_fetch_all($query , MYSQLI_ASSOC);
 		for (let i = 1; i <= tamanho; i++) {
 			aux=document.getElementById('comida'+i)
 			//quant*preço
+			
 		} 
 		//	>alimento
 		for (let i = 1; i <= tamanho; i++) {
 			aux=document.getElementById('roupa'+i)
 			//quant*preço
+
 		} 
 		//total total
 		//imprime o total total
