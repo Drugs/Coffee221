@@ -99,7 +99,7 @@ $alimento = mysqli_fetch_all($query, MYSQLI_ASSOC);
 						</div>
 						<div class='d-flex justify-content-between align-items-center'>
 							<div class='btn-group'>
-								<button type='button' onclick='carrinho({$roupas["id_info_roupa"]},'roupa')' class='btn btn-sm btn-outline-secondary'>Adicionar ao carrinho</button>
+								<button type='button' onclick=\"carrinho({$roupas["id_info_roupa"]},'roupa')\" class='btn btn-sm btn-outline-secondary'>Adicionar ao carrinho</button>
 							</div>
 						</div>
 					</div>
@@ -133,7 +133,7 @@ $alimento = mysqli_fetch_all($query, MYSQLI_ASSOC);
 								</div>
 								<div class='d-flex justify-content-between align-items-center'>
 									<div class='btn-group'>
-										<button type='button' onclick='carrinho({$alimentos["id_info_alimento"]},'alimento')' class='btn btn-sm btn-outline-secondary'>Adicionar ao carrinho</button>
+										<button type='button' onclick=\"carrinho({$alimentos["id_info_alimento"]},'alimento')\" class='btn btn-sm btn-outline-secondary'>Adicionar ao carrinho</button>
 									</div>
 								</div>
 							</div>
