@@ -21,7 +21,7 @@
 
 
 ?>
-<body>
+<body>    
     <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
       <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3"  href="../index.php">Coffee 221</a>
       <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,7 +61,7 @@
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="pagina_usuario.php">
                     <i class="bi bi-person-circle"></i>
                       Usuário
                     </a>
@@ -115,10 +115,12 @@
                                         ?></p>
                                           
                             <div class="d-flex justify-content-between align-items-center">
-                              <div class="btn-group">
+                            <div class="btn-group">
+                            <a class="w-100 btn btn-lg btn-dark" href="atualizar_endereco.php">Atualizar end.</a>
+                  <button type="button"  onclick="document.location= 'atualizar_usuario.php '"  class="btn btn-sm btn-warning">Atualizar</button>
+                </div>
                               
-                                <button type="button" onclick="document.location= 'atualizar_usuario.php '" class="btn btn-sm btn-warning">Atualizar</button>
-                                
+                           
                               </div>
                               <small class="text-muted"><?php 
                                         $con=  new mysqli($host, $user, $pass, $db);
