@@ -41,15 +41,12 @@ $roupa = mysqli_fetch_all($query , MYSQLI_ASSOC);
                 <div class="card-body p-4">
                     <div class="row ">
                         <div class="col">
-                            
                             <!---Titulo-->
                             <div class="d-flex justify-content-between align-items-center mb-4">
                                 <div>
                                     <h5 class="mb-1">Carrinho <i class="bi bi-cart3"></i></h5>
                                 </div>
-                            </div>
-
-                            
+                            </div> 
 <!---Primeiro produto-->      
 	<?php
     $bia=0;
@@ -135,13 +132,12 @@ $roupa = mysqli_fetch_all($query , MYSQLI_ASSOC);
 		}
                                     
         ?>
-                                      
-
-                            <div class="d-flex justify-content-between">
-                                <p class="mt-4 mb-2" >Total</p>
-                                <p class="mt-4 mb-2" id='total' >0</p>
-
+		<div class="d-flex justify-content-between">
+			<p class="mt-4 mb-2" >Total</p>
+			<p class="mt-4 mb-2" id='total' >0</p>
+		</div>
 <script>
+	soma()
 	function quant(ide, fun, prod) {
 		let imprime = document.getElementById(ide)
 		let imprimeQnt = imprime.dataset.quantidade
@@ -160,10 +156,31 @@ $roupa = mysqli_fetch_all($query , MYSQLI_ASSOC);
 		dinheiro.innerHTML = 'R$ ' + precoNovo
 		imprime.innerHTML = imprimeQnt
 		imprime.dataset.quantidade = imprimeQnt
+		soma()
 	}
+	function soma(){
+		//quantidade de itens
+		//	>roupas
+		//	>alimento
+		let valor=document.getElementById('item1') //pega o valor novo
+		let tamanho=valor.dataset.length
+		console.log(tamanho)
+		let aux
+		//	>roupas
+		for (let i = 1; i <= tamanho; i++) {
+			aux=document.getElementById('comida'+i)
+			//quant*preço
+		} 
+		//	>alimento
+		for (let i = 1; i <= tamanho; i++) {
+			aux=document.getElementById('roupa'+i)
+			//quant*preço
+		} 
+		//total total
+		//imprime o total total
+	}
+	
 </script>
-                            </div>
-
                             <button type="button" class="btn btn-info btn-block btn-lg" onclick="document.location= 'checkoutpage.php'">
                                 <span>Checkout</span>
                             </button>
