@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 12-Set-2022 às 19:38
--- Versão do servidor: 10.4.24-MariaDB
--- versão do PHP: 8.0.19
+-- Generation Time: Sep 15, 2022 at 11:36 PM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.0.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `coffee221`
+-- Database: `coffee221`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `galeria`
+-- Table structure for table `galeria`
 --
 
 CREATE TABLE `galeria` (
@@ -34,35 +34,38 @@ CREATE TABLE `galeria` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Extraindo dados da tabela `galeria`
+-- Dumping data for table `galeria`
 --
 
-INSERT INTO `galeria` (`id_galeria`, `endereco`, `fk_id_produto`) VALUES
-(1, 'camisa1.png', 1),
-(2, 'camisa2.png', 1),
-(3, 'Camisa3.png', 1),
-(4, 'camisavaca.jpg', 2),
-(5, 'caf2.png', 8);
+
+INSERT INTO `galeria` ( `endereco`, `fk_id_produto`) VALUES
+('camisa1.png', 1),
+('camisa2.png', 1),
+('Camisa3.png', 1),
+('camisavaca.jpg', 2),
+('caf2.png', 8),
+('camisa1.png', 25),
+('cf1.png', 26);
 
 --
--- Índices para tabelas despejadas
+-- Indexes for dumped tables
 --
 
 --
--- Índices para tabela `galeria`
+-- Indexes for table `galeria`
 --
 ALTER TABLE `galeria`
   ADD PRIMARY KEY (`id_galeria`);
 
 --
--- AUTO_INCREMENT de tabelas despejadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de tabela `galeria`
+-- AUTO_INCREMENT for table `galeria`
 --
 ALTER TABLE `galeria`
-  MODIFY `id_galeria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_galeria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

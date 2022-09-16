@@ -4,39 +4,35 @@ $title = 'The COFFEE\'N\'JOIN';
 include './include/database.php';
 include './include/header.php';
 include './include/nave.php';
+$pesquisa = '';
+if (isset($_GET["submit"]) and $_GET["submit"] == "buscar") {
+	$pesquisa = $_GET['buscar'];
+}
+$inf = "SELECT *, SUBSTRING(descricao, 1, 50) AS descricao FROM `produto` JOIN galeria ON galeria.fk_id_produto = produto.id_produto
+WHERE produto.nome_produto LIKE '%{$pesquisa}%' OR produto.categoria LIKE '%{$pesquisa}%' LIMIT 4";
+$query = mysqli_query($con, $inf);
+$result = mysqli_fetch_all($query, MYSQLI_ASSOC);
 ?>
 
 <body class="responsive">
 	<!-- JavaScript da Home -->
 	<script>
 		// AJAX do carrinho de compras
-		function carrinho(id_info_prod) {
+		function carrinho(id_info_prod, categoria) {
+			let idproduto = document.getElementById(id_info_prod)
+			console.log(idproduto)
+			//id info produto, 
+			//categoria: alimento ou roupa
 			//console.log(id_info_prod)
 			var xmlhttp = new XMLHttpRequest();
 			xmlhttp.onreadystatechange = function() {
 				if (this.readyState == 4 && this.status == 200) {
-					//console.log(this.responseText)
+					console.log(this.responseText)
 				}
 			}
-			xmlhttp.open("GET", "pages/botanocarrinho.php?id=" + id_info_prod);
+			xmlhttp.open("GET", "pages/botanocarrinho.php?id=" + id_info_prod + "&cat=" + categoria);
 			xmlhttp.send();
 		}
-		// Script do encurtador de texto dos cards
-		/*function leiamore() {
-			var pontos = document.getElementById("pontos");
-			var maisTexto = document.getElementById("mais");
-			var btnLeiaMais = document.getElementById("btnLeiaMais");
-
-			if (pontos.style.display === "none") {
-				pontos.style.display = "inline";
-				maisTexto.style.display = "none";
-				btnLeiaMais.innerHTML = "Leia Mais";
-			} else {
-				pontos.style.display = "none";
-				maisTexto.style.display = "inline";
-				btnLeiaMais.innerHTML = "Leia Menos";
-			}
-		}*/
 	</script>
 
 	<!-- Slider da Home do site -->
@@ -75,74 +71,31 @@ include './include/nave.php';
 	<!-- Cards da Home do site -->
 	<div class="container">
 		<div class="row justify-content-evenly mt-5">
-			<div class="col-md-3">
-				<div class="card shadow-sm">
-					<img src="./Imagens/fototeste.jpg" heigth="">
-					<div class="card-body">
-						<div class="card-text feed-item-body post-body">
-							<div style="vertical-align: inherit;">
-								<div style="vertical-align: inherit;">
-									<h2 class="text-center">Caramelo Cremoso </h2>
+			<?php
+			foreach ($result as $roupas) {
+				echo "
+				<div class='col-md-3'>
+					<div class='card shadow-sm'>
+						<div class='card-body'>
+							<a href='pages/produto.php?produto={$roupas['id_produto']}'><img src='imagens/{$roupas['endereco']}' class='card-img-top'></a>
+							<div class='card-text feed-item-body post-body'>
+								<div style='vertical-align: inherit;'>
+									<h2 class='text-center'>{$roupas['nome_produto']}</h2>
 								</div>
-								<div style="vertical-align: inherit;">
-									<p class="bia">Maior seletividade de grãos, sabor qualidade.</p>
+								<div style='vertical-align: inherit;'>
+									<p class='bia'>{$roupas['descricao']}...</p>
 								</div>
-							</div>
-						</div>
-						<div class="d-flex justify-content-between align-items-center">
-							<div class="btn-group">
-								<button type="button" id='alvo' onclick='carrinho()' class="btn btn-sm btn-outline-secondary">Adicionar ao carrinho</button>
+								<div class='d-flex justify-content-between align-items-center'>
+									<div class='btn-group'>
+										<button type='button' onclick='carrinho(id_info_prod, categoria)' class='btn btn-sm btn-outline-secondary'>Adicionar ao carrinho</button>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>
-
-			<div class="col-md-3">
-				<div class="card shadow-sm">
-					<img src="./Imagens/fototeste.jpg" heigth="">
-					<div class="card-body">
-						<div class="card-text feed-item-body post-body">
-							<div style="vertical-align: inherit;">
-								<div style="vertical-align: inherit;">
-									<h2 class="text-center">Caramelo Cremoso </h2>
-								</div>
-								<div style="vertical-align: inherit;">
-									<p class="bia">Maior seletividade de grãos, sabor qualidade.</p>
-								</div>
-							</div>
-						</div>
-						<div class="d-flex justify-content-between align-items-center">
-							<div class="btn-group">
-								<button type="button" id='alvo' onclick='carrinho()' class="btn btn-sm btn-outline-secondary">Adicionar ao carrinho</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-md-3">
-				<div class="card shadow-sm">
-					<img src="./Imagens/fototeste.jpg" heigth="">
-					<div class="card-body">
-						<div class="card-text feed-item-body post-body">
-							<div style="vertical-align: inherit;">
-								<div style="vertical-align: inherit;">
-									<h2 class="text-center">Caramelo Cremoso </h2>
-								</div>
-								<div style="vertical-align: inherit;">
-									<p class="bia">Maior seletividade de grãos, sabor qualidade.</p>
-								</div>
-							</div>
-						</div>
-						<div class="d-flex justify-content-between align-items-center">
-							<div class="btn-group">
-								<button type="button" id='alvo' onclick='carrinho()' class="btn btn-sm btn-outline-secondary">Adicionar ao carrinho</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+				</div>";
+			}
+			?>
 		</div>
 	</div>
 	<!-- Parallax -->

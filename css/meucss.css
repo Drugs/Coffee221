@@ -63,7 +63,7 @@ background: linear-gradient(90deg, rgba(200,140,51,1) 0%, rgba(235,154,92,1) 74%
 }
 
 .parallax-home{
-    background-image: url(../Imagens/graosdecafecaindo.jpg);
+    background-image: url(../Imagens/graoscafeparallax.jpg);
     min-height: 200px;
     background-attachment: fixed;
     background-position: center;

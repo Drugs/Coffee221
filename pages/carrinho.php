@@ -4,8 +4,31 @@ $title = 'Carrinho';
 include "../include/database.php";
 include '../include/header.php';
 include '../include/nave-site.php';
-#$consulta = "SELECT * FROM  `produto`  WHERE id_produto={$_SESSION['id_produto']}";
-#var_dump($consulta);
+//-------------------alimentos------------------------------------
+$consulta = "SELECT * FROM `carrinho` 
+join item_de_carrinho on item_de_carrinho.fk_id_carrinho = carrinho.id_carrinho 
+join info_alimento on info_alimento.id_info_alimento = item_de_carrinho.fk_id_info_produto join produto on produto.id_produto = info_alimento.fk_id_produto 
+join galeria on galeria.fk_id_produto = produto.id_produto
+WHERE item_de_carrinho.categoria ='alimento' 
+and carrinho.fk_id_pessoa = {$_SESSION['id_pessoa']}";
+$query = mysqli_query($con, $consulta);
+$alimento = mysqli_fetch_all($query , MYSQLI_ASSOC);
+echo "<pre>";
+var_dump($alimento);
+echo "</pre>";
+//-------------------roupas------------------------------------
+$consulta = "SELECT * FROM `carrinho` 
+join item_de_carrinho on item_de_carrinho.fk_id_carrinho = carrinho.id_carrinho 
+join info_roupa on info_roupa.id_info_roupa = item_de_carrinho.fk_id_info_produto 
+join produto on produto.id_produto = info_roupa.fk_id_produto  
+join galeria on galeria.fk_id_produto = produto.id_produto
+WHERE item_de_carrinho.categoria ='roupa' 
+and carrinho.fk_id_pessoa = {$_SESSION['id_pessoa']}";
+$query = mysqli_query($con, $consulta);
+$roupa = mysqli_fetch_all($query , MYSQLI_ASSOC);
+echo "<pre>";
+var_dump($roupa);
+echo "</pre>";
 ?>
 
 <div class="container py-5 h-100">
@@ -25,6 +48,7 @@ include '../include/nave-site.php';
 
                             
                             <!---Primeiro produto-->
+
                             <div class="card mb-3" style="box-shadow: 10px 5px 5px ;">
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between">
@@ -94,6 +118,58 @@ function soma(){
                                     </div>
                                 </div>
                             </div>
+
+                            
+                                        
+                                    <?php
+									$anterior = 0; 
+		foreach($roupa as $vestido ){
+			$atual = $vestido['fk_id_info_produto']; 
+			if ($atual != $anterior){ 
+				$subtotal = $vestido['quantidade'] * $vestido['preco'];
+				echo"<div class='card mb-3' style='box-shadow: 10px 5px 5px ;'>
+					<div class='card-body'>
+						<div class='d-flex justify-content-between'>
+							<div class='d-flex flex-row align-items-center'>
+								<div>
+									<img src = '../imagens/{$vestido['endereco']}' class='img-fluid rounded-3' alt='Shopping item' style='width: 65px;'>
+								</div>
+							</div>
+							<div class='mt-3'>
+								<h5>{$vestido['nome_produto']}</h5>
+							</div>
+							<div class='d-flex flex-row align-items-center'>
+								<button onclick=\"quant('item1', 'add', 'prod1')\" type='button' class='mr-2 btn btn-dark'>+</button>
+								<button onclick=\"quant('item1', 'sub', 'prod1')\" type='button' class='ms-4 btn btn-dark'>-</button>
+							</div>
+							<div class='d-flex flex-row align-items-center'>
+								<div style='width: 60px;'>
+									<h5 id='item1' class='fw-normal mb-0' data-quantidade='{$vestido['quantidade']}' data-preco='{$vestido['preco']}'>{$vestido['quantidade']}</h5>
+								</div>
+								<div style='width: 80px;'>
+									<h5 id='prod1' class='mb-0'>R$ {$subtotal}</h5>
+								</div>
+								<div style='width: 60px;'>
+									<a><i class='bi bi-trash3-fill'></i></a>
+								</div>
+							</div>            
+						</div>
+					</div>
+				</div>";
+			}
+			$anterior = $atual; 
+		}
+
+
+                                    foreach($alimento as $consulta ){
+                                       // echo"{$consulta['sabor']}";
+ 
+									}
+                                    
+                                        ?>
+                                      
+                                       
+
 
 
                             <!---Segundo produto-->
@@ -194,6 +270,7 @@ function soma(){
 
                             <div class="d-flex justify-content-between">
                                 <p class="mt-4 mb-2" >Total</p>
+
                                 <p class="mt-4 mb-2"  id='total' >0</p>
 
                             </div>
