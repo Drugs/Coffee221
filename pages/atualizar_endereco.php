@@ -18,8 +18,8 @@ if (isset($_GET['submit']) and $_GET['submit'] == 'send') {
      WHERE id_pessoa = {$_SESSION['id_pessoa']} ";
     $query = mysqli_query($con, $consulta1);
     header("Location:pagina_usuario.php");
-    #echo'<pre>';
-    #var_dump($consulta_up);
+    echo'<pre>';
+    #var_dump($consulta1);
     #echo'</pre>';
 }
 $consulta="SELECT * ,endereco.cidade a, pessoa.email from pessoa 
@@ -29,7 +29,7 @@ $endereco=mysqli_fetch_assoc($query);
 ?>
 
 <form action="" method="get">
-            <h1 class="text-center" style="margin-top: 1cm;">Cadastro de endereço</h1>
+            <h1 class="text-center" style="margin-top: 1cm;">Atualizar endereço</h1>
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-6">
@@ -47,7 +47,7 @@ $endereco=mysqli_fetch_assoc($query);
                                 <label for="exampleFormControlInput1" class="form-label"><strong>avenida</strong></label>
                             </div>
                             <div class="form-floating">
-                                <input type="number" class="form-control" name='numero'value="<?php echo $endereco['numero'];?>">
+                                <input type="number" class="form-control" name='numero 'value="<?php echo $endereco['numero'];?>">
                                 <label for="exampleFormControlInput1" class="form-label"><strong>numero</strong></label>
                             </div>
                             <div class="form-floating" style="margin-bottom: 5mm;">
