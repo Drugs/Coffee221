@@ -31,8 +31,17 @@ $alimento = mysqli_fetch_all($query, MYSQLI_ASSOC);
 	<script>
 		// AJAX do carrinho de compras
 		function carrinho(id_info_produto, categoria) {
-			console.log(categoria)
 			console.log(id_info_produto)
+			console.log(categoria)
+			let idproduto = document.getElementById(id_info_produto)
+			let cat = document.getElementById(categoria)
+			if (cat == $roupas["categoria"]) {
+				console.log(cat)
+			}
+			if (cat == $alimentos["categoria"]) {
+				console.log(cat)
+			}
+
 			//id info produto, 
 			//categoria: alimento ou roupa
 			//console.log(id_info_prod)
@@ -99,7 +108,7 @@ $alimento = mysqli_fetch_all($query, MYSQLI_ASSOC);
 						</div>
 						<div class='d-flex justify-content-between align-items-center'>
 							<div class='btn-group'>
-								<button type='button' onclick=\"carrinho({$roupas["id_info_roupa"]},'roupa')\" class='btn btn-sm btn-outline-secondary'>Adicionar ao carrinho</button>
+								<button type='button' onclick=\"carrinho({$roupas["id_info_roupa"]},{$roupas["categoria"]})\" class='btn btn-sm btn-outline-secondary'>Adicionar ao carrinho</button>
 							</div>
 						</div>
 					</div>
@@ -133,7 +142,7 @@ $alimento = mysqli_fetch_all($query, MYSQLI_ASSOC);
 								</div>
 								<div class='d-flex justify-content-between align-items-center'>
 									<div class='btn-group'>
-										<button type='button' onclick=\"carrinho({$alimentos["id_info_alimento"]},'alimento')\" class='btn btn-sm btn-outline-secondary'>Adicionar ao carrinho</button>
+										<button type='button' onclick=\"carrinho({$alimentos["id_info_alimento"]},{$alimentos["categoria"]})\" class='btn btn-sm btn-outline-secondary'>Adicionar ao carrinho</button>
 									</div>
 								</div>
 							</div>
