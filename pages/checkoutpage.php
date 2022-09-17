@@ -87,6 +87,9 @@ include "../include/nave-site.php";
                     <form class="needs-validation" action="pagdeobrigado.php" method="post">
                         <h4 class="mb-4">Endereço de entrega</h4>
                         <?php
+                        if (isset($_GET['endereco']) and $_GET['endereco'] == 'feito') {
+                            echo '<div class="alert alert-warning" role="alert">Você cadastrou seu endereço com sucesso.</div>';
+                        }
                         if (isset($_SESSION['id_usu']) and $_SESSION['id_usu'] != '') {
                             echo "
                         <div class='row g-3'>
@@ -155,9 +158,6 @@ include "../include/nave-site.php";
                         <?php
                         if (isset($_GET['cadastro']) and $_GET['cadastro'] == 'feito') {
                             echo '<div class="alert alert-warning" role="alert">Você cadastrou seu cartão com sucesso.</div>';
-                        }
-                        if (isset($_GET['endereco']) and $_GET['endereco'] == 'feito') {
-                            echo '<div class="alert alert-warning" role="alert">Você cadastrou seu endereço com sucesso.</div>';
                         }
                         ?>
                         <h4 class="mb-4">Forma de Pagamento</h4>

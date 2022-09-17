@@ -9,7 +9,7 @@ if (isset($_GET['cadEnd']) and $_GET['cadEnd'] == 'send') {
     VALUES ('{$_GET['cidade']}', '{$_GET['rua']}', '{$_GET['avenida']}', '{$_GET['numero']}', '{$_SESSION['id_pessoa']}', '{$_GET['cep']}',
     '{$_GET['estado']}', '{$_GET['complemento']}')";
     $query = mysqli_query($con, $inf);
-    #header("location: checkoutpage.php?endereco=feito");
+    header("location: checkoutpage.php?endereco=feito");
     echo $inf;
 }
 $inf2 = "SELECT * FROM pessoa";
