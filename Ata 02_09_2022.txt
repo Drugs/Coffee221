@@ -78,5 +78,6 @@ Sugestão - Mudar o diabo da imagem do Parallax
 			>Definir o status em aberto [1]
 			>Definir o status em concluído [2]
 		Redireciona para uma página feliz da alegria, obrigado pela sua compra, sua ligação é muito importante para nossa alegria.
+		Alerta - Por favor, faça Login para prosseguri com a compra.
 		
 		

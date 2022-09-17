@@ -6,7 +6,7 @@ include '../include/database.php';
 
 if (isset($_GET['cadastrar']) and $_GET['cadastrar'] == 'send') {
     $inf = "INSERT INTO cartoes (`nome_cartao`,`validade`,`cvv`,`numero`,`fk_id_pessoa`)
-    VALUES ('{$_GET['nome_cartao']}','{$_GET['validade']}','{$_GET['cvv']}','{$_GET['numero']}','{$_SESSION['id_pessoa']}')"; # Substituir o valor pelo ID da sessão
+    VALUES ('{$_GET['nome_cartao']}','{$_GET['validade']}','{$_GET['cvv']}','{$_GET['numero']}','{$_SESSION['id_pessoa']}')";
     $query = mysqli_query($con, $inf);
     header("location: checkoutpage.php?cadastro=feito");
 }
@@ -49,8 +49,8 @@ include "../include/nave-site.php";
                                 <label for="exampleFormControlTextarea1" class="form-label"><strong>CVV</strong></label>
                             </div>
                             <div class="form-floating">
-                                <label for="exampleFormControlTextarea1" class="form-label"><strong>Número do cartão</strong></label>
                                 <input type="text" class="form-control" id="numero" name="numero" maxlength='19' placeholder='' onkeyup='mascara(this)' pattern="[0-9]{4}[-][0-9]{4}[-][0-9]{4}[-][0-9]{4}">
+                                <label for="exampleFormControlTextarea1" class="form-label"><strong>Número do cartão</strong></label>
                             </div>
                             <input type='hidden' name='var' value='<?php echo $_GET['var']; ?>'>
                             <div class="row">
