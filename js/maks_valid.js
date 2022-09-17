@@ -24,3 +24,8 @@ function mascara(cartao) {
     if (cartao.value.length == 14)
         cartao.value = cartao.value + '-';
 }
+
+function cep(endereco) {
+    if (endereco.value.length == 5)
+        endereco.value = endereco.value + '-';
+}

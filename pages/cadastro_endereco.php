@@ -5,11 +5,12 @@ $title = "Cadastro - Cartão";
 include '../include/database.php';
 
 if (isset($_GET['cadEnd']) and $_GET['cadEnd'] == 'send') {
-    $inf = "INSERT INTO `endereco`(`id_endereco`, `cidade`, `rua`, `avenida`, `numero`, `fk_id_pessoa`, `cep`, `estado`, `complemento`) 
+    $inf = "INSERT INTO `endereco`(`cidade`, `rua`, `avenida`, `numero`, `fk_id_pessoa`, `cep`, `estado`, `complemento`) 
     VALUES ('{$_GET['cidade']}', '{$_GET['rua']}', '{$_GET['avenida']}', '{$_GET['numero']}', '{$_SESSION['id_pessoa']}', '{$_GET['cep']}',
-    '{$_GET['estado']}', '{$_GET['complemento']}',)";
+    '{$_GET['estado']}', '{$_GET['complemento']}')";
     $query = mysqli_query($con, $inf);
-    header("location: checkoutpage.php?endereco=feito");
+    #header("location: checkoutpage.php?endereco=feito");
+    echo $inf;
 }
 $inf2 = "SELECT * FROM pessoa";
 $query = mysqli_query($con, $inf2);
@@ -17,6 +18,13 @@ $resultado = mysqli_fetch_all($query, MYSQLI_ASSOC);
 include "../include/header.php";
 include "../include/nave-site.php";
 ?>
+
+<script>
+    function mascara(cad_endereco) {
+        if (cad_endereco.value.length == 5)
+            cad_endereco.value = cad_endereco.value + '-';
+    }
+</script>
 
 <body class="text-center responsive">
     <main class="form-signin">
@@ -38,27 +46,27 @@ include "../include/nave-site.php";
                             </div>
                             <div class="form-floating">
                                 <input type="text" class="form-control" name='rua'>
-                                <label for="exampleFormControlInput1" class="form-label"><strong>rua</strong></label>
+                                <label for="exampleFormControlInput1" class="form-label"><strong>Rua</strong></label>
                             </div>
                             <div class="form-floating">
                                 <input type="text" class="form-control" name='avenida'>
-                                <label for="exampleFormControlInput1" class="form-label"><strong>avenida</strong></label>
+                                <label for="exampleFormControlInput1" class="form-label"><strong>Avenida</strong></label>
                             </div>
                             <div class="form-floating">
-                                <input type="number" class="form-control" name='numero'>
-                                <label for="exampleFormControlInput1" class="form-label"><strong>numero</strong></label>
+                                <input type="text" class="form-control" name='numero' maxlength="4">
+                                <label for="exampleFormControlInput1" class="form-label"><strong>Número</strong></label>
                             </div>
                             <div class="form-floating">
-                                <input type="text" class="form-control" name='cep'>
-                                <label for="exampleFormControlTextarea1" class="form-label"><strong>cep</strong></label>
+                                <input type="text" class="form-control" id="cadendereco" name='cep' maxlength="9" placeholder='' onkeyup='mascara(this)' pattern="[0-9]{5}[-][0-9]{3}">
+                                <label for="exampleFormControlTextarea1" class="form-label"><strong>CEP</strong></label>
                             </div>
                             <div class="form-floating">
                                 <input type="text" class="form-control" name='estado'>
-                                <label for="exampleFormControlInput1" class="form-label"><strong>estado</strong></label>
+                                <label for="exampleFormControlInput1" class="form-label"><strong>Estado</strong></label>
                             </div>
                             <div class="form-floating">
                                 <input type="text" class="form-control" name='complemento'>
-                                <label for="exampleFormControlInput1" class="form-label"><strong>complemento</strong></label>
+                                <label for="exampleFormControlInput1" class="form-label"><strong>Complemento</strong></label>
                             </div>
                             <input type='hidden' name='var' value='<?php echo $_GET['var']; ?>'>
                             <div class="row">

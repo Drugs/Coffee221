@@ -13,7 +13,7 @@ if (isset($_SESSION['id_pessoa']) and $_SESSION['id_pessoa'] > 0) {
         WHERE id_pessoa = {$_SESSION['id_pessoa']}";
         $query = mysqli_query($con, $inf2);
         $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
-        if ($resultado = NULL) {
+        if ($result != NULL) {
             $inf3 = "SELECT * FROM pessoa JOIN endereco ON pessoa.id_pessoa = endereco.fk_id_pessoa WHERE pessoa.id_pessoa = {$id_pessoa}";
             $query = mysqli_query($con, $inf3);
             $result2 = mysqli_fetch_all($query, MYSQLI_ASSOC);
@@ -85,7 +85,7 @@ include "../include/nave-site.php";
                 <div class="col-md-7 col-lg-6">
                     <!-- <h4>Endereço de cobrança</h4> !-->
                     <form class="needs-validation" action="pagdeobrigado.php" method="post">
-
+                        <h4 class="mb-4">Endereço de entrega</h4>
                         <?php
                         if (isset($_SESSION['id_usu']) and $_SESSION['id_usu'] != '') {
                             echo "
@@ -110,7 +110,11 @@ include "../include/nave-site.php";
                             <label class='form-label' for='numero'>Número</label>
                                 <input class='form-control' placeholder='Ex.: 999' type='text' name='numero' id='' value='{$result2[0]['numero']}'>
                             </div>
-                            <div class='col-sm-12'>
+                            <div class='col-sm-6'>
+                                <label class='form-label' for='complemento'>Avenida</label>
+                                <input class='form-control' placeholder='Ex.: Avenida Dom João IV' type='text' name='avenida' id='' value='{$result2[0]['avenida']}'>
+                            </div>
+                            <div class='col-sm-6'>
                                 <label class='form-label' for='complemento'>Complemento</label>
                                 <input class='form-control' placeholder='Ex.: Condm. Bragança...' type='text' name='complemento' id='' value='{$result2[0]['complemento']}'>
                             </div>
@@ -146,17 +150,6 @@ include "../include/nave-site.php";
                         }
                         ?>
                         <hr class="my-4">
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" name="check-endereco" id="">
-                            <label class="form-label" for="">O endereço de entrega é o mesmo endereço de cobrança?</label>
-                        </div>
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" name="check-save-infos" id="">
-                            <label class="form-label" for="">Salvar informações para próximas compras</label>
-                        </div>
-                        <hr class="my-4">
-
-                        -->
 
 
                         <?php
@@ -169,11 +162,11 @@ include "../include/nave-site.php";
                         ?>
                         <h4 class="mb-4">Forma de Pagamento</h4>
                         <div class="my-3">
-                            <select class="selecaoop" name="selecao" id="">
+                            <!-- <select class="selecaoop" name="selecao" id="">
                                 <option value="Cartao_débito">Cartão de débito</option>
                                 <option value="Cartao_crédito">Cartão de crédito</option>
                                 <option value="PayPal">Paypal</option>
-                            </select>
+                            </select> -->
                             <!-- <span id="debitt" class="text-muted"></span>
                             <div class="form-check">
                                 <input type="radio" class="form-check-input" name="metodopagamento_debitt" id="debit" required>
