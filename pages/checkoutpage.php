@@ -76,12 +76,40 @@ include "../include/nave-site.php";
                 </div> !-->
 
                 <div class="col-md-7 col-lg-6">
-                    <h4>Endereço de cobrança</h4>
+                    <!-- <h4>Endereço de cobrança</h4> !-->
                     <form class="needs-validation" action="pagdeobrigado.php" method="post">
-                        <div class="row g-3">
+                        <!--<div class="row g-3">
+                            <div class="col-sm-6">
+                                <label class="form-label" for="nome">Primeiro nome:</label>
+                                <input class="form-control" type="text" name="nome" id="name">
+                            </div>
+                            <div class="col-sm-6">
+                                <label class="form-label" for="sobrenome">Sobrenome</label>
+                                <input class="form-control" type="text" name="sobrenome" id="sobrenome2">
+                            </div>
+                            <div class="col-sm-12">
+                                <label class="form-label" for="username">Nome de usuário</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">@</font>
+                                        </font>
+                                    </span>
+                                    <input class="form-control" placeholder="Nome de usuário" type="text" name="username" id="username2">
+                                </div>
+                            </div>    
+                            <div class="col-sm-12">
+                                <label class="form-label" for="email">E-mail <span class="text-muted">(opcional)</span>
+                                </label>
+                                <input class="form-control" placeholder="exemplo@gmail.com" type="email" name="email" id="">
+                            </div>
                             <div class="col-sm-12">
                                 <label class="form-label" for="endereco">Endereço</label>
                                 <input class="form-control" placeholder="Rua exemplo 1234" type="text" name="endereco" id="">
+                            </div>
+                            <div class="col-sm-12">
+                                <label class="form-label" for="endereco2">Endereço 2 <span class="text-muted">(opcional)</span></label>
+                                <input class="form-control" placeholder="Casa ou apartamento" type="text" name="endereco2" id="">
                             </div>
                             <div class="col-md-5">
                                 <label class="form-label" for="pais">País</label>
@@ -127,6 +155,19 @@ include "../include/nave-site.php";
                             </div>
                         </div>
                         <hr class="my-4">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" name="check-endereco" id="">
+                            <label class="form-label" for="">O endereço de entrega é o mesmo endereço de cobrança?</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" name="check-save-infos" id="">
+                            <label class="form-label" for="">Salvar informações para próximas compras</label>
+                        </div>
+                        <hr class="my-4">
+
+                        -->
+
+
                         <?php
                         if (isset($_GET['cadastro']) and $_GET['cadastro'] == 'feito') {
                             echo '<div class="alert alert-warning" role="alert">Você cadastrou seu cartão com sucesso.</div>';
