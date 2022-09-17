@@ -47,6 +47,10 @@ $roupa = mysqli_fetch_all($query , MYSQLI_ASSOC);
                                     <h5 class="mb-1">Carrinho <i class="bi bi-cart3"></i></h5>
                                 </div>
                             </div> 
+
+
+
+
 <!---Primeiro produto-->      
 	<?php
     $bia=0;
@@ -79,7 +83,7 @@ $roupa = mysqli_fetch_all($query , MYSQLI_ASSOC);
 									<h5 id='pr{$bia}' class='mb-0'>R$ {$subtotal}</h5>
 								</div>
 								<div style='width: 60px;'>
-									<a><i class='ms-2 bi bi-trash3-fill'></i></a>
+									<a ><i class='ms-2 bi bi-trash3-fill'></i></a>
 								</div>
 							</div>            
 						</div>
@@ -133,7 +137,7 @@ $roupa = mysqli_fetch_all($query , MYSQLI_ASSOC);
                                     
         ?>
 		<div class="d-flex justify-content-between">
-			<p class="mt-4 mb-2" >Total</p>
+			<h5 class="mt-4 mb-2" >Total</h5>
 			<p class="mt-4 mb-2" id='total' >0</p>
 		</div>
 <script>
@@ -153,6 +157,7 @@ $roupa = mysqli_fetch_all($query , MYSQLI_ASSOC);
 			}
 		}
 		let precoNovo = imprimeQnt * preco
+		console.log (precoNovo)
 		dinheiro.innerHTML = 'R$ ' + precoNovo
 		imprime.innerHTML = imprimeQnt
 		imprime.dataset.quantidade = imprimeQnt
@@ -162,29 +167,33 @@ $roupa = mysqli_fetch_all($query , MYSQLI_ASSOC);
 		//quantidade de itens
 		//	>roupas
 		//	>alimento
-		let valor = document.getElementById('comida{$bi}') //pega o valor novo
-		let valor2 = document.getElementById('roup{$bia}')
-		let quantidade = valor.dataset.length
-		console.log(quantidade)
-		let aux;
-		let juli;
-		//	>roupas
-		for (let i = 1; i <= quantidade; i++) {
-			aux=document.getElementById('comida'+i)
-			juli= valor * quantidade;
-			
+		let valor = document.getElementById('precoNovo')//pega o valor novo
+		let tamanho = valor.dataset.length
+		console.log(tamanho)
+		let aux
+		//>roupas
+		for (let i = 1; i <= tamanho; i++) {
+			aux = document.getElementById('comida'+i)
+		//quant*preço
 		} 
 		//	>alimento
-		for (let i = 1; i <= quantidade; i++) {
-			aux=document.getElementById('roupa'+i)
-			//quant*preço
-
-		} 
+		for (let i = 1; i <= tamanho; i++) {
+			aux = document.getElementById('roupa'+i)
+		//quant*preço
+		}
+		document.getElementById('total').innerHTML='';
+	    //total=subtotal.roupa+subtotal.alimento
 		//total total
 		//imprime o total total
 	}
-	
 </script>
+
+
+
+
+
+
+
                             <button type="button" class="btn btn-info btn-block btn-lg" onclick="document.location= 'checkoutpage.php'">
                                 <span>Checkout</span>
                             </button>
