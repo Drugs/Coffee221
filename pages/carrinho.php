@@ -162,18 +162,20 @@ $roupa = mysqli_fetch_all($query , MYSQLI_ASSOC);
 		//quantidade de itens
 		//	>roupas
 		//	>alimento
-		let valor=document.getElementById('item1') //pega o valor novo
-		let tamanho=valor.dataset.length
-		console.log(tamanho)
-		let aux
+		let valor = document.getElementById('comida{$bi}') //pega o valor novo
+		let valor2 = document.getElementById('roup{$bia}')
+		let quantidade = valor.dataset.length
+		console.log(quantidade)
+		let aux;
+		let juli;
 		//	>roupas
-		for (let i = 1; i <= tamanho; i++) {
+		for (let i = 1; i <= quantidade; i++) {
 			aux=document.getElementById('comida'+i)
-			//quant*preço
+			juli= valor * quantidade;
 			
 		} 
 		//	>alimento
-		for (let i = 1; i <= tamanho; i++) {
+		for (let i = 1; i <= quantidade; i++) {
 			aux=document.getElementById('roupa'+i)
 			//quant*preço
 
