@@ -47,10 +47,6 @@ $roupa = mysqli_fetch_all($query , MYSQLI_ASSOC);
                                     <h5 class="mb-1">Carrinho <i class="bi bi-cart3"></i></h5>
                                 </div>
                             </div> 
-
-
-
-
 <!---Primeiro produto-->      
 	<?php
     $bia=0;
@@ -72,12 +68,12 @@ $roupa = mysqli_fetch_all($query , MYSQLI_ASSOC);
                                 </div>
                             </div>
 							<div class='d-flex flex-row align-items-center'>
-								<button onclick=\"quant('roup{$bia}', 'add', 'pr{$bia}')\" type='button' class='mr-2 btn btn-dark'>+</button>
-								<button onclick=\"quant('roup{$bia}', 'sub', 'pr{$bia}')\" type='button' class='ms-4 btn btn-dark'>-</button>
+								<button onclick=\"quant('roupa{$bia}', 'add', 'pr{$bia}')\" type='button' class='mr-2 btn btn-dark'>+</button>
+								<button onclick=\"quant('roupa{$bia}', 'sub', 'pr{$bia}')\" type='button' class='ms-4 btn btn-dark'>-</button>
 							</div>
 							<div class='d-flex flex-row align-items-center'>
 								<div style='width: 80px;'>
-									<h5 id='roup{$bia}' class='fw-normal mb-0' data-quantidade='{$vestido['quantidade']}' data-preco='{$vestido['preco']}'>{$vestido['quantidade']}</h5>
+									<h5 id='roupa{$bia}' class='fw-normal mb-0' data-quantidade='{$vestido['quantidade']}' data-preco='{$vestido['preco']}'>{$vestido['quantidade']}</h5>
 								</div>
 								<div style='width: 90px;'>
 									<h5 id='pr{$bia}' class='mb-0'>R$ {$subtotal}</h5>
@@ -138,7 +134,7 @@ $roupa = mysqli_fetch_all($query , MYSQLI_ASSOC);
         ?>
 		<div class="d-flex justify-content-between">
 			<h5 class="mt-4 mb-2" >Total</h5>
-			<p class="mt-4 mb-2" id='total' >0</p>
+			<h5 class="mt-4 mb-2" id='total' >0</h5>
 		</div>
 <script>
 	soma()
@@ -164,24 +160,23 @@ $roupa = mysqli_fetch_all($query , MYSQLI_ASSOC);
 		soma()
 	}
 	function soma(){
-		//quantidade de itens
+		//1-quantidade de itens
 		//	>roupas
 		//	>alimento
-		let valor = document.getElementById('precoNovo')//pega o valor novo
-		let tamanho = valor.dataset.length
+		let tamanho = valor.dataset.imprimeQnt
 		console.log(tamanho)
 		let aux
-		//>roupas
+		//2- >roupas
 		for (let i = 1; i <= tamanho; i++) {
-			aux = document.getElementById('comida'+i)
+		aux = document.getElementById('comida'+i)
 		//quant*preço
 		} 
-		//	>alimento
+		//2- >alimento
 		for (let i = 1; i <= tamanho; i++) {
-			aux = document.getElementById('roupa'+i)
+			aux = document.getElementById('roupa'+i) //Aqui está o id do produto roupa 
 		//quant*preço
 		}
-		document.getElementById('total').innerHTML='';
+		document.getElementById('total').innerHTML='CAide';
 	    //total=subtotal.roupa+subtotal.alimento
 		//total total
 		//imprime o total total
@@ -194,7 +189,7 @@ $roupa = mysqli_fetch_all($query , MYSQLI_ASSOC);
 
 
 
-                            <button type="button" class="btn btn-info btn-block btn-lg" onclick="document.location= 'checkoutpage.php'">
+                            <button type="button" class="mt-2 btn btn-info btn-block btn-lg" onclick="document.location= 'checkoutpage.php'">
                                 <span>Checkout</span>
                             </button>
                         </div>

@@ -83,8 +83,9 @@ include "../include/nave-site.php";
                 </div> !-->
 
                 <div class="col-md-7 col-lg-6">
-                    <h4>Endereço de cobrança</h4>
+                    <!-- <h4>Endereço de cobrança</h4> !-->
                     <form class="needs-validation" action="pagdeobrigado.php" method="post">
+
                         <?php
                         if (isset($_SESSION['id_usu']) and $_SESSION['id_usu'] != '') {
                             echo "
@@ -145,6 +146,19 @@ include "../include/nave-site.php";
                         }
                         ?>
                         <hr class="my-4">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" name="check-endereco" id="">
+                            <label class="form-label" for="">O endereço de entrega é o mesmo endereço de cobrança?</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" name="check-save-infos" id="">
+                            <label class="form-label" for="">Salvar informações para próximas compras</label>
+                        </div>
+                        <hr class="my-4">
+
+                        -->
+
+
                         <?php
                         if (isset($_GET['cadastro']) and $_GET['cadastro'] == 'feito') {
                             echo '<div class="alert alert-warning" role="alert">Você cadastrou seu cartão com sucesso.</div>';
