@@ -33,10 +33,10 @@ Ata da reunião 02/09
 			>Colocar as imagens dos produtos -> FEITO
 		Páginas acessórias->[Página de produtos/Busca, Sobre, Categorias, Carrinho] -> A FAZER
 		Criar um botao de busca, ou mandar o formulário com JS -> EM ANDAMENTO
-		Botao de detalhes do produto - [Deixar cheguei ヽ⁠(｡⁠◕⁠o⁠◕⁠｡⁠)ﾉ⁠.] -> EM ANDAMENTO
+		Botao de detalhes do produto - [Deixar cheguei ヽ⁠(｡⁠◕⁠o⁠◕⁠｡⁠)ﾉ⁠.] -> FEITO
 
-Sugestão - Mudar o diabo da imagem do Parallax 
-		Adicionar ao carrinho
+Sugestão - Mudar o diabo da imagem do Parallax - FEITO
+		Adicionar ao carrinho - FEITO
 		Ajustar descrição e link pro produto - FEITO
 
 	
@@ -63,9 +63,9 @@ Sugestão - Mudar o diabo da imagem do Parallax
 		Trocar os ícones do menu
 	---------------------------------------------------------------------------------------------
 	Atualizar usuário
-		Adicionar o titulo da página->
-		Remover o var_dump->
-		Adicionar value do campo telefone->
+		Adicionar o titulo da página - FEITO
+		Remover o var_dump - FEITO
+		Adicionar value do campo telefone - FEITO
 	---------------------------------------------------------------------------------------------
 	Galeria
 		Busca - IMPORTANTEEEEEEEEEEEEEEE
