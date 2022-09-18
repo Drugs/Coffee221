@@ -12,26 +12,25 @@ if (isset($_GET['login']) and $_GET['login'] == 'send') {
     $query = mysqli_query($con, $consulta);
     $result = mysqli_fetch_assoc($query);
     //var_dump($result);
-	$continuar = $_GET['continuar_compra'];
+    $continuar = $_GET['continuar_compra'];
     if ($loginuse != '' and $senhauser != '') {
         if ($loginuse == $result["email"]) {
             if ($senhauser == $result["senha"]) {
                 $_SESSION['id_usu'] = $result['id_usuario'];
                 $_SESSION['id_pessoa'] = $result['fk_id_pessoa'];
-				if(!$continuar){
-					header('Location:../index.php');
-				}else{
-					header('Location:checkoutpage.php');
-				}
+                if (!$continuar) {
+                    header('Location: pagina_usuario.php');
+                } else {
+                    header('Location:checkoutpage.php');
+                }
             } else {
                 header('Location:login.php?senha=erro');
             }
         } else {
             header('Location:login.php?login=email');
         }
-    }else{
+    } else {
         header('Location:login.php?login=inexistente');
-    
     }
 }
 ?>
@@ -60,9 +59,9 @@ if (isset($_GET['login']) and $_GET['login'] == 'send') {
                             if (isset($_GET['logout']) and $_GET['logout'] == 'confirm') {
                                 echo '<div class="alert alert-warning" role="alert">Você se desconectou!</div>';
                             }
-                            if(isset($_GET['login']) and $_GET['login']=='inexistente') {
-                                echo '<div class="alert alert-warning" role="alert">Faça login para acessar o perfil!</div>'; 
-                              }
+                            if (isset($_GET['login']) and $_GET['login'] == 'inexistente') {
+                                echo '<div class="alert alert-warning" role="alert">Faça login para acessar o perfil!</div>';
+                            }
                             ?>
                         </div>
                         <form action="">
@@ -76,15 +75,15 @@ if (isset($_GET['login']) and $_GET['login'] == 'send') {
 
                             </div>
                             <div class="mt-2 d-grid gap-2">
-                             <button type="submit" value='send' name='login' class="btn btn-outline-light">Entrar</button>
+                                <button type="submit" value='send' name='login' class="btn btn-outline-light">Entrar</button>
                         </form>
                         <span style="color:white;">Ainda não tem uma conta?</span>
                         <a class='mt-1 btn btn-outline-light' href="cadastro_usuario.php"> Cadastre-se aqui</a>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
     </div>
 

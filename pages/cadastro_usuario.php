@@ -5,18 +5,19 @@ $title = "Cadastro";
 include "../include/header.php";
 include "../include/database.php";
 if (isset($_GET['cadastra']) and $_GET['cadastra'] == 'send') {
-    $consulta = "INSERT INTO pessoa (nome,email,telefone,endereco,pais)
-    VALUES ('{$_GET['nome']}','{$_GET['email']}','{$_GET['telefone']}','{$_GET['endereco']}','{$_GET['pais']}')";
-    #var_dump($consulta);
+    $consulta = "INSERT INTO pessoa (nome,email,telefone,pais)
+    VALUES ('{$_GET['nome']}','{$_GET['email']}','{$_GET['telefone']}','{$_GET['pais']}')";
+    var_dump($consulta);
     $query = mysqli_query($con, $consulta);
     $id_usu = mysqli_insert_id($con);
     $cripton = base64_encode($_GET['senha']);
     $consulta2 = "INSERT INTO usuario (email, senha, nivel, fk_id_pessoa, data) 
     VALUES ('{$_GET['email']}','{$cripton}','{$_GET['nivel']}','{$id_usu}', '{$_GET['data']}')";
     $query = mysqli_query($con, $consulta2);
-    #var_dump($consulta2);
-    header("Location: login.php?cadastro=sucesso");
+    var_dump($consulta2);
+    #header("Location: login.php?cadastro=sucesso");
 }
+
 ?>
 <script>
     function mascara(telefone) {
@@ -38,34 +39,53 @@ if (isset($_GET['cadastra']) and $_GET['cadastra'] == 'send') {
                     <div class="card-body p-5 text-center">
                         <form action="" method="get">
                             <h2 style="color:white;">Cadastrar-se</h2>
-                            <div class="form-floating mt-3">
+                            <div class="form-floating mt-2">
                                 <input type="text" class="form-control" id="floatingPassword" placeholder="Password" name='nome' required>
                                 <label for="floatingPassword">Digite seu nome</label>
                             </div>
+
                             <div class="form-floating mt-2">
                                 <input type="email" class="form-control" id="floatingPassword" placeholder="Password" name='email' required>
                                 <label for="floatingPassword">Digite seu Email</label>
                             </div>
+
                             <div class="form-floating mt-2">
                                 <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name='senha' required>
                                 <label for="floatingPassword">Digite sua Senha</label>
                             </div>
-                            <div class="form-floating mt-3">
-                                <input type="tel" class="form-control" id="telefone" placeholder="Password" name='telefone' data-mask="(00) 0000-0000" onkeypress="mascara(this)" pattern="^\(?\d{2}\)?[\s-]?[\s9]?\d{4}-?\d{4}$" required>
+                            <div class="form-floating   mt-2">
+                                <input type="tel" class="form-control" id="telefone" placeholder="Password" name='telefone' maxlength="15" data-mask="(00) 0000-0000" onkeypress="mascara(this)" pattern="^\(?\d{2}\)?[\s-]?[\s9]?\d{4}-?\d{4}$" required>
                                 <label for="floatingPassword">Digite seu Telefone</label>
                             </div>
-                            <div class="form-floating mt-3">
-                                <input type="endereco" class="form-control" id="floatingPassword" placeholder="Password" name='endereco' required>
-                                <label for="floatingPassword">Digite seu Endereço</label>
+                            <!--<div class="form-floating   mt-2">
+                                <input type="text" class="form-control" id="cadendereco" name='cep' maxlength="9" placeholder='Password' onkeyup='mascara2(this)' pattern="[0-9]{5}[-][0-9]{3}">
+                                <label for="floatingPassword">Digite seu CEP</label>
                             </div>
-                            <div class="form-floating mt-3">
+                            <div class="form-floating   mt-2">
+                                <input type="text" class="form-control" placeholder="Password" name='numero' maxlength="4">
+                                <label for="floatingPassword">Digite o número de sua casa</label>
+                            </div>
+                            <div class="form-floating   mt-2">
+                                <input type="text" class="form-control" placeholder="Password" name='estado'>
+                                <label for="floatingPassword">Digite o seu Estado</label>
+                            </div>
+                            <div class="form-floating   mt-2">
+                                <input type="text" class="form-control" placeholder="Password" name='cidade' required>
+                                <label for="floatingPassword">Digite sua Cidade</label>
+                            </div>
+                            <div class="form-floating   mt-2">
+                                <input type="text" class="form-control" placeholder="Password" name='rua'>
+                                <label for="floatingPassword">Digite a sua Rua</label>
+                            </div>-->
+                            <div class="form-floating   mt-2">
                                 <input type="text" class="form-control" id="floatingPassword" placeholder="Password" name='pais' required>
                                 <label for="floatingPassword">Digite seu País</label>
                             </div>
-                            <div class="form-floating mt-3">
+                            <div class="form-floating   mt-2">
                                 <input type="date" class="form-control" id="floatingPassword" placeholder="Data" name='data' required>
                                 <label for="floatingPassword">Data</label>
                             </div>
+
                             <!-- ESTE INPUT DEFINE QUAL SERÁ O NÍVEL DO USUÁRIO -->
                             <input type="hidden" class="form-control" id="nivel" name='nivel' value="1">
                             <div class="mt-2 d-grid gap-2">
