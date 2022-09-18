@@ -9,8 +9,8 @@ if (isset($_GET['cadEnd']) and $_GET['cadEnd'] == 'send') {
     VALUES ('{$_GET['cidade']}', '{$_GET['rua']}', '{$_GET['numero']}', '{$_SESSION['id_pessoa']}', '{$_GET['cep']}',
     '{$_GET['estado']}')";
     $query = mysqli_query($con, $inf);
-    var_dump($inf);
-    #header("location: pagina_usuario.php?endereco=feito");
+    #var_dump($inf);
+    header("location: pagina_usuario.php?endereco=feito");
 }
 $inf2 = "SELECT * FROM pessoa";
 $query = mysqli_query($con, $inf2);

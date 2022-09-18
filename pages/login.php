@@ -21,16 +21,16 @@ if (isset($_GET['login']) and $_GET['login'] == 'send') {
                 if (!$continuar) {
                     header('Location: pagina_usuario.php');
                 } else {
-                    header('Location:checkoutpage.php');
+                    header('Location: checkoutpage.php');
                 }
             } else {
-                header('Location:login.php?senha=erro');
+                header('Location: login.php?senha=erro');
             }
         } else {
-            header('Location:login.php?login=email');
+            header('Location: login.php?login=email');
         }
     } else {
-        header('Location:login.php?login=inexistente');
+        header('Location: login.php?login=inexistente');
     }
 }
 ?>
@@ -62,6 +62,9 @@ if (isset($_GET['login']) and $_GET['login'] == 'send') {
                             if (isset($_GET['login']) and $_GET['login'] == 'inexistente') {
                                 echo '<div class="alert alert-warning" role="alert">Faça login para acessar o perfil!</div>';
                             }
+                            if (isset($_GET['compra']) and $_GET['compra'] == 'erro') {
+                                echo '<div class="alert alert-warning" role="alert">Faça login para continuar a compra!</div>';
+                            }
                             ?>
                         </div>
                         <form action="">
@@ -72,7 +75,6 @@ if (isset($_GET['login']) and $_GET['login'] == 'send') {
                             <div class="form-floating mt-2">
                                 <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="senha">
                                 <label for="floatingPassword">Digite sua Senha</label>
-
                             </div>
                             <div class="mt-2 d-grid gap-2">
                                 <button type="submit" value='send' name='login' class="btn btn-outline-light">Entrar</button>

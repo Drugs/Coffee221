@@ -26,6 +26,12 @@ join endereco on pessoa.id_pessoa = endereco.fk_id_pessoa where pessoa.id_pessoa
 $query = mysqli_query($con, $consulta);
 $endereco = mysqli_fetch_assoc($query);
 ?>
+<script>
+    function mascara(cad_endereco) {
+        if (cad_endereco.value.length == 5)
+            cad_endereco.value = cad_endereco.value + '-';
+    }
+</script>
 
 <form action="" method="get">
     <h1 class="text-center" style="margin-top: 1cm;">Atualizar endereço</h1>
@@ -39,19 +45,19 @@ $endereco = mysqli_fetch_assoc($query);
                     </div>
                     <div class="form-floating">
                         <input type="text" class="form-control" name='rua' value="<?php echo $endereco['rua']; ?>">
-                        <label for="exampleFormControlInput1" class="form-label"><strong>rua</strong></label>
+                        <label for="exampleFormControlInput1" class="form-label"><strong>Rua</strong></label>
                     </div>
                     <div class="form-floating">
-                        <input type="number" class="form-control" name='numero ' value="<?php echo $endereco['numero']; ?>">
-                        <label for="exampleFormControlInput1" class="form-label"><strong>numero</strong></label>
+                        <input type="text" class="form-control" name='numero' maxlength="4" value="<?php echo $endereco['numero']; ?>">
+                        <label for="exampleFormControlInput1" class="form-label"><strong>Número</strong></label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="text" class="form-control" name='cep' id="cadendereco" maxlength="9" placeholder='' onkeyup='mascara(this)' pattern="[0-9]{5}[-][0-9]{3}" value="<?php echo $endereco['cep']; ?>">
+                        <label for="exampleFormControlTextarea1" class="form-label"><strong>Cep</strong></label>
                     </div>
                     <div class="form-floating" style="margin-bottom: 5mm;">
-                        <input type="text" class="form-control" name='cep' value="<?php echo $endereco['cep']; ?>">
-                        <label for="exampleFormControlTextarea1" class="form-label"><strong>cep</strong></label>
-                    </div>
-                    <div class="form-floating">
                         <input type="text" class="form-control" name='estado' value="<?php echo $endereco['estado']; ?>">
-                        <label for="exampleFormControlInput1" class="form-label"><strong>estado</strong></label>
+                        <label for="exampleFormControlInput1" class="form-label"><strong>Estado</strong></label>
                     </div>
                     <input type="hidden" name="var" value="<?= $_SESSION['id_usu'] ?>" />
                     <div class="row">
