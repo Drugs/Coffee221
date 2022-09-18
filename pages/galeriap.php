@@ -17,7 +17,6 @@ $produtos1 = mysqli_fetch_all($query, MYSQLI_ASSOC);
 $inf2 = "SELECT *, SUBSTRING(descricao, 1, 50) AS descricao FROM `produto` 
 join galeria on galeria.fk_id_produto = produto.id_produto
 WHERE produto.nome_produto LIKE '%%' OR produto.categoria LIKE '%%'";
-echo $inf2;
 $query = mysqli_query($con, $inf2);
 $produtos2 = mysqli_fetch_all($query, MYSQLI_ASSOC);
 ?>
