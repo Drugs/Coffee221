@@ -1,16 +1,16 @@
 <?php
 # BY - JONAS
 session_start();
-$title = "Cadastro - Cartão";
+$title = "Cadastro - Endereco";
 include '../include/database.php';
 
 if (isset($_GET['cadEnd']) and $_GET['cadEnd'] == 'send') {
-    $inf = "INSERT INTO `endereco`(`cidade`, `rua`, `avenida`, `numero`, `fk_id_pessoa`, `cep`, `estado`, `complemento`) 
-    VALUES ('{$_GET['cidade']}', '{$_GET['rua']}', '{$_GET['avenida']}', '{$_GET['numero']}', '{$_SESSION['id_pessoa']}', '{$_GET['cep']}',
-    '{$_GET['estado']}', '{$_GET['complemento']}')";
+    $inf = "INSERT INTO `endereco`(`cidade`, `rua`, `numero`, `fk_id_pessoa`, `cep`, `estado`) 
+    VALUES ('{$_GET['cidade']}', '{$_GET['rua']}', '{$_GET['numero']}', '{$_SESSION['id_pessoa']}', '{$_GET['cep']}',
+    '{$_GET['estado']}')";
     $query = mysqli_query($con, $inf);
-    header("location: checkoutpage.php?endereco=feito");
-    echo $inf;
+    var_dump($inf);
+    #header("location: pagina_usuario.php?endereco=feito");
 }
 $inf2 = "SELECT * FROM pessoa";
 $query = mysqli_query($con, $inf2);
@@ -49,10 +49,6 @@ include "../include/nave-site.php";
                                 <label for="exampleFormControlInput1" class="form-label"><strong>Rua</strong></label>
                             </div>
                             <div class="form-floating">
-                                <input type="text" class="form-control" name='avenida'>
-                                <label for="exampleFormControlInput1" class="form-label"><strong>Avenida</strong></label>
-                            </div>
-                            <div class="form-floating">
                                 <input type="text" class="form-control" name='numero' maxlength="4">
                                 <label for="exampleFormControlInput1" class="form-label"><strong>Número</strong></label>
                             </div>
@@ -64,14 +60,10 @@ include "../include/nave-site.php";
                                 <input type="text" class="form-control" name='estado'>
                                 <label for="exampleFormControlInput1" class="form-label"><strong>Estado</strong></label>
                             </div>
-                            <div class="form-floating">
-                                <input type="text" class="form-control" name='complemento'>
-                                <label for="exampleFormControlInput1" class="form-label"><strong>Complemento</strong></label>
-                            </div>
                             <input type='hidden' name='var' value='<?php echo $_GET['var']; ?>'>
                             <div class="row">
                                 <div class="col-6">
-                                    <a class="w-100 btn btn-lg btn-primary" style="margin-top: 5mm; margin-bottom: 2mm;" href="checkoutpage.php">Voltar</a>
+                                    <a class="w-100 btn btn-lg btn-primary" style="margin-top: 5mm; margin-bottom: 2mm;" href="pagina_usuario.php">Voltar</a>
                                 </div>
                                 <div class="col-6">
                                     <button class="w-100 btn btn-lg btn-primary" style="margin-top: 5mm; margin-bottom: 2mm;" type="submit" value="send" name="cadEnd">Enviar</button>

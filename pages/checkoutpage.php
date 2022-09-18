@@ -17,8 +17,6 @@ if (isset($_SESSION['id_pessoa']) and $_SESSION['id_pessoa'] > 0) {
             $inf3 = "SELECT * FROM pessoa JOIN endereco ON pessoa.id_pessoa = endereco.fk_id_pessoa WHERE pessoa.id_pessoa = {$id_pessoa}";
             $query = mysqli_query($con, $inf3);
             $result2 = mysqli_fetch_all($query, MYSQLI_ASSOC);
-        } else {
-            header("location: cadastro_endereco.php?cadastro-endereco=erro");
         }
     } else {
         header("location: cadastro_cartao.php?cadastro-cartao=erro");
@@ -113,14 +111,6 @@ include "../include/nave-site.php";
                             <label class='form-label' for='numero'>Número</label>
                                 <input class='form-control' placeholder='Ex.: 999' type='text' name='numero' id='' value='{$result2[0]['numero']}'>
                             </div>
-                            <div class='col-sm-6'>
-                                <label class='form-label' for='complemento'>Avenida</label>
-                                <input class='form-control' placeholder='Ex.: Avenida Dom João IV' type='text' name='avenida' id='' value='{$result2[0]['avenida']}'>
-                            </div>
-                            <div class='col-sm-6'>
-                                <label class='form-label' for='complemento'>Complemento</label>
-                                <input class='form-control' placeholder='Ex.: Condm. Bragança...' type='text' name='complemento' id='' value='{$result2[0]['complemento']}'>
-                            </div>
                         </div>";
                         } else {
                             echo "
@@ -144,10 +134,6 @@ include "../include/nave-site.php";
                                 <div class='col-md-4'>
                                 <label class='form-label' for='numero'>Número</label>
                                     <input class='form-control' placeholder='Ex.: 999' type='text' name='numero' id=''>
-                                </div>
-                                <div class='col-sm-12'>
-                                    <label class='form-label' for='complemento'>Complemento</label>
-                                    <input class='form-control' placeholder='Ex.: Condm. Bragança...' type='text' name='complemento' id=''>
                                 </div>
                             </div>";
                         }
