@@ -131,7 +131,7 @@ $alimento = mysqli_fetch_all($query, MYSQLI_ASSOC);
 				<div class='col-md-3'>
 					<div class='card shadow-sm'>
 						<div class='card-body'>
-							<a href='pages/produto.php?produto={$alimentos['id_produto']}'><img src='imagens/{$alimentos['endereco']}' class='card-img-top'></a>
+							<a href='pages/alimento.php?produto={$alimentos['id_produto']}'><img src='imagens/{$alimentos['endereco']}' class='card-img-top'></a>
 							<div class='card-text feed-item-body post-body'>
 								<div style='vertical-align: inherit;'>
 									<h2 class='text-center'>{$alimentos['nome_produto']}</h2>

@@ -11,19 +11,19 @@ Ata da reunião 02/09
 	---------------------------------------------------------------------------------------------
 	Carrinho 
 		CARRINHO
-		-Logica do script
-		-Ajeitar os butões pra mudar a quantidade
+		-Logica do script ->FEITO
+		-Ajeitar os butões pra mudar a quantidade->FEITO
 		-Colocar o icone de lixo pra apagar
-		-Calcular a quantidade e o valor
-		-Colocar o butao de checkout pra tem um location
-		-Pegar as informaçoes do banco de dados
-		-Pegar o id do usuario
+		-Calcular a quantidade e o valor->FEITO
+		-Colocar o butao de checkout pra tem um location ->FEITO
+		-Pegar as informaçoes do banco de dados->FEITO
+		-Pegar o id do usuario->FEITO
 		-O carrinho só mostra conjuntos de compras em aberto
-		-Centralizar os itens
+		-Centralizar os itens->FEITO
 		-Alterar o subtotal
-		-Adicionar o botão de ação
-		-Link da home
-		-Possibilidade de vc pegar o header do index.php
+		-Adicionar o botão de ação->FEITO
+		-Link da home->FEITO
+		-Possibilidade de vc pegar o header do index.php ->FEITO
 	---------------------------------------------------------------------------------------------
 	Pagina home>
 

@@ -8,12 +8,12 @@ if (isset($_SESSION['id_pessoa']) and $_SESSION['id_pessoa'] > 0) {
     $inf = "SELECT * FROM cartoes WHERE fk_id_pessoa = {$id_pessoa}";
     $query = mysqli_query($con, $inf);
     $resultado = mysqli_fetch_assoc($query);
-    if ($resultado != NULL) {
+    if ($resultado != 0) {
         $inf2 = "SELECT * FROM cartoes JOIN pessoa ON id_pessoa = fk_id_pessoa
         WHERE id_pessoa = {$_SESSION['id_pessoa']}";
         $query = mysqli_query($con, $inf2);
         $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
-        if ($result != NULL) {
+        if ($result != 0) {
             $inf3 = "SELECT * FROM pessoa JOIN endereco ON pessoa.id_pessoa = endereco.fk_id_pessoa WHERE pessoa.id_pessoa = {$id_pessoa}";
             $query = mysqli_query($con, $inf3);
             $result2 = mysqli_fetch_all($query, MYSQLI_ASSOC);
