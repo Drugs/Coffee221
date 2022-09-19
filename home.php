@@ -12,15 +12,15 @@ if (isset($_GET["submit"]) and $_GET["submit"] == "buscar") {
 $inf = "SELECT *, SUBSTRING(descricao, 1, 50) AS descricao FROM `produto` 
 JOIN info_roupa ON info_roupa.fk_id_produto = produto.id_produto
 JOIN galeria ON galeria.fk_id_produto = produto.id_produto 
-WHERE produto.nome_produto LIKE '%%' OR produto.categoria LIKE '%%' LIMIT 4";
-#var_dump($inf);
+WHERE produto.nome_produto LIKE '%%' OR produto.categoria LIKE '%%' group by id_produto LIMIT 4";
+#echo $inf;
 $query = mysqli_query($con, $inf);
 $roupa = mysqli_fetch_all($query, MYSQLI_ASSOC);
 //-------------------alimentos------------------------------------
 $inf2 = "SELECT *, SUBSTRING(descricao, 1, 50) AS descricao FROM `produto` 
 JOIN info_alimento ON info_alimento.fk_id_produto = produto.id_produto
 JOIN galeria ON galeria.fk_id_produto = produto.id_produto 
-WHERE produto.nome_produto LIKE '%%' OR produto.categoria LIKE '%%' LIMIT 4";
+WHERE produto.nome_produto LIKE '%%' OR produto.categoria LIKE '%%' group by id_produto LIMIT 4";
 #var_dump($inf);
 $query = mysqli_query($con, $inf2);
 $alimento = mysqli_fetch_all($query, MYSQLI_ASSOC);
@@ -47,7 +47,8 @@ $alimento = mysqli_fetch_all($query, MYSQLI_ASSOC);
 			var xmlhttp = new XMLHttpRequest();
 			xmlhttp.onreadystatechange = function() {
 				if (this.readyState == 4 && this.status == 200) {
-					console.log(this.responseText)
+					let coiso = document.getElementById(categoria+id_info_produto)
+					coiso.innerHTML = this.responseText
 				}
 			}
 			xmlhttp.open("GET", "pages/botanocarrinho.php?id=" + id_info_produto + "&cat=" + categoria);
@@ -106,7 +107,7 @@ $alimento = mysqli_fetch_all($query, MYSQLI_ASSOC);
 							<p class='bia'>{$roupas['descricao']}...</p>
 						</div>
 						<div class='d-flex justify-content-between align-items-center'>
-							<div class='btn-group'>
+							<div class='btn-group' id='roupa{$roupas["id_info_roupa"]}'>
 								<button type='button' onclick=\"carrinho({$roupas["id_info_roupa"]},'roupa')\" class='btn btn-sm btn-outline-secondary'>Adicionar ao carrinho</button>
 							</div>
 						</div>
@@ -140,7 +141,7 @@ $alimento = mysqli_fetch_all($query, MYSQLI_ASSOC);
 									<p class='bia'>{$alimentos['descricao']}...</p>
 								</div>
 								<div class='d-flex justify-content-between align-items-center'>
-									<div class='btn-group'>
+									<div class='btn-group' id='alimento{$alimentos["id_info_alimento"]}'>
 										<button type='button' onclick=\"carrinho({$alimentos["id_info_alimento"]},'alimento')\" class='btn btn-sm btn-outline-secondary'>Adicionar ao carrinho</button>
 									</div>
 								</div>
