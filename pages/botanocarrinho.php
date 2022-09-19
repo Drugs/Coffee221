@@ -11,7 +11,7 @@ if (isset($_GET['id']) and $_GET['id'] != 0) { //se produto existe passa
 		//echo "o usuário existe."; 
 
 		$consulta = 'Select * From carrinho Where fk_id_pessoa = ' . $_SESSION['id_pessoa'];
-		var_dump($consulta);
+		#var_dump($consulta);
 		$query = mysqli_query($con, $consulta);
 		$carrinho = mysqli_fetch_assoc($query);
 
