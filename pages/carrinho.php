@@ -148,7 +148,6 @@ $roupa = mysqli_fetch_all($query, MYSQLI_ASSOC);
 							?>
 							<script>
 								soma()
-
 								function quant(ide, fun, prod) {
 									let imprime = document.getElementById(ide)
 									let imprimeQnt = imprime.dataset.quantidade
@@ -182,22 +181,22 @@ $roupa = mysqli_fetch_all($query, MYSQLI_ASSOC);
 									let subalimentos = 0
 									let subroupas = 0
 									if (qntalimentos > 0) {
-										for (let repet1 = 0; repet1 < qntalimentos; repet1++) {
+										for (let repet1 = 0; repet1 < qntalimentos; repet1++){
 											let mult1 = document.getElementById('comida' + repet1) //Aqui está o id do produto comida
-											let subalimentos = mult1.dataset.quantidade * mult1.dataset.preco
-											console.log(subalimentos)
+											subalimentos += mult1.dataset.quantidade * mult1.dataset.preco
 										}
 									}
+											console.log(subalimentos)
 									//quant*preço
 									//2- >roupas
 									if (qntroupas > 0) {
-										for (let repet2 = 0; repet2 < qntroupas; repet2++) {
+										for (let repet2 = 0; repet2 < qntroupas; repet2++){
 											let mult2 = document.getElementById('roupa' + repet2)
-											subroupas = mult2.dataset.quantidade * mult2.dataset.preco
-											console.log(subroupas)
+											subroupas += mult2.dataset.quantidade * mult2.dataset.preco
 										}
+											console.log(subroupas)
 									}
-									let total = (subalimentos - subroupas)
+									let total = (subalimentos + subroupas)
 									console.log(total)
 									document.getElementById('total').innerHTML = 'R$ ' + total;
 
