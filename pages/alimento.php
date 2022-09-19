@@ -89,6 +89,23 @@ join galeria on galeria.fk_id_produto = produto.id_produto -->
                     let changePrice = "R$ " + idteste.dataset.preco
                     printPrice.innerHTML = changePrice.replace('.', ',')
                 }
+
+                function carrinho(id_info_produto, categoria) {
+                        let id_produto = document.getElementById(id_info_produto)
+                        let cat = document.getElementById(categoria)
+                        //id info produto, 
+                        //categoria: alimento ou roupa
+                        //console.log(id_info_prod)
+                        var xmlhttp = new XMLHttpRequest();
+                        xmlhttp.onreadystatechange = function() {
+                            if (this.readyState == 4 && this.status == 200) {
+                                let coiso = document.getElementById(categoria+id_info_produto)
+                                coiso.innerHTML = this.responseText
+                            }
+                        }
+                        xmlhttp.open("GET", "botanocarrinho.php?id=" + id_info_produto + "&cat=" + categoria);
+                        xmlhttp.send();
+                    }
             </script>
             </p>
 
@@ -109,7 +126,7 @@ join galeria on galeria.fk_id_produto = produto.id_produto -->
                 echo "
                     <div class= row>
                         <div class='col-md-6'>
-                            <a type='button' class='btn btn-outline-success buttonprodutos' style='margin-top: 13mm;' href='checkoutpage.php'>COMPRAR</a>
+                            <a type='button' class='btn btn-outline-success buttonprodutos' style='margin-top: 13mm;' onclick=\"carrinho({$informacoes["id_info_alimento"]},'alimento')\" href='carrinho.php'>COMPRAR</a>
                         </div>
                         <div class='col-md-6'>
                             <a type='button' class='btn btn-outline-dark' style='margin-top: 13mm; height: 60px; padding-top: 4mm;' href='galeriap.php'>Retornar para a galeria</a>
