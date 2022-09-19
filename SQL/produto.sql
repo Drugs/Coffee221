@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 08-Set-2022 às 22:55
+-- Tempo de geração: 19-Set-2022 às 19:52
 -- Versão do servidor: 10.4.24-MariaDB
 -- versão do PHP: 8.0.19
 
@@ -40,6 +40,7 @@ CREATE TABLE `produto` (
 --
 
 INSERT INTO `produto` (`id_produto`, `nome_produto`, `descricao`, `categoria`, `marca`) VALUES
+(1, 'Camisa Sorridente', 'Sorria, você está sendo amado S2', 'roupa', 'bibi.brave'),
 (2, 'Camisa de Vaca', 'blablabla', 'Roupa', 'Cute'),
 (8, 'Camisa de Café', 'A descrição condiz com o nome do produto', 'Roupa', 'Cute'),
 (13, 'Capuccino', 'o nome condiz com o produto', 'Alimento', 'Cleiton'),
