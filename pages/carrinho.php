@@ -2,6 +2,10 @@
 session_start();
 $title = 'Carrinho';
 include "../include/database.php";
+if (isset($_SESSION['id_pessoa']) and $_SESSION['id_pessoa'] > 0) {
+} else {
+    header("location: login.php?carrinho=erro");
+}
 include '../include/header.php';
 include '../include/nave-site.php';
 //-------------------alimentos------------------------------------
