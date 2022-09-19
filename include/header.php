@@ -12,4 +12,5 @@
 		<link rel="stylesheet" href="/coffee221/css/meucss.css" />
 		<link rel="stylesheet" href="/coffee221/css/alert.css" />
 		<link rel="stylesheet" href="/coffee221/css/time.css">
+		<link rel="stylesheet" href="/coffee221/css/icons.css">
 	</head>
