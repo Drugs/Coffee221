@@ -17,6 +17,10 @@ if (isset($_SESSION['id_pessoa']) and $_SESSION['id_pessoa'] > 0) {
             $inf3 = "SELECT * FROM pessoa JOIN endereco ON pessoa.id_pessoa = endereco.fk_id_pessoa WHERE pessoa.id_pessoa = {$id_pessoa}";
             $query = mysqli_query($con, $inf3);
             $result2 = mysqli_fetch_all($query, MYSQLI_ASSOC);
+            if ($result2 != NULL) {
+            } else {
+                header("location: cadastro_endereco.php?cadastro-endereco=erro");
+            }
         }
     } else {
         header("location: cadastro_cartao.php?cadastro-cartao=erro");
