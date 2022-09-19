@@ -65,6 +65,9 @@ if (isset($_GET['login']) and $_GET['login'] == 'send') {
                             if (isset($_GET['compra']) and $_GET['compra'] == 'erro') {
                                 echo '<div class="alert alert-warning" role="alert">Faça login para continuar a compra!</div>';
                             }
+                            if (isset($_GET['carrinho']) and $_GET['carrinho'] == 'erro') {
+                                echo '<div class="alert alert-warning" role="alert">Faça login para usar o carrinho!</div>';
+                            }
                             ?>
                         </div>
                         <form action="">

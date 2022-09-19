@@ -22,9 +22,29 @@ include "../include/nave-site.php";
                 </div>
                 <div class="col-md-4 coluna_4">
                     <div class="cartao aluno-3">
-                        <img class="imagens" src="../Imagens\imagens-nossotime/bian.png" alt="">
+                        <img class="imagens" src="../Imagens\imagens-nossotime/bian.png" alt="" style="width: 160px; height:160px;">
                         <h2>Bianca Nogueira</h2>
-                        <p>Chore ou ria, mas o prazo de entrega chega...</p>
+                        <h6><strong>Desenvolvedor Full-Stack</strong></h6>
+                      <span>
+                      <ul class="wrapper">
+                        <li class="icon twitter">
+                            <span class="tooltip">Pinterest</span>
+                            <a href="https://br.pinterest.com/biancanogueiranogueira/" style="color:black ;"><i class="fa fa-pinterest"></i></a>
+                        </li>
+                        <li class="icon instagram">
+                            <span class="tooltip">Instagram</span>
+                            <a href="https://www.instagram.com/bibi.brave/" style="color:black ;"><i class="fa fa-instagram"></i></a>
+                        </li>
+                        <li class="icon github">
+                            <span class="tooltip">Github</span>
+                            <a href="https://github.com/BibiBrave" style="color:black ;"><i class="fa fa-github"></i></a>
+                        </li>
+                        <li class="icon youtube">
+                            <span class="tooltip">Linkedin</span>
+                            <a href="https://www.linkedin.com/in/bianca-nogueira-484413249/"  style="color:black ;"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                        </ul>
+                      </span>
                     </div>
                 </div>
                 <div class="col-md-4 coluna_4">
@@ -48,7 +68,7 @@ include "../include/nave-site.php";
                 </div>
                 <div class="col-md-4  coluna_4">
                     <div class="cartao aluno-3">
-                        <img class="imagens" src="../Imagens\imagens-nossotime\anafoto.jpeg" alt="">
+                        <img class="imagens" src="../Imagens\imagens-nossotime\anafoto.jpeg" alt=""style="width: 160px; height:160px;">
                         <h2>Ana Clara Almeida</h2>
                         <p>Mais do que soma, progamador trabalha multiplicando as horas, saõ 4,são 6, são 8. </p>
                     </div>
@@ -62,7 +82,7 @@ include "../include/nave-site.php";
                 </div>
                 <div class="col-md-4 coluna_4">
                     <div class="cartao aluno-3">
-                        <img class="imagens" src="../Imagens\imagens-nossotime\duda.jpeg" alt="">
+                        <img class="imagens" src="../Imagens\imagens-nossotime\duda.jpeg" alt="" style="width: 160px; height:160px;">
                         <h2>Eduarda Venturini</h2>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, dignissimos!</p>
                     </div>

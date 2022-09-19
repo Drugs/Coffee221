@@ -34,7 +34,7 @@ $alimento = mysqli_fetch_all($query, MYSQLI_ASSOC);
 			let id_produto = document.getElementById(id_info_produto)
 			let cat = document.getElementById(categoria)
 
-			if (categoria == 'roupa' ) {
+			if (categoria == 'roupa') {
 				console.log(categoria)
 			}
 			if (categoria == 'alimento') {
@@ -97,7 +97,7 @@ $alimento = mysqli_fetch_all($query, MYSQLI_ASSOC);
 		<div class='col-md-3'>
 			<div class='card shadow-sm'>
 				<div class='card-body'>
-					<a href='pages/produto.php?produto={$roupas['id_produto']}'><img src='imagens/{$roupas['endereco']}' class='card-img-top'></a>
+					<a href='pages/produto.php?produto={$roupas['id_produto']}'><img src='imagens/{$roupas['endereco']}' class='card-img-top' style='max-width:220px; max-height:200px;'></a>
 					<div class='card-text feed-item-body post-body'>
 						<div style='vertical-align: inherit;'>
 							<h2 class='text-center'>{$roupas['nome_produto']}</h2>
@@ -131,7 +131,7 @@ $alimento = mysqli_fetch_all($query, MYSQLI_ASSOC);
 				<div class='col-md-3'>
 					<div class='card shadow-sm'>
 						<div class='card-body'>
-							<a href='pages/alimento.php?produto={$alimentos['id_produto']}'><img src='imagens/{$alimentos['endereco']}' class='card-img-top'></a>
+							<a href='pages/alimento.php?produto={$alimentos['id_produto']}'><img src='imagens/{$alimentos['endereco']}' class='card-img-top' style='max-width:230px; max-height:230px;'></a>
 							<div class='card-text feed-item-body post-body'>
 								<div style='vertical-align: inherit;'>
 									<h2 class='text-center'>{$alimentos['nome_produto']}</h2>
