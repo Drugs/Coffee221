@@ -63,7 +63,7 @@ $roupa = mysqli_fetch_all($query, MYSQLI_ASSOC);
 									$subtotal1 = $vestido['quantidade'] * $vestido['preco'];
 									$subtotal1 = str_replace('.', ',', $subtotal1);
 									echo "
-									<div class='card mb-3' style='box-shadow: 10px 5px 5px;'>
+									<div class='card mb-3' style='box-shadow: 10px 5px 5px;' id='roupa'>
 										<div class='card-body'>
 											<div class='d-flex justify-content-between'>
 												<div class='d-flex flex-row align-items-center'>
@@ -105,7 +105,7 @@ $roupa = mysqli_fetch_all($query, MYSQLI_ASSOC);
 									$subtotal2 = $cafe['quantidade'] * $cafe['preco'];
 									$subtotal2 = str_replace('.', ',', $subtotal2);
 									echo "
-									<div class='card mb-3' style='box-shadow: 10px 5px 5px;'>
+									<div class='card mb-3' style='box-shadow: 10px 5px 5px;' id='alimento'>
 										<div class='card-body'>
 											<div class='d-flex justify-content-between'>
 												<div class='d-flex flex-row align-items-center'>
@@ -214,10 +214,13 @@ $roupa = mysqli_fetch_all($query, MYSQLI_ASSOC);
 
 									if (categoria == 'roupa') {
 										console.log(categoria)
+										const element = document.getElementById("roupa");
+ 										 element.remove();
 									}
 									if (categoria == 'alimento') {
 										console.log(categoria)
-
+										const element = document.getElementById("alimento");
+ 									 element.remove();
 									}
 
 									var xmlhttp = new XMLHttpRequest();
@@ -228,7 +231,9 @@ $roupa = mysqli_fetch_all($query, MYSQLI_ASSOC);
 									}
 									xmlhttp.open("GET", "lixo_carrinho.php?id=" + id_info_produto + "&cat=" + categoria);
 									xmlhttp.send();
+									
 								}
+								
 							</script>
 							<button type="button" class="mt-2 btn btn-info btn-block btn-lg" onclick="document.location= 'checkoutpage.php'">
 								<span>Checkout</span>
