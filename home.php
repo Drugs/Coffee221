@@ -34,7 +34,7 @@ $alimento = mysqli_fetch_all($query, MYSQLI_ASSOC);
 			let id_produto = document.getElementById(id_info_produto)
 			let cat = document.getElementById(categoria)
 
-			if (categoria == 'roupa' ) {
+			if (categoria == 'roupa') {
 				console.log(categoria)
 			}
 			if (categoria == 'alimento') {
