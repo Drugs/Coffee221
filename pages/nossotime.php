@@ -70,14 +70,14 @@ include "../include/nave-site.php";
                     <div class="cartao aluno-3">
                         <img class="imagens" src="../Imagens\imagens-nossotime\anafoto.jpeg" alt=""style="width: 160px; height:160px;">
                         <h2>Ana Clara Almeida</h2>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, dignissimos!</p>
+                        <p>Mais do que soma, progamador trabalha multiplicando as horas, saõ 4,são 6, são 8. </p>
                     </div>
                 </div>
                 <div class="col-md-4  coluna_4">
                     <div class="cartao aluno-3">
                         <img class="imagens" src="../Imagens\imagens-nossotime\" alt="">
-                        <h2>Aluno 4</h2>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, dignissimos!</p>
+                        <h2>Samuel</h2>
+                        <p>lordin programodor, maestria dos 'br'.</p>
                     </div>
                 </div>
                 <div class="col-md-4 coluna_4">
