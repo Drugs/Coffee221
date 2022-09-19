@@ -61,7 +61,7 @@ $roupa = mysqli_fetch_all($query, MYSQLI_ASSOC);
 									$subtotal1 = $vestido['quantidade'] * $vestido['preco'];
 									$subtotal1 = str_replace('.', ',', $subtotal1);
 									echo "
-									<div class='card mb-3' style='box-shadow: 10px 5px 5px ;'>
+									<div class='card mb-3' style='box-shadow: 10px 5px 5px;'>
 										<div class='card-body'>
 											<div class='d-flex justify-content-between'>
 												<div class='d-flex flex-row align-items-center'>
@@ -94,7 +94,7 @@ $roupa = mysqli_fetch_all($query, MYSQLI_ASSOC);
 								$anterior = $atual;
 								$bia++;
 							}
-							
+
 							$bi = 0;
 							$anterior = 0;
 							foreach ($alimento as $cafe) {
@@ -103,7 +103,7 @@ $roupa = mysqli_fetch_all($query, MYSQLI_ASSOC);
 									$subtotal2 = $cafe['quantidade'] * $cafe['preco'];
 									$subtotal2 = str_replace('.', ',', $subtotal2);
 									echo "
-									<div class='card mb-3' style='box-shadow: 10px 5px 5px ;'>
+									<div class='card mb-3' style='box-shadow: 10px 5px 5px;'>
 										<div class='card-body'>
 											<div class='d-flex justify-content-between'>
 												<div class='d-flex flex-row align-items-center'>
@@ -196,46 +196,43 @@ $roupa = mysqli_fetch_all($query, MYSQLI_ASSOC);
 										//quant*preço
 									}
 									let somatotal = precoComida + precoRoupa
-									somafinal = parseFloat(somatotal)
-									document.getElementById('total').innerHTML = 'R$ ' + parseFloat(somafinal);
-									if (somafinal % 1 === 0) {
+									document.getElementById('total').innerHTML = 'R$ ' + parseFloat(somatotal);
+									if (somatotal % 1 === 0) {
 										console.log("é inteiro");
 									} else {
 										console.log("é float")
 									}
-									console.log(somafinal % 1)
+									console.log(somatotal % 1)
 									// ELE TEM QUE PEGAR A QUANTIA DE ITENS DE COMIDA E MULTIPLICAR PELO PREÇO UNITARIO DA COMIDA
 									//total=subtotal.roupa+subtotal.alimento
 									//total total
 									//imprime o total total*/
 								}
 							</script>
-						<script>
-							// lixo de roupa
-							function carrinho(id_info_produto, categoria) {
-								let id_produto = document.getElementById(id_info_produto)
-								let cat = document.getElementById(categoria)
-					
-								if (categoria == 'roupa') {
-									console.log(categoria)
-								}
-								if (categoria == 'alimento') {
-									console.log(categoria)
-					
-								}
-								//id info produto, 
-								//categoria: alimento ou roupa
-								//console.log(id_info_prod)
-								var xmlhttp = new XMLHttpRequest();
-								xmlhttp.onreadystatechange = function() {
-									if (this.readyState == 4 && this.status == 200) {
-										console.log(this.responseText)
+							<script>
+								// lixo de roupa
+								function carrinho(id_info_produto, categoria) {
+									let id_produto = document.getElementById(id_info_produto)
+									let cat = document.getElementById(categoria)
+
+									if (categoria == 'roupa') {
+										console.log(categoria)
 									}
+									if (categoria == 'alimento') {
+										console.log(categoria)
+
+									}
+
+									var xmlhttp = new XMLHttpRequest();
+									xmlhttp.onreadystatechange = function() {
+										if (this.readyState == 4 && this.status == 200) {
+											console.log(this.responseText)
+										}
+									}
+									xmlhttp.open("GET", "lixo_carrinho.php?id=" + id_info_produto + "&cat=" + categoria);
+									xmlhttp.send();
 								}
-								xmlhttp.open("GET", "lixo_carrinho.php?id=" + id_info_produto + "&cat=" + categoria);
-								xmlhttp.send();
-							}
-						</script>
+							</script>
 							<button type="button" class="mt-2 btn btn-info btn-block btn-lg" onclick="document.location= 'checkoutpage.php'">
 								<span>Checkout</span>
 							</button>
