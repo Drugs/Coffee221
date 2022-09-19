@@ -148,6 +148,7 @@ $roupa = mysqli_fetch_all($query, MYSQLI_ASSOC);
 							?>
 							<script>
 								soma()
+
 								function quant(ide, fun, prod) {
 									let imprime = document.getElementById(ide)
 									let imprimeQnt = imprime.dataset.quantidade
@@ -181,20 +182,20 @@ $roupa = mysqli_fetch_all($query, MYSQLI_ASSOC);
 									let subalimentos = 0
 									let subroupas = 0
 									if (qntalimentos > 0) {
-										for (let repet1 = 0; repet1 < qntalimentos; repet1++){
+										for (let repet1 = 0; repet1 < qntalimentos; repet1++) {
 											let mult1 = document.getElementById('comida' + repet1) //Aqui está o id do produto comida
 											subalimentos += mult1.dataset.quantidade * mult1.dataset.preco
 										}
 									}
-											console.log(subalimentos)
+									console.log(subalimentos)
 									//quant*preço
 									//2- >roupas
 									if (qntroupas > 0) {
-										for (let repet2 = 0; repet2 < qntroupas; repet2++){
+										for (let repet2 = 0; repet2 < qntroupas; repet2++) {
 											let mult2 = document.getElementById('roupa' + repet2)
 											subroupas += mult2.dataset.quantidade * mult2.dataset.preco
 										}
-											console.log(subroupas)
+										console.log(subroupas)
 									}
 									let total = (subalimentos + subroupas)
 									console.log(total)
@@ -234,7 +235,7 @@ $roupa = mysqli_fetch_all($query, MYSQLI_ASSOC);
 									soma
 								}
 							</script>
-							<button type="button" class="mt-2 btn btn-info btn-block btn-lg" onclick="document.location= 'checkoutpage.php'">
+							<button type="button" id="sumidao" class="mt-2 btn btn-info btn-block btn-lg" onclick="document.location= 'checkoutpage.php'">
 								<span>Checkout</span>
 							</button>
 						</div>
