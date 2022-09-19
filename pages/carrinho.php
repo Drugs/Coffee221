@@ -84,7 +84,7 @@ $roupa = mysqli_fetch_all($query, MYSQLI_ASSOC);
 														<h5 id='pr{$bia}' class='mb-0'>R$ {$subtotal1}</h5>
 													</div>
 													<div style='width: 60px;'>
-														<a ><i class='ms-2 bi bi-trash3-fill'></i></a>
+														<a><i class='ms-2 bi bi-trash3-fill' onclick=\"carrinho({$vestido["id_info_roupa"]},'roupa')\"></i></a>
 													</div>
 												</div>            
 											</div>
@@ -94,7 +94,7 @@ $roupa = mysqli_fetch_all($query, MYSQLI_ASSOC);
 								$anterior = $atual;
 								$bia++;
 							}
-
+							
 							$bi = 0;
 							$anterior = 0;
 							foreach ($alimento as $cafe) {
@@ -126,7 +126,7 @@ $roupa = mysqli_fetch_all($query, MYSQLI_ASSOC);
 														<h5 id='vu{$bi}' class='mb-0'>R$ {$subtotal2}</h5>
 													</div>
 													<div style='width: 60px;'>
-														<a><i class='ms-2 bi bi-trash3-fill'></i></a>
+														<a><i class='ms-2 bi bi-trash3-fill' onclick=\"carrinho({$cafe["id_info_alimento"]},'alimento')\" ></i></a>
 													</div>
 												</div>            
 											</div>
@@ -210,6 +210,32 @@ $roupa = mysqli_fetch_all($query, MYSQLI_ASSOC);
 									//imprime o total total*/
 								}
 							</script>
+						<script>
+							// lixo de roupa
+							function carrinho(id_info_produto, categoria) {
+								let id_produto = document.getElementById(id_info_produto)
+								let cat = document.getElementById(categoria)
+					
+								if (categoria == 'roupa') {
+									console.log(categoria)
+								}
+								if (categoria == 'alimento') {
+									console.log(categoria)
+					
+								}
+								//id info produto, 
+								//categoria: alimento ou roupa
+								//console.log(id_info_prod)
+								var xmlhttp = new XMLHttpRequest();
+								xmlhttp.onreadystatechange = function() {
+									if (this.readyState == 4 && this.status == 200) {
+										console.log(this.responseText)
+									}
+								}
+								xmlhttp.open("GET", "lixo_carrinho.php?id=" + id_info_produto + "&cat=" + categoria);
+								xmlhttp.send();
+							}
+						</script>
 							<button type="button" class="mt-2 btn btn-info btn-block btn-lg" onclick="document.location= 'checkoutpage.php'">
 								<span>Checkout</span>
 							</button>

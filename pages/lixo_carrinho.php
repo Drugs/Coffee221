@@ -5,15 +5,15 @@ include '../include/database.php';
 
                     
 $id_produto = $_GET['id']; //id do produto
-$id_categoria = $_GET['cat']; //categoria do produto
+//$id_categoria =; //categoria do produto
 
-    if (isset($id_produto and $id_produto) <> 0) {
-        if($id_categoria =='roupa'){
-            $inf = "DELETE FROM info_alimento WHERE id_info_alimento = {$id_produto}";
+    if (isset($_GET['id']) and $_GET['id'] != 0) {
+        if( $_GET['cat'] == 'roupa'){
+            $inf = "DELETE FROM item_de_carrinho WHERE fk_id_info_produto = {$id_produto}";
             $query = mysqli_query($con, $inf);
         }
-        if($id_categoria=='alimento'){
-            $inf2 = "DELETE FROM info_alimento WHERE id_info_alimento = {$id_produto}";
+        if( $_GET['cat'] == 'alimento'){
+            $inf2 = "DELETE FROM item_de_carrinho WHERE fk_id_info_produto = {$id_produto}";
             $query = mysqli_query($con, $inf2);
         }
     }
