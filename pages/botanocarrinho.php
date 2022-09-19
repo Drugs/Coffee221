@@ -34,7 +34,7 @@ if (isset($_GET['id']) and $_GET['id'] != 0) { //se produto existe passa
 			$consulta3 = "INSERT INTO `item_de_carrinho`( `fk_id_info_produto`, `fk_id_carrinho`, `categoria`,`quantidade`) VALUES ({$id_produto}, {$id_caro}, '{$id_categoria}', 1)";
 			$query = mysqli_query($con, $consulta3);
 			echo '<div class="alert alert-success" role="alert"> Item adicionado no carrinho com sucesso!</div>';
-			var_dump($consulta3);
+			//var_dump($consulta3);
 		}
 	} else {
 
