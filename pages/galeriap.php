@@ -29,7 +29,7 @@ $produtos2 = mysqli_fetch_all($query, MYSQLI_ASSOC);
         echo "
             <div class='col-6'>
               <div class='card' style='width: 18rem;'>
-                <a href='produto.php?produto={$roupas['id_produto']}'><img src='../imagens/{$roupas['endereco']}' class='card-img-top'></a>
+                <a href='produto.php?produto={$roupas['id_produto']}'><img src='../imagens/{$roupas['endereco']}' class='card-img-top' style='max-width:350px; max-height:350px;'></a>
                 <div class='card-text feed-item-body post-body'>
 								  <div style='vertical-align: inherit;'>
 									  <h2 class='text-center'>{$roupas['nome_produto']}</h2>
@@ -47,7 +47,7 @@ $produtos2 = mysqli_fetch_all($query, MYSQLI_ASSOC);
         echo "
             <div class='col-6'>
               <div class='card' style='width: 18rem;'>
-                <a href='alimento.php?produto={$alimentos['id_produto']}'><img src='../imagens/{$alimentos['endereco']}' class='card-img-top'></a>
+                <a href='alimento.php?produto={$alimentos['id_produto']}'><img src='../imagens/{$alimentos['endereco']}' class='card-img-top' style='max-width:350px; max-height:290px;'></a>
                 <div class='card-text feed-item-body post-body'>
                   <div style='vertical-align: inherit;'>
                     <h2 class='text-center'>{$alimentos['nome_produto']}</h2>
