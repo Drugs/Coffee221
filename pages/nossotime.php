@@ -8,8 +8,8 @@ include "../include/nave-site.php";
 
 <body class="corpo">
     <section>
-        <div class="container">
-            <div class="row d-flex g-4">
+        <div class="container-fluid">
+            <div class="row g-4">
                 <div class="col-12 navbar-brand">
                     <h1 class="texto_principal">Nossa equipe</h1>
                 </div>
@@ -18,26 +18,26 @@ include "../include/nave-site.php";
                         <img class="imagens" src="../Imagens\imagens-nossotime/bian.png" alt="" style="width: 160px; height:160px;">
                         <h2>Bianca Nogueira</h2>
                         <h6><strong>Desenvolvedor Full-Stack</strong></h6>
-                      <span>
-                      <ul class="wrapper">
-                        <li class="icon twitter">
-                            <span class="tooltip">Pinterest</span>
-                            <a href="https://br.pinterest.com/biancanogueiranogueira/" style="color:black ;"><i class="fa fa-pinterest"></i></a>
-                        </li>
-                        <li class="icon instagram">
-                            <span class="tooltip">Instagram</span>
-                            <a href="https://www.instagram.com/bibi.brave/" style="color:black ;"><i class="fa fa-instagram"></i></a>
-                        </li>
-                        <li class="icon github">
-                            <span class="tooltip">Github</span>
-                            <a href="https://github.com/BibiBrave" style="color:black ;"><i class="fa fa-github"></i></a>
-                        </li>
-                        <li class="icon youtube">
-                            <span class="tooltip">Linkedin</span>
-                            <a href="https://www.linkedin.com/in/bianca-nogueira-484413249/"  style="color:black ;"><i class="fa fa-linkedin"></i></a>
-                        </li>
-                        </ul>
-                      </span>
+                        <span>
+                            <ul class="wrapper">
+                                <li class="icon twitter">
+                                    <span class="tooltip">Pinterest</span>
+                                    <a href="https://br.pinterest.com/biancanogueiranogueira/" style="color:black ;"><i class="fa fa-pinterest"></i></a>
+                                </li>
+                                <li class="icon instagram">
+                                    <span class="tooltip">Instagram</span>
+                                    <a href="https://www.instagram.com/bibi.brave/" style="color:black ;"><i class="fa fa-instagram"></i></a>
+                                </li>
+                                <li class="icon github">
+                                    <span class="tooltip">Github</span>
+                                    <a href="https://github.com/BibiBrave" style="color:black ;"><i class="fa fa-github"></i></a>
+                                </li>
+                                <li class="icon youtube">
+                                    <span class="tooltip">Linkedin</span>
+                                    <a href="https://www.linkedin.com/in/bianca-nogueira-484413249/" style="color:black ;"><i class="fa fa-linkedin"></i></a>
+                                </li>
+                            </ul>
+                        </span>
                     </div>
                 </div>
                 <div class="col-md-4 coluna_4">
@@ -61,7 +61,7 @@ include "../include/nave-site.php";
                 </div>
                 <div class="col-md-4  coluna_4">
                     <div class="cartao aluno-3">
-                        <img class="imagens" src="../Imagens\imagens-nossotime\anafoto.jpeg" alt=""style="width: 160px; height:160px;">
+                        <img class="imagens" src="../Imagens\imagens-nossotime\anafoto.jpeg" alt="" style="width: 160px; height:160px;">
                         <h2>Ana Clara Almeida</h2>
                         <p>Mais do que soma, progamador trabalha multiplicando as horas, saõ 4,são 6, são 8. </p>
                     </div>
@@ -75,22 +75,22 @@ include "../include/nave-site.php";
                 </div>
                 <div class="col-md-4 coluna_4">
                     <div class="cartao aluno-3">
-                        <img class="imagens" src="../Imagens\imagens-nossotime\duda.jpeg" alt="" style="width: 160px; height:160px;">
+                        <img class="imagens" src="../Imagens\imagens-nossotime\duda.jpeg" alt="" style="">
                         <h2>Eduarda Venturini</h2>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, dignissimos!</p>
                     </div>
                 </div>
                 <div class="col-md-4  coluna_4">
                     <div class="cartao aluno-3">
-                        <img class="imagens" src="https://picsum.photos/160/157" alt="">
-                        <h2>Aluno 6</h2>
+                        <img class="imagens" src="../imagens/imagens-nossotime/jonas.jpg" alt="">
+                        <h2>Jonas</h2>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, dignissimos!</p>
                     </div>
                 </div>
                 <div class="col-12  coluna_12">
-                    <div class="cartao professor">
+                    <div class="cartao ">
                         <img class="imagens" src="https://picsum.photos/160/157" alt="">
-                        <h2>Aluno 7</h2>
+                        <h2>Italon</h2>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, dignissimos!</p>
                     </div>
                 </div>
