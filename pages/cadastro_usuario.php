@@ -35,7 +35,7 @@ if (isset($_GET['cadastra']) and $_GET['cadastra'] == 'send') {
     <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-                <div class="card bg-dark " style="border-radius: 1rem; padding-top: 2cm;" id="card">
+                <div class="card bg-dark " style="border-radius: 1rem;" id="card">
                     <div class="card-body p-5 text-center">
                         <form action="" method="get">
                             <h2 style="color:white;">Cadastrar-se</h2>
