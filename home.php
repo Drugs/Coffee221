@@ -12,7 +12,7 @@ if (isset($_GET["submit"]) and $_GET["submit"] == "buscar") {
 $inf = "SELECT *, SUBSTRING(descricao, 1, 50) AS descricao FROM `produto` 
 JOIN info_roupa ON info_roupa.fk_id_produto = produto.id_produto
 JOIN galeria ON galeria.fk_id_produto = produto.id_produto 
-WHERE produto.nome_produto LIKE '%%' OR produto.categoria LIKE '%%' group by id_produto LIMIT 4";
+WHERE produto.nome_produto LIKE '%%' OR produto.categoria = 'roupa' group by id_produto LIMIT 4";
 #echo $inf;
 $query = mysqli_query($con, $inf);
 $roupa = mysqli_fetch_all($query, MYSQLI_ASSOC);
@@ -20,7 +20,7 @@ $roupa = mysqli_fetch_all($query, MYSQLI_ASSOC);
 $inf2 = "SELECT *, SUBSTRING(descricao, 1, 50) AS descricao FROM `produto` 
 JOIN info_alimento ON info_alimento.fk_id_produto = produto.id_produto
 JOIN galeria ON galeria.fk_id_produto = produto.id_produto 
-WHERE produto.nome_produto LIKE '%%' OR produto.categoria LIKE '%%' group by id_produto LIMIT 4";
+WHERE produto.nome_produto LIKE '%%' OR produto.categoria='alimento' group by id_produto LIMIT 4";
 #var_dump($inf);
 $query = mysqli_query($con, $inf2);
 $alimento = mysqli_fetch_all($query, MYSQLI_ASSOC);
@@ -98,7 +98,7 @@ $alimento = mysqli_fetch_all($query, MYSQLI_ASSOC);
 		<div class='col-md-3'>
 			<div class='card shadow-sm'>
 				<div class='card-body'>
-					<a href='pages/produto.php?produto={$roupas['id_produto']}'><img src='imagens/{$roupas['endereco']}' class='card-img-top' style='max-width:220px; max-height:200px;'></a>
+					<a href='pages/produto.php?produto={$roupas['id_produto']}'><center><img src='imagens/{$roupas['endereco']}' class='card-img-top' style='max-width:220px; max-height:200px;'></center></a>
 					<div class='card-text feed-item-body post-body'>
 						<div style='vertical-align: inherit;'>
 							<h2 class='text-center'>{$roupas['nome_produto']}</h2>
@@ -132,7 +132,7 @@ $alimento = mysqli_fetch_all($query, MYSQLI_ASSOC);
 				<div class='col-md-3'>
 					<div class='card shadow-sm'>
 						<div class='card-body'>
-							<a href='pages/alimento.php?produto={$alimentos['id_produto']}'><img src='imagens/{$alimentos['endereco']}' class='card-img-top' style='max-width:230px; max-height:230px;'></a>
+							<a href='pages/alimento.php?produto={$alimentos['id_produto']}'><center><img src='imagens/{$alimentos['endereco']}' class='card-img-top' style='max-width:230px; max-height:230px;'></center></a>
 							<div class='card-text feed-item-body post-body'>
 								<div style='vertical-align: inherit;'>
 									<h2 class='text-center'>{$alimentos['nome_produto']}</h2>
