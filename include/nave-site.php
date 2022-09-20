@@ -21,12 +21,12 @@ include "header.php";
                 </a></li>
             <li><a href="./galeriap.php" class="nav-link px-2 text-white">
                     <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;">Itens</font>
+                        <font style="vertical-align: inherit;">Galeria</font>
                     </font>
                 </a></li>
             <li><a href="./nossotime.php" class="nav-link px-2 text-white">
                     <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;">Nosso time</font>
+                        <font style="vertical-align: inherit;">Nosso Time</font>
                     </font>
                 </a></li>
                 <li><a href="./carrinho.php" class="nav-link px-2 text-white">

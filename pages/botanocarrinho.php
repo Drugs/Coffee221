@@ -42,7 +42,6 @@ if (isset($_GET['id']) and $_GET['id'] != 0) { //se produto existe passa
 
 		}
 	} else {
- 
 		//echo "o usuário não existe.";
 		header("Location:login.php?login=inexistente");
 	}

@@ -21,7 +21,7 @@ include "header.php";
                 </a></li>
             <li><a href="./pages/galeriap.php" class="nav-link px-2 text-white">
                     <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;">Itens</font>
+                        <font style="vertical-align: inherit;">Galeria</font>
                     </font>
                 </a></li>
             <li><a href="./pages/nossotime.php" class="nav-link px-2 text-white">

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 20-Set-2022 às 22:51
+-- Tempo de geração: 20-Set-2022 às 23:21
 -- Versão do servidor: 10.4.24-MariaDB
 -- versão do PHP: 8.0.19
 
@@ -127,7 +127,6 @@ INSERT INTO `galeria` (`id_galeria`, `endereco`, `fk_id_produto`) VALUES
 (9, 'grao.jpg', 16),
 (17, 'camco1.png', 23),
 (18, 'camco.jpg', 24),
-(19, 'cafemorga.jpg', 25),
 (20, 'cafemorga2.png', 25);
 
 -- --------------------------------------------------------
