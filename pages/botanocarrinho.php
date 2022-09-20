@@ -22,9 +22,11 @@ if (isset($_GET['id']) and $_GET['id'] != 0) { //se produto existe passa
 			$data = date(" Y-n-j");
 			$consulta2 = "INSERT INTO `carrinho`(`fk_id_pessoa`, `data`, `status`) VALUES ('{$_SESSION['id_pessoa']}','{$data}',1)";
 			$query = mysqli_query($con, $consulta2);
-			$id_caro = $query->insert_id; //id do carrinho	
+			$id_caro = mysqli_insert_id($con);//id do carrinho	
+			
 		}
 		$consulta4 = "Select * From item_de_carrinho Where fk_id_info_produto = {$id_produto} and fk_id_carrinho = {$id_caro}";
+
 		$query = mysqli_query($con, $consulta4);
 		$item = mysqli_fetch_assoc($query);
 

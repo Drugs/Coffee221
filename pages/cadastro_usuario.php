@@ -7,15 +7,15 @@ include "../include/database.php";
 if (isset($_GET['cadastra']) and $_GET['cadastra'] == 'send') {
     $consulta = "INSERT INTO pessoa (nome,email,telefone,pais)
     VALUES ('{$_GET['nome']}','{$_GET['email']}','{$_GET['telefone']}','{$_GET['pais']}')";
-    var_dump($consulta);
+    //var_dump($consulta);
     $query = mysqli_query($con, $consulta);
     $id_usu = mysqli_insert_id($con);
     $cripton = base64_encode($_GET['senha']);
     $consulta2 = "INSERT INTO usuario (email, senha, nivel, fk_id_pessoa, data) 
     VALUES ('{$_GET['email']}','{$cripton}','{$_GET['nivel']}','{$id_usu}', '{$_GET['data']}')";
     $query = mysqli_query($con, $consulta2);
-    var_dump($consulta2);
-    #header("Location: login.php?cadastro=sucesso");
+    //var_dump($consulta2);
+    header("Location: login.php?cadastro=sucesso");
 }
 
 ?>

@@ -199,7 +199,8 @@ $roupa = mysqli_fetch_all($query, MYSQLI_ASSOC);
 									}
 									let total = (subalimentos + subroupas)
 									console.log(total)
-									document.getElementById('total').innerHTML = 'R$ ' + total;
+									document.getElementById('total').innerHTML = 'R$ ' + total.toFixed(2);
+									
 
 
 									//total=subtotal.roupa+subtotal.alimento

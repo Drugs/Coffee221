@@ -24,11 +24,6 @@ include "header.php";
                         <font style="vertical-align: inherit;">Itens</font>
                     </font>
                 </a></li>
-            <li><a href="./pages/checkoutpage.php" class="nav-link px-2 text-white">
-                    <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;">Sobre Cartão</font>
-                    </font>
-                </a></li>
             <li><a href="./pages/nossotime.php" class="nav-link px-2 text-white">
                     <font style="vertical-align: inherit;">
                         <font style="vertical-align: inherit;">Nosso Time</font>

@@ -58,12 +58,6 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="bi bi-file-earmark-text"></i>
-              Historico de compras
-            </a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="carrinho.php">
               <i class="bi bi-cart4"></i>
               Produtos no carrinho
@@ -79,12 +73,6 @@
             <a class="nav-link" href="checkoutpage.php">
               <i class="bi bi-basket3"></i>
               Checkout
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="bi bi-stack"></i>
-              Integrations
             </a>
           </li>
         </ul>

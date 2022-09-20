@@ -9,10 +9,7 @@ if (isset($_SESSION['id_usu']) and $_SESSION['id_pessoa'] > 0) {
   $inf = "SELECT * FROM pessoa JOIN endereco ON pessoa.id_pessoa = endereco.fk_id_pessoa WHERE id_pessoa = {$id_pessoa}";
   $query = mysqli_query($con, $inf);
   $resultado = mysqli_fetch_assoc($query);
-  if ($resultado != 0) {
-    $inf2 = "SELECT * FROM pessoa JOIN endereco ON pessoa.id_pessoa = endereco.fk_id_pessoa WHERE pessoa.id_pessoa = {$id_pessoa}";
-    $query = mysqli_query($con, $inf2);
-    $result2 = mysqli_fetch_all($query, MYSQLI_ASSOC);
+  if ($resultado['fk_id_pessoa'] != 0) {
   } else {
     header("location: cadastro_endereco.php?cadastro-endereco=erro");
   }
@@ -30,7 +27,7 @@ include '../include/cabecalho_usuario.php';
 ?>
 
 <body>
-  <main class="col-md-3 ms-sm-auto col-lg-10 px-md-4">
+  <main class="col-md-6 ms-sm-auto col-lg-10 px-md-4">
     <?php
     if (isset($_GET['endereco']) and $_GET['endereco'] == 'feito') {
       echo '<div class="alert alert-warning" role="alert">Endereço cadastrado com sucesso!</div>';
@@ -44,28 +41,9 @@ include '../include/cabecalho_usuario.php';
 
       <p class="card-text">
         <?php
-
-        $con =  new mysqli($host, $user, $pass, $db);
-        // Check connection
-        if ($con->connect_error) {
-          die("Conecção falha: " . $con->connect_error);
-        }
-
-        $sql = "SELECT * FROM pessoa 
-                    join usuario on usuario.fk_id_pessoa = id_pessoa 
-                    WHERE id_pessoa={$_SESSION['id_pessoa']}";
-        $result = $con->query($sql);
-
-        if ($result->num_rows > 0) {
           // output data of each row
-          while ($_GET = $result->fetch_assoc()) {
-            echo "Usuário: " . $_GET['nome'] .
-              "<br> Endereço: " . $_GET['endereco'] .  "<br>";
-          }
-        } else {
-          echo "0 resultados";
-        }
-        $con->close();
+            echo "Usuário: " . $resultado['nome'] .
+              "<p> Endereço: " . $resultado['rua']." ".$resultado['numero']."</p>" ;
         ?>
       </p>
       <div class="d-flex justify-content-between align-items-center">
@@ -74,35 +52,9 @@ include '../include/cabecalho_usuario.php';
           <button type="button" onclick="document.location= 'atualizar_usuario.php '" class="btn btn-sm btn-warning">Atualizar usu.</button>
         </div>
       </div>
-      <small class="text-muted">
-        <?php
-        $con =  new mysqli($host, $user, $pass, $db);
-        // Check connection
-        if ($con->connect_error) {
-          die("Conecção falha: " . $con->connect_error);
-        }
-
-        $sql = "SELECT * FROM pessoa 
-                join usuario on usuario.fk_id_pessoa = id_pessoa 
-                WHERE id_pessoa={$_SESSION['id_pessoa']}";
-        $result = $con->query($sql);
-
-        if ($result->num_rows > 0) {
-          // output data of each row
-          while ($_GET = $result->fetch_assoc()) {
-            echo "Id: " . $_GET['id_pessoa'] . "<br>";
-          }
-        } else {
-          echo "0 resultados";
-        }
-        $con->close();
-        ?>
-      </small>
     </div>
   </main>
 </body>
-
-
 <?php
 include '../include/footer.php';
 ?>
