@@ -13,13 +13,6 @@ include "../include/nave-site.php";
                 <div class="col-12 navbar-brand">
                     <h1 class="texto_principal">Nossa equipe</h1>
                 </div>
-                <div class="col-12 coluna_12">
-                    <div class="cartao professor">
-                        <img class="imagens" src="https://picsum.photos/160/157" alt="">
-                        <h2>Professor</h2>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, dignissimos!</p>
-                    </div>
-                </div>
                 <div class="col-md-4 coluna_4">
                     <div class="cartao aluno-3">
                         <img class="imagens" src="../Imagens\imagens-nossotime/bian.png" alt="" style="width: 160px; height:160px;">
