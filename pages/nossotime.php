@@ -8,16 +8,16 @@ include "../include/nave-site.php";
 
 <body class="corpo">
     <section>
-        <div class="container">
-            <div class="row d-flex g-4">
+        <div class="container-fluid">
+            <div class="row g-4">
                 <div class="col-12 navbar-brand">
                     <h1 class="texto_principal">Nossa equipe</h1>
                 </div>
-                <div class="col-12 coluna_12">
+                <div class="col-lg-12 coluna_12">
                     <div class="cartao professor">
-                        <img class="imagens" src="https://picsum.photos/160/157" alt="">
-                        <h2>Professor</h2>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, dignissimos!</p>
+                        <img class="imagens" src="../Imagens\imagens-nossotime/professor.jpeg" alt="">
+                        <h2>Israel Madruga</h2>
+                        <h4><strong>Professor</strong></h4>
                     </div>
                 </div>
                 <div class="col-md-4 coluna_4">
@@ -82,7 +82,7 @@ include "../include/nave-site.php";
                 </div>
                 <div class="col-md-4 coluna_4">
                     <div class="cartao aluno-3">
-                        <img class="imagens" src="../Imagens\imagens-nossotime\duda.jpeg" alt="" style="width: 160px; height:160px;">
+                        <img class="imagens" src="../Imagens\imagens-nossotime\duda.jpeg" alt="" style="">
                         <h2>Eduarda Venturini</h2>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, dignissimos!</p>
                     </div>
@@ -90,14 +90,14 @@ include "../include/nave-site.php";
                 <div class="col-md-4  coluna_4">
                     <div class="cartao aluno-3">
                         <img class="imagens" src="https://picsum.photos/160/157" alt="">
-                        <h2>Aluno 6</h2>
+                        <h2>Jonas</h2>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, dignissimos!</p>
                     </div>
                 </div>
                 <div class="col-12  coluna_12">
-                    <div class="cartao professor">
+                    <div class="cartao ">
                         <img class="imagens" src="https://picsum.photos/160/157" alt="">
-                        <h2>Aluno 7</h2>
+                        <h2>Italon</h2>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, dignissimos!</p>
                     </div>
                 </div>
