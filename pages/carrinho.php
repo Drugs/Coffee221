@@ -233,7 +233,7 @@ $roupa = mysqli_fetch_all($query, MYSQLI_ASSOC);
 									}
 									xmlhttp.open("GET", "lixo_carrinho.php?id=" + id_info_produto + "&cat=" + categoria);
 									xmlhttp.send();
-									soma
+									soma()
 								}
 							</script>
 							<button type="button" id="sumidao" class="mt-2 btn btn-info btn-block btn-lg" onclick="document.location= 'checkoutpage.php'">
