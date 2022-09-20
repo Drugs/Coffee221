@@ -113,7 +113,7 @@ $roupa = mysqli_fetch_all($query, MYSQLI_ASSOC);
 														<img src = '../imagens/{$cafe['endereco']}' class='img-fluid rounded-3' alt='Shopping item' style='width: 65px;'>
 													</div>
 													<div class=' ms-3 '>
-														<h5>{$cafe['sabor']}</h5>
+														<h5>{$cafe['nome_produto']}</h5>
 													</div>
 												</div>
 												<div class='d-flex flex-row align-items-center'>
