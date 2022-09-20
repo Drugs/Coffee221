@@ -17,7 +17,7 @@ join galeria on galeria.fk_id_produto = produto.id_produto
 WHERE item_de_carrinho.categoria ='alimento' 
 and carrinho.fk_id_pessoa = {$_SESSION['id_pessoa']}";
 $query = mysqli_query($con, $consulta1);
-$rowcount=mysqli_num_rows($query);
+$rowcount = mysqli_num_rows($query);
 $alimento = mysqli_fetch_all($query, MYSQLI_ASSOC);
 //var_dump($consulta);
 #echo $rowcount;
@@ -32,7 +32,7 @@ join galeria on galeria.fk_id_produto = produto.id_produto
 WHERE item_de_carrinho.categoria ='roupa' 
 and carrinho.fk_id_pessoa = {$_SESSION['id_pessoa']}";
 $query = mysqli_query($con, $consulta2);
-$rowcount2=mysqli_num_rows($query);
+$rowcount2 = mysqli_num_rows($query);
 $roupa = mysqli_fetch_all($query, MYSQLI_ASSOC);
 //var_dump($consulta);
 //echo "<pre>";
@@ -50,7 +50,7 @@ $roupa = mysqli_fetch_all($query, MYSQLI_ASSOC);
 							<!---Titulo-->
 							<div class="d-flex justify-content-between align-items-center mb-4">
 								<div>
-									<h5 id='guardiao' data-roupaqnt='<?=$rowcount?>' data-alimentoqnt='<?=$rowcount2?>' class="mb-1">Carrinho <i class="bi bi-cart3"></i></h5>
+									<h5 id='guardiao' data-roupaqnt='<?= $rowcount2 ?>' data-alimentoqnt='<?= $rowcount ?>' class="mb-1">Carrinho <i class="bi bi-cart3"></i></h5>
 								</div>
 							</div>
 							<!---Primeiro produto-->
@@ -113,7 +113,7 @@ $roupa = mysqli_fetch_all($query, MYSQLI_ASSOC);
 														<img src = '../imagens/{$cafe['endereco']}' class='img-fluid rounded-3' alt='Shopping item' style='width: 65px;'>
 													</div>
 													<div class=' ms-3 '>
-														<h5>{$cafe['sabor']}</h5>
+														<h5>{$cafe['nome_produto']}</h5>
 													</div>
 												</div>
 												<div class='d-flex flex-row align-items-center'>
@@ -148,6 +148,7 @@ $roupa = mysqli_fetch_all($query, MYSQLI_ASSOC);
 							?>
 							<script>
 								soma()
+
 								function quant(ide, fun, prod) {
 									let imprime = document.getElementById(ide)
 									let imprimeQnt = imprime.dataset.quantidade
@@ -170,57 +171,57 @@ $roupa = mysqli_fetch_all($query, MYSQLI_ASSOC);
 									soma()
 								}
 
-								function soma(){
+								function soma() {
 									let guardiao = document.getElementById('guardiao')
 									let qntroupas = guardiao.dataset.roupaqnt
 									let qntalimentos = guardiao.dataset.alimentoqnt
 									//1-quantidade de itens
 									//	>roupas
 									//	>alimento
-									let roupa0 = document.getElementById('roupa1')
-									console.log(roupa0.dataset.quantidade)
-									console.log(roupa0.dataset.preco)
 									//2- >alimento
-									for (let repet1 = 0; repet1 <= qntalimentos; repet1++) {
-										aux1 = document.getElementById('roupa' + repet1) //Aqui está o id do produto comida
-										//quant*preço
-										subalimento
+									let subalimentos = 0
+									let subroupas = 0
+									if (qntalimentos > 0) {
+										for (let repet1 = 0; repet1 < qntalimentos; repet1++) {
+											let mult1 = document.getElementById('comida' + repet1) //Aqui está o id do produto comida
+											subalimentos += mult1.dataset.quantidade * mult1.dataset.preco
+										}
 									}
+									console.log(subalimentos)
+									//quant*preço
 									//2- >roupas
-									for (let repet2 = 1; repet2 <= qntroupas; repet2++) {
-										//Aqui está o id do produto roupa 
-										//quant*preço
-										subroupa
+									if (qntroupas > 0) {
+										for (let repet2 = 0; repet2 < qntroupas; repet2++) {
+											let mult2 = document.getElementById('roupa' + repet2)
+											subroupas += mult2.dataset.quantidade * mult2.dataset.preco
+										}
+										console.log(subroupas)
 									}
-									let somatotal = precoComida + precoRoupa
-									document.getElementById('total').innerHTML = 'R$ ' + parseFloat(somatotal);
-									if (somatotal % 1 === 0) {
-										console.log("é inteiro");
-									} else {
-										console.log("é float")
-									}
-									console.log(somatotal % 1)
-									// ELE TEM QUE PEGAR A QUANTIA DE ITENS DE COMIDA E MULTIPLICAR PELO PREÇO UNITARIO DA COMIDA
+									let total = (subalimentos + subroupas)
+									console.log(total)
+									document.getElementById('total').innerHTML = 'R$ ' + total;
+
+
 									//total=subtotal.roupa+subtotal.alimento
-									//total total
 									//imprime o total total*/
 								}
-							</script>
-							<script>
 								// lixo de roupa
 								function carrinho(id_info_produto, categoria) {
 									let id_produto = document.getElementById(id_info_produto)
 									let cat = document.getElementById(categoria)
+									let remove = document.getElementById("guardiao")
 
 									if (categoria == 'roupa') {
 										console.log(categoria)
 										const element = document.getElementById("roupa");
- 										 element.remove();
+										element.remove();
+										remove.dataset.roupaqnt--
 									}
 									if (categoria == 'alimento') {
 										console.log(categoria)
 										const element = document.getElementById("alimento");
- 									 element.remove();
+										element.remove();
+										remove.dataset.alimentoqnt--
 									}
 
 									var xmlhttp = new XMLHttpRequest();
@@ -231,11 +232,10 @@ $roupa = mysqli_fetch_all($query, MYSQLI_ASSOC);
 									}
 									xmlhttp.open("GET", "lixo_carrinho.php?id=" + id_info_produto + "&cat=" + categoria);
 									xmlhttp.send();
-									
+									soma
 								}
-								
 							</script>
-							<button type="button" class="mt-2 btn btn-info btn-block btn-lg" onclick="document.location= 'checkoutpage.php'">
+							<button type="button" id="sumidao" class="mt-2 btn btn-info btn-block btn-lg" onclick="document.location= 'checkoutpage.php'">
 								<span>Checkout</span>
 							</button>
 						</div>
