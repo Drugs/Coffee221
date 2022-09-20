@@ -27,7 +27,7 @@ $produtos2 = mysqli_fetch_all($query, MYSQLI_ASSOC);
     foreach ($produtos1 as $roupas) {
       if (isset($roupas['categoria']) and $roupas['categoria'] == 'Roupa') {
         echo "
-            <div class='col-6'>
+            <div class='col-4'>
               <div class='card' style='width: 18rem;'>
                 <a href='produto.php?produto={$roupas['id_produto']}'><img src='../imagens/{$roupas['endereco']}' class='card-img-top' style='max-width:350px; max-height:350px;'></a>
                 <div class='card-text feed-item-body post-body'>
@@ -45,7 +45,7 @@ $produtos2 = mysqli_fetch_all($query, MYSQLI_ASSOC);
     foreach ($produtos2 as $alimentos) {
       if (isset($alimentos['categoria']) and $alimentos['categoria'] == 'Alimento') {
         echo "
-            <div class='col-6'>
+            <div class='col-4'>
               <div class='card' style='width: 18rem;'>
                 <a href='alimento.php?produto={$alimentos['id_produto']}'><img src='../imagens/{$alimentos['endereco']}' class='card-img-top' style='max-width:350px; max-height:290px;'></a>
                 <div class='card-text feed-item-body post-body'>
