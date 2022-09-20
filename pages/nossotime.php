@@ -15,28 +15,19 @@ include "../include/nave-site.php";
                 </div>
                 <div class="col-md-4 coluna_4">
                     <div class="cartao aluno-3">
-                        <img class="imagens" src="../Imagens\imagens-nossotime/bian.png" alt="" style="width: 160px; height:160px;">
+                        <img class="mb-3 imagens" src="../Imagens\imagens-nossotime/bian.png" alt="" style="width: 160px; height:160px;">
                         <h2>Bianca Nogueira</h2>
                         <h6><strong>Desenvolvedor Full-Stack</strong></h6>
-                        <span>
-                            <ul class="wrapper">
-                                <li class="icon twitter">
-                                    <span class="tooltip">Pinterest</span>
-                                    <a href="https://br.pinterest.com/biancanogueiranogueira/" style="color:black ;"><i class="fa fa-pinterest"></i></a>
-                                </li>
-                                <li class="icon instagram">
-                                    <span class="tooltip">Instagram</span>
-                                    <a href="https://www.instagram.com/bibi.brave/" style="color:black ;"><i class="fa fa-instagram"></i></a>
-                                </li>
-                                <li class="icon github">
-                                    <span class="tooltip">Github</span>
-                                    <a href="https://github.com/BibiBrave" style="color:black ;"><i class="fa fa-github"></i></a>
-                                </li>
-                                <li class="icon youtube">
-                                    <span class="tooltip">Linkedin</span>
-                                    <a href="https://www.linkedin.com/in/bianca-nogueira-484413249/" style="color:black ;"><i class="fa fa-linkedin"></i></a>
-                                </li>
-                            </ul>
+                        <span class="social-medias">
+                            <a href="https://www.instagram.com/bibi.brave/" target="_blank">
+                                <h4><i class="bi bi-instagram"></i></h4>
+                            </a>
+                            <a href="https://github.com/BibiBrave" target="_blank">
+                                <h4><i class="bi bi-github"></i></h4>
+                            </a>
+                            <a href="https://www.linkedin.com/in/bianca-nogueira-484413249/" target="_blank">
+                                <h4><i class="bi bi-linkedin"></i></h4>
+                            </a>
                         </span>
                     </div>
                 </div>
@@ -45,7 +36,6 @@ include "../include/nave-site.php";
                         <img class="imagens" src="../Imagens\imagens-nossotime\myphoto.jpeg" alt="">
                         <h2>Gustavo Henrique</h2>
                         <p><strong>Front-end developer &lt;/&gt;</strong></p>
-                        <P>HTML, CSS, JS <span>&lt;-/&#x2665;&gt;</span> </P>
                         <span class="social-medias">
                             <a href="http://www.instagram.com/gustavossantossmk/" target="_blank">
                                 <h4><i class="bi bi-instagram"></i></h4>
@@ -61,37 +51,74 @@ include "../include/nave-site.php";
                 </div>
                 <div class="col-md-4  coluna_4">
                     <div class="cartao aluno-3">
-                        <img class="imagens" src="../Imagens\imagens-nossotime\anafoto.jpeg" alt="" style="width: 160px; height:160px;">
+                        <img class="imagens" src="../Imagens\imagens-nossotime\an.png" alt="" style="width: 160px; height:160px;">
                         <h2>Ana Clara Almeida</h2>
-                        <p>Mais do que soma, progamador trabalha multiplicando as horas, saõ 4,são 6, são 8. </p>
+                        <p><strong>Develper Back-end</strong></p>
+                        <span class="social-medias">
+                            <a href="https://www.instagram.com/allmeidaclarinha/" target="_blank">
+                                <h4><i class="bi bi-instagram"></i></h4>
+                            </a>
+                            <a href="https://github.com/ana16clara" target="_blank">
+                                <h4><i class="bi bi-github"></i></h4>
+                            </a>
+                            <a  target="_blank">
+                                <h4><i class="bi bi-linkedin" style="color:black ;"></i></h4>
+                            </a>
+                        </span>
                     </div>
                 </div>
                 <div class="col-md-4  coluna_4">
                     <div class="cartao aluno-3">
-                        <img class="imagens" src="../Imagens\imagens-nossotime\" alt="">
+                        <img class="imagens" src="../Imagens\imagens-nossotime\samu.png" alt="">
                         <h2>Samuel</h2>
-                        <p>lordin programodor, maestria dos 'br'.</p>
+                        <p><strong>Develper Front-end </strong></p>
+                        <span class="social-medias">
+                            <a href="https://www.instagram.com/samuel.goes_/" target="_blank">
+                                <h4><i class="bi bi-instagram"></i></h4>
+                            </a>
+                            <a href="https://github.com/Invisibili2" target="_blank">
+                                <h4><i class="bi bi-github"></i></h4>
+                            </a>
+                            <a  target="_blank">
+                                <h4><i class="bi bi-linkedin" style="color:black ;"></i></h4>
+                            </a>
+                        </span>
                     </div>
                 </div>
                 <div class="col-md-4 coluna_4">
                     <div class="cartao aluno-3">
                         <img class="imagens" src="../Imagens\imagens-nossotime\duda.jpeg" alt="" style="">
                         <h2>Eduarda Venturini</h2>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, dignissimos!</p>
+                        <p><strong>Develper Front-end </strong></p>
+                        <span class="social-medias">
+                            <a href="https://www.instagram.com/dudinha_venturini/" target="_blank">
+                                <h4><i class="bi bi-instagram"></i></h4>
+                            </a>
+                            <a href="https://github.com/Duda-Santos" target="_blank">
+                                <h4><i class="bi bi-github"></i></h4>
+                            </a>
+                            <a  target="_blank">
+                                <h4><i class="bi bi-linkedin" style="color:black ;"></i></h4>
+                            </a>
+                        </span>
                     </div>
                 </div>
                 <div class="col-md-4  coluna_4">
                     <div class="cartao aluno-3">
-                        <img class="imagens" src="../imagens/imagens-nossotime/jonas.jpg" alt="">
+                        <img class="imagens" src="../imagens/imagens-nossotime/jonas.png" alt="">
                         <h2>Jonas</h2>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, dignissimos!</p>
-                    </div>
-                </div>
-                <div class="col-12  coluna_12">
-                    <div class="cartao ">
-                        <img class="imagens" src="https://picsum.photos/160/157" alt="">
-                        <h2>Italon</h2>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, dignissimos!</p>
+                        <p><strong>Develper Full-Stack </strong></p>
+                        <span class="social-medias">
+                            <a href="https://www.instagram.com/jonasgabrielsc/" target="_blank">
+                                <h4><i class="bi bi-instagram"></i></h4>
+                            </a>
+                            <a href="https://github.com/Yuumir" target="_blank">
+                                <h4><i class="bi bi-github"></i></h4>
+                            </a>
+                            <a  target="_blank">
+                                <h4><i class="bi bi-linkedin" style="color:black ;"></i></h4>
+                            </a>
+                        </span>
                     </div>
                 </div>
             </div>
