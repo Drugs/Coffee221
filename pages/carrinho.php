@@ -208,12 +208,14 @@ $roupa = mysqli_fetch_all($query, MYSQLI_ASSOC);
 										const element = document.getElementById("roupa");
 										element.remove();
 										remove.dataset.roupaqnt--
+										soma()
 									}
 									if (categoria == 'alimento') {
 										console.log(categoria)
 										const element = document.getElementById("alimento");
 										element.remove();
 										remove.dataset.alimentoqnt--
+										soma()
 									}
 
 									var xmlhttp = new XMLHttpRequest();
