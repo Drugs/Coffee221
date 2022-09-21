@@ -63,20 +63,7 @@ join galeria on galeria.fk_id_produto = produto.id_produto -->
                     ?>
                     <script>
                         // AJAX do carrinho de compras
-                        function carrinho(id_info_produto) {
-                            let id_produto = document.getElementById(id_info_produto)
-                            //id info produto, 
-                            //categoria: alimento ou roupa
-                            //console.log(id_info_prod)
-                            var xmlhttp = new XMLHttpRequest();
-                            xmlhttp.onreadystatechange = function() {
-                                if (this.readyState == 4 && this.status == 200) {
-                                    console.log(this.responseText)
-                                }
-                            }
-                            xmlhttp.open("GET", "botanocarrinho.php?id=" + id_info_produto + "&cat=" + 'roupa');
-                            xmlhttp.send();
-                        }
+                        
                         function carrinho(id_info_produto, categoria) {
                         let id_produto = document.getElementById(id_info_produto)
                         let cat = document.getElementById(categoria)

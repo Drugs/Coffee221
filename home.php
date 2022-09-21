@@ -35,10 +35,10 @@ $alimento = mysqli_fetch_all($query, MYSQLI_ASSOC);
 			let cat = document.getElementById(categoria)
 
 			if (categoria == 'roupa') {
-				console.log(categoria)
+				//console.log(categoria)
 			}
 			if (categoria == 'alimento') {
-				console.log(categoria)
+				//console.log(categoria)
 
 			}
 			//id info produto, 
@@ -108,14 +108,13 @@ $alimento = mysqli_fetch_all($query, MYSQLI_ASSOC);
 						</div>
 						<div class='d-flex justify-content-between align-items-center'>
 							<div class='btn-group' id='roupa{$roupas["id_info_roupa"]}'>
-								<button type='button' onclick=\"carrinho({$roupas["id_info_roupa"]},'roupa')\" class='btn btn-sm btn-outline-secondary'>Adicionar ao carrinho</button>
+								<button type='button' onclick=\"carrinho({$roupas["id_info_roupa"]},'roupa')\" class='btn btn-sm btn-outline-secondary' href='carrinho.php'>Adicionar ao carrinho</button>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>";
-				//var_dump($roupas);
 			}
 			?>
 		</div>
@@ -149,7 +148,6 @@ $alimento = mysqli_fetch_all($query, MYSQLI_ASSOC);
 						</div>
 					</div>
 				</div>";
-				//var_dump($alimentos);
 			}
 			?>
 		</div>

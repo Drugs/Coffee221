@@ -82,10 +82,10 @@ $produtos2 = mysqli_fetch_all($query, MYSQLI_ASSOC);
 			let cat = document.getElementById(categoria)
 
 			if (categoria == 'roupa') {
-				console.log(categoria)
+				//console.log(categoria)
 			}
 			if (categoria == 'alimento') {
-				console.log(categoria)
+				//console.log(categoria)
 
 			}
 			//id info produto, 

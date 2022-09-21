@@ -19,10 +19,7 @@ and carrinho.fk_id_pessoa = {$_SESSION['id_pessoa']}";
 $query = mysqli_query($con, $consulta1);
 $rowcount = mysqli_num_rows($query);
 $alimento = mysqli_fetch_all($query, MYSQLI_ASSOC);
-//var_dump($consulta);
-#echo $rowcount;
-//var_dump($alimento);
-//echo "</pre>";
+
 //-------------------roupas------------------------------------
 $consulta2 = "SELECT * FROM `carrinho` 
 join item_de_carrinho on item_de_carrinho.fk_id_carrinho = carrinho.id_carrinho 
@@ -34,10 +31,7 @@ and carrinho.fk_id_pessoa = {$_SESSION['id_pessoa']}";
 $query = mysqli_query($con, $consulta2);
 $rowcount2 = mysqli_num_rows($query);
 $roupa = mysqli_fetch_all($query, MYSQLI_ASSOC);
-//var_dump($consulta);
-//echo "<pre>";
-//var_dump($roupa);
-//echo "</pre>";
+
 ?>
 
 <div class="container py-5 h-100">
@@ -200,9 +194,6 @@ $roupa = mysqli_fetch_all($query, MYSQLI_ASSOC);
 									let total = (subalimentos + subroupas)
 									console.log(total)
 									document.getElementById('total').innerHTML = 'R$ ' + total.toFixed(2);
-									
-
-
 									//total=subtotal.roupa+subtotal.alimento
 									//imprime o total total*/
 								}
