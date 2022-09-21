@@ -61,7 +61,7 @@ include "../include/nave-site.php";
                             <a href="https://github.com/ana16clara" target="_blank">
                                 <h4><i class="bi bi-github"></i></h4>
                             </a>
-                            <a  target="_blank">
+                            <a target="_blank">
                                 <h4><i class="bi bi-linkedin" style="color:black ;"></i></h4>
                             </a>
                         </span>
@@ -79,7 +79,7 @@ include "../include/nave-site.php";
                             <a href="https://github.com/Invisibili2" target="_blank">
                                 <h4><i class="bi bi-github"></i></h4>
                             </a>
-                            <a  target="_blank">
+                            <a target="_blank">
                                 <h4><i class="bi bi-linkedin" style="color:black ;"></i></h4>
                             </a>
                         </span>
@@ -87,7 +87,7 @@ include "../include/nave-site.php";
                 </div>
                 <div class="col-md-4 coluna_4">
                     <div class="cartao aluno-3">
-                        <img class="imagens" src="../Imagens\imagens-nossotime\duda.jpeg" alt="" style="">
+                        <img class="imagens" src="../Imagens\imagens-nossotime\duda.jpeg" alt="">
                         <h2>Eduarda Venturini</h2>
                         <p><strong>Develper Front-end </strong></p>
                         <span class="social-medias">
@@ -97,7 +97,7 @@ include "../include/nave-site.php";
                             <a href="https://github.com/Duda-Santos" target="_blank">
                                 <h4><i class="bi bi-github"></i></h4>
                             </a>
-                            <a  target="_blank">
+                            <a target="_blank">
                                 <h4><i class="bi bi-linkedin" style="color:black ;"></i></h4>
                             </a>
                         </span>
@@ -115,7 +115,7 @@ include "../include/nave-site.php";
                             <a href="https://github.com/Yuumir" target="_blank">
                                 <h4><i class="bi bi-github"></i></h4>
                             </a>
-                            <a  target="_blank">
+                            <a target="_blank">
                                 <h4><i class="bi bi-linkedin" style="color:black ;"></i></h4>
                             </a>
                         </span>

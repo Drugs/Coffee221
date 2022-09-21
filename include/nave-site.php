@@ -29,9 +29,11 @@ include "header.php";
                         <font style="vertical-align: inherit;">Nosso Time</font>
                     </font>
                 </a></li>
-                <li><a href="./carrinho.php" class="nav-link px-2 text-white">
+            <li><a href="./carrinho.php" class="nav-link px-2 text-white">
                     <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;"><h4 id='icon'><i class="bi bi-cart4"></i></h4></font>
+                        <font style="vertical-align: inherit;">
+                            <h4 id='icon'><i class="bi bi-cart4"></i></h4>
+                        </font>
                     </font>
                 </a></li>
         </ul>
@@ -47,7 +49,7 @@ include "header.php";
                 </div>';
         } else {
             echo '<div class="text-end">';
-            echo '<a class="btn btn-outline-light" style="margin-bottom: 8px;" href="login-nave.php">Login</a>';
+            echo '<a class="btn btn-outline-light" style="margin-bottom: 8px;" href="../pages/login.php">Login</a>';
         }
         ?>
     </div>
