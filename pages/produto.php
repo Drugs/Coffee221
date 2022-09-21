@@ -67,6 +67,7 @@ join galeria on galeria.fk_id_produto = produto.id_produto -->
                         function carrinho(id_info_produto, categoria) {
                         let id_produto = document.getElementById(id_info_produto)
                         let cat = document.getElementById(categoria)
+                        
                         //id info produto, 
                         //categoria: alimento ou roupa
                         //console.log(id_info_prod)
@@ -77,7 +78,7 @@ join galeria on galeria.fk_id_produto = produto.id_produto -->
                                 coiso.innerHTML = this.responseText
                             }
                         }
-                        xmlhttp.open("GET", "botanocarrinho.php?id=" + id_info_produto + "&cat=" + categoria);
+                        xmlhttp.open("GET", "botanocarrinho.php?id=" + id_info_produto + "&cat=" + categoria +"&controle=1");
                         xmlhttp.send();
                     }
                     </script>

@@ -62,23 +62,6 @@ join galeria on galeria.fk_id_produto = produto.id_produto -->
                         echo '<i class="bi bi-star-fill"></i>';
                     }
                     ?>
-                    <script>
-                        // AJAX do carrinho de compras
-                        function carrinho(id_info_produto) {
-                            let id_produto = document.getElementById(id_info_produto)
-                            //id info produto, 
-                            //categoria: alimento ou roupa
-                            //console.log(id_info_prod)
-                            var xmlhttp = new XMLHttpRequest();
-                            xmlhttp.onreadystatechange = function() {
-                                if (this.readyState == 4 && this.status == 200) {
-                                    console.log(this.responseText)
-                                }
-                            }
-                            xmlhttp.open("GET", "botanocarrinho.php?id=" + id_info_produto + "&cat=" + 'alimento');
-                            xmlhttp.send();
-                        }
-                    </script>
                 </div>
             </div>
             <script>
@@ -103,7 +86,7 @@ join galeria on galeria.fk_id_produto = produto.id_produto -->
                                 coiso.innerHTML = this.responseText
                             }
                         }
-                        xmlhttp.open("GET", "botanocarrinho.php?id=" + id_info_produto + "&cat=" + categoria);
+                        xmlhttp.open("GET", "botanocarrinho.php?id=" + id_info_produto + "&cat=" + categoria+"&controle=1");
                         xmlhttp.send();
                     }
             </script>

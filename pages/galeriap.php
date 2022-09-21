@@ -98,7 +98,7 @@ $produtos2 = mysqli_fetch_all($query, MYSQLI_ASSOC);
 					coiso.innerHTML = this.responseText
 				}
 			}
-			xmlhttp.open("GET", "botanocarrinho.php?id=" + id_info_produto + "&cat=" + categoria);
+			xmlhttp.open("GET", "botanocarrinho.php?id=" + id_info_produto + "&cat=" + categoria +"&controle=1");
 			xmlhttp.send();
 		}
 	</script>

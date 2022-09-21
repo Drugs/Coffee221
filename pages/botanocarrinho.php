@@ -39,8 +39,12 @@ if (isset($_GET['id']) and $_GET['id'] != 0) { //se produto existe passa
 		}
 
 	} else {  //echo "o usuário não existe.";
+		if(isset($_GET['controle']) and $_GET['controle'] == 1){
+			echo '<div class="alert alert-danger" role="alert"> Faça login para adicionar ao carrinho!</div>';
+		}else{
 			header("Location:login.php?carrinho=erro");
 	}
+}
 } else { //se produto nao existe die()
 	die();
 }

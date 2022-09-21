@@ -39,7 +39,6 @@ $alimento = mysqli_fetch_all($query, MYSQLI_ASSOC);
 			}
 			if (categoria == 'alimento') {
 				//console.log(categoria)
-
 			}
 			//id info produto, 
 			//categoria: alimento ou roupa
@@ -51,7 +50,7 @@ $alimento = mysqli_fetch_all($query, MYSQLI_ASSOC);
 					coiso.innerHTML = this.responseText
 				}
 			}
-			xmlhttp.open("GET", "pages/botanocarrinho.php?id=" + id_info_produto + "&cat=" + categoria);
+			xmlhttp.open("GET", "pages/botanocarrinho.php?id=" + id_info_produto + "&cat=" + categoria+"&controle=1");
 			xmlhttp.send();
 		}
 	</script>
