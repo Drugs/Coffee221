@@ -31,7 +31,7 @@ $resultado = mysqli_fetch_all($query, MYSQLI_ASSOC);
                                     <option></option>
                                     <?php
                                     foreach ($resultado as $produtos) {
-                                        if (isset($produtos['categoria']) and $produtos['categoria'] == 'Roupa') {
+                                        if (isset($produtos['categoria']) and $produtos['categoria'] == 'roupa') {
                                             echo "
                                                 <option value='{$produtos['id_produto']}'>{$produtos['nome_produto']}</option>
                                                 ";

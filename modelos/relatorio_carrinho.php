@@ -5,7 +5,7 @@ include "../include/header.php";
 include '../include/database.php';
 session_start();
 $inf = "SELECT * FROM pessoa JOIN carrinho ON id_pessoa = fk_id_pessoa";
-var_dump($inf);
+#var_dump($inf);
 $query = mysqli_query($con, $inf);
 $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
 ?>

@@ -5,7 +5,7 @@ include "../include/header.php";
 include '../include/database.php';
 # http://localhost/coffee221/modelos/relatorio_produto.php
 $pesquisa = '';
-if (isset($_GET["submit"]) and $_GET["submit"] == "buscar") {
+if (isset($_GET['submit']) and $_GET['submit'] == 'buscar') {
     $pesquisa = $_GET['buscar'];
 }
 $inf = "SELECT * FROM produto WHERE produto.nome_produto LIKE '%{$pesquisa}%' 

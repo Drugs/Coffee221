@@ -9,7 +9,7 @@ if (isset($_GET['del']) and $_GET['del'] == 1) {
     $inf = "DELETE FROM cartoes WHERE id_info_cartao = {$id}";
     $query = mysqli_query($con, $inf);
     header("location: info_cartao.php?del=sucesso");
-    echo $inf;
+    #echo $inf;
 }
 $inf2 = "SELECT * FROM cartoes JOIN pessoa ON id_pessoa = fk_id_pessoa
 WHERE id_info_cartao = {$id}";

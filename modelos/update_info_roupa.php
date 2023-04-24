@@ -12,13 +12,13 @@ if (isset($_GET['submit']) and $_GET['submit'] = 'send') {
     WHERE id_info_roupa = {$id}";
     $query = mysqli_query($con, $inf);
     header("location: info_produto.php?submit=sucesso");
-    echo $inf;
+    #echo $inf;
 }
 $inf2 = "SELECT * FROM info_roupa JOIN produto ON id_produto = fk_id_produto
 WHERE id_info_roupa = {$id}";
 $query = mysqli_query($con, $inf2);
 $result = mysqli_fetch_assoc($query);
-echo $inf2;
+#echo $inf2;
 ?>
 
 <body class='text-center'>
